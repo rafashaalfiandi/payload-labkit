@@ -1,4 +1,4 @@
-# Daftar Payload Web
+# payload-labkit
 
 Salam, praktisi keamanan! Berikut tiga daftar payload yang dapat mendukung pengujian keamanan aplikasi web secara sistematis.
 
