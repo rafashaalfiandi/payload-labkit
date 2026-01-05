@@ -17,4 +17,6 @@ Salam, praktisi keamanan! Berikut tiga daftar payload yang dapat mendukung pengu
 - Semua file ini dibuat untuk tujuan _pentesting_ atau bug bounty dengan izin eksplisit, jadi jangan disalahgunakan. Gunakan secara bertanggung jawab.
 - Creator tidak bertanggung jawab kalau ada pihak yang memakai list ini buat hal-hal yang melanggar hukum atau etika.
 - Jangan unggah payload berpotensi berbahaya ke repo publik tanpa sadar riwayatnya.
-.
+
+## Lisensi
+Konten disediakan tanpa jaminan apa pun dan dapat digunakan ulang di bawah `MIT License`. Sertakan file `COPYING` atau tentukan lisensi ini saat mendistribusikan ulang agar semua orang tahu hak dan batasannya.
