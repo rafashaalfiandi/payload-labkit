@@ -7,6 +7,7 @@ Welcome to Payload-LabKit. This repository aggregates several curated payload li
 - `sqli-payloads.txt`: A multi-thousand entry set of SQL injection vectors (boolean, UNION, time-based, enumeration, and sleep/late binding variants) tailored for diverse database backends.
 - `useragents.txt`: A collection of `User-Agent` strings spanning modern browsers and Android devices to help simulate realistic request profiles.
 - `command-injection.txt`: Shell- and interpreter-based payloads that leverage separators (`;`, `&&`, `|`, `||`, backticks, etc.) for testing command execution flows.
+- `worldlist-directory-login.txt`: Over one million login- and admin-focused directory permutations that can seed directory-brute forcing and portal enumeration routines with very high coverage.
 
 ## How to use
 1. Pick the payload list that matches the attack surface you are validating (XSS, SQLi, command injection, or header manipulation).
