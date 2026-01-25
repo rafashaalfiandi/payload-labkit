@@ -1,22 +1,24 @@
 # payload-labkit
 
-Salam, praktisi keamanan! Berikut tiga daftar payload yang dapat mendukung pengujian keamanan aplikasi web secara sistematis.
+Welcome to Payload-LabKit. This repository aggregates several curated payload libraries to support systematic web application security assessments in controlled environments.
 
-## Isi folder
-- `xss-payloads.txt`: ribuan payload XSS (Cross-Site Scripting) singkat & encoded yang siap kamu coba di input vulnerable atau payload filter bypass.
-- `sqli-payloads.txt`: kumpulan payload SQL Injection (boolean, union, time-based, enumeration, dan payload otomatis) untuk berbagai database dan konteks.
-- `useragents.txt`: deretan string `User-Agent` untuk berbagai perangkat Android dan browser terbaru, berguna buat testing behavior berdasarkan header.
+## What's inside
+- `xss-payloads.txt`: Thousands of short and encoded Cross-Site Scripting payloads ready for inputs, filters, and parser bypasses.
+- `sqli-payloads.txt`: A multi-thousand entry set of SQL injection vectors (boolean, UNION, time-based, enumeration, and sleep/late binding variants) tailored for diverse database backends.
+- `useragents.txt`: A collection of `User-Agent` strings spanning modern browsers and Android devices to help simulate realistic request profiles.
+- `command-injection.txt`: Shell- and interpreter-based payloads that leverage separators (`;`, `&&`, `|`, `||`, backticks, etc.) for testing command execution flows.
 
-## Cara pakai
-1. Pilih payload yang sesuai target (XSS/SQLi/User-Agent).
-2. Masukkan payload ke parameter input, header, atau point injection di aplikasi target.
-3. Kombinasikan dengan tooling (Burp, ffuf, sqlmap, dll.) untuk automasi.
-4. Gunakan `useragents.txt` untuk mengganti header `User-Agent` agar request terlihat lebih natural.
+## How to use
+1. Pick the payload list that matches the attack surface you are validating (XSS, SQLi, command injection, or header manipulation).
+2. Inject the payload into the appropriate parameter, header, or request vector within an explicitly sanctioned testing scope.
+3. Combine these payloads with automation tooling such as Burp Suite, FFUF, sqlmap, or custom scripts for batch experimentation.
+4. Rotate value sets (for example switching `User-Agent` strings) to observe how the target responds to different client profiles.
 
-## Catatan penting
-- Semua file ini dibuat untuk tujuan _pentesting_ atau bug bounty dengan izin eksplisit, jadi jangan disalahgunakan. Gunakan secara bertanggung jawab.
-- Creator tidak bertanggung jawab kalau ada pihak yang memakai list ini buat hal-hal yang melanggar hukum atau etika.
-- Jangan unggah payload berpotensi berbahaya ke repo publik tanpa sadar riwayatnya.
+## Responsible use
+- These collections are provided strictly for authorized pentesting or bug bounty programs. Do not reuse them without the target owner's written permission.
+- The maintainer is not liable for misuse that violates laws or ethics.
+- Don’t push potentially harmful payload files to a public repository without understanding the implications for any built-in CI/runtime.
+- Execute command-injection payloads only inside isolated labs or systems you own to avoid damaging production assets.
 
-## Lisensi
-Konten disediakan tanpa jaminan apa pun dan dapat digunakan ulang di bawah `MIT License`. Sertakan file `COPYING` atau tentukan lisensi ini saat mendistribusikan ulang agar semua orang tahu hak dan batasannya.
+## License
+All contributions are provided without warranty and may be reused under the `MIT License`. Include the `COPYING` file or refer to this license when redistributing so downstream users understand the permissions and limitations.
